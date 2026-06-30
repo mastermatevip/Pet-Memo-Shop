@@ -16,7 +16,7 @@ $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $CfgFile = Join-Path $Root "deploy.local.config"
 
-$Repo = "https://github.com/mastermatevip/petmemoshop.git"
+$Repo = "https://github.com/mastermatevip/Pet-Memo-Shop.git"
 $Branch = "main"
 $Proxy = ""
 

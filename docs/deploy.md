@@ -1,7 +1,7 @@
 # Pet Memo Shop — 部署指南
 
 > 域名：**petmemoshop.com**  
-> 仓库：`mastermatevip/petmemoshop` · 分支 `main`  
+> 仓库：`mastermatevip/Pet-Memo-Shop` · 分支 `main`  
 > 方式：与 **carbonfactorys.com（碳工厂）** 相同 — **GitHub push → Coolify 自动构建上线**
 
 ---
@@ -20,10 +20,10 @@ Pet Memo Shop 是纯展示型 Next.js 站点（无后台上传目录），比碳
 
 在 **与 carbonfactorys 同一台 Coolify VPS** 上：
 
-1. **GitHub** — 创建仓库 `mastermatevip/petmemoshop`（Private 即可），不要初始化 README（本地已有代码）。
+1. **GitHub** — 仓库已创建：`mastermatevip/Pet-Memo-Shop`
 
 2. **Coolify** → **+ New Resource** → **Application** → **Public Repository**  
-   - Repository：`https://github.com/mastermatevip/petmemoshop`  
+   - Repository：`https://github.com/mastermatevip/Pet-Memo-Shop`  
    - Branch：`main`  
    - Build Pack：**Dockerfile**（项目根目录已有 `Dockerfile`）  
    - Port：`3000`  
@@ -125,7 +125,7 @@ git config --global http.https://github.com.proxy http://127.0.0.1:10808
 
 | 项目 | 碳工厂 | Pet Memo Shop |
 |------|--------|---------------|
-| 仓库 | `mastermatevip/carbonfactorys` | `mastermatevip/petmemoshop` |
+| 仓库 | `mastermatevip/carbonfactorys` | `mastermatevip/Pet-Memo-Shop` |
 | 多语言 | `/[lang]/...` | 仅英文，无语言前缀 |
 | 后台/API | Supabase + 管理后台 + uploads | 无（静态产品数据在 `src/data/`） |
 | 数据目录 | `data/`、`public/uploads/` 需权限 | 不需要 |

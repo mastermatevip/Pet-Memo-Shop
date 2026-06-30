@@ -1,5 +1,5 @@
 # GitHub repo — same org as carbonfactorys
-GITHUB_REPO=https://github.com/mastermatevip/petmemoshop.git
+GITHUB_REPO=https://github.com/mastermatevip/Pet-Memo-Shop.git
 GIT_BRANCH=main
 
 # Local proxy for git push (V2Ray / Clash). Leave empty to use git global config.
