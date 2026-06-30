@@ -1,0 +1,9 @@
+.next
+node_modules
+.git
+.gitignore
+*.md
+docs
+deploy.local.config
+.env*
+!.env.example

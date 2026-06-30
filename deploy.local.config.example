@@ -1,0 +1,10 @@
+# GitHub repo — same org as carbonfactorys
+GITHUB_REPO=https://github.com/mastermatevip/petmemoshop.git
+GIT_BRANCH=main
+
+# Local proxy for git push (V2Ray / Clash). Leave empty to use git global config.
+# Common: http://127.0.0.1:10808  or  http://127.0.0.1:7890
+GIT_PROXY=http://127.0.0.1:10808
+
+# Optional commit message override (leave empty = auto from changes)
+# COMMIT_MESSAGE=Deploy Pet Memo Shop updates

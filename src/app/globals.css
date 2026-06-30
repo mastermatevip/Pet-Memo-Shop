@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Core brand palette */
+  --color-bg: #F8F3EA;
+  --color-bg-secondary: #E7D8C5;
+  --color-text: #3A2E25;
+  --color-muted: #6B5E52;
+  --color-light: #8A7B6E;
+  --color-btn: #1F1A17;
+  --color-btn-hover: #332B26;
+  --color-btn-text: #FFFFFF;
+  --color-gold: #C8A96A;
+  --color-gold-light: #E8D5B0;
+  --color-gold-dark: #A88B52;
+  --color-border: #DED0BD;
+  --color-card: #FFFFFF;
+  --color-highlight: #F3E8D8;
+
+  /* Footer on warm dark base */
+  --color-footer-text: #E7D8C5;
+  --color-footer-muted: #B8A898;
+  --color-footer-border: #3D3530;
+
+  /* Legacy aliases — mapped to new palette for compatibility */
+  --color-cream-50: #F8F3EA;
+  --color-cream-100: #F3E8D8;
+  --color-cream-200: #E7D8C5;
+  --color-cream-300: #DED0BD;
+  --color-brown-400: #8A7B6E;
+  --color-brown-500: #6B5E52;
+  --color-brown-600: #5A4D42;
+  --color-brown-700: #3A2E25;
+  --color-brown-800: #3A2E25;
+  --color-gold-100: #F3E8D8;
+  --color-gold-400: #C8A96A;
+  --color-gold-500: #C8A96A;
+  --color-gold-600: #A88B52;
+  --color-gold-800: #8A7344;
+  --color-sage-50: #F3E8D8;
+  --color-sage-100: #F3E8D8;
+  --color-sage-400: #C8A96A;
+  --color-sage-600: #1F1A17;
+  --color-sage-700: #332B26;
+  --color-sage-800: #1F1A17;
+
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif), Georgia, serif;
+  color: var(--color-text);
+}
+
+.prose-memorial h2 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose-memorial h3 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-memorial p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+  color: var(--color-muted);
+}
+
+.prose-memorial ul, .prose-memorial ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  color: var(--color-muted);
+}
+
+.prose-memorial li {
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
+
+.prose-memorial a {
+  color: var(--color-gold-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-memorial a:hover {
+  color: var(--color-gold);
+}
+
+.prose-memorial table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.prose-memorial th, .prose-memorial td {
+  border: 1px solid var(--color-border);
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.prose-memorial th {
+  background: var(--color-highlight);
+  font-weight: 600;
+  color: var(--color-text);
+}
