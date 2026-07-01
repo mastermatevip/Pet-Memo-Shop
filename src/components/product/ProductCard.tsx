@@ -1,12 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Eye, ShoppingBag } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { StarRating } from "@/components/ui/StarRating";
 import { formatPrice } from "@/lib/utils";
-import { isLocalUpload } from "@/lib/images";
+import { ProductImageDisplay } from "@/components/shared/ProductImageDisplay";
 import type { Product } from "@/types";
 
 interface ProductCardProps {
@@ -20,13 +19,11 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300">
       <Link href={`/products/${product.slug}`} className="block relative aspect-square overflow-hidden">
-        <Image
+        <ProductImageDisplay
           src={product.images[0].src}
           alt={product.images[0].alt}
-          fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
           sizes="(max-width: 768px) 50vw, 25vw"
-          unoptimized={isLocalUpload(product.images[0].src)}
         />
         {product.customizable && (
           <div className="absolute top-3 left-3">

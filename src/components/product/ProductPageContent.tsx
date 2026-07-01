@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Check, Truck, Shield } from "lucide-react";
+import { ProductImageDisplay } from "@/components/shared/ProductImageDisplay";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { StarRating } from "@/components/ui/StarRating";
@@ -12,7 +12,6 @@ import { FAQSection } from "@/components/shared/FAQSection";
 import { ReviewsSection } from "@/components/shared/ReviewsSection";
 import { NFCExplanation } from "@/components/shared/NFCExplanation";
 import { formatPrice, getEstimatedDelivery } from "@/lib/utils";
-import { isLocalUpload } from "@/lib/images";
 import { getReviewsByProduct } from "@/data/reviews";
 import type { Product } from "@/types";
 
@@ -34,14 +33,11 @@ export function ProductPageContent({ product, relatedProducts }: ProductPageCont
           {/* Gallery */}
           <div>
             <div className="relative aspect-square rounded-2xl overflow-hidden bg-highlight mb-4">
-              <Image
+              <ProductImageDisplay
                 src={product.images[activeImage].src}
                 alt={product.images[activeImage].alt}
-                fill
-                className="object-cover"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                unoptimized={isLocalUpload(product.images[activeImage].src)}
               />
             </div>
             <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
@@ -53,14 +49,7 @@ export function ProductPageContent({ product, relatedProducts }: ProductPageCont
                     activeImage === i ? "border-gold" : "border-transparent"
                   }`}
                 >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover"
-                    sizes="80px"
-                    unoptimized={isLocalUpload(img.src)}
-                  />
+                  <ProductImageDisplay src={img.src} alt={img.alt} sizes="80px" />
                 </button>
               ))}
             </div>

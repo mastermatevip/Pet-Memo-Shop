@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronDown, ChevronUp, Plus, Trash2, Upload } from "lucide-react";
 import type { Product, ProductImage } from "@/types";
-import { isLocalUpload } from "@/lib/images";
+import { ProductImageDisplay } from "@/components/shared/ProductImageDisplay";
 import { AdminField, adminInputClass } from "@/components/admin/AdminField";
 
 const IMAGE_TYPES: { value: ProductImage["type"]; label: string }[] = [
@@ -135,13 +134,10 @@ export function ProductImagesEditor({ productSlug, images, onChange }: Props) {
             <div className="flex gap-4">
               <div className="relative w-24 h-24 shrink-0 rounded-lg overflow-hidden bg-bg border border-border">
                 {image.src ? (
-                  <Image
+                  <ProductImageDisplay
                     src={image.src}
                     alt={image.alt || "预览"}
-                    fill
-                    className="object-cover"
                     sizes="96px"
-                    unoptimized={isLocalUpload(image.src)}
                   />
                 ) : (
                   <div className="flex items-center justify-center h-full text-xs text-light">

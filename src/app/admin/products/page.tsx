@@ -1,8 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { AdminShell } from "@/components/admin/AdminShell";
+import { ProductImageDisplay } from "@/components/shared/ProductImageDisplay";
 import { loadProducts } from "@/lib/cms/store";
-import { isLocalUpload } from "@/lib/images";
 
 export const dynamic = "force-dynamic";
 
@@ -28,14 +27,7 @@ export default function AdminProductsPage() {
                   <div className="flex items-center gap-3">
                     <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-bg shrink-0">
                       {product.images[0] ? (
-                        <Image
-                          src={product.images[0].src}
-                          alt=""
-                          fill
-                          className="object-cover"
-                          sizes="40px"
-                          unoptimized={isLocalUpload(product.images[0].src)}
-                        />
+                        <ProductImageDisplay src={product.images[0].src} alt="" sizes="40px" />
                       ) : null}
                     </div>
                     <div>
