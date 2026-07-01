@@ -1,11 +1,13 @@
 import { notFound } from "next/navigation";
 import { ProductPageContent } from "@/components/product/ProductPageContent";
 import { buildMetadata } from "@/lib/seo";
-import { getProductBySlug, getAllProductSlugs } from "@/data/products";
+import { getProductBySlug, getAllProductSlugs, getRelatedProducts } from "@/data/products";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
+
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   return getAllProductSlugs().map((slug) => ({ slug }));
@@ -28,5 +30,7 @@ export default async function ProductPage({ params }: Props) {
   const product = getProductBySlug(slug);
   if (!product) notFound();
 
-  return <ProductPageContent product={product} />;
+  const relatedProducts = getRelatedProducts(product.relatedSlugs);
+
+  return <ProductPageContent product={product} relatedProducts={relatedProducts} />;
 }

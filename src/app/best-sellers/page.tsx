@@ -3,6 +3,8 @@ import { ProductCard } from "@/components/product/ProductCard";
 import { buildMetadata } from "@/lib/seo";
 import { getBestSellers } from "@/data/products";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = buildMetadata({
   title: "Unique Pet Memorial Gifts | Best Sellers",
   description:

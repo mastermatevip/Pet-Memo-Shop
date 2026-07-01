@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ReviewsSection } from "@/components/shared/ReviewsSection";
 import { TrustBadges } from "@/components/shared/TrustBadges";
 import { Newsletter } from "@/components/shared/Newsletter";
-import { homepageCategories, howItWorksSteps, personalizationOptions, nfcKeyPoints } from "@/data/homepage";
+import { getHomepageContent } from "@/data/homepage";
 import { getBestSellers } from "@/data/products";
 import { getFeaturedReviews } from "@/data/reviews";
 import { getLatestBlogPosts } from "@/data/blog";
@@ -23,36 +23,37 @@ const personalizationIcons: Record<string, React.ReactNode> = {
 };
 
 export function HomePage() {
+  const content = getHomepageContent();
+  const { hero, sections } = content;
   const bestSellers = getBestSellers(8);
   const reviews = getFeaturedReviews(6);
   const blogPosts = getLatestBlogPosts(3);
 
   return (
     <>
-      {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-highlight via-bg to-bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-text leading-tight mb-6">
-                Honor Their Memory with a Personalized Pet Keepsake
+                {hero.h1}
               </h1>
               <p className="text-muted text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
-                Create a meaningful memorial gift for a beloved dog, cat, or companion. Personalized with photos, names, dates, and optional NFC digital memorial pages.
+                {hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button href="/collections/pet-memorial-gifts" size="lg">
-                  Shop Memorial Gifts
+                <Button href={hero.primaryCta.href} size="lg">
+                  {hero.primaryCta.label}
                 </Button>
-                <Button href="/digital-pet-memorial" variant="outline" size="lg">
-                  Create Digital Memorial
+                <Button href={hero.secondaryCta.href} variant="outline" size="lg">
+                  {hero.secondaryCta.label}
                 </Button>
               </div>
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&h=600&fit=crop"
-                alt="personalized pet memorial frame with candle and flowers in warm natural light"
+                src={hero.image.src}
+                alt={hero.image.alt}
                 fill
                 className="object-cover"
                 priority
@@ -63,41 +64,43 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Category Cards */}
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading title="Shop by Category" subtitle="Find the perfect memorial gift for your beloved companion." />
+          <SectionHeading
+            title={sections.categories.title}
+            subtitle={sections.categories.subtitle}
+          />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {homepageCategories.map((cat) => (
+            {content.categories.map((cat) => (
               <CategoryCard key={cat.slug} category={cat} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Best Sellers */}
       <section className="py-16 md:py-20 bg-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading title="Best Selling Pet Memorial Gifts" />
+          <SectionHeading title={sections.bestSellers.title} />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {bestSellers.map((product) => (
               <ProductCard key={product.slug} product={product} />
             ))}
           </div>
           <div className="text-center mt-10">
-            <Button href="/best-sellers" variant="outline">View All Best Sellers</Button>
+            <Button href="/best-sellers" variant="outline">
+              {sections.bestSellers.viewAllLabel}
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* NFC Section */}
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-square rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=800&fit=crop"
-                alt="NFC pet memorial card opening a digital memory page on smartphone"
+                src={sections.nfc.image.src}
+                alt={sections.nfc.image.alt}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -105,33 +108,35 @@ export function HomePage() {
             </div>
             <div>
               <h2 className="font-serif text-3xl md:text-4xl text-text mb-4">
-                A Memorial Card That Opens Their Story
+                {sections.nfc.title}
               </h2>
               <p className="text-muted text-lg leading-relaxed mb-6">
-                Our NFC pet memorial cards allow families to keep photos, videos, stories, and loving messages in one digital memorial page. Simply tap the card with a smartphone to open the memory page.
+                {sections.nfc.description}
               </p>
               <ul className="space-y-3 mb-8">
-                {nfcKeyPoints.map((point) => (
+                {sections.nfc.keyPoints.map((point) => (
                   <li key={point} className="flex items-start gap-3 text-muted">
                     <Check className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                     {point}
                   </li>
                 ))}
               </ul>
-              <Button href="/collections/nfc-memorial-cards" size="lg">
-                Explore NFC Memorial Cards
+              <Button href={sections.nfc.cta.href} size="lg">
+                {sections.nfc.cta.label}
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
       <section className="py-16 md:py-20 bg-highlight">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading title="How It Works" subtitle="Creating a personalized memorial gift is simple and thoughtful." />
+          <SectionHeading
+            title={sections.howItWorks.title}
+            subtitle={sections.howItWorks.subtitle}
+          />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {howItWorksSteps.map((step) => (
+            {content.howItWorksSteps.map((step) => (
               <div key={step.step} className="text-center">
                 <div className="w-12 h-12 rounded-full bg-btn text-btn-text flex items-center justify-center mx-auto mb-4 text-lg font-serif">
                   {step.step}
@@ -144,12 +149,11 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Personalization */}
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading title="Made Personal for Every Beloved Companion" />
+          <SectionHeading title={sections.personalization.title} />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {personalizationOptions.map((option) => (
+            {content.personalizationOptions.map((option) => (
               <div key={option.label} className="text-center p-5 rounded-xl bg-bg hover:bg-highlight transition-colors">
                 <div className="w-12 h-12 rounded-full bg-card text-gold flex items-center justify-center mx-auto mb-3 shadow-sm">
                   {personalizationIcons[option.icon]}
@@ -162,13 +166,11 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Reviews */}
       <ReviewsSection reviews={reviews} />
 
-      {/* Blog */}
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading title="Pet Memorial Guides & Sympathy Gift Ideas" />
+          <SectionHeading title={sections.blog.title} />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {blogPosts.map((post) => (
               <Link
@@ -190,7 +192,9 @@ export function HomePage() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Button href="/blog" variant="outline">View All Guides</Button>
+            <Button href="/blog" variant="outline">
+              {sections.blog.viewAllLabel}
+            </Button>
           </div>
         </div>
       </section>

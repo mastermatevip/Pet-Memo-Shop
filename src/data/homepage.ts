@@ -1,104 +1,14 @@
-import type { CategoryCard, HowItWorksStep, PersonalizationOption } from "@/types";
+import { loadHomepageContent } from "@/lib/cms/store";
+import type { HomepageContent } from "@/lib/cms/types";
 
-export const homepageCategories: CategoryCard[] = [
-  {
-    slug: "dog-memorial-gifts",
-    title: "Dog Memorial Gifts",
-    description: "Personalized keepsakes to honor your loyal companion.",
-    image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=400&fit=crop",
-    imageAlt: "dog memorial gifts including personalized photo frame",
-  },
-  {
-    slug: "cat-memorial-gifts",
-    title: "Cat Memorial Gifts",
-    description: "Gentle tributes for your beloved feline friend.",
-    image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop",
-    imageAlt: "cat memorial gifts with personalized keepsakes",
-  },
-  {
-    slug: "pet-memorial-jewelry",
-    title: "Pet Memorial Jewelry",
-    description: "Wearable keepsakes to keep their memory close.",
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=400&fit=crop",
-    imageAlt: "pet memorial jewelry with engraved pendant",
-  },
-  {
-    slug: "pet-urns",
-    title: "Pet Urns",
-    description: "Elegant urns with personalized nameplates.",
-    image: "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&h=400&fit=crop",
-    imageAlt: "wooden pet cremation urn with nameplate",
-  },
-  {
-    slug: "nfc-memorial-cards",
-    title: "NFC Memorial Tags",
-    description: "Carbon fiber tags that open an online memorial.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
-    imageAlt: "carbon fiber NFC pet memorial tag with smartphone",
-  },
-  {
-    slug: "memorial-gift-boxes",
-    title: "Memorial Gift Boxes",
-    description: "Curated gift sets for remembrance.",
-    image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&h=400&fit=crop",
-    imageAlt: "memorial gift box with keepsakes",
-  },
-];
+export {
+  homepageCategories,
+  howItWorksSteps,
+  personalizationOptions,
+  nfcKeyPoints,
+  digitalMemorialFields,
+} from "@/data/homepage.static";
 
-export const howItWorksSteps: HowItWorksStep[] = [
-  {
-    step: 1,
-    title: "Choose Your Keepsake",
-    description: "Browse our collection of personalized memorial gifts and select the perfect tribute.",
-  },
-  {
-    step: 2,
-    title: "Upload Pet Photo & Details",
-    description: "Add your pet's name, photo, dates, and a personal message during checkout.",
-  },
-  {
-    step: 3,
-    title: "Preview and Confirm Design",
-    description: "We send a design proof for your review before anything goes into production.",
-  },
-  {
-    step: 4,
-    title: "Receive Your Memorial Gift",
-    description: "Your personalized keepsake arrives beautifully packaged and ready to display.",
-  },
-  {
-    step: 5,
-    title: "Open the Digital Memorial Page",
-    description: "For NFC products, tap the tag or scan the QR code to access the online memorial page.",
-  },
-];
-
-export const personalizationOptions: PersonalizationOption[] = [
-  { icon: "type", label: "Name Engraving", description: "Your pet's name beautifully engraved" },
-  { icon: "image", label: "Photo Printing", description: "Upload your favorite pet photo" },
-  { icon: "calendar", label: "Memorial Date", description: "Birth and remembrance dates" },
-  { icon: "message", label: "Custom Message", description: "A personal message or quote" },
-  { icon: "gift", label: "Gift Box", description: "Premium gift packaging available" },
-  { icon: "nfc", label: "NFC Digital Page", description: "Tap to open a digital memorial" },
-];
-
-export const nfcKeyPoints = [
-  "Add pet photos and videos",
-  "Include name, dates, and story",
-  "Tap with a smartphone",
-  "QR code backup available",
-  "Perfect beside an urn, photo frame, or keepsake box",
-];
-
-export const digitalMemorialFields = [
-  "Pet name",
-  "Pet photo",
-  "Birth date",
-  "Memorial date",
-  "Pet story",
-  "Photo gallery",
-  "Video link",
-  "Family message",
-  "Favorite memory",
-  "Optional guestbook",
-];
+export function getHomepageContent(): HomepageContent {
+  return loadHomepageContent();
+}

@@ -13,19 +13,18 @@ import { ReviewsSection } from "@/components/shared/ReviewsSection";
 import { NFCExplanation } from "@/components/shared/NFCExplanation";
 import { formatPrice, getEstimatedDelivery } from "@/lib/utils";
 import { getReviewsByProduct } from "@/data/reviews";
-import { getRelatedProducts } from "@/data/products";
 import type { Product } from "@/types";
 
 interface ProductPageContentProps {
   product: Product;
+  relatedProducts: Product[];
 }
 
-export function ProductPageContent({ product }: ProductPageContentProps) {
+export function ProductPageContent({ product, relatedProducts }: ProductPageContentProps) {
   const [activeImage, setActiveImage] = useState(0);
   const displayPrice = product.salePrice ?? product.price;
   const hasSale = product.salePrice !== undefined;
   const reviews = getReviewsByProduct(product.slug);
-  const relatedProducts = getRelatedProducts(product.relatedSlugs);
 
   return (
     <>
