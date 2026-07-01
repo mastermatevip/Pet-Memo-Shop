@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import type { Product } from "@/types";
 import { AdminField, adminInputClass, adminTextareaClass } from "@/components/admin/AdminField";
+import { ProductImagesEditor } from "@/components/admin/ProductImagesEditor";
 import { SaveStatus } from "@/components/admin/SaveStatus";
 
 interface Props {
@@ -19,15 +20,9 @@ export function ProductEditor({ initial }: Props) {
     setProduct((p) => ({ ...p, [key]: value }));
   }
 
-  function updateMainImage(field: "src" | "alt", value: string) {
-    setProduct((p) => {
-      const images = [...p.images];
-      if (!images[0]) {
-        images[0] = { src: "", alt: "", type: "main" };
-      }
-      images[0] = { ...images[0], [field]: value };
-      return { ...p, images };
-    });
+  function normalizeImages(images: Product["images"]) {
+    const filtered = images.filter((img) => img.src.trim());
+    return filtered.length > 0 ? filtered : product.images.filter((img) => img.src.trim());
   }
 
   function specsToText(specs: Record<string, string>) {
@@ -50,12 +45,21 @@ export function ProductEditor({ initial }: Props) {
 
   async function handleSave(e: React.FormEvent) {
     e.preventDefault();
+
+    const images = normalizeImages(product.images);
+    if (images.length === 0) {
+      setStatus("error");
+      return;
+    }
+
     setStatus("saving");
+
+    const payload = { ...product, images };
 
     const res = await fetch(`/api/admin/products/${product.slug}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(product),
+      body: JSON.stringify(payload),
     });
 
     if (!res.ok) {
@@ -63,6 +67,7 @@ export function ProductEditor({ initial }: Props) {
       return;
     }
 
+    setProduct(payload);
     setStatus("saved");
     router.refresh();
     setTimeout(() => setStatus("idle"), 2000);
@@ -104,6 +109,11 @@ export function ProductEditor({ initial }: Props) {
           />
         </AdminField>
       </div>
+
+      <ProductImagesEditor
+        images={product.images}
+        onChange={(images) => setField("images", images)}
+      />
 
       <AdminField label="短描述">
         <textarea
@@ -147,21 +157,6 @@ export function ProductEditor({ initial }: Props) {
           />
         </AdminField>
       </div>
-
-      <AdminField label="主图 URL">
-        <input
-          className={adminInputClass}
-          value={product.images[0]?.src ?? ""}
-          onChange={(e) => updateMainImage("src", e.target.value)}
-        />
-      </AdminField>
-      <AdminField label="主图 alt">
-        <input
-          className={adminInputClass}
-          value={product.images[0]?.alt ?? ""}
-          onChange={(e) => updateMainImage("alt", e.target.value)}
-        />
-      </AdminField>
 
       <AdminField label="标签" hint="英文逗号分隔">
         <input
@@ -209,7 +204,10 @@ export function ProductEditor({ initial }: Props) {
         >
           保存商品
         </button>
-        <SaveStatus status={status} />
+        <SaveStatus
+          status={status}
+          message={status === "error" && normalizeImages(product.images).length === 0 ? "至少保留一张有效图片" : undefined}
+        />
       </div>
     </form>
   );
