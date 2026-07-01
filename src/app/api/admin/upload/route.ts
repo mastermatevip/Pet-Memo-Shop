@@ -60,8 +60,21 @@ export async function POST(request: Request) {
   }
 
   const url = `/uploads/products/${Date.now()}-${randomBytes(6).toString("hex")}${processed.ext}`;
+  const filename = url.replace("/uploads/products/", "");
   const dir = ensureUploadDir();
-  fs.writeFileSync(path.join(dir, url.replace("/uploads/products/", "")), processed.buffer);
+
+  try {
+    fs.writeFileSync(path.join(dir, filename), processed.buffer);
+  } catch (err) {
+    const code = err instanceof Error && "code" in err ? String((err as NodeJS.ErrnoException).code) : "";
+    if (code === "EACCES" || code === "EPERM") {
+      return NextResponse.json(
+        { error: "上传目录无写入权限，请在容器内执行：chown -R nextjs:nodejs /app/public/uploads" },
+        { status: 500 }
+      );
+    }
+    return NextResponse.json({ error: "保存图片失败" }, { status: 500 });
+  }
 
   let product;
   if (typeof slug === "string" && slug.trim()) {
