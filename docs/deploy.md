@@ -2,7 +2,8 @@
 
 > 域名：**petmemoshop.com**  
 > 仓库：`mastermatevip/Pet-Memo-Shop` · 分支 `main`  
-> 方式：与 **carbonfactorys.com（碳工厂）** 相同 — **GitHub push → Coolify 自动构建上线**
+> 方式：与 **carbonfactorys.com（碳工厂）** 相同 — **GitHub push → Coolify 自动构建上线**  
+> **完成状态见：** `docs/project-status.md`
 
 ---
 
@@ -12,7 +13,7 @@
 本地改代码 → .\deploy.ps1 → GitHub main 更新 → Coolify webhook → Docker build → 上线
 ```
 
-Pet Memo Shop 是纯展示型 Next.js 站点（无后台上传目录），比碳工厂更简单，不需要 `data/` / `public/uploads/` 权限配置。
+Pet Memo Shop 为 Next.js Standalone + **文件型 CMS 后台**，需挂载持久卷保存编辑内容与上传图片。
 
 ---
 
@@ -20,7 +21,7 @@ Pet Memo Shop 是纯展示型 Next.js 站点（无后台上传目录），比碳
 
 在 **与 carbonfactorys 同一台 Coolify VPS** 上：
 
-1. **GitHub** — 仓库已创建：`mastermatevip/Pet-Memo-Shop`
+1. **GitHub** — 仓库：`mastermatevip/Pet-Memo-Shop`
 
 2. **Coolify** → **+ New Resource** → **Application** → **Public Repository**  
    - Repository：`https://github.com/mastermatevip/Pet-Memo-Shop`  
@@ -33,13 +34,23 @@ Pet Memo Shop 是纯展示型 Next.js 站点（无后台上传目录），比碳
    ```
    NODE_ENV=production
    PORT=3000
+   ADMIN_PASSWORD=强密码
+   ADMIN_SECRET=至少32位随机字符串
    ```
 
-4. **Deploy** — 首次手动点 Deploy，确认 Build 成功、容器 Running。
+4. **持久卷挂载**（Storages / Volumes）：
+   | 容器路径 | 用途 |
+   |----------|------|
+   | `/app/data/cms` | CMS JSON（homepage、products、blog） |
+   | `/app/public/uploads` | 商品上传图片 |
 
-5. **DNS** — 域名 A/CNAME 指向 Coolify 服务器（与 carbonfactorys 同 IP 即可，Coolify 按域名路由）。
+5. **Deploy** — 首次手动点 Deploy，确认 Build 成功、容器 Running。
 
-6. **SSL** — Coolify 里为 `petmemoshop.com` 开启 Let's Encrypt。
+6. **DNS** — 域名 A/CNAME 指向 Coolify 服务器（与 carbonfactorys 同 IP 即可，Coolify 按域名路由）。
+
+7. **SSL** — Coolify 里为 `petmemoshop.com` 开启 Let's Encrypt。
+
+8. **验收后台** — 访问 `https://petmemoshop.com/admin`，用 `ADMIN_PASSWORD` 登录。
 
 ---
 
@@ -79,10 +90,10 @@ npm run deploy
 GIT_PROXY=http://127.0.0.1:10808
 ```
 
-或全局一次配置：
+或单次 push：
 
 ```powershell
-git config --global http.https://github.com.proxy http://127.0.0.1:10808
+git -c "http.proxy=http://127.0.0.1:10808" -c "https.proxy=http://127.0.0.1:10808" push origin main
 ```
 
 详细排障见碳工厂文档：`I:\独立站\碳工厂\碳工厂\carbonedge\GitHub-Push排障.md`
@@ -98,7 +109,29 @@ git config --global http.https://github.com.proxy http://127.0.0.1:10808
 
 ---
 
-## 五、本地开发 vs 生产
+## 五、常见问题
+
+### 上传图片失败 / 后台图片不显示
+
+1. 确认 `/app/public/uploads` 卷已挂载
+2. 进入容器检查文件是否存在：
+   ```bash
+   ls -la /app/public/uploads/products/
+   ```
+3. 确认属主为 `nextjs:nodejs`（entrypoint 会自动 chown；旧容器可手动执行）：
+   ```bash
+   chown -R nextjs:nodejs /app/public/uploads
+   ```
+4. 直接访问图片 URL 验证：
+   `https://petmemoshop.com/uploads/products/xxx.webp`
+
+### CMS 编辑丢失
+
+确认 `/app/data/cms` 卷已挂载，且包含 `homepage.json`、`products.json`、`blog.json`。
+
+---
+
+## 六、本地开发 vs 生产
 
 | 命令 | 用途 |
 |------|------|
@@ -109,11 +142,12 @@ git config --global http.https://github.com.proxy http://127.0.0.1:10808
 
 ---
 
-## 六、文件清单
+## 七、文件清单
 
 | 文件 | 作用 |
 |------|------|
-| `Dockerfile` | Coolify Docker 构建（Next.js standalone） |
+| `Dockerfile` | Coolify Docker 构建（Next.js standalone + gosu） |
+| `docker-entrypoint.sh` | 启动时修复卷权限 |
 | `next.config.ts` | `output: 'standalone'`、www 重定向、安全头 |
 | `deploy.ps1` | 一键构建 + git push |
 | `deploy.local.config.example` | 仓库 URL、代理端口模板 |
@@ -121,23 +155,25 @@ git config --global http.https://github.com.proxy http://127.0.0.1:10808
 
 ---
 
-## 七、与碳工厂的差异
+## 八、与碳工厂的差异
 
 | 项目 | 碳工厂 | Pet Memo Shop |
 |------|--------|---------------|
 | 仓库 | `mastermatevip/carbonfactorys` | `mastermatevip/Pet-Memo-Shop` |
-| 多语言 | `/[lang]/...` | 仅英文，无语言前缀 |
-| 后台/API | Supabase + 管理后台 + uploads | 无（静态产品数据在 `src/data/`） |
-| 数据目录 | `data/`、`public/uploads/` 需权限 | 不需要 |
-| 部署复杂度 | 较高 | 较低 |
+| 多语言 | `/[lang]/...` | 仅英文，无语言前缀（v2 计划见 i18n-roadmap） |
+| 后台 | Supabase + 管理后台 | 文件型 CMS（首页/商品/博客） |
+| 数据目录 | `data/`、`public/uploads/` | 同上，需 Coolify 卷 |
+| 部署复杂度 | 较高 | 中等 |
 
 ---
 
-## 八、验收清单（上线后）
+## 九、验收清单（上线后）
 
-- [ ] https://petmemoshop.com/ 首页 Logo + 产品正常
-- [ ] https://petmemoshop.com/products/carbon-fiber-nfc-memorial-tag
-- [ ] https://petmemoshop.com/digital-pet-memorial
-- [ ] https://petmemoshop.com/sitemap.xml
-- [ ] www → 非 www 301
-- [ ] HTTPS 证书有效
+- [x] https://petmemoshop.com/ 首页正常
+- [x] 商品页、博客页正常
+- [x] https://petmemoshop.com/admin 登录与编辑
+- [x] 商品图片上传与显示
+- [x] 博客编辑保存后前台更新
+- [x] https://petmemoshop.com/sitemap.xml
+- [x] www → 非 www 301
+- [x] HTTPS 证书有效
