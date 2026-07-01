@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { Product } from "@/types";
 import { AdminField, adminInputClass, adminTextareaClass } from "@/components/admin/AdminField";
@@ -15,6 +15,10 @@ export function ProductEditor({ initial }: Props) {
   const router = useRouter();
   const [product, setProduct] = useState(initial);
   const [status, setStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
+
+  useEffect(() => {
+    setProduct(initial);
+  }, [initial]);
 
   function setField<K extends keyof Product>(key: K, value: Product[K]) {
     setProduct((p) => ({ ...p, [key]: value }));
@@ -111,6 +115,7 @@ export function ProductEditor({ initial }: Props) {
       </div>
 
       <ProductImagesEditor
+        productSlug={product.slug}
         images={product.images}
         onChange={(images) => setField("images", images)}
       />

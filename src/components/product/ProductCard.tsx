@@ -6,6 +6,7 @@ import { Eye, ShoppingBag } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { StarRating } from "@/components/ui/StarRating";
 import { formatPrice } from "@/lib/utils";
+import { isLocalUpload } from "@/lib/images";
 import type { Product } from "@/types";
 
 interface ProductCardProps {
@@ -25,6 +26,7 @@ export function ProductCard({ product }: ProductCardProps) {
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
           sizes="(max-width: 768px) 50vw, 25vw"
+          unoptimized={isLocalUpload(product.images[0].src)}
         />
         {product.customizable && (
           <div className="absolute top-3 left-3">

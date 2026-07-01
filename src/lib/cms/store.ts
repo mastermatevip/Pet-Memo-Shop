@@ -67,3 +67,31 @@ export function saveProducts(products: Product[]): ProductsFile {
 export function getProductBySlugFromStore(slug: string): Product | undefined {
   return loadProducts().find((p) => p.slug === slug);
 }
+
+export function updateProductImageSrc(
+  slug: string,
+  imageIndex: number,
+  src: string
+): Product | undefined {
+  const products = loadProducts();
+  const productIndex = products.findIndex((p) => p.slug === slug);
+  if (productIndex === -1) return undefined;
+
+  const product = products[productIndex];
+  const images = product.images.map((img) => ({ ...img }));
+
+  if (imageIndex < 0) return undefined;
+
+  while (images.length <= imageIndex) {
+    images.push({
+      src: "",
+      alt: product.title,
+      type: images.length === 0 ? "main" : "detail",
+    });
+  }
+
+  images[imageIndex] = { ...images[imageIndex], src };
+  products[productIndex] = { ...product, images };
+  saveProducts(products);
+  return products[productIndex];
+}

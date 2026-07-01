@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { ChevronDown, ChevronUp, Plus, Trash2, Upload } from "lucide-react";
-import type { ProductImage } from "@/types";
+import type { Product, ProductImage } from "@/types";
+import { isLocalUpload } from "@/lib/images";
 import { AdminField, adminInputClass } from "@/components/admin/AdminField";
 
 const IMAGE_TYPES: { value: ProductImage["type"]; label: string }[] = [
@@ -17,6 +19,7 @@ const IMAGE_TYPES: { value: ProductImage["type"]; label: string }[] = [
 ];
 
 interface Props {
+  productSlug: string;
   images: ProductImage[];
   onChange: (images: ProductImage[]) => void;
 }
@@ -25,9 +28,11 @@ function emptyImage(type: ProductImage["type"] = "detail"): ProductImage {
   return { src: "", alt: "", type };
 }
 
-export function ProductImagesEditor({ images, onChange }: Props) {
+export function ProductImagesEditor({ productSlug, images, onChange }: Props) {
+  const router = useRouter();
   const [uploadIndex, setUploadIndex] = useState<number | null>(null);
   const [uploadError, setUploadError] = useState<string | null>(null);
+  const [uploadOk, setUploadOk] = useState<string | null>(null);
   const fileRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   function baseImages(): ProductImage[] {
@@ -60,20 +65,37 @@ export function ProductImagesEditor({ images, onChange }: Props) {
   async function handleUpload(index: number, file: File) {
     setUploadIndex(index);
     setUploadError(null);
+    setUploadOk(null);
 
     const body = new FormData();
     body.append("file", file);
+    body.append("slug", productSlug);
+    body.append("imageIndex", String(index));
 
     try {
       const res = await fetch("/api/admin/upload", { method: "POST", body });
-      const data = (await res.json()) as { url?: string; error?: string };
+      const data = (await res.json()) as {
+        url?: string;
+        error?: string;
+        product?: Product;
+        saved?: boolean;
+      };
 
       if (!res.ok || !data.url) {
         setUploadError(data.error || "上传失败");
         return;
       }
 
-      updateImage(index, { src: data.url });
+      if (data.product?.images) {
+        onChange(data.product.images);
+        setUploadOk(`图片 ${index + 1} 已上传并替换，前台已更新`);
+      } else {
+        updateImage(index, { src: data.url });
+        setUploadOk(`图片 ${index + 1} 已上传，请点击「保存商品」写入`);
+      }
+
+      router.refresh();
+      setTimeout(() => setUploadOk(null), 4000);
     } catch {
       setUploadError("上传失败，请重试");
     } finally {
@@ -98,15 +120,16 @@ export function ProductImagesEditor({ images, onChange }: Props) {
       </div>
 
       <p className="text-sm text-muted">
-        支持 URL 或本地上传（JPG / PNG / WebP / GIF，最大 10MB）。上传后自动压缩：最长边 2000px、转 WebP（GIF 除外）。
+        点击「上传并替换」会立即更新该图并同步到前台（自动压缩为 WebP，最长边 2000px）。修改 URL 或顺序后仍需点「保存商品」。
       </p>
 
       {uploadError ? <p className="text-sm text-red-700">{uploadError}</p> : null}
+      {uploadOk ? <p className="text-sm text-green-700">{uploadOk}</p> : null}
 
       <div className="space-y-4">
         {list.map((image, index) => (
           <div
-            key={index}
+            key={`${index}-${image.src}`}
             className="rounded-xl border border-border bg-card p-4 space-y-3"
           >
             <div className="flex gap-4">
@@ -118,7 +141,7 @@ export function ProductImagesEditor({ images, onChange }: Props) {
                     fill
                     className="object-cover"
                     sizes="96px"
-                    unoptimized={image.src.startsWith("/uploads/")}
+                    unoptimized={isLocalUpload(image.src)}
                   />
                 ) : (
                   <div className="flex items-center justify-center h-full text-xs text-light">
@@ -182,10 +205,10 @@ export function ProductImagesEditor({ images, onChange }: Props) {
                     type="button"
                     disabled={uploadIndex === index}
                     onClick={() => fileRefs.current[index]?.click()}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-sm hover:bg-highlight disabled:opacity-50"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-gold bg-highlight px-3 py-1.5 text-sm font-medium hover:bg-gold/10 disabled:opacity-50"
                   >
                     <Upload className="w-4 h-4" />
-                    {uploadIndex === index ? "上传中…" : "上传图片"}
+                    {uploadIndex === index ? "上传中…" : "上传并替换"}
                   </button>
 
                   <button

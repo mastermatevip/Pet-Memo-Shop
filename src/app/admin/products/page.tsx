@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { loadProducts } from "@/lib/cms/store";
+import { isLocalUpload } from "@/lib/images";
 
 export const dynamic = "force-dynamic";
 
@@ -33,6 +34,7 @@ export default function AdminProductsPage() {
                           fill
                           className="object-cover"
                           sizes="40px"
+                          unoptimized={isLocalUpload(product.images[0].src)}
                         />
                       ) : null}
                     </div>
