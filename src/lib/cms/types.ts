@@ -3,6 +3,8 @@ import type {
   HowItWorksStep,
   PersonalizationOption,
   Product,
+  BlogCategory,
+  BlogPost,
 } from "@/types";
 
 export interface HomepageHero {
@@ -48,5 +50,11 @@ export interface ProductsFile {
 
 export interface HomepageFile {
   content: HomepageContent;
+  updatedAt: string;
+}
+
+export interface BlogFile {
+  categories: BlogCategory[];
+  posts: BlogPost[];
   updatedAt: string;
 }

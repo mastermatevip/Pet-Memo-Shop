@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
-import { blogPosts, blogCategories } from "@/data/blog";
+import { getBlogCategories, getBlogPosts } from "@/data/blog";
+
+export const dynamic = "force-dynamic";
 
 export const metadata = buildMetadata({
   title: "Pet Memorial Guides & Sympathy Gift Ideas",
@@ -10,6 +12,11 @@ export const metadata = buildMetadata({
 });
 
 export default function BlogPage() {
+  const blogCategories = getBlogCategories();
+  const blogPosts = [...getBlogPosts()].sort((a, b) =>
+    b.publishedAt.localeCompare(a.publishedAt)
+  );
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
       <div className="text-center mb-12">
@@ -21,7 +28,6 @@ export default function BlogPage() {
         </p>
       </div>
 
-      {/* Categories */}
       <div className="flex flex-wrap gap-3 justify-center mb-12">
         {blogCategories.map((cat) => (
           <Link
@@ -34,7 +40,6 @@ export default function BlogPage() {
         ))}
       </div>
 
-      {/* Posts Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogPosts.map((post) => (
           <Link

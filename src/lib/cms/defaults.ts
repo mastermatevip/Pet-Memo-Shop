@@ -5,7 +5,8 @@ import {
   nfcKeyPoints,
 } from "@/data/homepage.static";
 import { staticProducts } from "@/data/products.static";
-import type { HomepageContent, HomepageFile, ProductsFile } from "./types";
+import { blogCategories, blogPosts } from "@/data/blog.static";
+import type { HomepageContent, HomepageFile, ProductsFile, BlogFile } from "./types";
 
 export function defaultHomepageContent(): HomepageContent {
   return {
@@ -68,6 +69,14 @@ export function defaultHomepageFile(): HomepageFile {
 export function defaultProductsFile(): ProductsFile {
   return {
     products: staticProducts.map((p) => ({ ...p })),
+    updatedAt: new Date().toISOString(),
+  };
+}
+
+export function defaultBlogFile(): BlogFile {
+  return {
+    categories: blogCategories.map((c) => ({ ...c })),
+    posts: blogPosts.map((p) => ({ ...p, faqs: p.faqs.map((f) => ({ ...f })) })),
     updatedAt: new Date().toISOString(),
   };
 }

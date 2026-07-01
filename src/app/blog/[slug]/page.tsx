@@ -3,16 +3,14 @@ import { notFound } from "next/navigation";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { Button } from "@/components/ui/Button";
 import { buildMetadata } from "@/lib/seo";
-import { getBlogPostBySlug, getAllBlogSlugs, getLatestBlogPosts } from "@/data/blog";
+import { getBlogPostBySlug, getLatestBlogPosts } from "@/data/blog";
 import { formatDate } from "@/lib/utils";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateStaticParams() {
-  return getAllBlogSlugs().map((slug) => ({ slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;

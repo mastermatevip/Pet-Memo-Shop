@@ -2,10 +2,10 @@ import "server-only";
 
 import fs from "fs";
 import path from "path";
-import { defaultHomepageFile, defaultProductsFile } from "./defaults";
-import { CMS_DIR, HOMEPAGE_FILE, PRODUCTS_FILE, UPLOADS_DIR } from "./paths";
-import type { HomepageContent, HomepageFile, ProductsFile } from "./types";
-import type { Product } from "@/types";
+import { defaultHomepageFile, defaultProductsFile, defaultBlogFile } from "./defaults";
+import { CMS_DIR, HOMEPAGE_FILE, PRODUCTS_FILE, BLOG_FILE, UPLOADS_DIR } from "./paths";
+import type { HomepageContent, HomepageFile, ProductsFile, BlogFile } from "./types";
+import type { Product, BlogCategory, BlogPost } from "@/types";
 
 function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) {
@@ -35,6 +35,9 @@ export function initCmsFiles() {
   }
   if (!fs.existsSync(PRODUCTS_FILE)) {
     writeJson(PRODUCTS_FILE, defaultProductsFile());
+  }
+  if (!fs.existsSync(BLOG_FILE)) {
+    writeJson(BLOG_FILE, defaultBlogFile());
   }
 }
 
@@ -94,4 +97,32 @@ export function updateProductImageSrc(
   products[productIndex] = { ...product, images };
   saveProducts(products);
   return products[productIndex];
+}
+
+function readBlogFile(): BlogFile {
+  initCmsFiles();
+  return readJson<BlogFile>(BLOG_FILE) ?? defaultBlogFile();
+}
+
+export function loadBlogCategories(): BlogCategory[] {
+  return readBlogFile().categories;
+}
+
+export function loadBlogPosts(): BlogPost[] {
+  return readBlogFile().posts;
+}
+
+export function saveBlogData(categories: BlogCategory[], posts: BlogPost[]): BlogFile {
+  initCmsFiles();
+  const file: BlogFile = {
+    categories,
+    posts,
+    updatedAt: new Date().toISOString(),
+  };
+  writeJson(BLOG_FILE, file);
+  return file;
+}
+
+export function getBlogPostBySlugFromStore(slug: string): BlogPost | undefined {
+  return loadBlogPosts().find((p) => p.slug === slug);
 }
