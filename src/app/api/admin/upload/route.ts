@@ -4,16 +4,11 @@ import path from "path";
 import "server-only";
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/cms/require-admin";
+import { processProductUpload } from "@/lib/cms/process-upload-image";
 import { UPLOADS_DIR } from "@/lib/cms/paths";
 
-const MAX_BYTES = 5 * 1024 * 1024;
+const MAX_BYTES = 10 * 1024 * 1024;
 const ALLOWED = new Set(["image/jpeg", "image/png", "image/webp", "image/gif"]);
-const EXT: Record<string, string> = {
-  "image/jpeg": ".jpg",
-  "image/png": ".png",
-  "image/webp": ".webp",
-  "image/gif": ".gif",
-};
 
 function ensureUploadDir() {
   const dir = path.join(UPLOADS_DIR, "products");
@@ -39,14 +34,27 @@ export async function POST(request: Request) {
   }
 
   if (file.size > MAX_BYTES) {
-    return NextResponse.json({ error: "文件不能超过 5MB" }, { status: 400 });
+    return NextResponse.json({ error: "文件不能超过 10MB" }, { status: 400 });
   }
 
-  const ext = EXT[file.type] ?? (path.extname(file.name) || ".jpg");
-  const name = `${Date.now()}-${randomBytes(6).toString("hex")}${ext}`;
-  const dir = ensureUploadDir();
-  const buffer = Buffer.from(await file.arrayBuffer());
-  fs.writeFileSync(path.join(dir, name), buffer);
+  const raw = Buffer.from(await file.arrayBuffer());
+  const originalSize = raw.length;
 
-  return NextResponse.json({ url: `/uploads/products/${name}` });
+  let processed;
+  try {
+    processed = await processProductUpload(raw, file.type);
+  } catch {
+    return NextResponse.json({ error: "图片处理失败，请换一张试试" }, { status: 400 });
+  }
+
+  const name = `${Date.now()}-${randomBytes(6).toString("hex")}${processed.ext}`;
+  const dir = ensureUploadDir();
+  fs.writeFileSync(path.join(dir, name), processed.buffer);
+
+  return NextResponse.json({
+    url: `/uploads/products/${name}`,
+    originalSize,
+    size: processed.buffer.length,
+    mime: processed.mime,
+  });
 }

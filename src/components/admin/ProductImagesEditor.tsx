@@ -98,7 +98,7 @@ export function ProductImagesEditor({ images, onChange }: Props) {
       </div>
 
       <p className="text-sm text-muted">
-        支持填写图片 URL 或本地上传（JPG / PNG / WebP / GIF，最大 5MB）。第一张建议设为主图。
+        支持 URL 或本地上传（JPG / PNG / WebP / GIF，最大 10MB）。上传后自动压缩：最长边 2000px、转 WebP（GIF 除外）。
       </p>
 
       {uploadError ? <p className="text-sm text-red-700">{uploadError}</p> : null}
