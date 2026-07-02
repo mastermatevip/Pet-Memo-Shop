@@ -3,6 +3,7 @@ FROM node:20-slim AS base
 WORKDIR /app
 
 FROM base AS deps
+# Must stay in sync with package.json — npm ci fails if lock is missing entries (e.g. @swc/helpers for next-intl).
 COPY package.json package-lock.json ./
 RUN npm ci
 

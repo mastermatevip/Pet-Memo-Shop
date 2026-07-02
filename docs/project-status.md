@@ -17,6 +17,7 @@
 | 商品图片 | 多图编辑、本地上传、Sharp 压缩 WebP | ✅ | `680d8b7`–`770c50c` |
 | 上传修复 | 自动保存 CMS、卷权限、Standalone 图片服务 | ✅ | `f4d808d`–`ada4af3` |
 | 博客 CMS | 博客文章列表 + 单篇编辑，前台即时生效 | ✅ | `25b3098` |
+| 多语言 i18n | next-intl：en/de/es/fr/zh，前台语言切换 + 内容翻译 | 🔄 | `5011265`–`5c505d7` |
 
 ---
 
@@ -89,16 +90,27 @@ ADMIN_SECRET=至少32位随机字符串
 
 ```powershell
 cd I:\独立站\宠物纪念\pawaura
-.\deploy.ps1
+.\deploy.ps1    # 内含 npm ci + build，与 Coolify Docker 一致
 # 或
 npm run deploy
 ```
+
+`deploy.ps1` 会先跑 **`npm ci`** 再 **`npm run build`**，避免 lock 不同步只在 Coolify 上才报错。
 
 国内 push 需代理：
 
 ```powershell
 git -c "http.proxy=http://127.0.0.1:10808" -c "https.proxy=http://127.0.0.1:10808" push origin main
 ```
+
+### Coolify 构建失败记录（2026-07-02）
+
+| 问题 | 原因 | 修复 |
+|------|------|------|
+| `Missing: @swc/helpers@0.5.23` | `npm ci` 时 lock 与 `package.json` 不同步 | `5c505d7` 添加 `@swc/helpers` 并提交 lock |
+| `Failed to fetch Google Fonts` | `next/font/google` 构建期访问外网 | `d06e289` 改为运行时 `<link>` 加载 |
+
+**详细排障与禁止事项：** `docs/deploy.md` →「Coolify 构建失败记录」
 
 ---
 
@@ -119,7 +131,8 @@ git -c "http.proxy=http://127.0.0.1:10808" -c "https.proxy=http://127.0.0.1:1080
 
 | 优先级 | 内容 | 文档 |
 |--------|------|------|
-| P1 | 多语言（en/de/es/fr/zh） | `docs/i18n-roadmap.md` |
+| P1 | 多语言上线验收（Coolify 部署 `5c505d7`+） | `docs/deploy.md` |
+| P1 | 多语言 Phase 2（CMS 多 locale、博客翻译） | `docs/i18n-roadmap.md` |
 | P2 | 首页分类卡片/步骤等可视化编辑 | — |
 | P3 | 博客分类管理、Featured Image | — |
 | P4 | Cloudflare Access / IP 限制（可选安全加固） | `docs/admin.md` |

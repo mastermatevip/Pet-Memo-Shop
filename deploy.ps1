@@ -38,6 +38,17 @@ if (Test-Path $CfgFile) {
 Push-Location $Root
 try {
   if (-not $SkipBuild) {
+    Write-Host ">> npm ci (same as Coolify Docker deps stage)"
+    npm ci 2>&1 | Out-Host
+    if ($LASTEXITCODE -ne 0) {
+      throw @"
+npm ci failed — package.json and package-lock.json are out of sync.
+Run: npm install
+Then commit package-lock.json and retry.
+See docs/deploy.md section 'Coolify build failures'.
+"@
+    }
+
     Write-Host ">> npm run build"
     npm run build 2>&1 | Out-Host
     if ($LASTEXITCODE -ne 0) { throw "Build failed" }

@@ -69,16 +69,19 @@ npm run deploy
 
 脚本流程：
 
-1. `npm run build`（本地验证构建）
-2. `git add` + `commit`（有变更时）
-3. `git push origin main`
-4. Coolify 收到 webhook 后自动 rebuild + 切换容器
+1. `npm ci`（与 Coolify Docker 相同，校验 lock 文件）
+2. `npm run build`（本地验证构建）
+3. `git add` + `commit`（有变更时）
+4. `git push origin main`
+5. Coolify 收到 webhook 后自动 rebuild + 切换容器
 
 跳过本地构建（仅推送已有 commit）：
 
 ```powershell
 .\deploy.ps1 -SkipBuild
 ```
+
+> **重要：** 不要跳过本地构建就 push 依赖变更。Coolify 使用 `npm ci`，lock 不同步会在服务器上直接失败（见下方「Coolify 构建失败记录」）。
 
 ---
 
@@ -109,7 +112,61 @@ git -c "http.proxy=http://127.0.0.1:10808" -c "https.proxy=http://127.0.0.1:1080
 
 ---
 
-## 五、常见问题
+## 五、Coolify 构建失败记录（必读）
+
+> **记录日期：** 2026-07-02  
+> **现象：** Push 成功，Coolify Deployment **Failed**（约 14 秒），线上仍是旧版本（无 i18n、无语言切换、`/zh` 404）。
+
+### 事故 1：`npm ci` — lock 文件不同步
+
+| 项目 | 内容 |
+|------|------|
+| **报错** | `Missing: @swc/helpers@0.5.23 from lock file` |
+| **阶段** | Dockerfile `RUN npm ci` |
+| **原因** | 加入 `next-intl` 后只改了 `package.json`，lock 未同步；`next-intl` 内嵌的 `@swc/core` 需要 `@swc/helpers >= 0.5.17`，lock 里仍是 Next 自带的 `0.5.15` |
+| **修复 commit** | `5c505d7` — 显式添加 `@swc/helpers@^0.5.23` 并提交 `package-lock.json` |
+
+**以后避免：**
+
+- 执行 `npm install <包名>` 或改 `package.json` 后，**必须** `git add package-lock.json` 一并提交
+- 推送前本地跑 **`npm ci`**（`deploy.ps1` 已自动执行，与 Docker 一致）
+- 不要只用 `npm run build` 而跳过 `npm ci` — 本地 npm 11 有时能 build，Docker 里 npm 10 的 `npm ci` 仍会失败
+
+### 事故 2：`next/font/google` — 构建期访问 Google Fonts
+
+| 项目 | 内容 |
+|------|------|
+| **报错** | `Failed to fetch Cormorant Garamond / Inter from Google Fonts` |
+| **阶段** | Dockerfile `RUN npm run build` |
+| **原因** | `next/font/google` 在 **build 时**请求 `fonts.googleapis.com`；Coolify VPS 常无法访问 |
+| **修复 commit** | `d06e289` — 改为 `layout.tsx` 内 `<link>` 运行时加载字体 |
+
+**以后避免：**
+
+- **禁止**在项目中使用 `next/font/google`
+- 字体用 `layout.tsx` 的 `<link rel="stylesheet" href="https://fonts.googleapis.com/...">` + `globals.css` 里的 `font-family` 字符串
+- 若需完全离线构建，改为自托管字体文件（`public/fonts/` + `@font-face`）
+
+### 推送前检查清单
+
+```powershell
+cd I:\独立站\宠物纪念\pawaura
+npm ci          # 必须通过（模拟 Coolify）
+npm run build   # 必须通过
+git status      # 若有 package-lock.json 变更，必须 commit
+.\deploy.ps1    # 或手动 push
+```
+
+### Coolify 验收（部署成功后）
+
+- [ ] Deployments 最新 commit SHA 与 GitHub `main` 一致
+- [ ] Build Log 中 `npm ci`、`npm run build` 均为成功
+- [ ] https://petmemoshop.com/ Header 有语言切换（🌐 EN ▼）
+- [ ] https://petmemoshop.com/zh 返回 200（非 404）
+
+---
+
+## 六、常见问题
 
 ### 上传图片失败 / 后台图片不显示
 
@@ -131,18 +188,19 @@ git -c "http.proxy=http://127.0.0.1:10808" -c "https.proxy=http://127.0.0.1:1080
 
 ---
 
-## 六、本地开发 vs 生产
+## 七、本地开发 vs 生产
 
 | 命令 | 用途 |
 |------|------|
 | `npm run dev` | 本地开发 http://localhost:3000 |
+| `npm ci` | 与 Docker 相同的依赖安装（推送前必跑） |
 | `npm run build` | 生产构建验证 |
 | `npm start` | 本地跑生产构建（需先 build） |
-| `.\deploy.ps1` | 构建 + 推 GitHub + 触发 Coolify |
+| `.\deploy.ps1` | npm ci + build + 推 GitHub + 触发 Coolify |
 
 ---
 
-## 七、文件清单
+## 八、文件清单
 
 | 文件 | 作用 |
 |------|------|
@@ -155,19 +213,19 @@ git -c "http.proxy=http://127.0.0.1:10808" -c "https.proxy=http://127.0.0.1:1080
 
 ---
 
-## 八、与碳工厂的差异
+## 九、与碳工厂的差异
 
 | 项目 | 碳工厂 | Pet Memo Shop |
 |------|--------|---------------|
 | 仓库 | `mastermatevip/carbonfactorys` | `mastermatevip/Pet-Memo-Shop` |
-| 多语言 | `/[lang]/...` | 仅英文，无语言前缀（v2 计划见 i18n-roadmap） |
-| 后台 | Supabase + 管理后台 | 文件型 CMS（首页/商品/博客） |
+| 多语言 | `/[lang]/...` | `/` 英文；`/de/` `/es/` `/fr/` `/zh/`（next-intl） |
+| 后台 | Supabase + 管理后台 | 文件型 CMS（首页/商品/博客），仅中文 |
 | 数据目录 | `data/`、`public/uploads/` | 同上，需 Coolify 卷 |
-| 部署复杂度 | 较高 | 中等 |
+| 部署复杂度 | 较高 | 中等；注意 `npm ci` 与字体加载约束 |
 
 ---
 
-## 九、验收清单（上线后）
+## 十、验收清单（上线后）
 
 - [x] https://petmemoshop.com/ 首页正常
 - [x] 商品页、博客页正常
@@ -177,3 +235,4 @@ git -c "http.proxy=http://127.0.0.1:10808" -c "https.proxy=http://127.0.0.1:1080
 - [x] https://petmemoshop.com/sitemap.xml
 - [x] www → 非 www 301
 - [x] HTTPS 证书有效
+- [ ] 多语言路由 `/zh` 等 + Header 语言切换（i18n 部署成功后）
