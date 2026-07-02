@@ -251,7 +251,109 @@
       "description": "Sets de regalo seleccionados para el recuerdo de mascotas.",
       "intro": "Nuestras cajas de regalo conmemorativas y cajas de recuerdos para mascotas reúnen recuerdos personalizados en un embalaje cuidado — un regalo de condolencia considerado o un set completo de recuerdo para tu querido compañero.",
       "metaTitle": "Cajas de regalo conmemorativas | Sets de cajas de recuerdos para mascotas",
-      "metaDescription": "Compra cajas de regalo conmemorativas y cajas de recuerdos para mascotas con recuerdos personalizados, velas y marcos. Un regalo de condolencia considerado por la pérdida de una mascota."
+      "metaDescription": "Compra cajas de regalo conmemorativas y cajas de recuerdos para mascotas con recuerdos personalizados, velas y marcos. Un regalo de condolencia considerado por la pérdida de una mascota.",
+      "seoHeadings": {
+        "whatAre": "¿Qué son las cajas de regalo conmemorativas?",
+        "whenToChoose": "Cuándo elegir una caja de regalo conmemorativa",
+        "personalization": "Opciones de personalización",
+        "whyChoose": "Por qué elegir nuestras cajas de regalo"
+      },
+      "relatedCategories": "Categorías relacionadas",
+      "helpfulGuides": "Guías útiles",
+      "seoSections": {
+        "whatAre": "Las cajas conmemorativas combinan recuerdos personalizados, velas, marcos o joyería en un embalaje premium.",
+        "whenToChoose": "Ideal como regalo de condolencia o cuando desea un set completo y coordinado de recuerdos.",
+        "personalization": "Cada caja puede incluir artículos personalizados con nombre, foto y fechas, más tarjeta de regalo.",
+        "whyChoose": "Presentación premium y personalización significativa para regalar o recordar."
+      }
+    },
+    "digital-pet-memorial-keepsakes": {
+      "name": "Recuerdos digitales para mascotas",
+      "h1": "Páginas conmemorativas digitales y recuerdos en línea",
+      "description": "Páginas en línea para preservar fotos, videos e historias.",
+      "intro": "Cree un tributo digital duradero. Las páginas conmemorativas preservan fotos, videos, historias y mensajes accesibles en cualquier momento.",
+      "metaTitle": "Recuerdos digitales para mascotas | Páginas de memoria en línea",
+      "metaDescription": "Cree una página conmemorativa digital con fotos, videos e historias. Acceso por tarjeta NFC o código QR.",
+      "seoHeadings": {
+        "whatAre": "¿Qué son los recuerdos digitales para mascotas?",
+        "whenToChoose": "Cuándo elegir un memorial digital",
+        "personalization": "Opciones de personalización",
+        "whyChoose": "Por qué elegir nuestras páginas digitales"
+      },
+      "relatedCategories": "Categorías relacionadas",
+      "helpfulGuides": "Guías útiles",
+      "seoSections": {
+        "whatAre": "Páginas en línea dedicadas a honrar a un compañero con fotos, videos, historias y mensajes familiares.",
+        "whenToChoose": "Cuando desea compartir recuerdos con familia y amigos o combinar con tarjeta NFC o placa.",
+        "personalization": "Nombre, galería de fotos, fechas, historia, videos, mensajes y libro de visitas opcional.",
+        "whyChoose": "Diseño cálido y elegante, accesible en cualquier momento y lugar."
+      }
+    },
+    "pet-loss-sympathy-gifts": {
+      "name": "Regalos de condolencia por pérdida de mascota",
+      "h1": "Regalos de memoria y condolencia",
+      "description": "Regalos considerados para quienes están de luto.",
+      "intro": "Ofrezca consuelo con regalos de memoria personalizados, cajas de condolencia y tributos digitales.",
+      "metaTitle": "Regalos de memoria | Condolencias por pérdida de mascota",
+      "metaDescription": "Regalos de memoria para amigos y familia en duelo. Marcos, joyería, velas y cajas de regalo personalizadas.",
+      "seoHeadings": {
+        "whatAre": "¿Qué son los regalos de condolencia por pérdida de mascota?",
+        "whenToChoose": "Cuándo enviar un regalo de condolencia",
+        "personalization": "Opciones de personalización",
+        "whyChoose": "Por qué elegir nuestros regalos de condolencia"
+      },
+      "relatedCategories": "Categorías relacionadas",
+      "helpfulGuides": "Guías útiles",
+      "seoSections": {
+        "whatAre": "Recuerdos y regalos de condolencia que honran suavemente la memoria de una mascota fallecida.",
+        "whenToChoose": "Cuando un ser querido pierde su mascota y desea un gesto significativo y reconfortante.",
+        "personalization": "Muchos regalos personalizables con nombre, foto y fechas. Tarjetas y embalaje premium disponibles.",
+        "whyChoose": "Diseñados con calidez y respeto para apoyar en momentos difíciles."
+      }
+    },
+    "pet-memorial-frames": {
+      "name": "Marcos conmemorativos para mascotas",
+      "h1": "Marcos conmemorativos para mascotas",
+      "description": "Marcos personalizados para mostrar a su compañero.",
+      "intro": "Exhiba sus recuerdos favoritos en un marco conmemorativo grabado con nombre y fechas.",
+      "metaTitle": "Marcos conmemorativos | Marcos de fotos personalizados",
+      "metaDescription": "Marcos conmemorativos con grabado de nombre y fecha. Un tributo cálido en el hogar.",
+      "seoHeadings": {
+        "whatAre": "¿Qué son los marcos conmemorativos para mascotas?",
+        "whenToChoose": "Cuándo elegir un marco conmemorativo",
+        "personalization": "Opciones de personalización",
+        "whyChoose": "Por qué elegir nuestros marcos"
+      },
+      "relatedCategories": "Categorías relacionadas",
+      "helpfulGuides": "Guías útiles",
+      "seoSections": {
+        "whatAre": "Marcos de fotos personalizados con nombre, fechas y mensaje — una forma popular de tributo en el hogar.",
+        "whenToChoose": "Cuando desea un recordatorio diario visible de su compañero.",
+        "personalization": "Suba foto, añada nombre y fechas, elija fuente y estilo de marco.",
+        "whyChoose": "Materiales premium, grabado elegante y prueba antes de producción."
+      }
+    },
+    "pet-memorial-plaques": {
+      "name": "Placas conmemorativas para mascotas",
+      "h1": "Placas conmemorativas para mascotas",
+      "description": "Placas grabadas para honrar a su compañero.",
+      "intro": "Cree un tributo duradero con una placa personalizada — ideal para interior o jardín.",
+      "metaTitle": "Placas conmemorativas | Tributos grabados",
+      "metaDescription": "Placas con grabado de nombre y fecha. Madera, pizarra y metal. Integración NFC opcional.",
+      "seoHeadings": {
+        "whatAre": "¿Qué son las placas conmemorativas para mascotas?",
+        "whenToChoose": "Cuándo elegir una placa conmemorativa",
+        "personalization": "Opciones de personalización",
+        "whyChoose": "Por qué elegir nuestras placas"
+      },
+      "relatedCategories": "Categorías relacionadas",
+      "helpfulGuides": "Guías útiles",
+      "seoSections": {
+        "whatAre": "Placas grabadas con nombre, fechas y mensaje — ideales para estante, jardín o junto a urna.",
+        "whenToChoose": "Para tributo en jardín, estante o junto a urna y marco.",
+        "personalization": "Grabado de nombre, fechas, mensaje, huella o foto opcional. Chip NFC disponible.",
+        "whyChoose": "Materiales de calidad, grabado preciso e integración NFC opcional."
+      }
     }
   },
   "pages": {

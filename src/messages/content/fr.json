@@ -251,7 +251,109 @@
       "description": "Ensembles cadeaux soigneusement composés pour le souvenir.",
       "intro": "Nos coffrets cadeaux commémoratifs et boîtes à souvenirs pour animaux réunissent des souvenirs personnalisés dans un bel emballage — un cadeau de condoléances attentionné ou un ensemble complet de souvenir pour votre compagnon bien-aimé.",
       "metaTitle": "Coffrets cadeaux commémoratifs | Ensembles boîtes à souvenirs pour animaux",
-      "metaDescription": "Achetez des coffrets cadeaux commémoratifs et boîtes à souvenirs pour animaux avec souvenirs personnalisés, bougies et cadres. Un cadeau de condoléances attentionné pour la perte d'un animal."
+      "metaDescription": "Achetez des coffrets cadeaux commémoratifs et boîtes à souvenirs pour animaux avec souvenirs personnalisés, bougies et cadres. Un cadeau de condoléances attentionné pour la perte d'un animal.",
+      "seoHeadings": {
+        "whatAre": "Que sont les coffrets cadeaux commémoratifs ?",
+        "whenToChoose": "Quand choisir un coffret cadeau commémoratif",
+        "personalization": "Options de personnalisation",
+        "whyChoose": "Pourquoi choisir nos coffrets cadeaux"
+      },
+      "relatedCategories": "Catégories associées",
+      "helpfulGuides": "Guides utiles",
+      "seoSections": {
+        "whatAre": "Coffrets combinant souvenirs personnalisés, bougies, cadres ou bijoux dans un emballage premium.",
+        "whenToChoose": "Comme cadeau de condoléances ou pour un ensemble complet et harmonieux de souvenirs.",
+        "personalization": "Chaque coffret peut inclure des articles personnalisés avec nom, photo et dates, plus carte cadeau.",
+        "whyChoose": "Présentation premium et personnalisation significative pour offrir ou se souvenir."
+      }
+    },
+    "digital-pet-memorial-keepsakes": {
+      "name": "Souvenirs numériques pour animaux",
+      "h1": "Pages commémoratives numériques et souvenirs en ligne",
+      "description": "Pages en ligne pour préserver photos, vidéos et histoires.",
+      "intro": "Créez un hommage numérique durable. Les pages commémoratives préservent photos, vidéos, histoires et messages accessibles à tout moment.",
+      "metaTitle": "Souvenirs numériques pour animaux | Pages mémoire en ligne",
+      "metaDescription": "Créez une page commémorative numérique avec photos, vidéos et histoires. Accès par carte NFC ou code QR.",
+      "seoHeadings": {
+        "whatAre": "Que sont les souvenirs numériques pour animaux ?",
+        "whenToChoose": "Quand choisir un mémorial numérique",
+        "personalization": "Options de personnalisation",
+        "whyChoose": "Pourquoi choisir nos pages numériques"
+      },
+      "relatedCategories": "Catégories associées",
+      "helpfulGuides": "Guides utiles",
+      "seoSections": {
+        "whatAre": "Pages en ligne dédiées à honorer un compagnon avec photos, vidéos, histoires et messages familiaux.",
+        "whenToChoose": "Pour partager des souvenirs avec la famille ou compléter une carte NFC ou plaque.",
+        "personalization": "Nom, galerie photos, dates, histoire, vidéos, messages et livre d'or optionnel.",
+        "whyChoose": "Mise en page chaleureuse et élégante, accessible partout et à tout moment."
+      }
+    },
+    "pet-loss-sympathy-gifts": {
+      "name": "Cadeaux de condoléances pour perte d'animal",
+      "h1": "Cadeaux mémoire et condoléances",
+      "description": "Cadeaux attentionnés pour les personnes en deuil.",
+      "intro": "Offrez réconfort avec des cadeaux mémoire personnalisés, coffrets de condoléances et hommages numériques.",
+      "metaTitle": "Cadeaux mémoire | Condoléances perte d'animal",
+      "metaDescription": "Cadeaux mémoire pour amis et famille en deuil. Cadres, bijoux, bougies et coffrets personnalisés.",
+      "seoHeadings": {
+        "whatAre": "Que sont les cadeaux de condoléances pour perte d'animal ?",
+        "whenToChoose": "Quand offrir un cadeau de condoléances",
+        "personalization": "Options de personnalisation",
+        "whyChoose": "Pourquoi choisir nos cadeaux de condoléances"
+      },
+      "relatedCategories": "Catégories associées",
+      "helpfulGuides": "Guides utiles",
+      "seoSections": {
+        "whatAre": "Cadeaux mémoire et de condoléances qui honorent doucement la mémoire d'un animal disparu.",
+        "whenToChoose": "Quand un proche perd son compagnon et que vous souhaitez un geste réconfortant.",
+        "personalization": "Nombreux cadeaux personnalisables avec nom, photo et dates. Cartes et emballage premium disponibles.",
+        "whyChoose": "Conçus avec chaleur et respect pour soutenir dans les moments difficiles."
+      }
+    },
+    "pet-memorial-frames": {
+      "name": "Cadres commémoratifs pour animaux",
+      "h1": "Cadres commémoratifs pour animaux",
+      "description": "Cadres photo personnalisés pour votre compagnon.",
+      "intro": "Affichez vos plus beaux souvenirs dans un cadre commémoratif gravé du nom et des dates.",
+      "metaTitle": "Cadres commémoratifs | Cadres photo personnalisés",
+      "metaDescription": "Cadres commémoratifs avec gravure du nom et des dates. Un hommage chaleureux à la maison.",
+      "seoHeadings": {
+        "whatAre": "Que sont les cadres commémoratifs pour animaux ?",
+        "whenToChoose": "Quand choisir un cadre commémoratif",
+        "personalization": "Options de personnalisation",
+        "whyChoose": "Pourquoi choisir nos cadres"
+      },
+      "relatedCategories": "Catégories associées",
+      "helpfulGuides": "Guides utiles",
+      "seoSections": {
+        "whatAre": "Cadres photo personnalisés avec nom, dates et message — hommage domestique très populaire.",
+        "whenToChoose": "Quand vous souhaitez un rappel quotidien visible de votre compagnon.",
+        "personalization": "Téléchargez une photo, ajoutez nom et dates, choisissez police et style de cadre.",
+        "whyChoose": "Matériaux premium, gravure élégante et aperçu avant production."
+      }
+    },
+    "pet-memorial-plaques": {
+      "name": "Plaques commémoratives pour animaux",
+      "h1": "Plaques commémoratives pour animaux",
+      "description": "Plaques gravées pour honorer votre compagnon.",
+      "intro": "Créez un hommage durable avec une plaque personnalisée — pour intérieur ou jardin.",
+      "metaTitle": "Plaques commémoratives | Hommages gravés",
+      "metaDescription": "Plaques avec gravure du nom et des dates. Bois, ardoise et métal. Intégration NFC optionnelle.",
+      "seoHeadings": {
+        "whatAre": "Que sont les plaques commémoratives pour animaux ?",
+        "whenToChoose": "Quand choisir une plaque commémorative",
+        "personalization": "Options de personnalisation",
+        "whyChoose": "Pourquoi choisir nos plaques"
+      },
+      "relatedCategories": "Catégories associées",
+      "helpfulGuides": "Guides utiles",
+      "seoSections": {
+        "whatAre": "Plaques gravées avec nom, dates et message — idéales pour étagère, jardin ou près d'une urne.",
+        "whenToChoose": "Pour hommage de jardin, étagère ou à côté d'une urne et d'un cadre.",
+        "personalization": "Gravure du nom, dates, message, empreinte ou photo optionnelle. Puce NFC disponible.",
+        "whyChoose": "Matériaux de qualité, gravure précise et intégration NFC optionnelle."
+      }
     }
   },
   "pages": {

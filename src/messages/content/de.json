@@ -251,7 +251,109 @@
       "description": "Kuratierte Geschenksets zum Gedenken.",
       "intro": "Unsere Gedenkgeschenkboxen und Haustier-Erinnerungsboxen vereinen personalisierte Erinnerungsstücke in schöner Verpackung — ein einfühlsames Trostgeschenk oder ein vollständiges Gedenkset für Ihren geliebten Begleiter.",
       "metaTitle": "Gedenkgeschenkboxen | Haustier-Erinnerungsbox-Sets",
-      "metaDescription": "Shoppen Sie Gedenkgeschenkboxen und Haustier-Erinnerungsboxen mit personalisierten Erinnerungsstücken, Kerzen und Rahmen. Ein durchdachtes Trostgeschenk beim Haustierverlust."
+      "metaDescription": "Shoppen Sie Gedenkgeschenkboxen und Haustier-Erinnerungsboxen mit personalisierten Erinnerungsstücken, Kerzen und Rahmen. Ein durchdachtes Trostgeschenk beim Haustierverlust.",
+      "seoHeadings": {
+        "whatAre": "Was sind Gedenkgeschenkboxen?",
+        "whenToChoose": "Wann eine Gedenkgeschenkbox wählen",
+        "personalization": "Personalisierungsoptionen",
+        "whyChoose": "Warum unsere Gedenkgeschenkboxen"
+      },
+      "relatedCategories": "Verwandte Kategorien",
+      "helpfulGuides": "Hilfreiche Ratgeber",
+      "seoSections": {
+        "whatAre": "Gedenkgeschenkboxen sind kuratierte Sets mit personalisierten Erinnerungsstücken, Kerzen, Rahmen oder Schmuck in Premium-Geschenkverpackung.",
+        "whenToChoose": "Wählen Sie eine Geschenkbox als Trostgeschenk oder wenn Sie ein komplettes, abgestimmtes Gedenkset wünschen.",
+        "personalization": "Jede Box kann personalisierte Artikel mit Name, Foto und Daten enthalten. Geschenknachrichten sind möglich.",
+        "whyChoose": "Unsere Geschenkboxen überzeugen durch hochwertige Präsentation und bedeutungsvolle Personalisierung."
+      }
+    },
+    "digital-pet-memorial-keepsakes": {
+      "name": "Digitale Haustier-Gedenkseiten",
+      "h1": "Digitale Haustier-Gedenkseiten & Online-Erinnerungen",
+      "description": "Online-Gedenkseiten für Fotos, Videos und Geschichten.",
+      "intro": "Schaffen Sie ein dauerhaftes digitales Andenken. Digitale Gedenkseiten bewahren Fotos, Videos, Geschichten und Nachrichten — jederzeit abrufbar.",
+      "metaTitle": "Digitale Haustier-Gedenkseiten | Online-Erinnerungsseiten",
+      "metaDescription": "Erstellen Sie eine digitale Gedenkseite mit Fotos, Videos und Geschichten. Zugang per NFC-Karte oder QR-Code.",
+      "seoHeadings": {
+        "whatAre": "Was sind digitale Haustier-Gedenkseiten?",
+        "whenToChoose": "Wann ein digitales Andenken wählen",
+        "personalization": "Personalisierungsoptionen",
+        "whyChoose": "Warum unsere digitalen Gedenkseiten"
+      },
+      "relatedCategories": "Verwandte Kategorien",
+      "helpfulGuides": "Hilfreiche Ratgeber",
+      "seoSections": {
+        "whatAre": "Digitale Gedenkseiten ehren einen geliebten Begleiter online mit Fotos, Videos, Geschichten und Familiennachrichten.",
+        "whenToChoose": "Ideal, wenn Sie Erinnerungen teilen möchten oder eine NFC-Karte oder Plakette ergänzen.",
+        "personalization": "Name, Fotogalerie, Daten, Geschichte, Videos, Nachrichten und optionales Gästebuch.",
+        "whyChoose": "Warmes, elegantes Layout — die Geschichte Ihres Haustiers jederzeit und überall zugänglich."
+      }
+    },
+    "pet-loss-sympathy-gifts": {
+      "name": "Trostgeschenke bei Haustierverlust",
+      "h1": "Haustier-Erinnerungsgeschenke & Trostgeschenke",
+      "description": "Einfühlsame Geschenke für Trauernde.",
+      "intro": "Schenken Sie Trost mit bedeutungsvollen Erinnerungsgeschenken — personalisierte Erinnerungsstücke, Geschenkboxen und digitale Tribute.",
+      "metaTitle": "Haustier-Erinnerungsgeschenke | Trostgeschenke",
+      "metaDescription": "Trostgeschenke für Freunde und Familie nach Haustierverlust. Personalisierte Rahmen, Schmuck, Kerzen und Geschenkboxen.",
+      "seoHeadings": {
+        "whatAre": "Was sind Trostgeschenke bei Haustierverlust?",
+        "whenToChoose": "Wann ein Trostgeschenk schenken",
+        "personalization": "Personalisierungsoptionen",
+        "whyChoose": "Warum unsere Trostgeschenke"
+      },
+      "relatedCategories": "Verwandte Kategorien",
+      "helpfulGuides": "Hilfreiche Ratgeber",
+      "seoSections": {
+        "whatAre": "Erinnerungs- und Trostgeschenke ehren sanft das Andenken an ein verstorbenes Haustier.",
+        "whenToChoose": "Wenn jemand Ihnen nahesteht seinen Begleiter verliert und Sie tröstende Geste machen möchten.",
+        "personalization": "Viele Geschenke mit Name, Foto und Daten personalisierbar. Grußkarten und Premium-Verpackung verfügbar.",
+        "whyChoose": "Mit Wärme und Respekt gestaltet — eine durchdachte Wahl in schwerer Zeit."
+      }
+    },
+    "pet-memorial-frames": {
+      "name": "Haustier-Gedenkrahmen",
+      "h1": "Haustier-Gedenkrahmen",
+      "description": "Personalisierte Bilderrahmen für Ihren Begleiter.",
+      "intro": "Zeigen Sie Ihre schönsten Erinnerungen in einem personalisierten Gedenkrahmen mit Name und Daten.",
+      "metaTitle": "Haustier-Gedenkrahmen | Personalisierte Bilderrahmen",
+      "metaDescription": "Gedenkrahmen mit Namens- und Datumsgravur. Ein warmes Heim-Andenken für Hund oder Katze.",
+      "seoHeadings": {
+        "whatAre": "Was sind Haustier-Gedenkrahmen?",
+        "whenToChoose": "Wann einen Gedenkrahmen wählen",
+        "personalization": "Personalisierungsoptionen",
+        "whyChoose": "Warum unsere Gedenkrahmen"
+      },
+      "relatedCategories": "Verwandte Kategorien",
+      "helpfulGuides": "Hilfreiche Ratgeber",
+      "seoSections": {
+        "whatAre": "Gedenkrahmen mit Name, Daten und Nachricht — eine der beliebtesten Formen des Heim-Andenkens.",
+        "whenToChoose": "Wenn Sie täglich an Ihren Begleiter erinnert werden möchten.",
+        "personalization": "Foto hochladen, Name und Daten, Schriftart und Rahmenmaterial wählen.",
+        "whyChoose": "Premium-Materialien, elegante Gravur und Proof vor Produktion."
+      }
+    },
+    "pet-memorial-plaques": {
+      "name": "Haustier-Gedenktafeln",
+      "h1": "Haustier-Gedenktafeln",
+      "description": "Gravierte Tafeln zum Gedenken.",
+      "intro": "Schaffen Sie ein dauerhaftes Andenken mit einer personalisierten Gedenktafel — für Zuhause oder Garten.",
+      "metaTitle": "Haustier-Gedenktafeln | Gravierte Tribute",
+      "metaDescription": "Gedenktafeln mit Namens- und Datumsgravur. Holz, Schiefer und Metall. Optional mit NFC.",
+      "seoHeadings": {
+        "whatAre": "Was sind Haustier-Gedenktafeln?",
+        "whenToChoose": "Wann eine Gedenktafel wählen",
+        "personalization": "Personalisierungsoptionen",
+        "whyChoose": "Warum unsere Gedenktafeln"
+      },
+      "relatedCategories": "Verwandte Kategorien",
+      "helpfulGuides": "Hilfreiche Ratgeber",
+      "seoSections": {
+        "whatAre": "Gravierte Tafeln mit Name, Daten und Nachricht — ideal für Regal, Garten oder neben Urne.",
+        "whenToChoose": "Für Garten-Gedenkstätte, Regal oder neben Urne und Rahmen.",
+        "personalization": "Gravur von Name, Daten, Nachricht, optional Pfotenabdruck oder Foto. NFC möglich.",
+        "whyChoose": "Qualitätsmaterialien, präzise Gravur und optionale NFC-Integration."
+      }
     }
   },
   "pages": {

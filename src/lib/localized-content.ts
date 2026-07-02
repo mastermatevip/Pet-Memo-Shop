@@ -62,6 +62,20 @@ export interface CollectionContentBundle {
   metaTitle?: string;
   metaDescription?: string;
   imageAlt?: string;
+  seoSections?: {
+    whatAre?: string;
+    whenToChoose?: string;
+    personalization?: string;
+    whyChoose?: string;
+  };
+  seoHeadings?: {
+    whatAre?: string;
+    whenToChoose?: string;
+    personalization?: string;
+    whyChoose?: string;
+  };
+  relatedCategories?: string;
+  helpfulGuides?: string;
 }
 
 export interface BestSellersPageContent {
@@ -227,6 +241,26 @@ export function localizeCollection(collection: Collection, bundle: ContentBundle
     metaTitle: t.metaTitle ?? collection.metaTitle,
     metaDescription: t.metaDescription ?? collection.metaDescription,
     imageAlt: t.imageAlt ?? collection.imageAlt,
+    seoSections: {
+      whatAre: t.seoSections?.whatAre ?? collection.seoSections.whatAre,
+      whenToChoose: t.seoSections?.whenToChoose ?? collection.seoSections.whenToChoose,
+      personalization: t.seoSections?.personalization ?? collection.seoSections.personalization,
+      whyChoose: t.seoSections?.whyChoose ?? collection.seoSections.whyChoose,
+    },
+  };
+}
+
+export function getCollectionPageLabels(collection: Collection, bundle: ContentBundle | null) {
+  const t = bundle?.collections?.[collection.slug];
+  const name = t?.name ?? collection.name;
+
+  return {
+    whatAre: t?.seoHeadings?.whatAre ?? `What Are ${name}?`,
+    whenToChoose: t?.seoHeadings?.whenToChoose ?? "When to Choose This Type of Pet Memorial Gift",
+    personalization: t?.seoHeadings?.personalization ?? "Personalization Options",
+    whyChoose: t?.seoHeadings?.whyChoose ?? "Why Families Choose Our Memorial Keepsakes",
+    relatedCategories: t?.relatedCategories ?? "Related Categories",
+    helpfulGuides: t?.helpfulGuides ?? "Helpful Guides",
   };
 }
 

@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 import { getCollectionBySlug, getAllCollectionSlugs } from "@/data/collections";
 import { getProductsByCollection } from "@/data/products";
 import { getLatestBlogPosts } from "@/data/blog";
-import { localizeCollection, localizeProduct, loadContentBundle } from "@/lib/localized-content";
+import { localizeCollection, localizeProduct, loadContentBundle, getCollectionPageLabels } from "@/lib/localized-content";
 import { routing, type Locale } from "@/i18n/routing";
 
 interface Props {
@@ -45,6 +45,7 @@ export default async function CollectionPage({ params }: Props) {
 
   const bundle = await loadContentBundle(locale);
   const collection = localizeCollection(base, bundle);
+  const labels = getCollectionPageLabels(collection, bundle);
   const products = getProductsByCollection(slug).map((p) => localizeProduct(p, bundle));
   const relatedCollections = collection.relatedSlugs
     .map((s) => {
@@ -91,19 +92,19 @@ export default async function CollectionPage({ params }: Props) {
 
         <div className="prose-memorial max-w-3xl mx-auto mb-16 space-y-8">
           <div>
-            <h2>What Are {collection.name}?</h2>
+            <h2>{labels.whatAre}</h2>
             <p>{collection.seoSections.whatAre}</p>
           </div>
           <div>
-            <h2>When to Choose This Type of Pet Memorial Gift</h2>
+            <h2>{labels.whenToChoose}</h2>
             <p>{collection.seoSections.whenToChoose}</p>
           </div>
           <div>
-            <h2>Personalization Options</h2>
+            <h2>{labels.personalization}</h2>
             <p>{collection.seoSections.personalization}</p>
           </div>
           <div>
-            <h2>Why Families Choose Our Memorial Keepsakes</h2>
+            <h2>{labels.whyChoose}</h2>
             <p>{collection.seoSections.whyChoose}</p>
           </div>
         </div>
@@ -111,7 +112,7 @@ export default async function CollectionPage({ params }: Props) {
         <FAQSection faqs={collection.faqs} />
 
         <section className="py-12">
-          <h2 className="font-serif text-2xl text-text mb-6">Related Categories</h2>
+          <h2 className="font-serif text-2xl text-text mb-6">{labels.relatedCategories}</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {relatedCollections.map((rel) => rel && (
               <Link
@@ -126,7 +127,7 @@ export default async function CollectionPage({ params }: Props) {
         </section>
 
         <section className="py-8 border-t border-border">
-          <h2 className="font-serif text-xl text-text mb-4">Helpful Guides</h2>
+          <h2 className="font-serif text-xl text-text mb-4">{labels.helpfulGuides}</h2>
           <div className="flex flex-wrap gap-4">
             {blogPosts.map((post) => (
               <Link

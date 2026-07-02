@@ -251,7 +251,109 @@
       "description": "精心搭配的宠物纪念礼品套装。",
       "intro": "纪念礼品盒与宠物记忆盒，将个性化纪念品精美包装——贴心慰问礼品，或为自己心爱伙伴准备的完整纪念套装。",
       "metaTitle": "纪念礼品盒 | 宠物记忆盒礼品套装",
-      "metaDescription": "选购纪念礼品盒与宠物记忆盒，含个性化纪念品、蜡烛与相框。宠物失去的贴心慰问礼品。"
+      "metaDescription": "选购纪念礼品盒与宠物记忆盒，含个性化纪念品、蜡烛与相框。宠物失去的贴心慰问礼品。",
+      "seoHeadings": {
+        "whatAre": "什么是纪念礼品盒？",
+        "whenToChoose": "何时选择纪念礼品盒",
+        "personalization": "定制选项",
+        "whyChoose": "为何选择我们的纪念礼品盒"
+      },
+      "relatedCategories": "相关分类",
+      "helpfulGuides": "实用指南",
+      "seoSections": {
+        "whatAre": "纪念礼品盒是将个性化纪念品、蜡烛、相框或首饰组合在一起的精选套装，采用精美礼盒包装。",
+        "whenToChoose": "当您想赠送慰问礼品，或希望一次性获得完整、协调的纪念套装时，纪念礼品盒是理想选择。",
+        "personalization": "每个礼盒可包含带有宠物名字、照片与日期的定制商品，并可添加慰问贺卡。",
+        "whyChoose": "我们的礼品盒注重包装质感与有意义的个性化，适合赠送他人，也适合作为个人纪念。"
+      }
+    },
+    "digital-pet-memorial-keepsakes": {
+      "name": "数字宠物纪念页",
+      "h1": "数字宠物纪念页与在线纪念品",
+      "description": "在线纪念页，永久保存照片、视频与故事。",
+      "intro": "为心爱伙伴创建持久的数字纪念。数字宠物纪念页保存照片、视频、故事与留言，家人朋友随时可访问。",
+      "metaTitle": "数字宠物纪念页 | 在线记忆页面",
+      "metaDescription": "创建含照片、视频与故事的数字宠物纪念页。可通过 NFC 卡或二维码访问，在线铭记心爱伙伴。",
+      "seoHeadings": {
+        "whatAre": "什么是数字宠物纪念页？",
+        "whenToChoose": "何时选择数字纪念",
+        "personalization": "定制选项",
+        "whyChoose": "为何选择我们的数字纪念页"
+      },
+      "relatedCategories": "相关分类",
+      "helpfulGuides": "实用指南",
+      "seoSections": {
+        "whatAre": "数字宠物纪念页是专为纪念心爱伙伴而设的在线页面，可展示照片、视频、故事与家人留言。",
+        "whenToChoose": "当您希望与家人朋友分享回忆，或搭配实体 NFC 卡、牌匾一起使用时，数字纪念是理想选择。",
+        "personalization": "可包含宠物名字、照片集、出生与纪念日期、故事、视频链接、家人留言及可选访客留言簿。",
+        "whyChoose": "我们的数字纪念页布局温暖优雅，随时随地方便访问，长久保存宠物的故事。"
+      }
+    },
+    "pet-loss-sympathy-gifts": {
+      "name": "宠物失去慰问礼品",
+      "h1": "宠物记忆礼品与慰问礼品",
+      "description": "为失去宠物的人准备的贴心礼品。",
+      "intro": "以贴心的宠物记忆礼品与慰问纪念品，传递温柔关怀。个性化纪念品、慰问礼品盒与数字纪念，专为铭记心爱伙伴而设计。",
+      "metaTitle": "宠物记忆礼品 | 宠物失去慰问礼品",
+      "metaDescription": "为失去宠物的朋友与家人选购宠物记忆礼品。个性化相框、首饰、蜡烛与慰问礼品盒，用心传递关怀。",
+      "seoHeadings": {
+        "whatAre": "什么是宠物失去慰问礼品？",
+        "whenToChoose": "何时赠送慰问礼品",
+        "personalization": "定制选项",
+        "whyChoose": "为何选择我们的慰问礼品"
+      },
+      "relatedCategories": "相关分类",
+      "helpfulGuides": "实用指南",
+      "seoSections": {
+        "whatAre": "宠物记忆礼品与慰问纪念品，是赠予失去心爱宠物之人的贴心礼物，以温柔方式铭记它们的记忆。",
+        "whenToChoose": "当朋友、家人或同事失去宠物，您希望送出有意义、能传递安慰的礼物时，慰问礼品最为合适。",
+        "personalization": "许多慰问礼品可定制宠物名字、照片与日期，并可添加礼品贺卡与精美包装。",
+        "whyChoose": "我们的慰问礼品以温暖与尊重为设计理念，是在宠物失去时支持他人的贴心选择。"
+      }
+    },
+    "pet-memorial-frames": {
+      "name": "宠物纪念相框",
+      "h1": "宠物纪念相框",
+      "description": "个性化相框，展示心爱伙伴的照片。",
+      "intro": "在个性化宠物纪念相框中展示最珍贵的回忆。刻上宠物名字与日期，成为家中温暖的纪念。",
+      "metaTitle": "宠物纪念相框 | 个性化照片相框",
+      "metaDescription": "选购宠物纪念相框，支持名字与日期刻字。为心爱狗狗或猫咪打造温暖的居家纪念。",
+      "seoHeadings": {
+        "whatAre": "什么是宠物纪念相框？",
+        "whenToChoose": "何时选择纪念相框",
+        "personalization": "定制选项",
+        "whyChoose": "为何选择我们的纪念相框"
+      },
+      "relatedCategories": "相关分类",
+      "helpfulGuides": "实用指南",
+      "seoSections": {
+        "whatAre": "宠物纪念相框是可刻印宠物名字、日期与定制留言的照片框，是最受欢迎的居家纪念方式之一。",
+        "whenToChoose": "当您希望在家中每日看见心爱伙伴的提醒时，纪念相框是理想选择。",
+        "personalization": "可上传宠物照片，添加名字与纪念日期，选择字体，以及木质、金属或亚克力框型。",
+        "whyChoose": "我们的相框采用优质材料、精致刻字，并提供生产前样稿确认，让您安心。"
+      }
+    },
+    "pet-memorial-plaques": {
+      "name": "宠物纪念牌匾",
+      "h1": "宠物纪念牌匾",
+      "description": "刻字牌匾，铭记心爱伙伴。",
+      "intro": "以个性化宠物纪念牌匾留下持久纪念。刻上名字、日期与爱的留言——适合居家或花园展示。",
+      "metaTitle": "宠物纪念牌匾 | 刻字宠物纪念",
+      "metaDescription": "选购宠物纪念牌匾，支持名字与日期刻字。木质、板岩与金属可选，适合室内或花园，可搭配 NFC 数字纪念。",
+      "seoHeadings": {
+        "whatAre": "什么是宠物纪念牌匾？",
+        "whenToChoose": "何时选择纪念牌匾",
+        "personalization": "定制选项",
+        "whyChoose": "为何选择我们的纪念牌匾"
+      },
+      "relatedCategories": "相关分类",
+      "helpfulGuides": "实用指南",
+      "seoSections": {
+        "whatAre": "宠物纪念牌匾是刻字纪念物，展示宠物名字、日期与定制留言，适合书架、花园或骨灰盒旁摆放。",
+        "whenToChoose": "当您需要花园纪念、书架展示，或与骨灰盒、相框搭配时，纪念牌匾最为合适。",
+        "personalization": "可刻印名字、出生与纪念日期、定制留言，以及可选爪印或照片，亦可嵌入 NFC 芯片。",
+        "whyChoose": "我们的牌匾采用优质材料、精准刻字，并可选 NFC 数字纪念集成。"
+      }
     }
   },
   "pages": {
