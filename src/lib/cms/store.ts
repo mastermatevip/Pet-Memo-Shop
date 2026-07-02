@@ -99,9 +99,23 @@ export function updateProductImageSrc(
   return products[productIndex];
 }
 
+function normalizeBlogPost(post: BlogPost): BlogPost {
+  return {
+    ...post,
+    viewCount:
+      typeof post.viewCount === "number" && Number.isFinite(post.viewCount) && post.viewCount >= 0
+        ? Math.floor(post.viewCount)
+        : 0,
+  };
+}
+
 function readBlogFile(): BlogFile {
   initCmsFiles();
-  return readJson<BlogFile>(BLOG_FILE) ?? defaultBlogFile();
+  const file = readJson<BlogFile>(BLOG_FILE) ?? defaultBlogFile();
+  return {
+    ...file,
+    posts: file.posts.map(normalizeBlogPost),
+  };
 }
 
 export function loadBlogCategories(): BlogCategory[] {
@@ -125,4 +139,16 @@ export function saveBlogData(categories: BlogCategory[], posts: BlogPost[]): Blo
 
 export function getBlogPostBySlugFromStore(slug: string): BlogPost | undefined {
   return loadBlogPosts().find((p) => p.slug === slug);
+}
+
+export function incrementBlogPostViewCount(slug: string): BlogPost | undefined {
+  const file = readBlogFile();
+  const index = file.posts.findIndex((p) => p.slug === slug);
+  if (index === -1) return undefined;
+
+  const posts = [...file.posts];
+  const current = normalizeBlogPost(posts[index]);
+  posts[index] = { ...current, viewCount: current.viewCount + 1 };
+  saveBlogData(file.categories, posts);
+  return posts[index];
 }

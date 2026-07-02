@@ -23,6 +23,7 @@ export default function AdminBlogPage() {
             <tr>
               <th className="px-4 py-3 font-medium">文章</th>
               <th className="px-4 py-3 font-medium">分类</th>
+              <th className="px-4 py-3 font-medium">浏览量</th>
               <th className="px-4 py-3 font-medium">发布日期</th>
               <th className="px-4 py-3 font-medium" />
             </tr>
@@ -35,6 +36,7 @@ export default function AdminBlogPage() {
                   <p className="text-xs text-light">{post.slug}</p>
                 </td>
                 <td className="px-4 py-3 text-muted">{post.category}</td>
+                <td className="px-4 py-3 text-muted">{post.viewCount ?? 0}</td>
                 <td className="px-4 py-3 text-muted">{formatDate(post.publishedAt)}</td>
                 <td className="px-4 py-3 text-right">
                   <Link

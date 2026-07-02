@@ -65,7 +65,8 @@
     "learnMore": "Mehr erfahren",
     "viewAll": "Alle anzeigen",
     "backToBlog": "Zurück zum Blog",
-    "minRead": "{count} Min. Lesezeit"
+    "minRead": "{count} Min. Lesezeit",
+    "viewCount": "{count} Aufrufe"
   },
   "meta": {
     "homeTitle": "Personalisierte Tiergedenkgeschenke | Individuelle Erinnerungsstücke",

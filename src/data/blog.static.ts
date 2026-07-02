@@ -15,11 +15,12 @@ function createBlogPost(
     BlogPost,
     "slug" | "title" | "metaTitle" | "metaDescription" | "excerpt" | "category" | "categorySlug" | "content"
   > &
-    Partial<Pick<BlogPost, "publishedAt" | "readTime" | "faqs" | "relatedProductSlugs" | "relatedCollectionSlugs">>
+    Partial<Pick<BlogPost, "publishedAt" | "readTime" | "viewCount" | "faqs" | "relatedProductSlugs" | "relatedCollectionSlugs">>
 ): BlogPost {
   return {
     publishedAt: "2025-12-01",
     readTime: 8,
+    viewCount: 0,
     faqs: [
       {
         question: "What is the best pet memorial gift?",

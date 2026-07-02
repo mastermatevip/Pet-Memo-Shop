@@ -73,6 +73,8 @@ export function BlogPostEditor({ initial, categories }: Props) {
     <form onSubmit={handleSave} className="space-y-8">
       <div className="rounded-lg bg-highlight px-4 py-3 text-sm text-muted">
         Slug：<code className="font-mono">{post.slug}</code>（只读）
+        <span className="mx-2">·</span>
+        浏览量：<span className="font-medium text-text">{post.viewCount ?? 0}</span>（自动统计）
       </div>
 
       <AdminField label="文章标题">

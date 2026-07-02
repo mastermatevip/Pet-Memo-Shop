@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { buildMetadata } from "@/lib/seo";
 import { getBlogPostsByCategory, getBlogCategoryBySlug } from "@/data/blog";
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -25,6 +26,7 @@ export default async function BlogCategoryPage({ params }: Props) {
   const category = getBlogCategoryBySlug(slug);
   if (!category) notFound();
 
+  const t = await getTranslations("common");
   const posts = getBlogPostsByCategory(slug);
 
   return (
@@ -43,7 +45,11 @@ export default async function BlogCategoryPage({ params }: Props) {
             <h2 className="font-serif text-xl text-text group-hover:text-gold-dark transition-colors mb-2">
               {post.title}
             </h2>
-            <p className="text-muted text-sm">{post.excerpt}</p>
+            <p className="text-muted text-sm mb-3">{post.excerpt}</p>
+            <div className="flex items-center gap-3 text-xs text-light">
+              <span>{t("minRead", { count: post.readTime })}</span>
+              <span>{t("viewCount", { count: post.viewCount })}</span>
+            </div>
           </Link>
         ))}
       </div>

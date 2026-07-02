@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { buildMetadata } from "@/lib/seo";
 import { getBlogCategories, getBlogPosts } from "@/data/blog";
+import { getTranslations } from "next-intl/server";
 
 export const dynamic = "force-dynamic";
 
@@ -11,7 +12,8 @@ export const metadata = buildMetadata({
   path: "/blog",
 });
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const t = await getTranslations("common");
   const blogCategories = getBlogCategories();
   const blogPosts = [...getBlogPosts()].sort((a, b) =>
     b.publishedAt.localeCompare(a.publishedAt)
@@ -54,8 +56,11 @@ export default function BlogPage() {
               </h2>
               <p className="text-muted text-sm leading-relaxed mb-4">{post.excerpt}</p>
               <div className="flex items-center justify-between text-xs text-light">
-                <span>{post.readTime} min read</span>
-                <span className="text-gold font-medium group-hover:underline">Read more &rarr;</span>
+                <div className="flex items-center gap-3">
+                  <span>{t("minRead", { count: post.readTime })}</span>
+                  <span>{t("viewCount", { count: post.viewCount })}</span>
+                </div>
+                <span className="text-gold font-medium group-hover:underline">{t("readMore")} &rarr;</span>
               </div>
             </div>
           </Link>

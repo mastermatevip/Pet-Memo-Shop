@@ -65,7 +65,8 @@
     "learnMore": "En savoir plus",
     "viewAll": "Tout voir",
     "backToBlog": "Retour au blog",
-    "minRead": "{count} min de lecture"
+    "minRead": "{count} min de lecture",
+    "viewCount": "{count} vues"
   },
   "meta": {
     "homeTitle": "Cadeaux commémoratifs personnalisés pour animaux",

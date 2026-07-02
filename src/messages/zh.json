@@ -65,7 +65,8 @@
     "learnMore": "了解更多",
     "viewAll": "查看全部",
     "backToBlog": "返回博客",
-    "minRead": "{count} 分钟阅读"
+    "minRead": "{count} 分钟阅读",
+    "viewCount": "{count} 次阅读"
   },
   "meta": {
     "homeTitle": "个性化宠物纪念礼品 | 定制纪念品",

@@ -71,6 +71,7 @@ export interface BlogPost {
   categorySlug: string;
   publishedAt: string;
   readTime: number;
+  viewCount: number;
   content: string;
   faqs: FAQ[];
   relatedProductSlugs: string[];

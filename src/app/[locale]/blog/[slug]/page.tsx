@@ -2,9 +2,11 @@ import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { Button } from "@/components/ui/Button";
+import { BlogViewCounter } from "@/components/blog/BlogViewCounter";
 import { buildMetadata } from "@/lib/seo";
 import { getBlogPostBySlug, getLatestBlogPosts } from "@/data/blog";
 import { formatDate } from "@/lib/utils";
+import { getTranslations } from "next-intl/server";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -111,20 +113,22 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPostBySlug(slug);
   if (!post) notFound();
 
+  const t = await getTranslations("common");
   const relatedPosts = getLatestBlogPosts(3).filter((p) => p.slug !== slug);
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
       <div className="mb-8">
-        <Link href="/blog" className="text-sm text-gold hover:underline">&larr; Back to Blog</Link>
+        <Link href="/blog" className="text-sm text-gold hover:underline">&larr; {t("backToBlog")}</Link>
       </div>
 
       <header className="mb-10">
         <span className="text-xs text-gold font-medium uppercase tracking-wider">{post.category}</span>
         <h1 className="font-serif text-3xl md:text-4xl text-text mt-2 mb-4">{post.title}</h1>
-        <div className="flex items-center gap-4 text-sm text-light">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-light">
           <span>{formatDate(post.publishedAt)}</span>
-          <span>{post.readTime} min read</span>
+          <span>{t("minRead", { count: post.readTime })}</span>
+          <BlogViewCounter slug={post.slug} initialCount={post.viewCount} />
         </div>
       </header>
 
