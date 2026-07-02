@@ -79,9 +79,9 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3 md:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-0">
             <LanguageSwitcher />
-            <button aria-label={t("search")} className="p-2 text-muted hover:text-text transition-colors">
+            <button aria-label={t("search")} className="p-2 text-muted hover:text-text transition-colors shrink-0">
               <Search className="w-5 h-5" />
             </button>
             <button aria-label={t("account")} className="hidden sm:block p-2 text-muted hover:text-text transition-colors">

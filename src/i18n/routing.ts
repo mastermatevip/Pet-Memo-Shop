@@ -17,6 +17,14 @@ export const localeNames: Record<Locale, string> = {
   zh: "中文",
 };
 
+export const localeShortNames: Record<Locale, string> = {
+  en: "EN",
+  de: "DE",
+  es: "ES",
+  fr: "FR",
+  zh: "中文",
+};
+
 export const ogLocales: Record<Locale, string> = {
   en: "en_US",
   de: "de_DE",
