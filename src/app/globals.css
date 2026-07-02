@@ -44,8 +44,8 @@
   --color-sage-700: #332B26;
   --color-sage-800: #1F1A17;
 
-  --font-serif: var(--font-cormorant);
-  --font-sans: var(--font-inter);
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
 }
 
 body {
@@ -122,5 +122,5 @@ h1, h2, h3, h4, h5, h6 {
 
 html.locale-zh,
 .locale-zh {
-  font-family: var(--font-inter), "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
 }
