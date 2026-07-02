@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "shop": "Boutique",
+    "digitalMemorial": "Mémorial numérique",
+    "bestSellers": "Meilleures ventes",
+    "blog": "Blog",
+    "about": "À propos",
+    "contact": "Contact",
+    "search": "Rechercher",
+    "account": "Compte",
+    "cart": "Panier",
+    "currency": "Devise",
+    "menu": "Menu",
+    "collections": {
+      "pet-memorial-gifts": "Cadeaux commémoratifs",
+      "dog-memorial-gifts": "Cadeaux pour chiens",
+      "cat-memorial-gifts": "Cadeaux pour chats",
+      "pet-memorial-jewelry": "Bijoux commémoratifs",
+      "pet-urns": "Urnes pour animaux",
+      "nfc-memorial-cards": "Tags NFC commémoratifs",
+      "memorial-gift-boxes": "Coffrets cadeaux commémoratifs"
+    }
+  },
+  "footer": {
+    "tagline": "Cadeaux commémoratifs personnalisés et souvenirs numériques",
+    "customerSupport": "Service client",
+    "shop": "Boutique",
+    "information": "Informations",
+    "copyright": "Tous droits réservés.",
+    "links": {
+      "contact": "Nous contacter",
+      "trackOrder": "Suivre ma commande",
+      "shipping": "Politique d'expédition",
+      "returns": "Retours et remboursements",
+      "faqs": "FAQ",
+      "about": "À propos",
+      "blog": "Blog",
+      "reviews": "Avis",
+      "wholesale": "Vente en gros",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation"
+    }
+  },
+  "announcements": {
+    "0": "Livraison gratuite sur certains cadeaux commémoratifs",
+    "1": "Souvenirs personnalisés faits avec amour",
+    "2": "Nouveau : Tags NFC en fibre de carbone — Appuyez pour ouvrir leur histoire"
+  },
+  "trust": {
+    "secureCheckout": "Paiement sécurisé",
+    "worldwideShipping": "Expédition mondiale",
+    "personalizedCare": "Personnalisé avec soin",
+    "proofBeforeProduction": "Aperçu avant production",
+    "trackingProvided": "Numéro de suivi",
+    "friendlySupport": "Service client attentionné"
+  },
+  "language": {
+    "label": "Langue",
+    "switchTo": "Changer de langue"
+  },
+  "common": {
+    "readMore": "Lire la suite",
+    "shopNow": "Acheter",
+    "learnMore": "En savoir plus",
+    "viewAll": "Tout voir",
+    "backToBlog": "Retour au blog",
+    "minRead": "{count} min de lecture"
+  },
+  "meta": {
+    "homeTitle": "Cadeaux commémoratifs personnalisés pour animaux",
+    "homeDescription": "Cadeaux commémoratifs, bijoux, cadres et tags NFC en fibre de carbone. Photo, nom et date personnalisés avec aperçu avant production."
+  }
+}

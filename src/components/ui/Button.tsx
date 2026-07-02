@@ -1,5 +1,7 @@
+"use client";
+
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { forwardRef } from "react";
 
 type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
@@ -12,14 +14,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variants: Record<ButtonVariant, string> = {
-  primary:
-    "bg-btn text-btn-text hover:bg-btn-hover shadow-sm",
-  secondary:
-    "bg-gold text-btn-text hover:bg-gold-dark shadow-sm",
-  outline:
-    "border-2 border-border text-text hover:bg-highlight bg-transparent",
-  ghost:
-    "text-muted hover:bg-bg-secondary bg-transparent",
+  primary: "bg-btn text-btn-text hover:bg-btn-hover shadow-sm",
+  secondary: "bg-gold text-btn-text hover:bg-gold-dark shadow-sm",
+  outline: "border-2 border-border text-text hover:bg-highlight bg-transparent",
+  ghost: "text-muted hover:bg-bg-secondary bg-transparent",
 };
 
 const sizes: Record<ButtonSize, string> = {

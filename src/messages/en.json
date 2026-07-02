@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "digitalMemorial": "Digital Memorial",
+    "bestSellers": "Best Sellers",
+    "blog": "Blog",
+    "about": "About Us",
+    "contact": "Contact",
+    "search": "Search",
+    "account": "Account",
+    "cart": "Cart",
+    "currency": "Currency",
+    "menu": "Menu",
+    "collections": {
+      "pet-memorial-gifts": "Pet Memorial Gifts",
+      "dog-memorial-gifts": "Dog Memorial Gifts",
+      "cat-memorial-gifts": "Cat Memorial Gifts",
+      "pet-memorial-jewelry": "Pet Memorial Jewelry",
+      "pet-urns": "Pet Urns",
+      "nfc-memorial-cards": "NFC Memorial Tags",
+      "memorial-gift-boxes": "Memorial Gift Boxes"
+    }
+  },
+  "footer": {
+    "tagline": "Personalized Pet Memorial Gifts & Digital Keepsakes",
+    "customerSupport": "Customer Support",
+    "shop": "Shop",
+    "information": "Information",
+    "copyright": "All rights reserved.",
+    "links": {
+      "contact": "Contact Us",
+      "trackOrder": "Track Your Order",
+      "shipping": "Shipping Policy",
+      "returns": "Returns & Refunds",
+      "faqs": "FAQs",
+      "about": "About Us",
+      "blog": "Blog",
+      "reviews": "Reviews",
+      "wholesale": "Wholesale",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "announcements": {
+    "0": "Free Shipping on Selected Memorial Gifts",
+    "1": "Personalized Keepsakes Made with Love",
+    "2": "New: Carbon Fiber NFC Memorial Tags — Tap to Open Their Story"
+  },
+  "trust": {
+    "secureCheckout": "Secure Checkout",
+    "worldwideShipping": "Worldwide Shipping",
+    "personalizedCare": "Personalized with Care",
+    "proofBeforeProduction": "Proof Before Production",
+    "trackingProvided": "Tracking Number Provided",
+    "friendlySupport": "Friendly Customer Support"
+  },
+  "language": {
+    "label": "Language",
+    "switchTo": "Switch language"
+  },
+  "common": {
+    "readMore": "Read more",
+    "shopNow": "Shop Now",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "backToBlog": "Back to Blog",
+    "minRead": "{count} min read"
+  },
+  "meta": {
+    "homeTitle": "Personalized Pet Memorial Gifts | Custom Keepsakes",
+    "homeDescription": "Shop personalized pet memorial gifts, unique keepsakes, pet memorial jewelry, frames, and carbon fiber NFC digital memorial tags. Custom photo, name, and date engraving with proof before production."
+  }
+}

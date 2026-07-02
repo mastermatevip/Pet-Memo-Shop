@@ -1,8 +1,8 @@
-import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/cms/require-admin";
 import { saveHomepageContent } from "@/lib/cms/store";
 import type { HomepageContent } from "@/lib/cms/types";
+import { revalidateLocalizedPath } from "@/lib/i18n-revalidate";
 
 export async function GET() {
   const denied = await requireAdmin();
@@ -18,7 +18,7 @@ export async function PUT(request: Request) {
 
   const content = (await request.json()) as HomepageContent;
   const file = saveHomepageContent(content);
-  revalidatePath("/");
+  revalidateLocalizedPath("/");
 
   return NextResponse.json(file);
 }

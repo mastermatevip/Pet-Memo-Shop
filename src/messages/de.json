@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "shop": "Shop",
+    "digitalMemorial": "Digitale Erinnerung",
+    "bestSellers": "Bestseller",
+    "blog": "Blog",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "search": "Suchen",
+    "account": "Konto",
+    "cart": "Warenkorb",
+    "currency": "Währung",
+    "menu": "Menü",
+    "collections": {
+      "pet-memorial-gifts": "Tiergedenkgeschenke",
+      "dog-memorial-gifts": "Hunde-Gedenkgeschenke",
+      "cat-memorial-gifts": "Katzen-Gedenkgeschenke",
+      "pet-memorial-jewelry": "Tiergedenk schmuck",
+      "pet-urns": "Tierurnen",
+      "nfc-memorial-cards": "NFC-Gedenktags",
+      "memorial-gift-boxes": "Gedenk-Geschenkboxen"
+    }
+  },
+  "footer": {
+    "tagline": "Personalisierte Tiergedenkgeschenke & digitale Erinnerungsstücke",
+    "customerSupport": "Kundenservice",
+    "shop": "Shop",
+    "information": "Informationen",
+    "copyright": "Alle Rechte vorbehalten.",
+    "links": {
+      "contact": "Kontakt",
+      "trackOrder": "Bestellung verfolgen",
+      "shipping": "Versandrichtlinie",
+      "returns": "Rückgabe & Erstattung",
+      "faqs": "FAQ",
+      "about": "Über uns",
+      "blog": "Blog",
+      "reviews": "Bewertungen",
+      "wholesale": "Großhandel",
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen"
+    }
+  },
+  "announcements": {
+    "0": "Kostenloser Versand bei ausgewählten Gedenkgeschenken",
+    "1": "Personalisierte Erinnerungsstücke mit Liebe gefertigt",
+    "2": "Neu: NFC-Gedenktags aus Carbon — Tippen, um ihre Geschichte zu öffnen"
+  },
+  "trust": {
+    "secureCheckout": "Sicherer Checkout",
+    "worldwideShipping": "Weltweiter Versand",
+    "personalizedCare": "Personalisiert mit Sorgfalt",
+    "proofBeforeProduction": "Proof vor Produktion",
+    "trackingProvided": "Sendungsverfolgung",
+    "friendlySupport": "Freundlicher Kundenservice"
+  },
+  "language": {
+    "label": "Sprache",
+    "switchTo": "Sprache wechseln"
+  },
+  "common": {
+    "readMore": "Weiterlesen",
+    "shopNow": "Jetzt shoppen",
+    "learnMore": "Mehr erfahren",
+    "viewAll": "Alle anzeigen",
+    "backToBlog": "Zurück zum Blog",
+    "minRead": "{count} Min. Lesezeit"
+  },
+  "meta": {
+    "homeTitle": "Personalisierte Tiergedenkgeschenke | Individuelle Erinnerungsstücke",
+    "homeDescription": "Personalisierte Tiergedenkgeschenke, Schmuck, Rahmen und NFC-Gedenktags aus Carbon. Mit Foto, Name und Datum graviert — Proof vor Produktion."
+  }
+}

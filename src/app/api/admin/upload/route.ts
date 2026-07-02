@@ -8,6 +8,7 @@ import { requireAdmin } from "@/lib/cms/require-admin";
 import { processProductUpload } from "@/lib/cms/process-upload-image";
 import { updateProductImageSrc } from "@/lib/cms/store";
 import { UPLOADS_DIR } from "@/lib/cms/paths";
+import { revalidateLocalizedPath } from "@/lib/i18n-revalidate";
 
 const MAX_BYTES = 10 * 1024 * 1024;
 const ALLOWED = new Set(["image/jpeg", "image/png", "image/webp", "image/gif"]);
@@ -21,9 +22,9 @@ function ensureUploadDir() {
 }
 
 function revalidateProduct(slug: string) {
-  revalidatePath("/");
-  revalidatePath("/best-sellers");
-  revalidatePath(`/products/${slug}`);
+  revalidateLocalizedPath("/");
+  revalidateLocalizedPath("/best-sellers");
+  revalidateLocalizedPath(`/products/${slug}`);
   revalidatePath("/admin/products");
   revalidatePath(`/admin/products/${slug}`);
 }

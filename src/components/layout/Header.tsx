@@ -1,33 +1,35 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { Search, User, ShoppingBag, Menu, X, ChevronDown } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { BrandLogo } from "@/components/layout/BrandLogo";
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { cn } from "@/lib/utils";
 
-const shopLinks = [
-  { href: "/collections/pet-memorial-gifts", label: "Pet Memorial Gifts" },
-  { href: "/collections/dog-memorial-gifts", label: "Dog Memorial Gifts" },
-  { href: "/collections/cat-memorial-gifts", label: "Cat Memorial Gifts" },
-  { href: "/collections/pet-memorial-jewelry", label: "Pet Memorial Jewelry" },
-  { href: "/collections/pet-urns", label: "Pet Urns" },
-  { href: "/collections/nfc-memorial-cards", label: "NFC Memorial Tags" },
-  { href: "/collections/memorial-gift-boxes", label: "Memorial Gift Boxes" },
-];
-
-const mainLinks = [
-  { href: "/", label: "Home" },
-  { href: "/digital-pet-memorial", label: "Digital Memorial" },
-  { href: "/best-sellers", label: "Best Sellers" },
-  { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About Us" },
-  { href: "/contact", label: "Contact" },
-];
+const collectionSlugs = [
+  "pet-memorial-gifts",
+  "dog-memorial-gifts",
+  "cat-memorial-gifts",
+  "pet-memorial-jewelry",
+  "pet-urns",
+  "nfc-memorial-cards",
+  "memorial-gift-boxes",
+] as const;
 
 export function Header() {
+  const t = useTranslations("nav");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
+
+  const mainLinks = [
+    { href: "/digital-pet-memorial" as const, label: t("digitalMemorial") },
+    { href: "/best-sellers" as const, label: t("bestSellers") },
+    { href: "/blog" as const, label: t("blog") },
+    { href: "/about" as const, label: t("about") },
+    { href: "/contact" as const, label: t("contact") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-bg/95 backdrop-blur-sm border-b border-border">
@@ -37,7 +39,7 @@ export function Header() {
 
           <nav className="hidden lg:flex items-center gap-8">
             <Link href="/" className="text-muted hover:text-text transition-colors text-sm font-medium">
-              Home
+              {t("home")}
             </Link>
 
             <div
@@ -46,19 +48,19 @@ export function Header() {
               onMouseLeave={() => setShopOpen(false)}
             >
               <button className="flex items-center gap-1 text-muted hover:text-text transition-colors text-sm font-medium">
-                Shop
+                {t("shop")}
                 <ChevronDown className="w-4 h-4" />
               </button>
               {shopOpen && (
                 <div className="absolute top-full left-0 pt-2 w-64">
                   <div className="bg-card rounded-xl shadow-lg border border-border py-2">
-                    {shopLinks.map((link) => (
+                    {collectionSlugs.map((slug) => (
                       <Link
-                        key={link.href}
-                        href={link.href}
+                        key={slug}
+                        href={`/collections/${slug}`}
                         className="block px-4 py-2.5 text-sm text-muted hover:bg-highlight hover:text-text transition-colors"
                       >
-                        {link.label}
+                        {t(`collections.${slug}`)}
                       </Link>
                     ))}
                   </div>
@@ -66,7 +68,7 @@ export function Header() {
               )}
             </div>
 
-            {mainLinks.slice(1).map((link) => (
+            {mainLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -78,20 +80,21 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3 md:gap-4">
-            <button aria-label="Search" className="p-2 text-muted hover:text-text transition-colors">
+            <LanguageSwitcher />
+            <button aria-label={t("search")} className="p-2 text-muted hover:text-text transition-colors">
               <Search className="w-5 h-5" />
             </button>
-            <button aria-label="Account" className="hidden sm:block p-2 text-muted hover:text-text transition-colors">
+            <button aria-label={t("account")} className="hidden sm:block p-2 text-muted hover:text-text transition-colors">
               <User className="w-5 h-5" />
             </button>
-            <button aria-label="Cart" className="relative p-2 text-muted hover:text-text transition-colors">
+            <button aria-label={t("cart")} className="relative p-2 text-muted hover:text-text transition-colors">
               <ShoppingBag className="w-5 h-5" />
               <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-gold text-btn-text text-[10px] rounded-full flex items-center justify-center">
                 0
               </span>
             </button>
             <select
-              aria-label="Currency"
+              aria-label={t("currency")}
               className="hidden md:block text-sm text-muted bg-transparent border-none cursor-pointer focus:outline-none"
               defaultValue="USD"
             >
@@ -100,7 +103,7 @@ export function Header() {
               <option value="GBP">GBP</option>
             </select>
             <button
-              aria-label="Menu"
+              aria-label={t("menu")}
               className="lg:hidden p-2 text-muted"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
@@ -118,20 +121,20 @@ export function Header() {
       >
         <nav className="px-4 py-4 space-y-1">
           <Link href="/" className="block py-2.5 text-text font-medium" onClick={() => setMobileOpen(false)}>
-            Home
+            {t("home")}
           </Link>
-          <p className="pt-3 pb-1 text-xs uppercase tracking-wider text-light font-medium">Shop</p>
-          {shopLinks.map((link) => (
+          <p className="pt-3 pb-1 text-xs uppercase tracking-wider text-light font-medium">{t("shop")}</p>
+          {collectionSlugs.map((slug) => (
             <Link
-              key={link.href}
-              href={link.href}
+              key={slug}
+              href={`/collections/${slug}`}
               className="block py-2 pl-3 text-muted"
               onClick={() => setMobileOpen(false)}
             >
-              {link.label}
+              {t(`collections.${slug}`)}
             </Link>
           ))}
-          {mainLinks.slice(1).map((link) => (
+          {mainLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -141,6 +144,9 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <div className="pt-3 border-t border-border mt-2">
+            <LanguageSwitcher variant="mobile" />
+          </div>
         </nav>
       </div>
     </header>

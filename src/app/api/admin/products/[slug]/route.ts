@@ -1,8 +1,8 @@
-import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/cms/require-admin";
 import { loadProducts, saveProducts } from "@/lib/cms/store";
 import type { Product } from "@/types";
+import { revalidateLocalizedPath } from "@/lib/i18n-revalidate";
 
 interface RouteContext {
   params: Promise<{ slug: string }>;
@@ -41,9 +41,9 @@ export async function PUT(request: Request, context: RouteContext) {
   products[index] = updated;
   const file = saveProducts(products);
 
-  revalidatePath("/");
-  revalidatePath("/best-sellers");
-  revalidatePath(`/products/${slug}`);
+  revalidateLocalizedPath("/");
+  revalidateLocalizedPath("/best-sellers");
+  revalidateLocalizedPath(`/products/${slug}`);
 
   return NextResponse.json(file);
 }

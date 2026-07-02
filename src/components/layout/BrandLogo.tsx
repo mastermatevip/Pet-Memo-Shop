@@ -1,12 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { BRAND } from "@/config/brand";
 import { cn } from "@/lib/utils";
 
 type BrandLogoProps = {
   variant?: "full" | "icon";
   className?: string;
-  href?: string;
+  href?: string | false;
   priority?: boolean;
 };
 
@@ -33,7 +33,7 @@ export function BrandLogo({
     />
   );
 
-  if (!href) return image;
+  if (href === false) return image;
 
   return (
     <Link href={href} className="flex-shrink-0 inline-flex items-center">

@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "shop": "Tienda",
+    "digitalMemorial": "Memorial digital",
+    "bestSellers": "Más vendidos",
+    "blog": "Blog",
+    "about": "Sobre nosotros",
+    "contact": "Contacto",
+    "search": "Buscar",
+    "account": "Cuenta",
+    "cart": "Carrito",
+    "currency": "Moneda",
+    "menu": "Menú",
+    "collections": {
+      "pet-memorial-gifts": "Regalos conmemorativos",
+      "dog-memorial-gifts": "Regalos para perros",
+      "cat-memorial-gifts": "Regalos para gatos",
+      "pet-memorial-jewelry": "Joyería conmemorativa",
+      "pet-urns": "Urna para mascotas",
+      "nfc-memorial-cards": "Etiquetas NFC conmemorativas",
+      "memorial-gift-boxes": "Cajas de regalo conmemorativas"
+    }
+  },
+  "footer": {
+    "tagline": "Regalos conmemorativos personalizados y recuerdos digitales",
+    "customerSupport": "Atención al cliente",
+    "shop": "Tienda",
+    "information": "Información",
+    "copyright": "Todos los derechos reservados.",
+    "links": {
+      "contact": "Contáctanos",
+      "trackOrder": "Rastrear pedido",
+      "shipping": "Política de envío",
+      "returns": "Devoluciones y reembolsos",
+      "faqs": "Preguntas frecuentes",
+      "about": "Sobre nosotros",
+      "blog": "Blog",
+      "reviews": "Reseñas",
+      "wholesale": "Mayoristas",
+      "privacy": "Política de privacidad",
+      "terms": "Términos de servicio"
+    }
+  },
+  "announcements": {
+    "0": "Envío gratis en regalos conmemorativos seleccionados",
+    "1": "Recuerdos personalizados hechos con amor",
+    "2": "Nuevo: Etiquetas NFC de fibra de carbono — Toca para abrir su historia"
+  },
+  "trust": {
+    "secureCheckout": "Pago seguro",
+    "worldwideShipping": "Envío mundial",
+    "personalizedCare": "Personalizado con cuidado",
+    "proofBeforeProduction": "Prueba antes de producción",
+    "trackingProvided": "Número de seguimiento",
+    "friendlySupport": "Atención amable"
+  },
+  "language": {
+    "label": "Idioma",
+    "switchTo": "Cambiar idioma"
+  },
+  "common": {
+    "readMore": "Leer más",
+    "shopNow": "Comprar ahora",
+    "learnMore": "Saber más",
+    "viewAll": "Ver todo",
+    "backToBlog": "Volver al blog",
+    "minRead": "{count} min de lectura"
+  },
+  "meta": {
+    "homeTitle": "Regalos conmemorativos personalizados para mascotas",
+    "homeDescription": "Regalos conmemorativos, joyería, marcos y etiquetas NFC de fibra de carbono. Foto, nombre y fecha personalizados con prueba antes de producción."
+  }
+}

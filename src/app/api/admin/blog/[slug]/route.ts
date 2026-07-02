@@ -1,18 +1,11 @@
-import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/cms/require-admin";
 import { loadBlogPosts, saveBlogData, loadBlogCategories } from "@/lib/cms/store";
 import type { BlogPost } from "@/types";
+import { revalidateLocalizedPath } from "@/lib/i18n-revalidate";
 
 interface RouteContext {
   params: Promise<{ slug: string }>;
-}
-
-function revalidateBlogPaths(slug: string, categorySlug: string) {
-  revalidatePath("/");
-  revalidatePath("/blog");
-  revalidatePath(`/blog/${slug}`);
-  revalidatePath(`/blog/category/${categorySlug}`);
 }
 
 export async function GET(_request: Request, context: RouteContext) {
@@ -50,7 +43,11 @@ export async function PUT(request: Request, context: RouteContext) {
 
   posts[index] = updated;
   const file = saveBlogData(loadBlogCategories(), posts);
-  revalidateBlogPaths(slug, updated.categorySlug);
+
+  revalidateLocalizedPath("/");
+  revalidateLocalizedPath("/blog");
+  revalidateLocalizedPath(`/blog/${slug}`);
+  revalidateLocalizedPath(`/blog/category/${updated.categorySlug}`);
 
   return NextResponse.json(file);
 }

@@ -1,34 +1,38 @@
-import Link from "next/link";
-import { BRAND, SOCIAL_LINKS, PAYMENT_METHODS } from "@/config/brand";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { BRAND, PAYMENT_METHODS } from "@/config/brand";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 
-const customerSupport = [
-  { href: "/contact", label: "Contact Us" },
-  { href: "/track-order", label: "Track Your Order" },
-  { href: "/shipping-policy", label: "Shipping Policy" },
-  { href: "/returns-refunds", label: "Returns & Refunds" },
-  { href: "/faqs", label: "FAQs" },
-];
+const collectionSlugs = [
+  "pet-memorial-gifts",
+  "dog-memorial-gifts",
+  "cat-memorial-gifts",
+  "pet-memorial-jewelry",
+  "pet-urns",
+  "nfc-memorial-cards",
+] as const;
 
-const shopLinks = [
-  { href: "/collections/pet-memorial-gifts", label: "Pet Memorial Gifts" },
-  { href: "/collections/dog-memorial-gifts", label: "Dog Memorial Gifts" },
-  { href: "/collections/cat-memorial-gifts", label: "Cat Memorial Gifts" },
-  { href: "/collections/pet-memorial-jewelry", label: "Pet Memorial Jewelry" },
-  { href: "/collections/pet-urns", label: "Pet Urns" },
-  { href: "/collections/nfc-memorial-cards", label: "NFC Memorial Tags" },
-];
+export async function Footer() {
+  const t = await getTranslations("footer");
+  const tNav = await getTranslations("nav");
 
-const infoLinks = [
-  { href: "/about", label: "About Us" },
-  { href: "/blog", label: "Blog" },
-  { href: "/reviews", label: "Reviews" },
-  { href: "/wholesale", label: "Wholesale" },
-  { href: "/privacy-policy", label: "Privacy Policy" },
-  { href: "/terms-of-service", label: "Terms of Service" },
-];
+  const customerSupport = [
+    { href: "/contact" as const, label: t("links.contact") },
+    { href: "/track-order" as const, label: t("links.trackOrder") },
+    { href: "/shipping-policy" as const, label: t("links.shipping") },
+    { href: "/returns-refunds" as const, label: t("links.returns") },
+    { href: "/faqs" as const, label: t("links.faqs") },
+  ];
 
-export function Footer() {
+  const infoLinks = [
+    { href: "/about" as const, label: t("links.about") },
+    { href: "/blog" as const, label: t("links.blog") },
+    { href: "/reviews" as const, label: t("links.reviews") },
+    { href: "/wholesale" as const, label: t("links.wholesale") },
+    { href: "/privacy-policy" as const, label: t("links.privacy") },
+    { href: "/terms-of-service" as const, label: t("links.terms") },
+  ];
+
   return (
     <footer className="bg-btn text-footer-text">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -37,13 +41,13 @@ export function Footer() {
             <div className="inline-block bg-bg rounded-xl p-2 mb-3">
               <BrandLogo variant="icon" href="/" />
             </div>
-            <p className="text-footer-muted text-sm leading-relaxed mb-4">{BRAND.tagline}</p>
+            <p className="text-footer-muted text-sm leading-relaxed mb-4">{t("tagline")}</p>
             <div className="flex gap-4">
               {[
-                { href: SOCIAL_LINKS.instagram, label: "Instagram", text: "IG" },
-                { href: SOCIAL_LINKS.facebook, label: "Facebook", text: "FB" },
-                { href: SOCIAL_LINKS.pinterest, label: "Pinterest", text: "P" },
-                { href: SOCIAL_LINKS.tiktok, label: "TikTok", text: "T" },
+                { href: "https://instagram.com/petmemoshop", label: "Instagram", text: "IG" },
+                { href: "https://facebook.com/petmemoshop", label: "Facebook", text: "FB" },
+                { href: "https://pinterest.com/petmemoshop", label: "Pinterest", text: "P" },
+                { href: "https://tiktok.com/@petmemoshop", label: "TikTok", text: "T" },
               ].map((social) => (
                 <a
                   key={social.label}
@@ -58,7 +62,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-btn-text font-medium mb-4">Customer Support</h4>
+            <h4 className="text-btn-text font-medium mb-4">{t("customerSupport")}</h4>
             <ul className="space-y-2.5">
               {customerSupport.map((link) => (
                 <li key={link.href}>
@@ -71,12 +75,15 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-btn-text font-medium mb-4">Shop</h4>
+            <h4 className="text-btn-text font-medium mb-4">{t("shop")}</h4>
             <ul className="space-y-2.5">
-              {shopLinks.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-footer-muted hover:text-btn-text text-sm transition-colors">
-                    {link.label}
+              {collectionSlugs.map((slug) => (
+                <li key={slug}>
+                  <Link
+                    href={`/collections/${slug}`}
+                    className="text-footer-muted hover:text-btn-text text-sm transition-colors"
+                  >
+                    {tNav(`collections.${slug}`)}
                   </Link>
                 </li>
               ))}
@@ -84,7 +91,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-btn-text font-medium mb-4">Information</h4>
+            <h4 className="text-btn-text font-medium mb-4">{t("information")}</h4>
             <ul className="space-y-2.5">
               {infoLinks.map((link) => (
                 <li key={link.href}>
@@ -109,7 +116,7 @@ export function Footer() {
             ))}
           </div>
           <p className="text-footer-muted text-sm">
-            &copy; {new Date().getFullYear()} {BRAND.name}. All rights reserved.
+            &copy; {new Date().getFullYear()} {BRAND.name}. {t("copyright")}
           </p>
         </div>
       </div>

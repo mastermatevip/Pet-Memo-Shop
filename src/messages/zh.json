@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "首页",
+    "shop": "选购",
+    "digitalMemorial": "数字纪念",
+    "bestSellers": "畅销榜",
+    "blog": "博客",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "search": "搜索",
+    "account": "账户",
+    "cart": "购物车",
+    "currency": "货币",
+    "menu": "菜单",
+    "collections": {
+      "pet-memorial-gifts": "宠物纪念礼品",
+      "dog-memorial-gifts": "狗狗纪念礼品",
+      "cat-memorial-gifts": "猫咪纪念礼品",
+      "pet-memorial-jewelry": "宠物纪念首饰",
+      "pet-urns": "宠物骨灰盒",
+      "nfc-memorial-cards": "NFC 纪念吊牌",
+      "memorial-gift-boxes": "纪念礼品盒"
+    }
+  },
+  "footer": {
+    "tagline": "个性化宠物纪念礼品与数字纪念品",
+    "customerSupport": "客户支持",
+    "shop": "选购",
+    "information": "信息",
+    "copyright": "版权所有。",
+    "links": {
+      "contact": "联系我们",
+      "trackOrder": "订单追踪",
+      "shipping": "配送政策",
+      "returns": "退换货",
+      "faqs": "常见问题",
+      "about": "关于我们",
+      "blog": "博客",
+      "reviews": "用户评价",
+      "wholesale": "批发合作",
+      "privacy": "隐私政策",
+      "terms": "服务条款"
+    }
+  },
+  "announcements": {
+    "0": "精选纪念礼品免运费",
+    "1": "用心定制的个性化纪念品",
+    "2": "新品：碳纤维 NFC 纪念吊牌 — 轻触即可打开它们的回忆"
+  },
+  "trust": {
+    "secureCheckout": "安全结账",
+    "worldwideShipping": "全球配送",
+    "personalizedCare": "用心定制",
+    "proofBeforeProduction": "生产前确认样稿",
+    "trackingProvided": "提供物流单号",
+    "friendlySupport": "友好客服"
+  },
+  "language": {
+    "label": "语言",
+    "switchTo": "切换语言"
+  },
+  "common": {
+    "readMore": "阅读更多",
+    "shopNow": "立即选购",
+    "learnMore": "了解更多",
+    "viewAll": "查看全部",
+    "backToBlog": "返回博客",
+    "minRead": "{count} 分钟阅读"
+  },
+  "meta": {
+    "homeTitle": "个性化宠物纪念礼品 | 定制纪念品",
+    "homeDescription": "个性化宠物纪念礼品、首饰、相框及碳纤维 NFC 数字纪念吊牌。支持照片、名字、日期定制，生产前提供样稿确认。"
+  }
+}

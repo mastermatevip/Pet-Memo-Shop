@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { buildMetadata } from "@/lib/seo";
 import { getBlogCategories, getBlogPosts } from "@/data/blog";
 

@@ -1,7 +1,8 @@
 # Pet Memo Shop — 多语言工作计划
 
-> **状态：** 已规划，未开工（后台 CMS 一期已完成，下一优先）  
+> **状态：** Phase 1 进行中（路由 + 壳层五语已完成，2026-06-30）  
 > **目标语言：** en · de · es · fr · zh  
+> **后台语言：** 仅中文（不变）  
 > **域名：** https://petmemoshop.com
 
 ---
@@ -50,10 +51,11 @@
 
 ### Phase 1 — MVP（五语壳层 + 核心转化）
 
-- [ ] Header / Footer / 公告 / Trust badges
-- [ ] 首页 Hero、分类、How it works、NFC 区块
+- [x] `[locale]` 路由、next-intl、语言切换、hreflang（壳层）
+- [x] Header / Footer / 公告 / Trust badges（五语 JSON）
+- [ ] 首页 Hero、分类、How it works、NFC 区块（仍读 CMS 英文，待 Phase 1b）
 - [ ] Top 10–15 SKU 标题、描述、规格
-- [ ] About、Shipping、Returns、Contact
+- [ ] About、Shipping、Returns、Contact 正文
 - [ ] 各语言首页 + 核心 Collection meta
 
 ### Phase 2

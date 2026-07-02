@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import createIntlMiddleware from "next-intl/middleware";
 import { COOKIE_NAME, verifySessionToken } from "@/lib/cms/session-edge";
+import { routing } from "@/i18n/routing";
 
-export async function middleware(request: NextRequest) {
+const intlMiddleware = createIntlMiddleware(routing);
+
+async function handleAdminAuth(request: NextRequest): Promise<NextResponse | null> {
   const { pathname } = request.nextUrl;
-
-  if (!pathname.startsWith("/admin")) {
-    return NextResponse.next();
-  }
 
   if (
     pathname === "/admin/login" ||
@@ -29,6 +29,30 @@ export async function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  if (
+    pathname.startsWith("/admin") ||
+    pathname.startsWith("/api/admin") ||
+    pathname.startsWith("/uploads")
+  ) {
+    if (pathname.startsWith("/admin") || pathname.startsWith("/api/admin")) {
+      const adminResponse = await handleAdminAuth(request);
+      if (adminResponse) return adminResponse;
+    }
+    return NextResponse.next();
+  }
+
+  return intlMiddleware(request);
+}
+
 export const config = {
-  matcher: ["/admin/:path*", "/api/admin/:path*"],
+  matcher: [
+    "/",
+    "/(de|es|fr|zh|en)/:path*",
+    "/((?!api|_next|_vercel|uploads|.*\\..*).*)",
+    "/admin/:path*",
+    "/api/admin/:path*",
+  ],
 };
