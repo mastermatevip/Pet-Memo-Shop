@@ -1,0 +1,403 @@
+{
+  "homepage": {
+    "hero": {
+      "h1": "用个性化宠物纪念品，珍藏它们的记忆",
+      "subtitle": "为心爱的狗狗、猫咪或伙伴，定制一份有意义的纪念礼品。可添加照片、名字、日期，并可选 NFC 数字纪念页。",
+      "primaryCta": "选购纪念礼品",
+      "secondaryCta": "创建数字纪念页",
+      "imageAlt": "暖光下的个性化宠物纪念相框，搭配蜡烛与鲜花"
+    },
+    "sections": {
+      "categories": {
+        "title": "按分类选购",
+        "subtitle": "为心爱的伙伴，找到最合适的纪念礼品。"
+      },
+      "bestSellers": {
+        "title": "畅销宠物纪念礼品",
+        "viewAllLabel": "查看全部畅销款"
+      },
+      "nfc": {
+        "title": "一张纪念卡，打开它们的故事",
+        "description": "NFC 宠物纪念卡让家人将照片、视频、故事与爱的留言集中保存在一个数字纪念页中。只需用手机轻触卡片，即可打开记忆页面。",
+        "cta": "探索 NFC 纪念卡",
+        "imageAlt": "NFC 宠物纪念卡在智能手机上打开数字记忆页",
+        "keyPoints": [
+          "添加宠物照片与视频",
+          "包含名字、日期与故事",
+          "智能手机轻触即可打开",
+          "提供二维码备用访问",
+          "可搭配骨灰盒、相框或收纳盒摆放"
+        ]
+      },
+      "howItWorks": {
+        "title": "如何定制",
+        "subtitle": "定制个性化纪念礼品，简单且充满心意。"
+      },
+      "personalization": {
+        "title": "为每一位心爱的伙伴专属定制"
+      },
+      "blog": {
+        "title": "宠物纪念指南与慰问礼品灵感",
+        "viewAllLabel": "查看全部指南"
+      }
+    },
+    "categories": {
+      "dog-memorial-gifts": {
+        "title": "狗狗纪念礼品",
+        "description": "个性化纪念品，致敬忠诚的伙伴。"
+      },
+      "cat-memorial-gifts": {
+        "title": "猫咪纪念礼品",
+        "description": "温柔纪念，致敬您心爱的猫咪。"
+      },
+      "pet-memorial-jewelry": {
+        "title": "宠物纪念首饰",
+        "description": "可佩戴的纪念品，让记忆常伴身边。"
+      },
+      "pet-urns": {
+        "title": "宠物骨灰盒",
+        "description": "精致骨灰盒，搭配个性化铭牌。"
+      },
+      "nfc-memorial-cards": {
+        "title": "NFC 纪念吊牌",
+        "description": "碳纤维吊牌，轻触打开在线纪念页。"
+      },
+      "memorial-gift-boxes": {
+        "title": "纪念礼品盒",
+        "description": "精心搭配的纪念礼品套装。"
+      }
+    },
+    "howItWorksSteps": {
+      "1": {
+        "title": "选择纪念品",
+        "description": "浏览个性化纪念礼品系列，挑选最合适的款式。"
+      },
+      "2": {
+        "title": "上传宠物照片与信息",
+        "description": "结账时添加宠物名字、照片、日期与个人留言。"
+      },
+      "3": {
+        "title": "预览并确认设计",
+        "description": "生产前我们会发送设计稿供您审阅确认。"
+      },
+      "4": {
+        "title": "收到纪念礼品",
+        "description": "个性化纪念品精美包装送达，即可摆放展示。"
+      },
+      "5": {
+        "title": "打开数字纪念页",
+        "description": "NFC 产品可轻触吊牌或扫描二维码，访问在线纪念页。"
+      }
+    },
+    "personalizationOptions": {
+      "0": {
+        "label": "名字刻字",
+        "description": "精美刻印宠物名字"
+      },
+      "1": {
+        "label": "照片印刷",
+        "description": "上传您最喜爱的宠物照片"
+      },
+      "2": {
+        "label": "纪念日期",
+        "description": "出生与纪念日期"
+      },
+      "3": {
+        "label": "定制留言",
+        "description": "个人寄语或语录"
+      },
+      "4": {
+        "label": "礼品包装",
+        "description": "可选高端礼品包装"
+      },
+      "5": {
+        "label": "NFC 数字页",
+        "description": "轻触打开数字纪念页"
+      }
+    }
+  },
+  "products": {
+    "personalized-pet-memorial-frame": {
+      "title": "个性化宠物纪念相框",
+      "shortDescription": "温暖典雅的相框，刻印宠物名字与日期。温柔的居家纪念，让记忆常伴左右。",
+      "metaTitle": "宠物纪念相框 | 个性化照片相框",
+      "metaDescription": "个性化宠物纪念相框，刻印名字与日期。展示最喜爱的照片，为心爱的狗狗或猫咪留下温暖的居家纪念。"
+    },
+    "nfc-pet-memorial-card": {
+      "title": "NFC 宠物纪念卡",
+      "shortDescription": "内置 NFC 芯片的实体纪念卡。智能手机轻触即可打开充满照片、视频与故事的数字页面。",
+      "metaTitle": "NFC 宠物纪念卡 | 数字记忆纪念品",
+      "metaDescription": "NFC 宠物纪念卡可打开含照片、视频与故事的数字页。智能手机轻触或扫描二维码，实体与数字纪念兼具。"
+    },
+    "carbon-fiber-nfc-memorial-tag": {
+      "title": "碳纤维 NFC 纪念吊牌",
+      "shortDescription": "高端碳纤维纪念吊牌，内置 NFC 芯片。轻触打开在线纪念页，或扫描二维码备用。激光刻印名字与日期。",
+      "metaTitle": "数字宠物纪念吊牌 | 碳纤维 NFC 纪念品",
+      "metaDescription": "高端碳纤维 NFC 纪念吊牌，轻触打开含照片与视频的在线宠物纪念页。适用于狗狗与猫咪，可佩戴或摆放展示。"
+    },
+    "engraved-pet-memorial-pendant": {
+      "title": "刻字宠物纪念吊坠",
+      "shortDescription": "精致吊坠，刻印宠物名字与爪印。可佩戴的纪念品，让记忆每日相伴。",
+      "metaTitle": "宠物纪念吊坠 | 刻字项链",
+      "metaDescription": "宠物纪念吊坠，刻印名字与爪印。纯银项链，每日佩戴，珍藏心爱伙伴的记忆。"
+    },
+    "wooden-pet-cremation-urn": {
+      "title": "木质宠物骨灰盒",
+      "shortDescription": "精工木质骨灰盒，搭配个性化铭牌。温暖而庄重的安息之所。",
+      "metaTitle": "宠物纪念骨灰盒 | 木质骨灰盒",
+      "metaDescription": "木质宠物纪念骨灰盒，个性化铭牌。温暖庄重的狗狗与猫咪骨灰盒，可选照片与 NFC 纪念卡。"
+    },
+    "memorial-sympathy-gift-box": {
+      "title": "纪念慰问礼品盒",
+      "shortDescription": "精选套装：个性化纪念相框、蜡烛与慰问卡。为失去宠物的人送上温柔关怀。",
+      "metaTitle": "独特宠物纪念礼品 | 慰问礼品盒",
+      "metaDescription": "独特宠物纪念礼品盒，含个性化相框、蜡烛与慰问卡。为失去心爱宠物的人送上贴心礼物。"
+    },
+    "engraved-pet-memorial-plaque": {
+      "title": "刻字宠物纪念牌匾",
+      "shortDescription": "板岩纪念牌匾，刻印宠物名字、日期与爱的留言。适合书架或花园摆放。",
+      "metaTitle": "宠物纪念牌匾 | 个性化刻字牌匾",
+      "metaDescription": "个性化宠物纪念牌匾，刻印名字、日期与留言。板岩材质，适合室内或花园展示，可选 NFC 集成。"
+    },
+    "dog-memorial-keepsake-box": {
+      "title": "狗狗纪念收纳盒",
+      "shortDescription": "木质收纳盒，刻印狗狗名字。收藏项圈、吊牌、照片与珍贵纪念物。",
+      "metaTitle": "宠物记忆盒 | 狗狗纪念收纳盒",
+      "metaDescription": "个性化宠物记忆盒，收纳项圈、吊牌与照片。刻字木质狗狗纪念收纳盒，内衬丝绒。"
+    },
+    "cat-memorial-photo-ornament": {
+      "title": "猫咪纪念照片挂饰",
+      "shortDescription": "陶瓷照片挂饰，呈现猫咪肖像与名字。节日展示或全年纪念的温柔之选。",
+      "metaTitle": "猫咪纪念挂饰 | 个性化照片挂饰",
+      "metaDescription": "猫咪纪念照片挂饰，陶瓷材质，定制肖像与名字。节日或日常摆放的温柔纪念。"
+    },
+    "ceramic-pet-cremation-urn": {
+      "title": "陶瓷宠物骨灰盒",
+      "shortDescription": "典雅陶瓷骨灰盒，搭配个性化铭牌。柔和白釉与金色点缀，宁静居家纪念。",
+      "metaTitle": "宠物纪念骨灰盒 | 陶瓷骨灰盒",
+      "metaDescription": "陶瓷宠物骨灰盒，个性化铭牌。柔和白釉与金色点缀，为心爱伙伴提供宁静的安息之所。"
+    },
+    "pet-memorial-photo-locket": {
+      "title": "宠物纪念照片盒式项链",
+      "shortDescription": "纯银盒式项链，内藏宠物照片。正面刻印名字，极为私密的可佩戴纪念品。",
+      "metaTitle": "宠物纪念项链 | 照片盒式项链",
+      "metaDescription": "宠物纪念项链，内置照片盒式吊坠。纯银材质，正面刻印名字，极为私密的可佩戴纪念品。"
+    },
+    "digital-memorial-page-standalone": {
+      "title": "数字宠物纪念页",
+      "shortDescription": "独立数字纪念页，含照片、视频、故事与家人留言。通过专属链接与二维码访问。",
+      "metaTitle": "数字宠物纪念页 | 在线记忆纪念",
+      "metaDescription": "创建数字宠物纪念页，含照片、视频、故事与家人留言。通过专属链接与二维码分享。"
+    },
+    "pet-loss-candle-set": {
+      "title": "宠物失去纪念蜡烛套装",
+      "shortDescription": "三支大豆蜡蜡烛，柔和香氛与纪念标签。温柔舒适的宠物失去慰问礼品。",
+      "metaTitle": "宠物失去纪念蜡烛 | 慰问蜡烛套装",
+      "metaDescription": "宠物失去纪念蜡烛套装，三支大豆蜡蜡烛，柔和香氛与纪念标签。温柔舒适的慰问礼品。"
+    }
+  },
+  "collections": {
+    "pet-memorial-gifts": {
+      "name": "宠物纪念礼品",
+      "h1": "个性化宠物纪念礼品",
+      "description": "贴心的个性化纪念品，纪念心爱伙伴。",
+      "intro": "探索个性化宠物纪念礼品，为与狗狗、猫咪或伙伴共度的情谊留下纪念。每件纪念品可定制照片、名字、日期与爱的留言。",
+      "metaTitle": "宠物纪念礼品 | 狗狗与猫咪个性化纪念品",
+      "metaDescription": "选购个性化宠物纪念礼品。定制相框、牌匾、首饰、骨灰盒与 NFC 数字纪念品，生产前提供设计稿确认。"
+    },
+    "dog-memorial-gifts": {
+      "name": "狗狗纪念礼品",
+      "h1": "狗狗纪念礼品与宠物纪念",
+      "description": "有意义的纪念品，铭记心爱狗狗。",
+      "intro": "以个性化狗狗纪念礼品，致敬忠诚的陪伴。从刻字相框到 NFC 记忆卡，每件作品都让它们的故事常伴身边。",
+      "metaTitle": "狗狗纪念礼品 | 狗狗宠物纪念",
+      "metaDescription": "选购狗狗纪念礼品。个性化相框、骨灰盒、首饰、收纳盒与 NFC 卡，纪念心爱狗狗。"
+    },
+    "cat-memorial-gifts": {
+      "name": "猫咪纪念礼品",
+      "h1": "猫咪纪念礼品",
+      "description": "温柔纪念品，铭记心爱猫咪。",
+      "intro": "以个性化纪念礼品，庆祝猫咪安静的陪伴。每件作品以温暖与尊重设计，致敬它们独特的个性。",
+      "metaTitle": "猫咪纪念礼品 | 个性化猫咪纪念品",
+      "metaDescription": "选购个性化猫咪纪念礼品。相框、首饰、骨灰盒与数字纪念品，纪念心爱猫咪。"
+    },
+    "pet-memorial-jewelry": {
+      "name": "宠物纪念首饰",
+      "h1": "宠物纪念首饰",
+      "description": "可佩戴的纪念品，让记忆常伴身边。",
+      "intro": "以个性化宠物纪念首饰，让心爱伙伴常伴左右——刻字吊坠、纪念项链、照片盒式项链与爪印设计，精工典雅。",
+      "metaTitle": "宠物纪念首饰 | 吊坠、项链与盒式项链",
+      "metaDescription": "选购宠物纪念首饰：吊坠、项链与照片盒式项链。刻印名字、日期与爪印，个性化纪念品致敬心爱宠物。"
+    },
+    "pet-urns": {
+      "name": "宠物骨灰盒",
+      "h1": "宠物纪念骨灰盒",
+      "description": "精致骨灰盒，搭配个性化铭牌。",
+      "intro": "以精美宠物纪念骨灰盒，致敬心爱伙伴。可选木质、陶瓷与金属骨灰盒，搭配个性化铭牌与相框。",
+      "metaTitle": "宠物纪念骨灰盒 | 个性化骨灰盒",
+      "metaDescription": "选购狗狗与猫咪宠物纪念骨灰盒。木质、陶瓷与金属骨灰盒，个性化铭牌、照片选项与可选 NFC 纪念卡。"
+    },
+    "nfc-memorial-cards": {
+      "name": "NFC 纪念吊牌",
+      "h1": "数字宠物纪念吊牌与 NFC 纪念品",
+      "description": "轻触打开充满回忆的在线宠物纪念页。",
+      "intro": "将实体纪念品与持久的在线纪念相连。NFC 纪念吊牌与卡片——含高端碳纤维吊牌——轻触即可打开含照片、视频、故事与家人留言的数字页，亦可扫描二维码。",
+      "metaTitle": "数字宠物纪念吊牌 | NFC 与二维码纪念品",
+      "metaDescription": "选购数字宠物纪念吊牌，NFC 与二维码访问。高端碳纤维吊牌与纪念卡，打开含照片、视频与故事的在线页面。"
+    },
+    "memorial-gift-boxes": {
+      "name": "纪念礼品盒",
+      "h1": "纪念礼品盒与宠物记忆盒",
+      "description": "精心搭配的宠物纪念礼品套装。",
+      "intro": "纪念礼品盒与宠物记忆盒，将个性化纪念品精美包装——贴心慰问礼品，或为自己心爱伙伴准备的完整纪念套装。",
+      "metaTitle": "纪念礼品盒 | 宠物记忆盒礼品套装",
+      "metaDescription": "选购纪念礼品盒与宠物记忆盒，含个性化纪念品、蜡烛与相框。宠物失去的贴心慰问礼品。"
+    }
+  },
+  "pages": {
+    "about": {
+      "title": "关于 Pet Memo Shop",
+      "metaTitle": "关于我们 | Pet Memo Shop",
+      "metaDescription": "了解 Pet Memo Shop——高端宠物纪念品牌，打造个性化纪念品与数字纪念体验。",
+      "sections": [
+        {
+          "type": "p",
+          "text": "Pet Memo Shop 创立之初便怀有一个信念：每一位心爱伙伴都值得被温暖、庄重与爱地铭记。我们打造个性化宠物纪念礼品与数字纪念品，帮助家庭致敬共同拥有的情谊。"
+        },
+        {
+          "type": "h2",
+          "text": "我们的使命"
+        },
+        {
+          "type": "p",
+          "text": "我们相信纪念礼品应当温柔而非沉重。产品设计旨在庆祝宠物带来的欢乐、忠诚与安静陪伴——不是哀悼它们的离去，而是铭记它们的记忆。"
+        },
+        {
+          "type": "h2",
+          "text": "我们的特色"
+        },
+        {
+          "type": "p",
+          "text": "我们的标志性 NFC 宠物纪念卡，将实体纪念品与数字纪念页相连。只需轻触，家人即可访问照片、视频、故事与留言——创造随时间生长的鲜活纪念。"
+        },
+        {
+          "type": "h2",
+          "text": "我们的承诺"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "每件个性化产品生产前均提供设计稿确认",
+            "高端材质与精工制作",
+            "温暖、尊重的客户支持",
+            "全球配送，全程可追踪"
+          ]
+        }
+      ],
+      "cta": "探索我们的系列"
+    },
+    "shipping": {
+      "title": "配送政策",
+      "metaTitle": "配送政策 | Pet Memo Shop",
+      "metaDescription": "了解 Pet Memo Shop 配送选项、送达时间与国际配送。",
+      "sections": [
+        {
+          "type": "p",
+          "text": "我们从发货中心全球配送，所有订单均含物流追踪。"
+        },
+        {
+          "type": "h2",
+          "text": "生产时间"
+        },
+        {
+          "type": "p",
+          "text": "个性化产品在设计稿确认后需 3–5 个工作日生产。非定制产品 1–2 个工作日内发货。"
+        },
+        {
+          "type": "h2",
+          "text": "送达时间"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "美国：5–7 个工作日",
+            "加拿大与英国：7–12 个工作日",
+            "欧洲与澳大利亚：10–15 个工作日",
+            "其他国际地区：12–20 个工作日"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "免运费"
+        },
+        {
+          "type": "p",
+          "text": "指定纪念礼品及订单满 $75 可享标准免运费。"
+        }
+      ]
+    },
+    "returns": {
+      "title": "退换货",
+      "metaTitle": "退换货 | Pet Memo Shop",
+      "metaDescription": "Pet Memo Shop 个性化与非定制纪念礼品的退换货政策。",
+      "sections": [
+        {
+          "type": "h2",
+          "text": "定制产品"
+        },
+        {
+          "type": "p",
+          "text": "个性化与定制纪念礼品除商品损坏或定制信息错误外不可退换。请在收货后 14 天内联系我们并提供问题照片。"
+        },
+        {
+          "type": "h2",
+          "text": "非定制产品"
+        },
+        {
+          "type": "p",
+          "text": "非定制产品可在 30 天内退回，须保持原包装且未使用。退货运费由客户承担，除非商品存在缺陷。"
+        },
+        {
+          "type": "h2",
+          "text": "损坏商品"
+        },
+        {
+          "type": "p",
+          "text": "如商品送达时已损坏，请在 14 天内联系我们并提供照片。我们将免费安排换货或全额退款。"
+        },
+        {
+          "type": "h2",
+          "text": "如何发起退换"
+        },
+        {
+          "type": "p",
+          "text": "请发送邮件至 hello@petmemoshop.com，注明订单号与退换原因。我们的团队将引导您完成流程。"
+        }
+      ]
+    }
+  },
+  "bestSellersPage": {
+    "title": "独特宠物纪念礼品",
+    "subtitle": "全球宠物家庭最喜爱的纪念纪念品。",
+    "metaTitle": "独特宠物纪念礼品 | 畅销榜",
+    "metaDescription": "选购独特宠物纪念礼品与畅销个性化纪念品——NFC 卡、首饰、相框、骨灰盒与慰问礼品盒。"
+  },
+  "contact": {
+    "title": "联系我们",
+    "intro": "订单咨询、定制问题或其他需求，我们随时为您服务。团队将在 24 小时内回复。",
+    "name": "姓名",
+    "email": "邮箱",
+    "subject": "主题",
+    "message": "留言",
+    "send": "发送留言",
+    "thanks": "感谢您的来信，我们会尽快回复。",
+    "subjects": [
+      "订单咨询",
+      "定制帮助",
+      "配送问题",
+      "退换货",
+      "批发咨询",
+      "其他"
+    ]
+  }
+}

@@ -1,35 +1,38 @@
-import { buildMetadata } from "@/lib/seo";
+import { createLocalizedPolicyPage } from "@/lib/localized-policy-page";
 
-function PolicyLayout({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-      <h1 className="font-serif text-4xl text-text mb-8">{title}</h1>
-      <div className="prose-memorial space-y-6">{children}</div>
-    </div>
-  );
-}
-
-export const metadata = buildMetadata({
-  title: "Shipping Policy",
-  description: "Learn about Pet Memo Shop shipping options, delivery times, and international shipping.",
+const { Page, generateMetadata } = createLocalizedPolicyPage({
+  pageKey: "shipping",
   path: "/shipping-policy",
+  fallbackTitle: "Shipping Policy",
+  fallbackMetaDescription:
+    "Learn about Pet Memo Shop shipping options, delivery times, and international shipping.",
+  fallbackSections: [
+    {
+      type: "p",
+      text: "We ship worldwide from our fulfillment centers. All orders include tracking.",
+    },
+    { type: "h2", text: "Processing Time" },
+    {
+      type: "p",
+      text: "Personalized items require 3–5 business days for production after design proof approval. Non-customized items ship within 1–2 business days.",
+    },
+    { type: "h2", text: "Delivery Times" },
+    {
+      type: "ul",
+      items: [
+        "United States: 5–7 business days",
+        "Canada & UK: 7–12 business days",
+        "Europe & Australia: 10–15 business days",
+        "Other international: 12–20 business days",
+      ],
+    },
+    { type: "h2", text: "Free Shipping" },
+    {
+      type: "p",
+      text: "Free standard shipping is available on selected memorial gifts and orders over $75.",
+    },
+  ],
 });
 
-export default function ShippingPolicyPage() {
-  return (
-    <PolicyLayout title="Shipping Policy">
-      <p>We ship worldwide from our fulfillment centers. All orders include tracking.</p>
-      <h2>Processing Time</h2>
-      <p>Personalized items require 3–5 business days for production after design proof approval. Non-customized items ship within 1–2 business days.</p>
-      <h2>Delivery Times</h2>
-      <ul>
-        <li>United States: 5–7 business days</li>
-        <li>Canada & UK: 7–12 business days</li>
-        <li>Europe & Australia: 10–15 business days</li>
-        <li>Other international: 12–20 business days</li>
-      </ul>
-      <h2>Free Shipping</h2>
-      <p>Free standard shipping is available on selected memorial gifts and orders over $75.</p>
-    </PolicyLayout>
-  );
-}
+export { generateMetadata };
+export default Page;

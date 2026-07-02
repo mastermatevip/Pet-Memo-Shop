@@ -1,10 +1,24 @@
+import ContactForm from "./ContactForm";
 import { buildMetadata } from "@/lib/seo";
-import { BRAND } from "@/config/brand";
+import { loadContentBundle } from "@/lib/localized-content";
 
-export const metadata = buildMetadata({
-  title: "Contact Us",
-  description: `Contact ${BRAND.name} for order inquiries, personalization help, and customer support.`,
-  path: "/contact",
-});
+interface Props {
+  params: Promise<{ locale: string }>;
+}
 
-export { default } from "./ContactForm";
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const bundle = await loadContentBundle(locale);
+  const contact = bundle?.contact;
+
+  return buildMetadata({
+    title: contact?.title ?? "Contact Us",
+    description: contact?.intro ?? "Contact Pet Memo Shop for order inquiries and support.",
+    path: "/contact",
+    locale,
+  });
+}
+
+export default function ContactPage() {
+  return <ContactForm />;
+}

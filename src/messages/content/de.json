@@ -1,0 +1,403 @@
+{
+  "homepage": {
+    "hero": {
+      "h1": "Ehren Sie ihr Andenken mit einem personalisierten Haustier-Erinnerungsstück",
+      "subtitle": "Gestalten Sie ein bedeutungsvolles Gedenkgeschenk für einen geliebten Hund, eine Katze oder einen treuen Begleiter. Personalisiert mit Fotos, Namen, Daten und optionalen NFC-Digitalgedenkseiten.",
+      "primaryCta": "Gedenkgeschenke entdecken",
+      "secondaryCta": "Digitale Gedenkseite erstellen",
+      "imageAlt": "Personalisierter Haustier-Gedenkrahmen mit Kerze und Blumen in warmem natürlichem Licht"
+    },
+    "sections": {
+      "categories": {
+        "title": "Nach Kategorie shoppen",
+        "subtitle": "Finden Sie das perfekte Gedenkgeschenk für Ihren geliebten Begleiter."
+      },
+      "bestSellers": {
+        "title": "Bestseller: Haustier-Gedenkgeschenke",
+        "viewAllLabel": "Alle Bestseller ansehen"
+      },
+      "nfc": {
+        "title": "Eine Gedenkkarte, die ihre Geschichte öffnet",
+        "description": "Unsere NFC-Haustier-Gedenkkarten ermöglichen es Familien, Fotos, Videos, Geschichten und liebevolle Nachrichten auf einer digitalen Gedenkseite zu sammeln. Tippen Sie einfach mit dem Smartphone auf die Karte, um die Erinnerungsseite zu öffnen.",
+        "cta": "NFC-Gedenkkarten entdecken",
+        "imageAlt": "NFC-Haustier-Gedenkkarte öffnet digitale Erinnerungsseite auf dem Smartphone",
+        "keyPoints": [
+          "Haustierfotos und -videos hinzufügen",
+          "Name, Daten und Geschichte einbinden",
+          "Mit dem Smartphone antippen",
+          "QR-Code als Backup verfügbar",
+          "Ideal neben Urne, Bilderrahmen oder Erinnerungsbox"
+        ]
+      },
+      "howItWorks": {
+        "title": "So funktioniert es",
+        "subtitle": "Ein personalisiertes Gedenkgeschenk zu gestalten ist einfach und voller Herz."
+      },
+      "personalization": {
+        "title": "Individuell für jeden geliebten Begleiter"
+      },
+      "blog": {
+        "title": "Gedenkratgeber & Ideen für Trostgeschenke",
+        "viewAllLabel": "Alle Ratgeber ansehen"
+      }
+    },
+    "categories": {
+      "dog-memorial-gifts": {
+        "title": "Hunde-Gedenkgeschenke",
+        "description": "Personalisierte Erinnerungsstücke, die Ihren treuen Begleiter ehren."
+      },
+      "cat-memorial-gifts": {
+        "title": "Katzen-Gedenkgeschenke",
+        "description": "Sanfte Erinnerungen für Ihre geliebte Katze."
+      },
+      "pet-memorial-jewelry": {
+        "title": "Haustier-Gedenkschmuck",
+        "description": "Tragbare Erinnerungsstücke, die ihre Nähe bewahren."
+      },
+      "pet-urns": {
+        "title": "Haustier-Urnen",
+        "description": "Elegante Urnen mit personalisierten Namensschildern."
+      },
+      "nfc-memorial-cards": {
+        "title": "NFC-Gedenkanhänger",
+        "description": "Carbon-Anhänger, die eine Online-Gedenkseite öffnen."
+      },
+      "memorial-gift-boxes": {
+        "title": "Gedenkgeschenkboxen",
+        "description": "Sorgfältig zusammengestellte Geschenksets zum Gedenken."
+      }
+    },
+    "howItWorksSteps": {
+      "1": {
+        "title": "Erinnerungsstück wählen",
+        "description": "Durchstöbern Sie unsere Kollektion personalisierter Gedenkgeschenke und wählen Sie die passende Erinnerung."
+      },
+      "2": {
+        "title": "Foto & Details hochladen",
+        "description": "Fügen Sie beim Checkout den Namen, das Foto, die Daten und eine persönliche Nachricht Ihres Haustiers hinzu."
+      },
+      "3": {
+        "title": "Design prüfen und bestätigen",
+        "description": "Wir senden Ihnen einen Designentwurf zur Prüfung, bevor die Produktion beginnt."
+      },
+      "4": {
+        "title": "Gedenkgeschenk erhalten",
+        "description": "Ihr personalisiertes Erinnerungsstück kommt liebevoll verpackt und bereit zur Aufstellung bei Ihnen an."
+      },
+      "5": {
+        "title": "Digitale Gedenkseite öffnen",
+        "description": "Bei NFC-Produkten tippen Sie den Anhänger an oder scannen den QR-Code, um die Online-Gedenkseite zu öffnen."
+      }
+    },
+    "personalizationOptions": {
+      "0": {
+        "label": "Namensgravur",
+        "description": "Der Name Ihres Haustiers, kunstvoll graviert"
+      },
+      "1": {
+        "label": "Fotodruck",
+        "description": "Laden Sie Ihr liebstes Haustierfoto hoch"
+      },
+      "2": {
+        "label": "Gedenkdatum",
+        "description": "Geburts- und Erinnerungsdaten"
+      },
+      "3": {
+        "label": "Persönliche Nachricht",
+        "description": "Eine persönliche Botschaft oder ein Zitat"
+      },
+      "4": {
+        "label": "Geschenkbox",
+        "description": "Premium-Geschenkverpackung optional"
+      },
+      "5": {
+        "label": "NFC-Digitalseite",
+        "description": "Antippen, um eine digitale Gedenkseite zu öffnen"
+      }
+    }
+  },
+  "products": {
+    "personalized-pet-memorial-frame": {
+      "title": "Personalisierter Haustier-Gedenkrahmen",
+      "shortDescription": "Ein warmer, eleganter Bilderrahmen mit Gravur von Name und Daten. Eine sanfte Erinnerung für Zuhause.",
+      "metaTitle": "Haustier-Gedenkrahmen | Personalisierter Bilderrahmen",
+      "metaDescription": "Personalisierter Haustier-Gedenkrahmen mit Namens- und Datumsgravur. Zeigen Sie Ihr Lieblingsfoto als warme Erinnerung für Hund oder Katze."
+    },
+    "nfc-pet-memorial-card": {
+      "title": "NFC-Haustier-Gedenkkarte",
+      "shortDescription": "Eine physische Gedenkkarte mit eingebettetem NFC-Chip. Antippen mit dem Smartphone, um eine Seite voller Fotos, Videos und Geschichten zu öffnen.",
+      "metaTitle": "NFC-Haustier-Gedenkkarte | Digitales Erinnerungsstück",
+      "metaDescription": "NFC-Haustier-Gedenkkarte öffnet eine digitale Seite mit Fotos, Videos und Geschichten. Antippen oder QR-Code scannen — physisch und digital vereint."
+    },
+    "carbon-fiber-nfc-memorial-tag": {
+      "title": "Carbon-NFC-Gedenkanhänger",
+      "shortDescription": "Premium-Carbon-Gedenkanhänger mit NFC-Chip. Antippen für die Online-Gedenkseite oder QR-Code scannen. Lasergravur mit Name und Daten.",
+      "metaTitle": "Digitaler Haustier-Gedenkanhänger | Carbon-NFC-Erinnerungsstück",
+      "metaDescription": "Premium-Carbon-NFC-Gedenkanhänger öffnet eine Online-Gedenkseite mit Fotos und Videos. Für Hunde und Katzen — tragbar oder zur Aufstellung."
+    },
+    "engraved-pet-memorial-pendant": {
+      "title": "Gravierter Haustier-Gedenkanhänger",
+      "shortDescription": "Ein zartes Anhängerstück mit Gravur von Name und Pfotenabdruck. Ein tragbares Erinnerungsstück für jeden Tag.",
+      "metaTitle": "Haustier-Gedenkanhänger | Gravierte Halskette",
+      "metaDescription": "Haustier-Gedenkanhänger mit Gravur von Name und Pfotenabdruck. Sterling-Silber-Halskette — tragen Sie die Erinnerung täglich bei sich."
+    },
+    "wooden-pet-cremation-urn": {
+      "title": "Holz-Urne für Haustiere",
+      "shortDescription": "Sorgfältig gefertigte Holzurne mit personalisiertem Namensschild. Ein warmer, würdevoller Ruheort.",
+      "metaTitle": "Haustier-Gedenkurne | Holz-Einäscherungsurne",
+      "metaDescription": "Holz-Haustier-Gedenkurne mit personalisiertem Namensschild. Warme, würdevolle Urne für Hunde und Katzen — optional mit Foto und NFC-Karte."
+    },
+    "memorial-sympathy-gift-box": {
+      "title": "Gedenk-Trostgeschenkbox",
+      "shortDescription": "Ein kuratiertes Set mit personalisiertem Gedenkrahmen, Kerze und Trostkarte. Eine einfühlsame Geste für Trauernde.",
+      "metaTitle": "Einzigartige Haustier-Gedenkgeschenke | Trostgeschenkbox",
+      "metaDescription": "Einzigartige Haustier-Gedenkgeschenkbox mit personalisiertem Rahmen, Kerze und Trostkarte. Ein durchdachtes Geschenk für den Verlust eines geliebten Haustiers."
+    },
+    "engraved-pet-memorial-plaque": {
+      "title": "Gravierte Haustier-Gedenktafel",
+      "shortDescription": "Schiefer-Gedenktafel mit Gravur von Name, Daten und liebevoller Nachricht. Ideal für Regal oder Garten.",
+      "metaTitle": "Haustier-Gedenktafel | Personalisierte Gravur",
+      "metaDescription": "Personalisierte Haustier-Gedenktafel mit Gravur von Name, Daten und Nachricht. Schiefer für Innen- oder Gartendisplay — optional mit NFC."
+    },
+    "dog-memorial-keepsake-box": {
+      "title": "Hunde-Erinnerungsbox",
+      "shortDescription": "Holzbox mit Gravur des Hundenamens. Bewahren Sie Halsbänder, Anhänger, Fotos und kostbare Erinnerungen an einem Ort.",
+      "metaTitle": "Haustier-Erinnerungsbox | Hunde-Gedenkbox",
+      "metaDescription": "Personalisierte Haustier-Erinnerungsbox für Halsbänder, Anhänger und Fotos. Gravierte Holzbox mit Samtausstattung."
+    },
+    "cat-memorial-photo-ornament": {
+      "title": "Katzen-Foto-Gedenkanhänger",
+      "shortDescription": "Keramikanhänger mit Porträt und Name Ihrer Katze. Eine sanfte Erinnerung für Feiertage oder das ganze Jahr.",
+      "metaTitle": "Katzen-Gedenkanhänger | Personalisiertes Fotoornament",
+      "metaDescription": "Katzen-Gedenk-Fotoornament aus Keramik mit personalisiertem Porträt und Name. Sanfte Erinnerung für Feiertage oder den Alltag."
+    },
+    "ceramic-pet-cremation-urn": {
+      "title": "Keramik-Urne für Haustiere",
+      "shortDescription": "Elegante Keramikurne mit personalisiertem Namensschild. Sanfte weiße Glasur mit dezenten Goldakzenten.",
+      "metaTitle": "Haustier-Gedenkurne | Keramik-Einäscherungsurne",
+      "metaDescription": "Keramik-Haustierurne mit personalisiertem Namensschild. Sanfte weiße Glasur mit Goldakzenten — ein stiller Ruheort für Ihren Begleiter."
+    },
+    "pet-memorial-photo-locket": {
+      "title": "Haustier-Foto-Medaillon",
+      "shortDescription": "Sterling-Silber-Medaillon mit Foto Ihres Haustiers im Inneren. Name elegant auf der Vorderseite graviert.",
+      "metaTitle": "Haustier-Gedenkkette | Foto-Medaillon",
+      "metaDescription": "Haustier-Gedenkkette mit Foto-Medaillon. Sterling Silber, Name auf der Vorderseite graviert — ein zutiefst persönliches Erinnerungsstück."
+    },
+    "digital-memorial-page-standalone": {
+      "title": "Digitale Haustier-Gedenkseite",
+      "shortDescription": "Eigenständige digitale Gedenkseite mit Fotos, Videos, Geschichte und Familiennachrichten. Zugang per Link und QR-Code.",
+      "metaTitle": "Digitale Haustier-Gedenkseite | Online-Erinnerung",
+      "metaDescription": "Erstellen Sie eine digitale Haustier-Gedenkseite mit Fotos, Videos, Geschichte und Familiennachrichten. Teilen Sie sie per Link und QR-Code."
+    },
+    "pet-loss-candle-set": {
+      "title": "Gedenkkerzen-Set zum Haustierverlust",
+      "shortDescription": "Drei Sojawachskerzen mit sanften Düften und Gedenketiketten. Ein Trostgeschenk voller Wärme und Ruhe.",
+      "metaTitle": "Gedenkkerzen zum Haustierverlust | Kerzenset",
+      "metaDescription": "Gedenkkerzen-Set zum Haustierverlust: drei Sojawachskerzen mit sanften Düften und Erinnerungsetiketten. Ein einfühlsames Trostgeschenk."
+    }
+  },
+  "collections": {
+    "pet-memorial-gifts": {
+      "name": "Haustier-Gedenkgeschenke",
+      "h1": "Personalisierte Haustier-Gedenkgeschenke",
+      "description": "Durchdachte personalisierte Erinnerungsstücke für einen geliebten Begleiter.",
+      "intro": "Entdecken Sie personalisierte Haustier-Gedenkgeschenke, die die Bindung zu Ihrem geliebten Hund, Ihrer Katze oder Ihrem Begleiter ehren. Jedes Stück kann mit Fotos, Namen, Daten und liebevollen Nachrichten gestaltet werden.",
+      "metaTitle": "Haustier-Gedenkgeschenke | Personalisierte Erinnerungsstücke für Hunde & Katzen",
+      "metaDescription": "Shoppen Sie personalisierte Haustier-Gedenkgeschenke. Individuelle Bilderrahmen, Tafeln, Schmuck, Urnen und NFC-Digitalerinnerungen — mit Designentwurf vor der Produktion."
+    },
+    "dog-memorial-gifts": {
+      "name": "Hunde-Gedenkgeschenke",
+      "h1": "Hunde-Gedenkgeschenke & Haustier-Gedenkstücke für Hunde",
+      "description": "Bedeutungsvolle Erinnerungsstücke für einen geliebten Hund.",
+      "intro": "Ehren Sie den treuen Geist Ihres Hundes mit personalisierten Gedenkgeschenken. Von gravierten Rahmen bis zu NFC-Erinnerungskarten — jedes Stück hält ihre Geschichte nah bei Ihnen.",
+      "metaTitle": "Hunde-Gedenkgeschenke | Haustier-Gedenkstücke für Hunde",
+      "metaDescription": "Shoppen Sie Hunde-Gedenkgeschenke. Personalisierte Rahmen, Urnen, Schmuck, Erinnerungsboxen und NFC-Karten für Ihren geliebten Hund."
+    },
+    "cat-memorial-gifts": {
+      "name": "Katzen-Gedenkgeschenke",
+      "h1": "Katzen-Gedenkgeschenke",
+      "description": "Sanfte Erinnerungsstücke für eine geliebte Katze.",
+      "intro": "Feiern Sie die stille Begleitung Ihrer Katze mit personalisierten Gedenkgeschenken. Jedes Stück ist mit Wärme und Respekt gestaltet, um ihren einzigartigen Charakter zu ehren.",
+      "metaTitle": "Katzen-Gedenkgeschenke | Personalisierte Katzen-Erinnerungsstücke",
+      "metaDescription": "Shoppen Sie personalisierte Katzen-Gedenkgeschenke. Bilderrahmen, Schmuck, Urnen und digitale Erinnerungsstücke für Ihre geliebte Katze."
+    },
+    "pet-memorial-jewelry": {
+      "name": "Haustier-Gedenkschmuck",
+      "h1": "Haustier-Gedenkschmuck",
+      "description": "Tragbare Erinnerungsstücke, die ihre Nähe bewahren.",
+      "intro": "Halten Sie Ihren geliebten Begleiter nah mit personalisiertem Haustier-Gedenkschmuck — gravierte Anhänger, Gedenkketten, Foto-Medaillons und Pfotenabdruck-Designs, kunstvoll gefertigt.",
+      "metaTitle": "Haustier-Gedenkschmuck | Anhänger, Ketten & Medaillons",
+      "metaDescription": "Shoppen Sie Haustier-Gedenkschmuck: Anhänger, Ketten und Foto-Medaillons. Graviert mit Name, Daten und Pfotenabdruck — personalisierte Erinnerungen für Ihr Haustier."
+    },
+    "pet-urns": {
+      "name": "Haustier-Urnen",
+      "h1": "Haustier-Gedenkurnen",
+      "description": "Elegante Einäscherungsurnen mit personalisierten Namensschildern.",
+      "intro": "Ehren Sie Ihren geliebten Begleiter mit einer kunstvoll gefertigten Haustier-Gedenkurne. Wählen Sie aus Holz-, Keramik- und Metallurnen mit optionalen Namensschildern und Bilderrahmen.",
+      "metaTitle": "Haustier-Gedenkurnen | Personalisierte Einäscherungsurnen",
+      "metaDescription": "Shoppen Sie Haustier-Gedenkurnen für Hunde und Katzen. Holz-, Keramik- und Metallurnen mit Namensschildern, Fotooptionen und optionalen NFC-Gedenkkarten."
+    },
+    "nfc-memorial-cards": {
+      "name": "NFC-Gedenkanhänger",
+      "h1": "Digitale Haustier-Gedenkanhänger & NFC-Erinnerungsstücke",
+      "description": "Antippen, um eine Online-Gedenkseite voller Erinnerungen zu öffnen.",
+      "intro": "Verbinden Sie ein physisches Erinnerungsstück mit einer dauerhaften Online-Gedenkseite. Unsere NFC-Anhänger und -Karten — einschließlich Premium-Carbon-Anhänger — öffnen per Antippen eine Seite mit Fotos, Videos, Geschichten und Familiennachrichten. Oder scannen Sie den QR-Code.",
+      "metaTitle": "Digitale Haustier-Gedenkanhänger | NFC- & QR-Code-Erinnerungsstücke",
+      "metaDescription": "Shoppen Sie digitale Haustier-Gedenkanhänger mit NFC- und QR-Code-Zugang. Premium-Carbon-Anhänger und Gedenkkarten öffnen Online-Seiten mit Fotos, Videos und Geschichten."
+    },
+    "memorial-gift-boxes": {
+      "name": "Gedenkgeschenkboxen",
+      "h1": "Gedenkgeschenkboxen & Haustier-Erinnerungsboxen",
+      "description": "Kuratierte Geschenksets zum Gedenken.",
+      "intro": "Unsere Gedenkgeschenkboxen und Haustier-Erinnerungsboxen vereinen personalisierte Erinnerungsstücke in schöner Verpackung — ein einfühlsames Trostgeschenk oder ein vollständiges Gedenkset für Ihren geliebten Begleiter.",
+      "metaTitle": "Gedenkgeschenkboxen | Haustier-Erinnerungsbox-Sets",
+      "metaDescription": "Shoppen Sie Gedenkgeschenkboxen und Haustier-Erinnerungsboxen mit personalisierten Erinnerungsstücken, Kerzen und Rahmen. Ein durchdachtes Trostgeschenk beim Haustierverlust."
+    }
+  },
+  "pages": {
+    "about": {
+      "title": "Über Pet Memo Shop",
+      "metaTitle": "Über uns | Pet Memo Shop",
+      "metaDescription": "Erfahren Sie mehr über Pet Memo Shop — eine Premium-Marke für Haustier-Gedenkstücke mit personalisierten Erinnerungen und digitalen Gedenkseiten.",
+      "sections": [
+        {
+          "type": "p",
+          "text": "Pet Memo Shop wurde mit einer einfachen Überzeugung gegründet: Jeder geliebte Begleiter verdient es, mit Wärme, Würde und Liebe in Erinnerung zu bleiben. Wir gestalten personalisierte Haustier-Gedenkgeschenke und digitale Erinnerungsstücke, die Familien helfen, die gemeinsame Bindung zu ehren."
+        },
+        {
+          "type": "h2",
+          "text": "Unsere Mission"
+        },
+        {
+          "type": "p",
+          "text": "Wir glauben, dass Gedenkgeschenke sanft wirken sollten — nicht düster. Unsere Produkte feiern die Freude, Loyalität und stille Begleitung, die Haustiere in unser Leben bringen — nicht ihren Verlust, sondern ihr Andenken."
+        },
+        {
+          "type": "h2",
+          "text": "Was uns auszeichnet"
+        },
+        {
+          "type": "p",
+          "text": "Unsere charakteristischen NFC-Haustier-Gedenkkarten verbinden physische Erinnerungsstücke mit digitalen Gedenkseiten. Mit einem einfachen Antippen greifen Familien auf Fotos, Videos, Geschichten und Nachrichten zu — und schaffen ein lebendiges Andenken, das mit der Zeit wächst."
+        },
+        {
+          "type": "h2",
+          "text": "Unser Versprechen"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Jedes personalisierte Produkt wird vor der Produktion mit einem Designentwurf bestätigt",
+            "Premium-Materialien und sorgfältige Handwerkskunst",
+            "Warme, respektvolle Kundenbetreuung",
+            "Weltweiter Versand mit Sendungsverfolgung"
+          ]
+        }
+      ],
+      "cta": "Kollektion entdecken"
+    },
+    "shipping": {
+      "title": "Versandrichtlinie",
+      "metaTitle": "Versandrichtlinie | Pet Memo Shop",
+      "metaDescription": "Erfahren Sie mehr über Versandoptionen, Lieferzeiten und internationalen Versand bei Pet Memo Shop.",
+      "sections": [
+        {
+          "type": "p",
+          "text": "Wir versenden weltweit aus unseren Fulfillment-Zentren. Alle Bestellungen enthalten Sendungsverfolgung."
+        },
+        {
+          "type": "h2",
+          "text": "Bearbeitungszeit"
+        },
+        {
+          "type": "p",
+          "text": "Personalisierte Artikel benötigen 3–5 Werktage für die Produktion nach Freigabe des Designentwurfs. Nicht personalisierte Artikel werden innerhalb von 1–2 Werktagen versendet."
+        },
+        {
+          "type": "h2",
+          "text": "Lieferzeiten"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "USA: 5–7 Werktage",
+            "Kanada & UK: 7–12 Werktage",
+            "Europa & Australien: 10–15 Werktage",
+            "Sonstige internationale Ziele: 12–20 Werktage"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Kostenloser Versand"
+        },
+        {
+          "type": "p",
+          "text": "Kostenloser Standardversand gilt für ausgewählte Gedenkgeschenke und Bestellungen über 75 $."
+        }
+      ]
+    },
+    "returns": {
+      "title": "Rückgabe & Erstattung",
+      "metaTitle": "Rückgabe & Erstattung | Pet Memo Shop",
+      "metaDescription": "Rückgabe- und Erstattungsrichtlinie von Pet Memo Shop für personalisierte und nicht personalisierte Gedenkgeschenke.",
+      "sections": [
+        {
+          "type": "h2",
+          "text": "Personalisierte Produkte"
+        },
+        {
+          "type": "p",
+          "text": "Personalisierte und individuell gestaltete Gedenkgeschenke können nicht zurückgegeben werden, es sei denn, der Artikel ist beschädigt oder die Personalisierung ist fehlerhaft. Bitte kontaktieren Sie uns innerhalb von 14 Tagen nach Lieferung mit Fotos des Problems."
+        },
+        {
+          "type": "h2",
+          "text": "Nicht personalisierte Produkte"
+        },
+        {
+          "type": "p",
+          "text": "Nicht personalisierte Artikel können innerhalb von 30 Tagen in originaler, unbenutzter Verpackung zurückgegeben werden. Die Rücksendekosten trägt der Kunde, sofern der Artikel nicht defekt ist."
+        },
+        {
+          "type": "h2",
+          "text": "Beschädigte Artikel"
+        },
+        {
+          "type": "p",
+          "text": "Ist Ihr Artikel beschädigt angekommen, kontaktieren Sie uns bitte innerhalb von 14 Tagen mit Fotos. Wir veranlassen einen Ersatz oder eine vollständige Erstattung ohne zusätzliche Kosten."
+        },
+        {
+          "type": "h2",
+          "text": "Rückgabe starten"
+        },
+        {
+          "type": "p",
+          "text": "Schreiben Sie uns an hello@petmemoshop.com mit Ihrer Bestellnummer und dem Rückgabegrund. Unser Team führt Sie durch den Prozess."
+        }
+      ]
+    }
+  },
+  "bestSellersPage": {
+    "title": "Einzigartige Tiergedenkgeschenke",
+    "subtitle": "Unsere beliebtesten Erinnerungsstücke, gewählt von Tierfamilien weltweit.",
+    "metaTitle": "Einzigartige Tiergedenkgeschenke | Bestseller",
+    "metaDescription": "Entdecken Sie einzigartige Tiergedenkgeschenke und Bestseller — NFC-Karten, Schmuck, Rahmen, Urnen und Geschenkboxen."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "intro": "Wir helfen Ihnen gerne bei Bestellungen, Personalisierungsfragen und allem anderen. Unser Team antwortet innerhalb von 24 Stunden.",
+    "name": "Name",
+    "email": "E-Mail",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "thanks": "Vielen Dank für Ihre Nachricht. Wir melden uns in Kürze bei Ihnen.",
+    "subjects": [
+      "Bestellanfrage",
+      "Hilfe bei der Personalisierung",
+      "Versandfrage",
+      "Rückgabe & Erstattung",
+      "Großhandelsanfrage",
+      "Sonstiges"
+    ]
+  }
+}

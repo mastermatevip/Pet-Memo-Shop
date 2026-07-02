@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/Button";
 import { CategoryCard } from "@/components/collection/CategoryCard";
 import { ProductCard } from "@/components/product/ProductCard";
@@ -11,6 +12,7 @@ import { getHomepageContent } from "@/data/homepage";
 import { getBestSellers } from "@/data/products";
 import { getFeaturedReviews } from "@/data/reviews";
 import { getLatestBlogPosts } from "@/data/blog";
+import { localizeHomepage, localizeProduct, loadContentBundle } from "@/lib/localized-content";
 import { Check, Type, ImageIcon, Calendar, MessageSquare, Gift, Nfc } from "lucide-react";
 
 const personalizationIcons: Record<string, React.ReactNode> = {
@@ -22,10 +24,13 @@ const personalizationIcons: Record<string, React.ReactNode> = {
   nfc: <Nfc className="w-6 h-6" />,
 };
 
-export function HomePage() {
-  const content = getHomepageContent();
+export async function HomePage() {
+  const locale = await getLocale();
+  const t = await getTranslations("common");
+  const bundle = await loadContentBundle(locale);
+  const content = localizeHomepage(getHomepageContent(), bundle);
   const { hero, sections } = content;
-  const bestSellers = getBestSellers(8);
+  const bestSellers = getBestSellers(8).map((p) => localizeProduct(p, bundle));
   const reviews = getFeaturedReviews(6);
   const blogPosts = getLatestBlogPosts(3);
 
@@ -185,7 +190,7 @@ export function HomePage() {
                   </h3>
                   <p className="text-muted text-sm leading-relaxed">{post.excerpt}</p>
                   <span className="inline-block mt-4 text-sm text-gold font-medium group-hover:underline">
-                    Read more &rarr;
+                    {t("readMore")} &rarr;
                   </span>
                 </div>
               </Link>

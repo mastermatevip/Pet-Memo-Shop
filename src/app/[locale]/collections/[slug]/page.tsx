@@ -7,9 +7,11 @@ import { buildMetadata } from "@/lib/seo";
 import { getCollectionBySlug, getAllCollectionSlugs } from "@/data/collections";
 import { getProductsByCollection } from "@/data/products";
 import { getLatestBlogPosts } from "@/data/blog";
+import { localizeCollection, localizeProduct, loadContentBundle } from "@/lib/localized-content";
+import { routing, type Locale } from "@/i18n/routing";
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export const dynamic = "force-dynamic";
@@ -19,24 +21,36 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { slug } = await params;
-  const collection = getCollectionBySlug(slug);
-  if (!collection) return {};
+  const { locale, slug } = await params;
+  const base = getCollectionBySlug(slug);
+  if (!base) return {};
+
+  const bundle = await loadContentBundle(locale);
+  const collection = localizeCollection(base, bundle);
+
   return buildMetadata({
     title: collection.metaTitle,
     description: collection.metaDescription,
     path: `/collections/${slug}`,
+    locale,
   });
 }
 
 export default async function CollectionPage({ params }: Props) {
-  const { slug } = await params;
-  const collection = getCollectionBySlug(slug);
-  if (!collection) notFound();
+  const { locale, slug } = await params;
+  if (!routing.locales.includes(locale as Locale)) notFound();
 
-  const products = getProductsByCollection(slug);
+  const base = getCollectionBySlug(slug);
+  if (!base) notFound();
+
+  const bundle = await loadContentBundle(locale);
+  const collection = localizeCollection(base, bundle);
+  const products = getProductsByCollection(slug).map((p) => localizeProduct(p, bundle));
   const relatedCollections = collection.relatedSlugs
-    .map((s) => getCollectionBySlug(s))
+    .map((s) => {
+      const rel = getCollectionBySlug(s);
+      return rel ? localizeCollection(rel, bundle) : undefined;
+    })
     .filter(Boolean);
   const blogPosts = getLatestBlogPosts(2);
 
@@ -63,15 +77,6 @@ export default async function CollectionPage({ params }: Props) {
           {collection.intro}
         </p>
 
-        {/* Filters */}
-        <div className="flex flex-wrap gap-3 mb-8 pb-6 border-b border-border">
-          <button className="px-4 py-2 rounded-full bg-btn text-btn-text text-sm">All</button>
-          <button className="px-4 py-2 rounded-full bg-highlight text-muted text-sm hover:bg-bg-secondary transition-colors">Customizable</button>
-          <button className="px-4 py-2 rounded-full bg-highlight text-muted text-sm hover:bg-bg-secondary transition-colors">NFC Enabled</button>
-          <button className="px-4 py-2 rounded-full bg-highlight text-muted text-sm hover:bg-bg-secondary transition-colors">Best Sellers</button>
-        </div>
-
-        {/* Product Grid */}
         {products.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-16">
             {products.map((product) => (
@@ -79,15 +84,11 @@ export default async function CollectionPage({ params }: Props) {
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-16">
-            {/* Show products from related collections as fallback */}
-            <p className="col-span-full text-muted text-center py-12">
-              Browse our full collection of memorial keepsakes below.
-            </p>
-          </div>
+          <p className="text-muted text-center py-12 mb-16">
+            Browse our full collection of memorial keepsakes below.
+          </p>
         )}
 
-        {/* SEO Content */}
         <div className="prose-memorial max-w-3xl mx-auto mb-16 space-y-8">
           <div>
             <h2>What Are {collection.name}?</h2>
@@ -109,7 +110,6 @@ export default async function CollectionPage({ params }: Props) {
 
         <FAQSection faqs={collection.faqs} />
 
-        {/* Related Categories */}
         <section className="py-12">
           <h2 className="font-serif text-2xl text-text mb-6">Related Categories</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -125,7 +125,6 @@ export default async function CollectionPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Blog Links */}
         <section className="py-8 border-t border-border">
           <h2 className="font-serif text-xl text-text mb-4">Helpful Guides</h2>
           <div className="flex flex-wrap gap-4">
