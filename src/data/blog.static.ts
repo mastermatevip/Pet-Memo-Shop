@@ -859,4 +859,126 @@ You don't have to choose. Every [NFC memorial tag](/collections/nfc-memorial-car
 [Create your digital pet memorial](/digital-pet-memorial) or [shop NFC keepsakes](/collections/nfc-memorial-cards).
     `,
   }),
+  createBlogPost({
+    slug: "how-to-create-a-pet-memory-corner-at-home",
+    title: "How to Create a Pet Memory Corner at Home",
+    metaTitle: "How to Create a Pet Memory Corner at Home | Pet Memorial Guide",
+    metaDescription:
+      "Learn how to create a meaningful pet memory corner at home with photo frames, keepsake boxes, plaques, and candles. A gentle step-by-step guide to honoring your companion.",
+    excerpt:
+      "A pet memory corner gives you a quiet place to remember your companion every day. Here is how to choose a spot, gather meaningful items, and make it feel personal.",
+    category: "Pet Loss Support",
+    categorySlug: "pet-loss-support",
+    publishedAt: "2026-07-03",
+    readTime: 9,
+    relatedProductSlugs: [
+      "personalized-pet-memorial-frame",
+      "dog-memorial-keepsake-box",
+      "engraved-pet-memorial-plaque",
+      "pet-loss-candle-set",
+    ],
+    relatedCollectionSlugs: [
+      "pet-memorial-gifts",
+      "pet-memorial-frames",
+      "pet-memorial-plaques",
+    ],
+    faqs: [
+      {
+        question: "What is a pet memory corner?",
+        answer:
+          "A pet memory corner is a dedicated space in your home where you display photos, keepsakes, and memorial items that honor your companion. It can be a shelf, mantle, bedside table, or small nook — whatever feels right to you.",
+      },
+      {
+        question: "What should I put in a pet memorial display?",
+        answer:
+          "Many families include a favorite photo in a personalized frame, a keepsake box for collar and tags, an engraved plaque with their name and dates, and a gentle candle for quiet remembrance moments.",
+      },
+      {
+        question: "Where is the best place for a pet memory corner?",
+        answer:
+          "Choose somewhere you naturally pass or pause each day — a living room shelf, bedroom nightstand, or hallway ledge. There is no wrong answer; the best spot is one that brings comfort rather than pain.",
+      },
+    ],
+    content: `
+## Why a Memory Corner Matters
+
+After losing a pet, your home can feel quieter in ways that are hard to describe. A **pet memory corner** — sometimes called a remembrance shelf or memorial nook — gives you one intentional place to honor your companion without scattering mementos across the house.
+
+It is not about forgetting grief. It is about making room for love to stay visible.
+
+## Step 1: Choose a Meaningful Spot
+
+Look for a location that feels natural to you:
+
+- **Living room shelf** — A shared space where family can remember together
+- **Bedside table** — A private place for quiet morning or evening moments
+- **Hallway ledge** — A gentle reminder as you move through your day
+- **Beside an urn** — If you have chosen cremation, a dedicated area near the urn can feel grounding
+
+Avoid high-traffic areas if you prefer privacy. There is no single correct choice — only what feels right for your home and your heart.
+
+## Step 2: Start with a Photo That Captures Their Spirit
+
+A favorite portrait is often the heart of a memory corner. A [personalized pet memorial frame](/products/personalized-pet-memorial-frame) engraved with their name and dates turns a simple photo into a lasting tribute.
+
+**Tips for choosing a photo:**
+- Pick an image that shows their personality — not just a posed shot
+- Consider a candid moment: sunbathing, playing, or resting beside you
+- Choose warm, clear lighting that prints beautifully
+
+We send a design proof before production so you can feel confident in every detail.
+
+## Step 3: Gather Small Keepsakes
+
+The little objects left behind often carry the most emotion: a collar, name tag, favorite toy, or lock of fur. A [dog memorial keepsake box](/products/dog-memorial-keepsake-box) or cat keepsake box keeps these treasures organized and protected in one beautiful place.
+
+You do not need to display everything at once. Start with what feels most meaningful and add items over time.
+
+## Step 4: Add a Lasting Engraved Tribute
+
+An [engraved pet memorial plaque](/products/engraved-pet-memorial-plaque) works beautifully on a shelf or beside a frame. Wood, slate, and metal options let you match your home's style while marking their name and memorial dates permanently.
+
+Many families engrave:
+- Pet's name
+- Birth and memorial dates
+- A short phrase: "Forever in our hearts" or "Until we meet again"
+
+## Step 5: Create a Gentle Atmosphere
+
+Soft lighting makes a memory corner feel warm rather than somber. A [pet loss candle set](/products/pet-loss-candle-set) brings a calming scent and a quiet ritual — light it on anniversaries, birthdays, or evenings when you want to feel close.
+
+Some families also add:
+- A small plant or fresh flowers
+- A folded letter or poem
+- An [NFC memorial card](/products/nfc-pet-memorial-card) beside the frame for tap-to-open photos and videos
+
+## What to Include: Quick Reference
+
+| Item | Purpose | Example |
+|------|---------|---------|
+| Photo frame | Daily visual reminder | [Personalized memorial frame](/products/personalized-pet-memorial-frame) |
+| Keepsake box | Store collar, tags, mementos | [Dog memorial keepsake box](/products/dog-memorial-keepsake-box) |
+| Engraved plaque | Permanent name and dates | [Memorial plaque](/products/engraved-pet-memorial-plaque) |
+| Candle | Quiet remembrance ritual | [Pet loss candle set](/products/pet-loss-candle-set) |
+| Digital keepsake | Photos, videos, family messages | [NFC memorial card](/products/nfc-pet-memorial-card) |
+
+## Step 6: Involve Family When You Are Ready
+
+A memory corner can become a shared space. Invite family members to add a note, choose a photo, or light the candle together on meaningful dates. Children especially benefit from a visible place to remember a pet they loved.
+
+If you are not ready yet, that is okay. Create the corner at your own pace — there is no deadline for honoring their memory.
+
+## When a Memory Corner Feels Too Hard
+
+Some days, passing the shelf may feel overwhelming. That is normal. You can temporarily cover the display, move it to a quieter room, or add items gradually as grief softens.
+
+The goal is comfort, not pressure.
+
+## Start Building Your Memory Corner
+
+Browse [pet memorial gifts](/collections/pet-memorial-gifts) for frames, plaques, and keepsake boxes — or explore [pet memorial frames](/collections/pet-memorial-frames) and [memorial plaques](/collections/pet-memorial-plaques) to find the pieces that feel right for your home.
+
+Your companion's story deserves a place in your daily life. A memory corner helps keep that story close.
+    `,
+  }),
 ];
