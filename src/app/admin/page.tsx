@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { isAdminConfigured } from "@/lib/cms/auth";
-import { loadHomepageContent, loadProducts, loadBlogPosts, loadOrders } from "@/lib/cms/store";
+import { loadHomepageContent, loadProducts, loadBlogPosts, loadOrders, loadMembers } from "@/lib/cms/store";
 
 export const dynamic = "force-dynamic";
 
@@ -10,6 +10,7 @@ export default function AdminDashboardPage() {
   const productCount = loadProducts().length;
   const blogCount = loadBlogPosts().length;
   const orderCount = loadOrders().length;
+  const memberCount = loadMembers().length;
   const homepage = loadHomepageContent();
 
   return (
@@ -21,7 +22,7 @@ export default function AdminDashboardPage() {
         </div>
       ) : null}
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
         <div className="rounded-xl border border-border bg-card p-6">
           <p className="text-sm text-light">商品数量</p>
           <p className="font-serif text-3xl mt-1">{productCount}</p>
@@ -33,6 +34,10 @@ export default function AdminDashboardPage() {
         <div className="rounded-xl border border-border bg-card p-6">
           <p className="text-sm text-light">订单数量</p>
           <p className="font-serif text-3xl mt-1">{orderCount}</p>
+        </div>
+        <div className="rounded-xl border border-border bg-card p-6">
+          <p className="text-sm text-light">会员数量</p>
+          <p className="font-serif text-3xl mt-1">{memberCount}</p>
         </div>
         <div className="rounded-xl border border-border bg-card p-6">
           <p className="text-sm text-light">首页主标题</p>
@@ -68,6 +73,13 @@ export default function AdminDashboardPage() {
         >
           <p className="font-medium">管理订单</p>
           <p className="text-sm text-muted mt-1">订单状态、物流信息、客户资料</p>
+        </Link>
+        <Link
+          href="/admin/members"
+          className="block rounded-xl border border-border bg-card p-5 hover:border-gold transition-colors"
+        >
+          <p className="font-medium">管理会员</p>
+          <p className="text-sm text-muted mt-1">客户资料、消费统计、关联订单</p>
         </Link>
       </div>
     </AdminShell>

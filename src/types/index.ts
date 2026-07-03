@@ -133,6 +133,26 @@ export interface Order {
   shippedAt?: string;
 }
 
+export type MemberStatus = "active" | "blocked";
+
+export type MemberSource = "checkout" | "manual" | "import";
+
+export interface Member {
+  email: string;
+  name: string;
+  phone?: string;
+  defaultShippingAddress?: string;
+  status: MemberStatus;
+  source: MemberSource;
+  orderCount: number;
+  totalSpent: number;
+  currency: string;
+  orderNumbers: string[];
+  internalNotes?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface CategoryCard {
   slug: string;
   title: string;

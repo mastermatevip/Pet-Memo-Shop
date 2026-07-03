@@ -2,11 +2,12 @@ import "server-only";
 
 import fs from "fs";
 import path from "path";
-import { defaultHomepageFile, defaultProductsFile, defaultBlogFile, defaultOrdersFile } from "./defaults";
-import { CMS_DIR, HOMEPAGE_FILE, PRODUCTS_FILE, BLOG_FILE, ORDERS_FILE, UPLOADS_DIR } from "./paths";
-import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile } from "./types";
-import type { Product, BlogCategory, BlogPost, Order } from "@/types";
+import { defaultHomepageFile, defaultProductsFile, defaultBlogFile, defaultOrdersFile, defaultMembersFile } from "./defaults";
+import { CMS_DIR, HOMEPAGE_FILE, PRODUCTS_FILE, BLOG_FILE, ORDERS_FILE, MEMBERS_FILE, UPLOADS_DIR } from "./paths";
+import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile, MembersFile } from "./types";
+import type { Product, BlogCategory, BlogPost, Order, Member } from "@/types";
 import { isBlogPostPublished } from "@/lib/blog";
+import { syncAllMembersFromOrders } from "@/lib/members/sync";
 
 function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) {
@@ -42,6 +43,10 @@ export function initCmsFiles() {
   }
   if (!fs.existsSync(ORDERS_FILE)) {
     writeJson(ORDERS_FILE, defaultOrdersFile());
+  }
+  if (!fs.existsSync(MEMBERS_FILE)) {
+    writeJson(MEMBERS_FILE, defaultMembersFile());
+    syncAllMembersFromOrders(loadOrders());
   }
 }
 
@@ -208,4 +213,52 @@ export function generateOrderNumber(): string {
     .filter((n) => Number.isFinite(n));
   const next = numbers.length > 0 ? Math.max(...numbers) + 1 : 100001;
   return `PA-${next}`;
+}
+
+function normalizeMember(member: Member): Member {
+  return {
+    ...member,
+    email: member.email.trim().toLowerCase(),
+    name: member.name.trim(),
+    phone: member.phone?.trim() || undefined,
+    defaultShippingAddress: member.defaultShippingAddress?.trim() || undefined,
+    status: member.status === "blocked" ? "blocked" : "active",
+    source:
+      member.source === "manual" || member.source === "import" || member.source === "checkout"
+        ? member.source
+        : "manual",
+    orderCount: Math.max(0, member.orderNumbers?.length ?? member.orderCount ?? 0),
+    totalSpent: Number(member.totalSpent) || 0,
+    currency: member.currency || "USD",
+    orderNumbers: member.orderNumbers ?? [],
+    internalNotes: member.internalNotes?.trim() || undefined,
+  };
+}
+
+function readMembersFile(): MembersFile {
+  initCmsFiles();
+  const file = readJson<MembersFile>(MEMBERS_FILE) ?? defaultMembersFile();
+  return {
+    ...file,
+    members: file.members.map(normalizeMember),
+  };
+}
+
+export function loadMembers(): Member[] {
+  return readMembersFile().members;
+}
+
+export function saveMembers(members: Member[]): MembersFile {
+  initCmsFiles();
+  const file: MembersFile = {
+    members: members.map(normalizeMember),
+    updatedAt: new Date().toISOString(),
+  };
+  writeJson(MEMBERS_FILE, file);
+  return file;
+}
+
+export function getMemberByEmailFromStore(email: string): Member | undefined {
+  const normalized = email.trim().toLowerCase();
+  return loadMembers().find((m) => m.email === normalized);
 }

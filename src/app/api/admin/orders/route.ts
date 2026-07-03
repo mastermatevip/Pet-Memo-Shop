@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/cms/require-admin";
 import { generateOrderNumber, loadOrders, saveOrders } from "@/lib/cms/store";
+import { upsertMemberFromOrder } from "@/lib/members/sync";
 import type { Order } from "@/types";
 
 export async function GET() {
@@ -48,6 +49,7 @@ export async function POST(request: Request) {
 
   orders.push(order);
   const file = saveOrders(orders);
+  upsertMemberFromOrder(order);
 
   return NextResponse.json({ order, ...file });
 }

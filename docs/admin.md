@@ -17,6 +17,9 @@
 | `/admin/orders` | 订单列表 |
 | `/admin/orders/new` | 新建订单 |
 | `/admin/orders/[orderNumber]` | 单订单编辑（状态、物流、客户信息） |
+| `/admin/members` | 会员列表 |
+| `/admin/members/new` | 新建会员 |
+| `/admin/members/[email]` | 单会员编辑（资料、状态、关联订单） |
 
 ## 环境变量
 
@@ -40,6 +43,7 @@ ADMIN_SECRET=至少32位随机字符串
 | `data/cms/products.json` | 全部商品 |
 | `data/cms/blog.json` | 博客分类 + 全部文章 |
 | `data/cms/orders.json` | 全部订单（状态、物流、客户资料） |
+| `data/cms/members.json` | 全部会员（邮箱去重、消费统计、关联订单） |
 
 首次启动时，若 JSON 不存在，会从 `src/data/*.static.ts` 静态数据自动 seed。
 
@@ -49,7 +53,7 @@ ADMIN_SECRET=至少32位随机字符串
 
 1. 在 Environment Variables 添加 `ADMIN_PASSWORD`、`ADMIN_SECRET`
 2. 挂载持久卷：
-   - `/app/data/cms` → CMS JSON（首页、商品、博客、订单）
+   - `/app/data/cms` → CMS JSON（首页、商品、博客、订单、会员）
    - `/app/public/uploads` → 上传的商品图片
 3. Redeploy 后访问 `https://petmemoshop.com/admin`
 
@@ -114,6 +118,15 @@ Slug 只读（避免破坏 URL）。
 订单号格式 `PA-100001`，新建时自动生成。客户可在前台 `/track-order` 用订单号 + 邮箱查询物流（不含内部备注）。
 
 **PayPal 收款：** 客户通过 `/checkout` 用 PayPal 付款后，系统自动创建订单（见 `docs/paypal.md`）。
+
+### 会员
+
+- 以 **邮箱** 为唯一标识（无需前台注册密码）
+- **自动入库**：PayPal 结账成功、后台新建订单时自动创建/更新会员
+- **从订单同步**：列表页按钮，将历史订单客户批量导入
+- 可编辑：姓名、电话、默认地址、状态（正常/已禁用）、内部备注
+- 会员详情页展示关联订单列表，可跳转订单编辑
+- 手动新建会员用于预录客户（来源标记为「手动创建」）
 
 ## SEO / Sitemap
 

@@ -6,6 +6,7 @@ import type {
   BlogCategory,
   BlogPost,
   Order,
+  Member,
 } from "@/types";
 
 export interface HomepageHero {
@@ -62,5 +63,10 @@ export interface BlogFile {
 
 export interface OrdersFile {
   orders: Order[];
+  updatedAt: string;
+}
+
+export interface MembersFile {
+  members: Member[];
   updatedAt: string;
 }

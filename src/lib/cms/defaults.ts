@@ -7,7 +7,7 @@ import {
 import { staticProducts } from "@/data/products.static";
 import { blogCategories, blogPosts } from "@/data/blog.static";
 import { seedOrders } from "@/data/orders.static";
-import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile } from "./types";
+import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile, MembersFile } from "./types";
 
 export function defaultHomepageContent(): HomepageContent {
   return {
@@ -88,6 +88,13 @@ export function defaultOrdersFile(): OrdersFile {
       ...o,
       items: o.items.map((item) => ({ ...item })),
     })),
+    updatedAt: new Date().toISOString(),
+  };
+}
+
+export function defaultMembersFile(): MembersFile {
+  return {
+    members: [],
     updatedAt: new Date().toISOString(),
   };
 }
