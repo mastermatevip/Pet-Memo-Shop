@@ -66,7 +66,8 @@
     "viewAll": "View All",
     "backToBlog": "Back to Blog",
     "minRead": "{count} min read",
-    "viewCount": "{count} views"
+    "viewCount": "{count} views",
+    "relatedProducts": "Featured Products"
   },
   "meta": {
     "homeTitle": "Personalized Pet Memorial Gifts | Custom Keepsakes",

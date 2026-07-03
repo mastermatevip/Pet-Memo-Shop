@@ -66,7 +66,8 @@
     "viewAll": "Ver todo",
     "backToBlog": "Volver al blog",
     "minRead": "{count} min de lectura",
-    "viewCount": "{count} visitas"
+    "viewCount": "{count} visitas",
+    "relatedProducts": "Productos destacados"
   },
   "meta": {
     "homeTitle": "Regalos conmemorativos personalizados para mascotas",

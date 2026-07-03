@@ -3,8 +3,10 @@ import { notFound } from "next/navigation";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { Button } from "@/components/ui/Button";
 import { BlogViewCounter } from "@/components/blog/BlogViewCounter";
+import { BlogRelatedProducts } from "@/components/blog/BlogRelatedProducts";
 import { buildMetadata } from "@/lib/seo";
 import { getBlogPostBySlug, getLatestBlogPosts } from "@/data/blog";
+import { getRelatedProducts } from "@/data/products";
 import { formatDate } from "@/lib/utils";
 import { getTranslations } from "next-intl/server";
 
@@ -23,6 +25,12 @@ export async function generateMetadata({ params }: Props) {
     description: post.metaDescription,
     path: `/blog/${slug}`,
   });
+}
+
+function renderInlineMarkdown(text: string) {
+  return text
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 }
 
 function renderContent(content: string) {
@@ -53,11 +61,19 @@ function renderContent(content: string) {
       elements.push(
         <table key={`table-${elements.length}`}>
           <thead>
-            <tr>{header.map((cell, i) => <th key={i}>{cell.trim()}</th>)}</tr>
+            <tr>
+              {header.map((cell, i) => (
+                <th key={i} dangerouslySetInnerHTML={{ __html: renderInlineMarkdown(cell.trim()) }} />
+              ))}
+            </tr>
           </thead>
           <tbody>
             {rows.filter((r) => !r.every((c) => c.match(/^[-|]+$/))).map((row, ri) => (
-              <tr key={ri}>{row.map((cell, ci) => <td key={ci}>{cell.trim()}</td>)}</tr>
+              <tr key={ri}>
+                {row.map((cell, ci) => (
+                  <td key={ci} dangerouslySetInnerHTML={{ __html: renderInlineMarkdown(cell.trim()) }} />
+                ))}
+              </tr>
             ))}
           </tbody>
         </table>
@@ -95,8 +111,7 @@ function renderContent(content: string) {
       listItems.push(trimmed);
     } else {
       flushList();
-      const htmlLine = trimmed
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+      const htmlLine = renderInlineMarkdown(trimmed);
       elements.push(
         <p key={elements.length} dangerouslySetInnerHTML={{ __html: htmlLine }} />
       );
@@ -115,6 +130,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const t = await getTranslations("common");
   const relatedPosts = getLatestBlogPosts(3).filter((p) => p.slug !== slug);
+  const relatedProducts = getRelatedProducts(post.relatedProductSlugs);
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -131,6 +147,8 @@ export default async function BlogPostPage({ params }: Props) {
           <BlogViewCounter slug={post.slug} initialCount={post.viewCount} />
         </div>
       </header>
+
+      <BlogRelatedProducts products={relatedProducts} title={t("relatedProducts")} />
 
       {/* Table of Contents */}
       <nav className="bg-bg rounded-xl p-6 mb-10 border border-border">

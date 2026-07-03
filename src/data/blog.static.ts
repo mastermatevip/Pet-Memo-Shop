@@ -61,7 +61,7 @@ Losing a pet is a deeply personal experience. For many people, their companion w
 A [personalized pet memorial frame](/products/personalized-pet-memorial-frame) is one of the most cherished sympathy gifts. It gives the recipient a beautiful way to display their favorite photo alongside their pet's name and dates.
 
 ### Memorial Gift Box
-Our [memorial sympathy gift box](/products/memorial-sympathy-gift-box) combines a mini frame, a gentle candle, and a sympathy card in premium packaging 鈥?everything needed to offer comfort in one thoughtful package.
+Our [memorial sympathy gift box](/products/memorial-sympathy-gift-box) combines a mini frame, a gentle candle, and a sympathy card in premium packaging —everything needed to offer comfort in one thoughtful package.
 
 ### NFC Memorial Card
 For a modern twist on remembrance, an [NFC pet memorial card](/products/nfc-pet-memorial-card) opens a digital page filled with photos, videos, and stories. It's a unique gift that keeps on giving.
@@ -131,7 +131,7 @@ Explore our full [dog memorial gifts](/collections/dog-memorial-gifts) collectio
     content: `
 ## Remembering a Beloved Cat
 
-Cats offer a unique kind of companionship 鈥?quiet, warm, and deeply personal. A cat memorial gift should reflect that gentle spirit.
+Cats offer a unique kind of companionship —quiet, warm, and deeply personal. A cat memorial gift should reflect that gentle spirit.
 
 ## Top Cat Memorial Gift Ideas
 
@@ -194,12 +194,12 @@ A pet memorial keepsake is any personalized item created to honor the memory of 
 
 ## Types of Memorial Keepsakes
 
-- **Photo frames** 鈥?Display a favorite portrait at home
-- **Jewelry** 鈥?Wear their memory close
-- **Urns** 鈥?A dignified resting place for ashes
-- **Plaques** 鈥?Engraved tributes for shelf or garden
-- **NFC cards** 鈥?Physical cards that open digital memorial pages
-- **Gift boxes** 鈥?Curated sympathy gift sets
+- **Photo frames** —Display a favorite portrait at home
+- **Jewelry** —Wear their memory close
+- **Urns** —A dignified resting place for ashes
+- **Plaques** —Engraved tributes for shelf or garden
+- **NFC cards** —Physical cards that open digital memorial pages
+- **Gift boxes** —Curated sympathy gift sets
 
 Explore our full range of [pet memorial gifts](/collections/pet-memorial-gifts).
     `,
@@ -225,8 +225,8 @@ A general rule: **1 cubic inch per pound** of your pet's weight. For example, a 
 
 ## Material Options
 
-- **Wood** 鈥?Warm, natural, home-friendly ([wooden pet urn](/products/wooden-pet-cremation-urn))
-- **Ceramic** 鈥?Elegant, serene ([ceramic pet urn](/products/ceramic-pet-cremation-urn))
+- **Wood** —Warm, natural, home-friendly ([wooden pet urn](/products/wooden-pet-cremation-urn))
+- **Ceramic** —Elegant, serene ([ceramic pet urn](/products/ceramic-pet-cremation-urn))
 
 Browse all [pet urns](/collections/pet-urns).
     `,
@@ -248,10 +248,10 @@ When someone you care about loses a pet, a sympathy gift shows you acknowledge t
 
 ## Gift Ideas
 
-1. [Memorial Sympathy Gift Box](/products/memorial-sympathy-gift-box) 鈥?Complete set with frame, candle, and card
-2. [Pet Loss Candle Set](/products/pet-loss-candle-set) 鈥?Gentle scents for quiet remembrance
-3. [Personalized Memorial Frame](/products/personalized-pet-memorial-frame) 鈥?A home tribute they'll cherish
-4. [NFC Memorial Card](/products/nfc-pet-memorial-card) 鈥?A digital + physical keepsake
+1. [Memorial Sympathy Gift Box](/products/memorial-sympathy-gift-box) —Complete set with frame, candle, and card
+2. [Pet Loss Candle Set](/products/pet-loss-candle-set) —Gentle scents for quiet remembrance
+3. [Personalized Memorial Frame](/products/personalized-pet-memorial-frame) —A home tribute they'll cherish
+4. [NFC Memorial Card](/products/nfc-pet-memorial-card) —A digital + physical keepsake
 
 Shop all [pet loss sympathy gifts](/collections/pet-loss-sympathy-gifts).
     `,
@@ -304,10 +304,10 @@ NFC (Near Field Communication) allows a physical tag or card to open an online m
 
 ## Step by Step
 
-1. **Receive your keepsake** 鈥?Personalized with your pet's name and dates
-2. **Tap with phone** 鈥?Hold your smartphone near the NFC chip
-3. **Memorial page opens** 鈥?View photos, videos, story, and messages
-4. **QR code backup** 鈥?Scan the QR code if NFC isn't available
+1. **Receive your keepsake** —Personalized with your pet's name and dates
+2. **Tap with phone** —Hold your smartphone near the NFC chip
+3. **Memorial page opens** —View photos, videos, story, and messages
+4. **QR code backup** —Scan the QR code if NFC isn't available
 
 ## Carbon Fiber Tag vs Memorial Card
 
@@ -342,9 +342,9 @@ Pet memorial jewelry offers an intimate way to carry your companion's memory wit
 
 ## Types
 
-- **Engraved pendants** 鈥?Name and paw print on sterling silver
-- **Photo lockets** 鈥?Hold their photo inside
-- **Bracelets** 鈥?Subtle engraved bands
+- **Engraved pendants** —Name and paw print on sterling silver
+- **Photo lockets** —Hold their photo inside
+- **Bracelets** —Subtle engraved bands
 
 Shop [pet memorial jewelry](/collections/pet-memorial-jewelry).
     `,
@@ -356,7 +356,7 @@ Shop [pet memorial jewelry](/collections/pet-memorial-jewelry).
     metaDescription:
       "Gentle Rainbow Bridge pet memorial gift ideas including personalized frames, jewelry, and digital keepsakes.",
     excerpt:
-      "Gentle memorial gift ideas inspired by the Rainbow Bridge poem 鈥?warm, comforting, and deeply personal.",
+      "Gentle memorial gift ideas inspired by the Rainbow Bridge poem —warm, comforting, and deeply personal.",
     category: "Pet Memorial Gift Ideas",
     categorySlug: "pet-memorial-gift-ideas",
     content: `
@@ -411,7 +411,7 @@ Explore all [pet memorial gifts](/collections/pet-memorial-gifts).
     title: "Pet Memorial Ideas: 15 Meaningful Ways to Honor Your Companion",
     metaTitle: "Pet Memorial Ideas | Meaningful Tribute & Gift Ideas",
     metaDescription:
-      "Discover pet memorial ideas for dogs and cats 鈥?photo frames, jewelry, urns, digital pages, NFC tags, and sympathy gifts. Unique personalized tribute inspiration.",
+      "Discover pet memorial ideas for dogs and cats —photo frames, jewelry, urns, digital pages, NFC tags, and sympathy gifts. Unique personalized tribute inspiration.",
     excerpt:
       "Looking for pet memorial ideas? From personalized keepsakes to online tributes, here are meaningful ways to honor your beloved dog or cat.",
     category: "Pet Memorial Gift Ideas",
@@ -438,7 +438,7 @@ Explore all [pet memorial gifts](/collections/pet-memorial-gifts).
       {
         question: "Can I create a pet memorial without a physical product?",
         answer:
-          "Yes. A standalone digital pet memorial page lets you build an online tribute with photos, videos, and family messages 鈥?shareable via link or QR code.",
+          "Yes. A standalone digital pet memorial page lets you build an online tribute with photos, videos, and family messages —shareable via link or QR code.",
       },
     ],
     content: `
@@ -466,7 +466,7 @@ For families who choose cremation, a [wooden pet urn](/products/wooden-pet-crema
 An [engraved pet memorial pendant](/products/engraved-pet-memorial-pendant) with their name and a paw print keeps their memory close throughout the day.
 
 ### 6. Photo Locket
-A [pet memorial photo locket](/products/pet-memorial-photo-locket) holds their portrait inside 鈥?a private, intimate tribute you can carry everywhere.
+A [pet memorial photo locket](/products/pet-memorial-photo-locket) holds their portrait inside —a private, intimate tribute you can carry everywhere.
 
 ## Digital & Modern Memorial Ideas
 
@@ -477,7 +477,7 @@ Create an [online pet memorial page](/products/digital-memorial-page-standalone)
 Our [carbon fiber NFC memorial tag](/products/carbon-fiber-nfc-memorial-tag) combines a premium physical keepsake with a rich digital experience. One tap opens their full online memorial.
 
 ### 9. NFC Memorial Card
-An [NFC pet memorial card](/products/nfc-pet-memorial-card) is a classic wallet-size format that opens the same digital page 鈥?ideal beside an urn or photo frame.
+An [NFC pet memorial card](/products/nfc-pet-memorial-card) is a classic wallet-size format that opens the same digital page —ideal beside an urn or photo frame.
 
 ## Sympathy & Gift Ideas
 
@@ -485,7 +485,7 @@ An [NFC pet memorial card](/products/nfc-pet-memorial-card) is a classic wallet-
 When comforting a friend, a [memorial sympathy gift box](/products/memorial-sympathy-gift-box) with a mini frame, candle, and sympathy card offers a complete, thoughtful gesture.
 
 ### 11. Remembrance Candle Set
-A [pet loss candle set](/products/pet-loss-candle-set) brings a soft glow and calming scent 鈥?a simple, beautiful way to mark a remembrance moment.
+A [pet loss candle set](/products/pet-loss-candle-set) brings a soft glow and calming scent —a simple, beautiful way to mark a remembrance moment.
 
 ### 12. Cat Memorial Ornament
 For cat families, a [cat memorial photo ornament](/products/cat-memorial-photo-ornament) displays their portrait in a delicate ceramic form, perfect for year-round display.
@@ -503,7 +503,7 @@ Write about their funniest habits, favorite spots, and the quiet moments you mis
 
 ## How to Choose
 
-| If you want鈥?| Consider鈥?|
+| If you want… | Consider… |
 |--------------|-------------|
 | A daily home reminder | Photo frame or plaque |
 | Something to wear | Pendant or locket |
@@ -532,7 +532,7 @@ Browse all [pet memorial gifts](/collections/pet-memorial-gifts) or explore [uni
       {
         question: "What is a digital pet memorial?",
         answer:
-          "A digital pet memorial is an online page dedicated to honoring a beloved companion. It typically includes photos, videos, their story, memorial dates, and messages from family 鈥?accessible via web link, QR code, or NFC tap.",
+          "A digital pet memorial is an online page dedicated to honoring a beloved companion. It typically includes photos, videos, their story, memorial dates, and messages from family —accessible via web link, QR code, or NFC tap.",
       },
       {
         question: "Is a digital pet memorial the same as a social media post?",
@@ -548,24 +548,24 @@ Browse all [pet memorial gifts](/collections/pet-memorial-gifts) or explore [uni
     content: `
 ## Understanding Digital Pet Memorials
 
-A **digital pet memorial** is an online tribute page created to honor and preserve the memory of a beloved dog, cat, or companion. Unlike a single photo on social media, it is a dedicated space designed for remembrance 鈥?with room for their full story.
+A **digital pet memorial** is an online tribute page created to honor and preserve the memory of a beloved dog, cat, or companion. Unlike a single photo on social media, it is a dedicated space designed for remembrance —with room for their full story.
 
 ## What Can You Include?
 
 Most online pet memorial pages include:
 
-- **Pet name and portrait** 鈥?The heart of the tribute
-- **Birth and memorial dates** 鈥?Marking the time you shared
-- **Photo gallery** 鈥?Favorite moments across their life
-- **Videos** 鈥?Clips that capture their personality
-- **Their story** 鈥?Who they were, what made them special
-- **Family messages** 鈥?Notes from the people who loved them
-- **Guestbook** 鈥?Optional space for friends to leave messages
+- **Pet name and portrait** —The heart of the tribute
+- **Birth and memorial dates** —Marking the time you shared
+- **Photo gallery** —Favorite moments across their life
+- **Videos** —Clips that capture their personality
+- **Their story** —Who they were, what made them special
+- **Family messages** —Notes from the people who loved them
+- **Guestbook** —Optional space for friends to leave messages
 
 ## Why Families Choose Digital Memorials
 
 ### Shareable with Everyone
-Family members across distances can visit the page anytime. No app required 鈥?it opens in any web browser.
+Family members across distances can visit the page anytime. No app required —it opens in any web browser.
 
 ### Always Accessible
 Unlike a physical item that stays in one home, an online memorial can be shared with grandparents, friends, and anyone who loved your pet.
@@ -586,7 +586,7 @@ Many families display a [personalized photo frame](/products/personalized-pet-me
 
 ## Digital vs Traditional Memorials
 
-Digital memorials don't replace physical keepsakes 鈥?they complement them. A photo frame on your shelf and an online page filled with videos serve different but equally meaningful purposes. Together, they create a complete tribute.
+Digital memorials don't replace physical keepsakes —they complement them. A photo frame on your shelf and an online page filled with videos serve different but equally meaningful purposes. Together, they create a complete tribute.
 
 ## Getting Started
 
@@ -631,7 +631,7 @@ Learn more on our [Digital Pet Memorial](/digital-pet-memorial) page or shop [di
     content: `
 ## Why Make a Pet Memorial Online?
 
-An **online pet memorial** lets you preserve your companion's story in a dedicated space 鈥?not scattered across phones and social feeds. Family and friends can visit, contribute memories, and return whenever they need to feel close.
+An **online pet memorial** lets you preserve your companion's story in a dedicated space —not scattered across phones and social feeds. Family and friends can visit, contribute memories, and return whenever they need to feel close.
 
 ## Step-by-Step: Create Your Online Memorial
 
@@ -646,15 +646,15 @@ An **online pet memorial** lets you preserve your companion's story in a dedicat
 ### Step 2: Gather Your Materials
 
 Before you begin, collect:
-- 5鈥?0 favorite photos (portraits and candid moments)
-- 1鈥? short video clips if available
+- 5–10 favorite photos (portraits and candid moments)
+- 1–3 short video clips if available
 - Birth date and memorial date
 - A few sentences about their personality
 - Messages from family members (optional)
 
 ### Step 3: Upload Photos & Details
 
-Enter your pet's name, upload their portrait, and add memorial dates. Choose a layout that feels warm and personal 鈥?this page is their home online.
+Enter your pet's name, upload their portrait, and add memorial dates. Choose a layout that feels warm and personal —this page is their home online.
 
 ### Step 4: Write Their Story
 
@@ -676,10 +676,10 @@ Preview your page, approve the design, and share the link with family. If you or
 
 ## Tips for a Meaningful Online Tribute
 
-- **Lead with their best photo** 鈥?Choose an image that captures their spirit
-- **Include everyday moments** 鈥?Not just posed portraits, but the quiet, real ones
-- **Update over time** 鈥?Add new memories on anniversaries or special dates
-- **Place a physical anchor** 鈥?Display an NFC tag beside their urn or frame so the digital page is always one tap away
+- **Lead with their best photo** —Choose an image that captures their spirit
+- **Include everyday moments** —Not just posed portraits, but the quiet, real ones
+- **Update over time** —Add new memories on anniversaries or special dates
+- **Place a physical anchor** —Display an NFC tag beside their urn or frame so the digital page is always one tap away
 
 ## What Makes Pet Memo Shop Different
 
@@ -693,7 +693,7 @@ Every digital memorial includes proof-before-production for physical keepsakes, 
     title: "Carbon Fiber NFC Memorial Tag: Complete Guide",
     metaTitle: "Carbon Fiber NFC Memorial Tag Guide | Digital Pet Memorial Tag",
     metaDescription:
-      "Everything about the carbon fiber NFC memorial tag 鈥?how it works, what to engrave, how to open your online pet memorial, and why families choose this premium keepsake.",
+      "Everything about the carbon fiber NFC memorial tag —how it works, what to engrave, how to open your online pet memorial, and why families choose this premium keepsake.",
     excerpt:
       "Our carbon fiber NFC memorial tag combines premium materials with tap-to-open digital memorial technology. Here is everything you need to know.",
     category: "Digital Memorials",
@@ -722,18 +722,18 @@ Every digital memorial includes proof-before-production for physical keepsakes, 
     content: `
 ## What Is the Carbon Fiber NFC Memorial Tag?
 
-The [carbon fiber NFC memorial tag](/products/carbon-fiber-nfc-memorial-tag) is Pet Memo Shop's signature digital memorial keepsake. It pairs aerospace-grade carbon fiber with an embedded NFC chip 鈥?a **digital pet memorial tag** you can wear, display, or keep close.
+The [carbon fiber NFC memorial tag](/products/carbon-fiber-nfc-memorial-tag) is Pet Memo Shop's signature digital memorial keepsake. It pairs aerospace-grade carbon fiber with an embedded NFC chip —a **digital pet memorial tag** you can wear, display, or keep close.
 
 One gentle tap opens a full **online pet memorial** filled with photos, videos, and the story only you can tell.
 
 ## Key Features
 
-- **Real carbon fiber** 鈥?Lightweight, durable, matte black weave
-- **Embedded NFC chip** 鈥?Tap to open memorial page instantly
-- **Laser engraving** 鈥?Your pet's name and memorial dates
-- **QR code backup** 鈥?Laser-marked on the back for any smartphone
-- **Digital page included** 鈥?Photo gallery, videos, story, guestbook
-- **Versatile display** 鈥?Wear as a dog tag, hang beside an urn, or place on a memory shelf
+- **Real carbon fiber** —Lightweight, durable, matte black weave
+- **Embedded NFC chip** —Tap to open memorial page instantly
+- **Laser engraving** —Your pet's name and memorial dates
+- **QR code backup** —Laser-marked on the back for any smartphone
+- **Digital page included** —Photo gallery, videos, story, guestbook
+- **Versatile display** —Wear as a dog tag, hang beside an urn, or place on a memory shelf
 
 ## How It Works
 
@@ -741,7 +741,7 @@ One gentle tap opens a full **online pet memorial** filled with photos, videos, 
 2. We set up your online memorial page and send a design proof
 3. Your engraved tag ships with the digital page ready to use
 4. Tap the tag with any NFC-compatible smartphone
-5. The memorial page opens in your browser 鈥?no app needed
+5. The memorial page opens in your browser —no app needed
 
 ## Carbon Fiber Tag vs NFC Card
 
@@ -749,7 +749,7 @@ One gentle tap opens a full **online pet memorial** filled with photos, videos, 
 |---------|------------------|----------|
 | Material | Real carbon fiber | Premium PVC |
 | Size | Dog tag (1.25" x 2") | Wallet card |
-| Durability | High 鈥?daily wear | Moderate |
+| Durability | High —daily wear | Moderate |
 | Display | Wear, urn-side, shelf | Beside frame or urn |
 | Price | $69.99 | $34.99 |
 | Digital page | Included | Included |
@@ -760,7 +760,7 @@ Choose the **carbon fiber tag** for a premium, lasting keepsake. Choose the **NF
 
 Most families engrave:
 - Pet's name
-- Birth year 鈥?Memorial year (e.g., 2012 鈥?2025)
+- Birth year —Memorial year (e.g., 2012–2025)
 - Optional short message or paw print icon
 
 We send a proof before engraving so you can review every detail.
@@ -770,7 +770,7 @@ We send a proof before engraving so you can review every detail.
 - Families who want a **premium physical + digital** tribute
 - Dog owners looking for a **pet memorial dog tag** with modern technology
 - Anyone displaying a memorial beside an **urn or photo frame**
-- Sympathy gifts for pet loss 鈥?a unique, meaningful gesture
+- Sympathy gifts for pet loss —a unique, meaningful gesture
 
 ## Order Your Tag
 
@@ -784,7 +784,7 @@ We send a proof before engraving so you can review every detail.
     metaDescription:
       "Compare NFC and QR code access for pet memorials. Learn how each works, their pros and cons, and why Pet Memo Shop includes both on every keepsake.",
     excerpt:
-      "Should you use NFC or QR code for your pet memorial? Both open the same online page 鈥?here is how they compare and why having both matters.",
+      "Should you use NFC or QR code for your pet memorial? Both open the same online page —here is how they compare and why having both matters.",
     category: "Digital Memorials",
     categorySlug: "digital-memorials",
     publishedAt: "2026-06-30",
@@ -794,7 +794,7 @@ We send a proof before engraving so you can review every detail.
       {
         question: "What is the difference between NFC and QR code for pet memorials?",
         answer:
-          "NFC requires tapping the keepsake with a compatible smartphone to open the memorial page instantly. QR codes are scanned with the phone camera. Both open the same online pet memorial 鈥?NFC is faster; QR codes work on all phones.",
+          "NFC requires tapping the keepsake with a compatible smartphone to open the memorial page instantly. QR codes are scanned with the phone camera. Both open the same online pet memorial —NFC is faster; QR codes work on all phones.",
       },
       {
         question: "Do all phones support NFC memorial tags?",
@@ -810,11 +810,11 @@ We send a proof before engraving so you can review every detail.
     content: `
 ## Two Ways to Open the Same Memorial
 
-Every Pet Memo Shop digital memorial 鈥?whether on a [carbon fiber NFC tag](/products/carbon-fiber-nfc-memorial-tag), [NFC card](/products/nfc-pet-memorial-card), or [standalone page](/products/digital-memorial-page-standalone) 鈥?can be accessed in two ways: **NFC tap** and **QR code scan**. Both open the same online pet memorial.
+Every Pet Memo Shop digital memorial —whether on a [carbon fiber NFC tag](/products/carbon-fiber-nfc-memorial-tag), [NFC card](/products/nfc-pet-memorial-card), or [standalone page](/products/digital-memorial-page-standalone) —can be accessed in two ways: **NFC tap** and **QR code scan**. Both open the same online pet memorial.
 
 ## How NFC Works
 
-Hold your smartphone near the NFC chip embedded in the tag or card. The memorial page opens automatically in your browser. No app, no typing 鈥?just tap.
+Hold your smartphone near the NFC chip embedded in the tag or card. The memorial page opens automatically in your browser. No app, no typing —just tap.
 
 **Pros:**
 - Instant, one-step access
@@ -832,7 +832,7 @@ Point your phone camera at the QR code printed or laser-marked on the keepsake. 
 **Pros:**
 - Works on virtually all smartphones
 - Familiar to most users
-- Easy to share 鈥?print the QR on sympathy cards or programs
+- Easy to share —print the QR on sympathy cards or programs
 
 **Cons:**
 - Requires camera alignment
@@ -842,7 +842,7 @@ Point your phone camera at the QR code printed or laser-marked on the keepsake. 
 
 | | NFC Tap | QR Code Scan |
 |---|---------|--------------|
-| Speed | Instant | 2鈥? seconds |
+| Speed | Instant | 2–3 seconds |
 | Phone compatibility | Most modern phones | All smartphones |
 | User experience | Tap and go | Point, scan, tap |
 | Best for | Daily visits, family at home | Older phones, printed materials |
@@ -850,7 +850,7 @@ Point your phone camera at the QR code printed or laser-marked on the keepsake. 
 
 ## Why We Include Both
 
-We believe a pet memorial should be accessible to everyone who loved your companion 鈥?grandparents with older phones, friends at a remembrance gathering, family across the country. NFC provides the best daily experience; QR code ensures no one is left out.
+We believe a pet memorial should be accessible to everyone who loved your companion —grandparents with older phones, friends at a remembrance gathering, family across the country. NFC provides the best daily experience; QR code ensures no one is left out.
 
 ## Which Should You Choose?
 
