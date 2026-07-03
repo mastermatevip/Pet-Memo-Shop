@@ -75,6 +75,11 @@ export function BlogPostEditor({ initial, categories }: Props) {
         Slug：<code className="font-mono">{post.slug}</code>（只读）
         <span className="mx-2">·</span>
         浏览量：<span className="font-medium text-text">{post.viewCount ?? 0}</span>（自动统计）
+        <span className="mx-2">·</span>
+        状态：
+        <span className="font-medium text-text">
+          {post.status === "published" ? "已发布" : "草稿"}
+        </span>
       </div>
 
       <AdminField label="文章标题">
@@ -85,18 +90,29 @@ export function BlogPostEditor({ initial, categories }: Props) {
         />
       </AdminField>
 
+      <AdminField label="分类">
+        <select
+          className={adminInputClass}
+          value={post.categorySlug}
+          onChange={(e) => setCategorySlug(e.target.value)}
+        >
+          {categories.map((cat) => (
+            <option key={cat.slug} value={cat.slug}>
+              {cat.name}
+            </option>
+          ))}
+        </select>
+      </AdminField>
+
       <div className="grid sm:grid-cols-2 gap-4">
-        <AdminField label="分类">
+        <AdminField label="发布状态">
           <select
             className={adminInputClass}
-            value={post.categorySlug}
-            onChange={(e) => setCategorySlug(e.target.value)}
+            value={post.status}
+            onChange={(e) => setField("status", e.target.value as BlogPost["status"])}
           >
-            {categories.map((cat) => (
-              <option key={cat.slug} value={cat.slug}>
-                {cat.name}
-              </option>
-            ))}
+            <option value="draft">草稿（前台不可见）</option>
+            <option value="published">已发布</option>
           </select>
         </AdminField>
         <AdminField label="发布日期">

@@ -6,6 +6,7 @@ import { defaultHomepageFile, defaultProductsFile, defaultBlogFile } from "./def
 import { CMS_DIR, HOMEPAGE_FILE, PRODUCTS_FILE, BLOG_FILE, UPLOADS_DIR } from "./paths";
 import type { HomepageContent, HomepageFile, ProductsFile, BlogFile } from "./types";
 import type { Product, BlogCategory, BlogPost } from "@/types";
+import { isBlogPostPublished } from "@/lib/blog";
 
 function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) {
@@ -106,6 +107,7 @@ function normalizeBlogPost(post: BlogPost): BlogPost {
       typeof post.viewCount === "number" && Number.isFinite(post.viewCount) && post.viewCount >= 0
         ? Math.floor(post.viewCount)
         : 0,
+    status: post.status === "draft" ? "draft" : "published",
   };
 }
 
@@ -148,6 +150,8 @@ export function incrementBlogPostViewCount(slug: string): BlogPost | undefined {
 
   const posts = [...file.posts];
   const current = normalizeBlogPost(posts[index]);
+  if (!isBlogPostPublished(current)) return undefined;
+
   posts[index] = { ...current, viewCount: current.viewCount + 1 };
   saveBlogData(file.categories, posts);
   return posts[index];

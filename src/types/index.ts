@@ -61,6 +61,8 @@ export interface Review {
   date: string;
 }
 
+export type BlogPostStatus = "draft" | "published";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -72,6 +74,7 @@ export interface BlogPost {
   publishedAt: string;
   readTime: number;
   viewCount: number;
+  status: BlogPostStatus;
   content: string;
   faqs: FAQ[];
   relatedProductSlugs: string[];

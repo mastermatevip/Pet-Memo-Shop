@@ -15,7 +15,7 @@ function createBlogPost(
     BlogPost,
     "slug" | "title" | "metaTitle" | "metaDescription" | "excerpt" | "category" | "categorySlug" | "content"
   > &
-    Partial<Pick<BlogPost, "publishedAt" | "readTime" | "viewCount" | "faqs" | "relatedProductSlugs" | "relatedCollectionSlugs">>
+    Partial<Pick<BlogPost, "publishedAt" | "readTime" | "viewCount" | "status" | "faqs" | "relatedProductSlugs" | "relatedCollectionSlugs">>
 ): BlogPost {
   return {
     publishedAt: "2025-12-01",
@@ -36,9 +36,11 @@ function createBlogPost(
     relatedProductSlugs: ["personalized-pet-memorial-frame", "carbon-fiber-nfc-memorial-tag", "memorial-sympathy-gift-box"],
     relatedCollectionSlugs: ["pet-memorial-gifts", "pet-loss-sympathy-gifts", "nfc-memorial-cards"],
     ...partial,
+    status: partial.status ?? "published",
   };
 }
 
+/** New entries must set status: "draft" — publish manually in /admin/blog. */
 export const blogPosts: BlogPost[] = [
   createBlogPost({
     slug: "what-to-give-someone-who-lost-a-pet",
@@ -871,6 +873,7 @@ You don't have to choose. Every [NFC memorial tag](/collections/nfc-memorial-car
     categorySlug: "pet-loss-support",
     publishedAt: "2026-07-03",
     readTime: 9,
+    status: "draft",
     relatedProductSlugs: [
       "personalized-pet-memorial-frame",
       "dog-memorial-keepsake-box",
