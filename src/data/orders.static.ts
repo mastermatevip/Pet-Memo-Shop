@@ -1,0 +1,56 @@
+import type { Order } from "@/types";
+
+export const seedOrders: Order[] = [
+  {
+    orderNumber: "PA-100001",
+    customerName: "Sarah Mitchell",
+    customerEmail: "sarah.mitchell@example.com",
+    customerPhone: "+1 555-0101",
+    shippingAddress: "742 Oak Lane\nPortland, OR 97201\nUnited States",
+    items: [
+      {
+        productSlug: "personalized-pet-memorial-frame",
+        title: "Personalized Pet Memorial Frame",
+        quantity: 1,
+        unitPrice: 49.99,
+      },
+    ],
+    orderStatus: "shipped",
+    shippingStatus: "in_transit",
+    carrier: "USPS",
+    trackingNumber: "9400111899223344556677",
+    internalNotes: "Customer requested name engraving: Bella",
+    totalAmount: 49.99,
+    currency: "USD",
+    createdAt: "2026-06-20T10:30:00.000Z",
+    updatedAt: "2026-06-25T14:00:00.000Z",
+    shippedAt: "2026-06-25T14:00:00.000Z",
+  },
+  {
+    orderNumber: "PA-100002",
+    customerName: "James Chen",
+    customerEmail: "james.chen@example.com",
+    shippingAddress: "18 Maple Street\nToronto, ON M5V 2T6\nCanada",
+    items: [
+      {
+        productSlug: "carbon-fiber-nfc-memorial-tag",
+        title: "Carbon Fiber NFC Memorial Tag",
+        quantity: 1,
+        unitPrice: 69.99,
+      },
+      {
+        productSlug: "digital-memorial-page-standalone",
+        title: "Digital Memorial Page (Standalone)",
+        quantity: 1,
+        unitPrice: 29.99,
+      },
+    ],
+    orderStatus: "in_production",
+    shippingStatus: "processing",
+    internalNotes: "Digital page setup in progress. Awaiting final photo upload.",
+    totalAmount: 99.98,
+    currency: "USD",
+    createdAt: "2026-06-28T08:15:00.000Z",
+    updatedAt: "2026-06-30T09:00:00.000Z",
+  },
+];

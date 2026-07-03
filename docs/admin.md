@@ -14,6 +14,9 @@
 | `/admin/products/[slug]` | 单商品编辑（含图片上传） |
 | `/admin/blog` | 博客文章列表 |
 | `/admin/blog/[slug]` | 单篇文章编辑 |
+| `/admin/orders` | 订单列表 |
+| `/admin/orders/new` | 新建订单 |
+| `/admin/orders/[orderNumber]` | 单订单编辑（状态、物流、客户信息） |
 
 ## 环境变量
 
@@ -36,6 +39,7 @@ ADMIN_SECRET=至少32位随机字符串
 | `data/cms/homepage.json` | 首页 Hero、区块标题、NFC 文案等 |
 | `data/cms/products.json` | 全部商品 |
 | `data/cms/blog.json` | 博客分类 + 全部文章 |
+| `data/cms/orders.json` | 全部订单（状态、物流、客户资料） |
 
 首次启动时，若 JSON 不存在，会从 `src/data/*.static.ts` 静态数据自动 seed。
 
@@ -45,7 +49,7 @@ ADMIN_SECRET=至少32位随机字符串
 
 1. 在 Environment Variables 添加 `ADMIN_PASSWORD`、`ADMIN_SECRET`
 2. 挂载持久卷：
-   - `/app/data/cms` → CMS JSON（首页、商品、博客）
+   - `/app/data/cms` → CMS JSON（首页、商品、博客、订单）
    - `/app/public/uploads` → 上传的商品图片
 3. Redeploy 后访问 `https://petmemoshop.com/admin`
 
@@ -97,6 +101,24 @@ Slug 只读（避免破坏 URL）。
 - 代码中新增的文章默认为 **草稿**，前台不可见
 - 在 `/admin/blog` 打开文章，将「发布状态」改为 **已发布** 并保存，前台即时上线
 - 草稿不会出现在博客列表、首页推荐或 sitemap 中
+
+### 订单
+
+- 客户姓名、邮箱、电话、收货地址
+- 订单商品（名称、数量、单价、关联商品 Slug）
+- **订单状态**：待确认 / 样稿已发送 / 生产中 / 已发货 / 已完成 / 已取消
+- **物流状态**：未发货 / 备货中 / 运输中 / 已签收 / 物流异常
+- 物流公司、物流单号、发货时间
+- 内部备注（仅后台可见）
+
+订单号格式 `PA-100001`，新建时自动生成。客户可在前台 `/track-order` 用订单号 + 邮箱查询物流（不含内部备注）。
+
+## SEO / Sitemap
+
+- `https://petmemoshop.com/sitemap.xml` — 自动生成，含全部语言版本、商品、合集、已发布博客
+- `https://petmemoshop.com/robots.txt` — 禁止爬取 `/admin` 与 `/api`
+
+可在 Google Search Console 提交 sitemap URL。
 
 ## 图片上传说明
 

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { isAdminConfigured } from "@/lib/cms/auth";
-import { loadHomepageContent, loadProducts, loadBlogPosts } from "@/lib/cms/store";
+import { loadHomepageContent, loadProducts, loadBlogPosts, loadOrders } from "@/lib/cms/store";
 
 export const dynamic = "force-dynamic";
 
@@ -9,6 +9,7 @@ export default function AdminDashboardPage() {
   const configured = isAdminConfigured();
   const productCount = loadProducts().length;
   const blogCount = loadBlogPosts().length;
+  const orderCount = loadOrders().length;
   const homepage = loadHomepageContent();
 
   return (
@@ -20,7 +21,7 @@ export default function AdminDashboardPage() {
         </div>
       ) : null}
 
-      <div className="grid sm:grid-cols-3 gap-4 mb-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="rounded-xl border border-border bg-card p-6">
           <p className="text-sm text-light">商品数量</p>
           <p className="font-serif text-3xl mt-1">{productCount}</p>
@@ -28,6 +29,10 @@ export default function AdminDashboardPage() {
         <div className="rounded-xl border border-border bg-card p-6">
           <p className="text-sm text-light">博客文章</p>
           <p className="font-serif text-3xl mt-1">{blogCount}</p>
+        </div>
+        <div className="rounded-xl border border-border bg-card p-6">
+          <p className="text-sm text-light">订单数量</p>
+          <p className="font-serif text-3xl mt-1">{orderCount}</p>
         </div>
         <div className="rounded-xl border border-border bg-card p-6">
           <p className="text-sm text-light">首页主标题</p>
@@ -56,6 +61,13 @@ export default function AdminDashboardPage() {
         >
           <p className="font-medium">编辑博客</p>
           <p className="text-sm text-muted mt-1">文章标题、正文、SEO、FAQ</p>
+        </Link>
+        <Link
+          href="/admin/orders"
+          className="block rounded-xl border border-border bg-card p-5 hover:border-gold transition-colors"
+        >
+          <p className="font-medium">管理订单</p>
+          <p className="text-sm text-muted mt-1">订单状态、物流信息、客户资料</p>
         </Link>
       </div>
     </AdminShell>

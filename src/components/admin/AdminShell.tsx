@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Home, Package, LayoutDashboard, FileText } from "lucide-react";
+import { Home, Package, LayoutDashboard, FileText, ShoppingBag } from "lucide-react";
 import { AdminLogoutButton } from "@/components/admin/AdminLogoutButton";
 
 interface AdminShellProps {
@@ -12,6 +12,7 @@ const nav = [
   { href: "/admin/homepage", label: "首页", icon: Home },
   { href: "/admin/products", label: "商品", icon: Package },
   { href: "/admin/blog", label: "博客", icon: FileText },
+  { href: "/admin/orders", label: "订单", icon: ShoppingBag },
 ];
 
 export function AdminShell({ title, children }: AdminShellProps) {

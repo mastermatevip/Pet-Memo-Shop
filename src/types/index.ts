@@ -92,6 +92,47 @@ export interface BlogCategory {
   description: string;
 }
 
+export type OrderStatus =
+  | "pending"
+  | "proof_sent"
+  | "in_production"
+  | "shipped"
+  | "delivered"
+  | "cancelled";
+
+export type ShippingStatus =
+  | "not_shipped"
+  | "processing"
+  | "in_transit"
+  | "delivered"
+  | "exception";
+
+export interface OrderLineItem {
+  productSlug?: string;
+  title: string;
+  quantity: number;
+  unitPrice: number;
+}
+
+export interface Order {
+  orderNumber: string;
+  customerName: string;
+  customerEmail: string;
+  customerPhone?: string;
+  shippingAddress: string;
+  items: OrderLineItem[];
+  orderStatus: OrderStatus;
+  shippingStatus: ShippingStatus;
+  carrier?: string;
+  trackingNumber?: string;
+  internalNotes?: string;
+  totalAmount: number;
+  currency: string;
+  createdAt: string;
+  updatedAt: string;
+  shippedAt?: string;
+}
+
 export interface CategoryCard {
   slug: string;
   title: string;

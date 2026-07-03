@@ -2,10 +2,10 @@ import "server-only";
 
 import fs from "fs";
 import path from "path";
-import { defaultHomepageFile, defaultProductsFile, defaultBlogFile } from "./defaults";
-import { CMS_DIR, HOMEPAGE_FILE, PRODUCTS_FILE, BLOG_FILE, UPLOADS_DIR } from "./paths";
-import type { HomepageContent, HomepageFile, ProductsFile, BlogFile } from "./types";
-import type { Product, BlogCategory, BlogPost } from "@/types";
+import { defaultHomepageFile, defaultProductsFile, defaultBlogFile, defaultOrdersFile } from "./defaults";
+import { CMS_DIR, HOMEPAGE_FILE, PRODUCTS_FILE, BLOG_FILE, ORDERS_FILE, UPLOADS_DIR } from "./paths";
+import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile } from "./types";
+import type { Product, BlogCategory, BlogPost, Order } from "@/types";
 import { isBlogPostPublished } from "@/lib/blog";
 
 function ensureDir(dir: string) {
@@ -39,6 +39,9 @@ export function initCmsFiles() {
   }
   if (!fs.existsSync(BLOG_FILE)) {
     writeJson(BLOG_FILE, defaultBlogFile());
+  }
+  if (!fs.existsSync(ORDERS_FILE)) {
+    writeJson(ORDERS_FILE, defaultOrdersFile());
   }
 }
 
@@ -155,4 +158,54 @@ export function incrementBlogPostViewCount(slug: string): BlogPost | undefined {
   posts[index] = { ...current, viewCount: current.viewCount + 1 };
   saveBlogData(file.categories, posts);
   return posts[index];
+}
+
+function normalizeOrder(order: Order): Order {
+  return {
+    ...order,
+    orderNumber: order.orderNumber.trim().toUpperCase(),
+    customerEmail: order.customerEmail.trim(),
+    items: order.items.map((item) => ({
+      ...item,
+      quantity: Math.max(1, Math.floor(item.quantity) || 1),
+      unitPrice: Number(item.unitPrice) || 0,
+    })),
+  };
+}
+
+function readOrdersFile() {
+  initCmsFiles();
+  const file = readJson<OrdersFile>(ORDERS_FILE) ?? defaultOrdersFile();
+  return {
+    ...file,
+    orders: file.orders.map(normalizeOrder),
+  };
+}
+
+export function loadOrders(): Order[] {
+  return readOrdersFile().orders;
+}
+
+export function saveOrders(orders: Order[]): OrdersFile {
+  initCmsFiles();
+  const file: OrdersFile = {
+    orders: orders.map(normalizeOrder),
+    updatedAt: new Date().toISOString(),
+  };
+  writeJson(ORDERS_FILE, file);
+  return file;
+}
+
+export function getOrderByNumberFromStore(orderNumber: string): Order | undefined {
+  const normalized = orderNumber.trim().toUpperCase();
+  return loadOrders().find((o) => o.orderNumber === normalized);
+}
+
+export function generateOrderNumber(): string {
+  const orders = loadOrders();
+  const numbers = orders
+    .map((o) => parseInt(o.orderNumber.replace(/^PA-/i, ""), 10))
+    .filter((n) => Number.isFinite(n));
+  const next = numbers.length > 0 ? Math.max(...numbers) + 1 : 100001;
+  return `PA-${next}`;
 }
