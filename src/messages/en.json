@@ -67,7 +67,17 @@
     "backToBlog": "Back to Blog",
     "minRead": "{count} min read",
     "viewCount": "{count} views",
-    "relatedProducts": "Featured Products"
+    "relatedProducts": "Featured Products",
+    "addedToCart": "Added to cart"
+  },
+  "account": {
+    "title": "My Account",
+    "intro": "Pet Memo Shop does not require a separate sign-up. Pay with PayPal at checkout, then track your order anytime with your order number and email.",
+    "trackOrder": "Track Your Order",
+    "trackOrderDesc": "Enter your order number and email to check production and shipping status.",
+    "contactSupport": "Contact Support",
+    "contactSupportDesc": "Questions about personalization, shipping, or your order? We are here to help.",
+    "adminNote": "Store staff: use /admin to manage products and orders."
   },
   "meta": {
     "homeTitle": "Personalized Pet Memorial Gifts | Custom Keepsakes",

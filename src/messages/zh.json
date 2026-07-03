@@ -67,7 +67,17 @@
     "backToBlog": "返回博客",
     "minRead": "{count} 分钟阅读",
     "viewCount": "{count} 次阅读",
-    "relatedProducts": "相关商品"
+    "relatedProducts": "相关商品",
+    "addedToCart": "已加入购物车"
+  },
+  "account": {
+    "title": "我的账户",
+    "intro": "本站无需单独注册。结账时使用 PayPal 付款，之后可用订单号和邮箱随时查单。",
+    "trackOrder": "订单追踪",
+    "trackOrderDesc": "输入订单号和邮箱，查看生产与物流状态。",
+    "contactSupport": "联系客服",
+    "contactSupportDesc": "有个性化、配送或订单问题？我们随时为您解答。",
+    "adminNote": "店铺管理员请访问 /admin 管理商品与订单。"
   },
   "meta": {
     "homeTitle": "个性化宠物纪念礼品 | 定制纪念品",

@@ -9,7 +9,7 @@ const faqs = [
   { question: "Do you ship internationally?", answer: "Yes. We ship worldwide with tracking provided for every order." },
   { question: "Can customized products be returned?", answer: "Customized products cannot be returned unless damaged or incorrect. Non-customized items may be returned within 30 days." },
   { question: "Is this suitable as a sympathy gift?", answer: "Absolutely. Our memorial keepsakes are thoughtfully designed as gentle sympathy gifts." },
-  { question: "What payment methods do you accept?", answer: "We accept Visa, Mastercard, PayPal, Apple Pay, Google Pay, and Shop Pay." },
+  { question: "What payment methods do you accept?", answer: "We accept PayPal at checkout. PayPal also supports paying with Visa, Mastercard, Apple Pay, and Google Pay where available in your region." },
 ];
 
 export const metadata = buildMetadata({

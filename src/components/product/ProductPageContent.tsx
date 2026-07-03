@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Check, Truck, Shield } from "lucide-react";
+import { useRouter } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { ProductImageDisplay } from "@/components/shared/ProductImageDisplay";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -11,6 +13,8 @@ import { ProductCard } from "@/components/product/ProductCard";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { ReviewsSection } from "@/components/shared/ReviewsSection";
 import { NFCExplanation } from "@/components/shared/NFCExplanation";
+import { useCart } from "@/components/cart/CartProvider";
+import { CartToast } from "@/components/cart/CartToast";
 import { formatPrice, getEstimatedDelivery } from "@/lib/utils";
 import { getReviewsByProduct } from "@/data/reviews";
 import type { Product } from "@/types";
@@ -21,7 +25,11 @@ interface ProductPageContentProps {
 }
 
 export function ProductPageContent({ product, relatedProducts }: ProductPageContentProps) {
+  const router = useRouter();
+  const t = useTranslations("common");
+  const { addItem } = useCart();
   const [activeImage, setActiveImage] = useState(0);
+  const [toast, setToast] = useState<string | null>(null);
   const displayPrice = product.salePrice ?? product.price;
   const hasSale = product.salePrice !== undefined;
   const reviews = getReviewsByProduct(product.slug);
@@ -80,8 +88,39 @@ export function ProductPageContent({ product, relatedProducts }: ProductPageCont
             <p className="text-muted leading-relaxed mb-6">{product.shortDescription}</p>
 
             <div className="space-y-3 mb-6">
-              <Button size="lg" className="w-full">Add to Cart</Button>
-              <Button variant="secondary" size="lg" className="w-full">Buy Now</Button>
+              <Button
+                type="button"
+                size="lg"
+                className="w-full"
+                disabled={!product.inStock}
+                onClick={() => {
+                  addItem({
+                    productSlug: product.slug,
+                    title: product.title,
+                    unitPrice: displayPrice,
+                  });
+                  setToast(t("addedToCart"));
+                }}
+              >
+                Add to Cart
+              </Button>
+              <Button
+                type="button"
+                variant="secondary"
+                size="lg"
+                className="w-full"
+                disabled={!product.inStock}
+                onClick={() => {
+                  addItem({
+                    productSlug: product.slug,
+                    title: product.title,
+                    unitPrice: displayPrice,
+                  });
+                  router.push("/checkout");
+                }}
+              >
+                Buy Now
+              </Button>
               <WishlistButton />
             </div>
 
@@ -165,6 +204,7 @@ export function ProductPageContent({ product, relatedProducts }: ProductPageCont
           </section>
         )}
       </div>
+      <CartToast message={toast} onClear={() => setToast(null)} />
     </>
   );
 }

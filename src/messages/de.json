@@ -67,7 +67,17 @@
     "backToBlog": "Zurück zum Blog",
     "minRead": "{count} Min. Lesezeit",
     "viewCount": "{count} Aufrufe",
-    "relatedProducts": "Empfohlene Produkte"
+    "relatedProducts": "Empfohlene Produkte",
+    "addedToCart": "In den Warenkorb gelegt"
+  },
+  "account": {
+    "title": "Mein Konto",
+    "intro": "Eine separate Registrierung ist nicht nötig. Bezahlen Sie mit PayPal an der Kasse und verfolgen Sie Ihre Bestellung später mit Bestellnummer und E-Mail.",
+    "trackOrder": "Bestellung verfolgen",
+    "trackOrderDesc": "Geben Sie Bestellnummer und E-Mail ein, um den Status zu prüfen.",
+    "contactSupport": "Support kontaktieren",
+    "contactSupportDesc": "Fragen zu Personalisierung, Versand oder Ihrer Bestellung? Wir helfen gerne.",
+    "adminNote": "Shop-Betreiber: /admin für Produkte und Bestellungen."
   },
   "meta": {
     "homeTitle": "Personalisierte Tiergedenkgeschenke | Individuelle Erinnerungsstücke",

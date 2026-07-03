@@ -50,10 +50,9 @@ export const TRUST_BADGES = [
 ] as const;
 
 export const PAYMENT_METHODS = [
+  "PayPal",
   "Visa",
   "Mastercard",
-  "PayPal",
   "Apple Pay",
   "Google Pay",
-  "Shop Pay",
 ] as const;

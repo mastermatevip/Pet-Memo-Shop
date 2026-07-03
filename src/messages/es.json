@@ -67,7 +67,17 @@
     "backToBlog": "Volver al blog",
     "minRead": "{count} min de lectura",
     "viewCount": "{count} visitas",
-    "relatedProducts": "Productos destacados"
+    "relatedProducts": "Productos destacados",
+    "addedToCart": "Añadido al carrito"
+  },
+  "account": {
+    "title": "Mi cuenta",
+    "intro": "No necesita registrarse por separado. Pague con PayPal en el checkout y rastree su pedido con el número de pedido y el correo electrónico.",
+    "trackOrder": "Rastrear pedido",
+    "trackOrderDesc": "Introduzca el número de pedido y el correo para ver el estado.",
+    "contactSupport": "Contactar soporte",
+    "contactSupportDesc": "¿Preguntas sobre personalización, envío o su pedido? Estamos aquí para ayudar.",
+    "adminNote": "Personal de la tienda: use /admin para gestionar productos y pedidos."
   },
   "meta": {
     "homeTitle": "Regalos conmemorativos personalizados para mascotas",

@@ -1,11 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { Eye, ShoppingBag } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/Badge";
 import { StarRating } from "@/components/ui/StarRating";
 import { formatPrice } from "@/lib/utils";
 import { ProductImageDisplay } from "@/components/shared/ProductImageDisplay";
+import { useCart } from "@/components/cart/CartProvider";
+import { CartToast } from "@/components/cart/CartToast";
 import type { Product } from "@/types";
 
 interface ProductCardProps {
@@ -13,6 +17,9 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const t = useTranslations("common");
+  const { addItem } = useCart();
+  const [toast, setToast] = useState<string | null>(null);
   const displayPrice = product.salePrice ?? product.price;
   const hasSale = product.salePrice !== undefined;
 
@@ -55,11 +62,24 @@ export function ProductCard({ product }: ProductCardProps) {
             <span className="text-sm text-light line-through">{formatPrice(product.price)}</span>
           )}
         </div>
-        <button className="w-full flex items-center justify-center gap-2 py-2.5 bg-highlight hover:bg-btn hover:text-btn-text text-text rounded-full text-sm font-medium transition-colors">
+        <button
+          type="button"
+          disabled={!product.inStock}
+          onClick={() => {
+            addItem({
+              productSlug: product.slug,
+              title: product.title,
+              unitPrice: displayPrice,
+            });
+            setToast(t("addedToCart"));
+          }}
+          className="w-full flex items-center justify-center gap-2 py-2.5 bg-highlight hover:bg-btn hover:text-btn-text text-text rounded-full text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        >
           <ShoppingBag className="w-4 h-4" />
           Add to Cart
         </button>
       </div>
+      <CartToast message={toast} onClear={() => setToast(null)} />
     </div>
   );
 }

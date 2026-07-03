@@ -113,6 +113,8 @@ Slug 只读（避免破坏 URL）。
 
 订单号格式 `PA-100001`，新建时自动生成。客户可在前台 `/track-order` 用订单号 + 邮箱查询物流（不含内部备注）。
 
+**PayPal 收款：** 客户通过 `/checkout` 用 PayPal 付款后，系统自动创建订单（见 `docs/paypal.md`）。
+
 ## SEO / Sitemap
 
 - `https://petmemoshop.com/sitemap.xml` — 自动生成，含全部语言版本、商品、合集、已发布博客

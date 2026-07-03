@@ -4,6 +4,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { CartProvider } from "@/components/cart/CartProvider";
 import { StorefrontGoogleTagManager } from "@/components/analytics/GoogleTagManager";
 import { routing, type Locale } from "@/i18n/routing";
 
@@ -29,12 +30,14 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <NextIntlClientProvider messages={messages}>
       <StorefrontGoogleTagManager />
-      <div lang={locale} className={locale === "zh" ? "locale-zh contents" : "contents"}>
-        <AnnouncementBar />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </div>
+      <CartProvider>
+        <div lang={locale} className={locale === "zh" ? "locale-zh contents" : "contents"}>
+          <AnnouncementBar />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
+      </CartProvider>
     </NextIntlClientProvider>
   );
 }

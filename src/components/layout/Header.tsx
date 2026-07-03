@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
+import { useCart } from "@/components/cart/CartProvider";
 import { cn } from "@/lib/utils";
 
 const collectionSlugs = [
@@ -20,6 +21,7 @@ const collectionSlugs = [
 
 export function Header() {
   const t = useTranslations("nav");
+  const { itemCount } = useCart();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
 
@@ -84,15 +86,25 @@ export function Header() {
             <button aria-label={t("search")} className="p-2 text-muted hover:text-text transition-colors shrink-0">
               <Search className="w-5 h-5" />
             </button>
-            <button aria-label={t("account")} className="hidden sm:block p-2 text-muted hover:text-text transition-colors">
+            <Link
+              href="/account"
+              aria-label={t("account")}
+              className="hidden sm:block p-2 text-muted hover:text-text transition-colors"
+            >
               <User className="w-5 h-5" />
-            </button>
-            <button aria-label={t("cart")} className="relative p-2 text-muted hover:text-text transition-colors">
+            </Link>
+            <Link
+              href="/cart"
+              aria-label={t("cart")}
+              className="relative p-2 text-muted hover:text-text transition-colors"
+            >
               <ShoppingBag className="w-5 h-5" />
-              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-gold text-btn-text text-[10px] rounded-full flex items-center justify-center">
-                0
-              </span>
-            </button>
+              {itemCount > 0 ? (
+                <span className="absolute -top-0.5 -right-0.5 min-w-4 h-4 px-1 bg-gold text-btn-text text-[10px] rounded-full flex items-center justify-center">
+                  {itemCount > 9 ? "9+" : itemCount}
+                </span>
+              ) : null}
+            </Link>
             <select
               aria-label={t("currency")}
               className="hidden md:block text-sm text-muted bg-transparent border-none cursor-pointer focus:outline-none"
@@ -144,6 +156,20 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/account"
+            className="block py-2.5 text-text font-medium"
+            onClick={() => setMobileOpen(false)}
+          >
+            {t("account")}
+          </Link>
+          <Link
+            href="/cart"
+            className="block py-2.5 text-text font-medium"
+            onClick={() => setMobileOpen(false)}
+          >
+            {t("cart")}
+          </Link>
           <div className="pt-3 border-t border-border mt-2">
             <LanguageSwitcher variant="mobile" />
           </div>

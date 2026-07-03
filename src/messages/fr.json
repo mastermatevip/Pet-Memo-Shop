@@ -67,7 +67,17 @@
     "backToBlog": "Retour au blog",
     "minRead": "{count} min de lecture",
     "viewCount": "{count} vues",
-    "relatedProducts": "Produits recommandés"
+    "relatedProducts": "Produits recommandés",
+    "addedToCart": "Ajouté au panier"
+  },
+  "account": {
+    "title": "Mon compte",
+    "intro": "Aucune inscription séparée n'est requise. Payez avec PayPal à la caisse, puis suivez votre commande avec le numéro de commande et l'e-mail.",
+    "trackOrder": "Suivre la commande",
+    "trackOrderDesc": "Entrez le numéro de commande et l'e-mail pour vérifier le statut.",
+    "contactSupport": "Contacter le support",
+    "contactSupportDesc": "Des questions sur la personnalisation, la livraison ou votre commande ? Nous sommes là pour vous aider.",
+    "adminNote": "Personnel boutique : utilisez /admin pour gérer produits et commandes."
   },
   "meta": {
     "homeTitle": "Cadeaux commémoratifs personnalisés pour animaux",
