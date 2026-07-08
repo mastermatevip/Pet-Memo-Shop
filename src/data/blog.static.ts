@@ -10,6 +10,27 @@ export const blogCategories: BlogCategory[] = [
   { slug: "personalized-gift-guides", name: "Personalized Gift Guides", description: "Guides for personalized memorial gifts." },
 ];
 
+/** Slugs seeded as published before the draft-first deploy policy (2026-07). */
+const LEGACY_PUBLISHED_SLUGS = new Set([
+  "what-to-give-someone-who-lost-a-pet",
+  "best-dog-memorial-gifts-for-a-grieving-friend",
+  "best-cat-memorial-gifts-to-remember-a-beloved-cat",
+  "how-to-choose-a-pet-memorial-gift",
+  "what-is-a-pet-memorial-keepsake",
+  "how-to-choose-a-pet-urn",
+  "pet-loss-sympathy-gift-ideas",
+  "how-to-create-a-digital-pet-memorial-page",
+  "nfc-pet-memorial-cards-how-they-work",
+  "personalized-pet-memorial-jewelry-guide",
+  "rainbow-bridge-pet-memorial-gift-ideas",
+  "meaningful-ways-to-remember-a-dog-or-cat",
+  "pet-memorial-ideas",
+  "what-is-a-digital-pet-memorial",
+  "how-to-make-a-pet-memorial-online",
+  "carbon-fiber-nfc-memorial-tag-guide",
+  "nfc-vs-qr-code-pet-memorial",
+]);
+
 function createBlogPost(
   partial: Pick<
     BlogPost,
@@ -36,11 +57,13 @@ function createBlogPost(
     relatedProductSlugs: ["personalized-pet-memorial-frame", "carbon-fiber-nfc-memorial-tag", "memorial-sympathy-gift-box"],
     relatedCollectionSlugs: ["pet-memorial-gifts", "pet-loss-sympathy-gifts", "nfc-memorial-cards"],
     ...partial,
-    status: partial.status ?? "published",
+    status:
+      partial.status ??
+      (LEGACY_PUBLISHED_SLUGS.has(partial.slug) ? "published" : "draft"),
   };
 }
 
-/** New entries must set status: "draft" — publish manually in /admin/blog. */
+/** New posts: omit status (defaults to draft) — publish manually in /admin/blog after deploy. */
 export const blogPosts: BlogPost[] = [
   createBlogPost({
     slug: "what-to-give-someone-who-lost-a-pet",
@@ -873,7 +896,6 @@ You don't have to choose. Every [NFC memorial tag](/collections/nfc-memorial-car
     categorySlug: "pet-loss-support",
     publishedAt: "2026-07-08",
     readTime: 9,
-    status: "published",
     relatedProductSlugs: [
       "personalized-pet-memorial-frame",
       "dog-memorial-keepsake-box",
