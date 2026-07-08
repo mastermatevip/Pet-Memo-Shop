@@ -871,9 +871,9 @@ You don't have to choose. Every [NFC memorial tag](/collections/nfc-memorial-car
       "A pet memory corner gives you a quiet place to remember your companion every day. Here is how to choose a spot, gather meaningful items, and make it feel personal.",
     category: "Pet Loss Support",
     categorySlug: "pet-loss-support",
-    publishedAt: "2026-07-03",
+    publishedAt: "2026-07-08",
     readTime: 9,
-    status: "draft",
+    status: "published",
     relatedProductSlugs: [
       "personalized-pet-memorial-frame",
       "dog-memorial-keepsake-box",
