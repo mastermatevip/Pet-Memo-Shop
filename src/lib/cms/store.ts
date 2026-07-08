@@ -119,12 +119,31 @@ function normalizeBlogPost(post: BlogPost): BlogPost {
   };
 }
 
+function mergeBlogPostsFromSeed(file: BlogFile): BlogFile {
+  const seed = defaultBlogFile();
+  const existingSlugs = new Set(file.posts.map((p) => p.slug));
+  const missingPosts = seed.posts.filter((p) => !existingSlugs.has(p.slug));
+
+  const existingCategorySlugs = new Set(file.categories.map((c) => c.slug));
+  const missingCategories = seed.categories.filter((c) => !existingCategorySlugs.has(c.slug));
+
+  if (missingPosts.length === 0 && missingCategories.length === 0) {
+    return file;
+  }
+
+  return saveBlogData(
+    [...file.categories, ...missingCategories],
+    [...file.posts, ...missingPosts.map(normalizeBlogPost)]
+  );
+}
+
 function readBlogFile(): BlogFile {
   initCmsFiles();
   const file = readJson<BlogFile>(BLOG_FILE) ?? defaultBlogFile();
+  const merged = mergeBlogPostsFromSeed(file);
   return {
-    ...file,
-    posts: file.posts.map(normalizeBlogPost),
+    ...merged,
+    posts: merged.posts.map(normalizeBlogPost),
   };
 }
 
