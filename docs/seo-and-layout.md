@@ -2,7 +2,23 @@
 
 > 域名：**petmemoshop.com**  
 > 代码目录：`pawaura/`（Next.js 16 + TypeScript + Tailwind v4）  
-> 最后更新：2026-06-30
+> 最后更新：2026-07-08
+
+---
+
+## 0. 性能（PageSpeed）
+
+**2026-07-08 优化结果：** 移动端 Performance **~80 分**（优化前 71，LCP 7.2s）。
+
+| 措施 | 说明 |
+|------|------|
+| 首页 ISR | `revalidate = 3600`，降低 TTFB |
+| 异步字体 | `AsyncGoogleFonts`，非阻塞加载 |
+| LCP Hero | 移动端图片优先、`priority`、本地 `/images/hero-memorial.jpg` |
+| AVIF | `next.config.ts` 启用 AVIF + WebP |
+| GTM 延迟 | `requestIdleCallback` 后再注入 |
+
+详细变更见 `docs/project-status.md` →「2026-07-08 更新记录」。
 
 ---
 

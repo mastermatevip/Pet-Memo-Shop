@@ -145,7 +145,7 @@ Slug 只读（避免破坏 URL）。
 - 上传 API：`POST /api/admin/upload`（需登录，multipart，字段 `file` + `slug` + `imageIndex`）
 - 文件保存至 `public/uploads/products/`，URL 形如 `/uploads/products/xxx.webp`
 - Standalone 模式下通过 App Route `/uploads/products/[filename]` 提供图片访问
-- 后台预览对本地上传使用原生 `<img>`，外链仍用 `next/image`
+- 前台对本地上传与外链均使用 `next/image` 响应式优化（`ProductImageDisplay.tsx`）
 
 ## 保存与前台
 
