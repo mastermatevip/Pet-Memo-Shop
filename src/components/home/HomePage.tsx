@@ -39,7 +39,7 @@ export async function HomePage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-highlight via-bg to-bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="order-2 lg:order-1">
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-text leading-tight mb-6">
                 {hero.h1}
               </h1>
@@ -55,14 +55,15 @@ export async function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="order-1 lg:order-2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={hero.image.src}
                 alt={hero.image.alt}
                 fill
                 className="object-cover"
                 priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={75}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 50vw"
               />
             </div>
           </div>

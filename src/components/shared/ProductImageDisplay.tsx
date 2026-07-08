@@ -10,7 +10,7 @@ interface ProductImageDisplayProps {
   priority?: boolean;
 }
 
-/** 本地上传走原生 img + App Route；外链走 next/image */
+/** Local uploads and remote URLs both go through next/image for responsive sizing. */
 export function ProductImageDisplay({
   src,
   alt,
@@ -19,24 +19,13 @@ export function ProductImageDisplay({
   sizes,
   priority,
 }: ProductImageDisplayProps) {
-  if (isLocalUpload(src)) {
-    if (fill) {
-      return (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={src} alt={alt} className={`absolute inset-0 w-full h-full ${className}`} />
-      );
-    }
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img src={src} alt={alt} className={className} />;
-  }
-
   return (
     <Image
       src={src}
       alt={alt}
       fill={fill}
       className={className}
-      sizes={sizes}
+      sizes={sizes ?? (isLocalUpload(src) ? "(max-width: 768px) 50vw, 25vw" : undefined)}
       priority={priority}
     />
   );

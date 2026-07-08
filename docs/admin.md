@@ -149,7 +149,7 @@ Slug 只读（避免破坏 URL）。
 
 ## 保存与前台
 
-保存后 API 会调用 `revalidatePath`，前台页面使用 `force-dynamic` 读取最新 JSON，**无需重新 build**。
+保存后 API 会调用 `revalidatePath`，首页等页面使用 **ISR 缓存**（约 1 小时），保存后会立即刷新，**无需重新 build**。
 
 ## 安全
 

@@ -18,7 +18,7 @@ export function defaultHomepageContent(): HomepageContent {
       primaryCta: { label: "Shop Memorial Gifts", href: "/collections/pet-memorial-gifts" },
       secondaryCta: { label: "Create Digital Memorial", href: "/digital-pet-memorial" },
       image: {
-        src: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&h=600&fit=crop",
+        src: "/images/hero-memorial.jpg",
         alt: "personalized pet memorial frame with candle and flowers in warm natural light",
       },
     },
