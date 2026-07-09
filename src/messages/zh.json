@@ -70,6 +70,12 @@
     "relatedProducts": "相关商品",
     "addedToCart": "已加入购物车"
   },
+  "contactFab": {
+    "whatsapp": "WhatsApp 联系 {number}",
+    "whatsappLabel": "WhatsApp",
+    "email": "发送邮件至 {address}",
+    "emailLabel": "邮箱"
+  },
   "account": {
     "title": "我的账户",
     "intro": "本站无需单独注册。结账时使用 PayPal 付款，之后可用订单号和邮箱随时查单。",

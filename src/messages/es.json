@@ -70,6 +70,12 @@
     "relatedProducts": "Productos destacados",
     "addedToCart": "Añadido al carrito"
   },
+  "contactFab": {
+    "whatsapp": "WhatsApp {number}",
+    "whatsappLabel": "WhatsApp",
+    "email": "Correo a {address}",
+    "emailLabel": "Correo"
+  },
   "account": {
     "title": "Mi cuenta",
     "intro": "No necesita registrarse por separado. Pague con PayPal en el checkout y rastree su pedido con el número de pedido y el correo electrónico.",

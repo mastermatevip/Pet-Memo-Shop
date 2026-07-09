@@ -4,6 +4,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingContactButtons } from "@/components/layout/FloatingContactButtons";
 import { CartProvider } from "@/components/cart/CartProvider";
 import { StorefrontGoogleTagManager } from "@/components/analytics/GoogleTagManager";
 import { routing, type Locale } from "@/i18n/routing";
@@ -36,6 +37,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <FloatingContactButtons />
         </div>
       </CartProvider>
     </NextIntlClientProvider>

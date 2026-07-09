@@ -70,6 +70,12 @@
     "relatedProducts": "Empfohlene Produkte",
     "addedToCart": "In den Warenkorb gelegt"
   },
+  "contactFab": {
+    "whatsapp": "WhatsApp {number}",
+    "whatsappLabel": "WhatsApp",
+    "email": "E-Mail an {address}",
+    "emailLabel": "E-Mail"
+  },
   "account": {
     "title": "Mein Konto",
     "intro": "Eine separate Registrierung ist nicht nötig. Bezahlen Sie mit PayPal an der Kasse und verfolgen Sie Ihre Bestellung später mit Bestellnummer und E-Mail.",

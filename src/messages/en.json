@@ -70,6 +70,12 @@
     "relatedProducts": "Featured Products",
     "addedToCart": "Added to cart"
   },
+  "contactFab": {
+    "whatsapp": "Chat on WhatsApp {number}",
+    "whatsappLabel": "WhatsApp",
+    "email": "Email us at {address}",
+    "emailLabel": "Email"
+  },
   "account": {
     "title": "My Account",
     "intro": "Pet Memo Shop does not require a separate sign-up. Pay with PayPal at checkout, then track your order anytime with your order number and email.",
