@@ -2,9 +2,32 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { ChevronDown, ChevronUp, Plus, Trash2 } from "lucide-react";
 import type { HomepageContent } from "@/lib/cms/types";
+import type { CategoryCard, HowItWorksStep, PersonalizationOption } from "@/types";
 import { AdminField, adminInputClass, adminTextareaClass } from "@/components/admin/AdminField";
 import { SaveStatus } from "@/components/admin/SaveStatus";
+
+const PERSONALIZATION_ICONS: { value: PersonalizationOption["icon"]; label: string }[] = [
+  { value: "type", label: "文字" },
+  { value: "image", label: "图片" },
+  { value: "calendar", label: "日期" },
+  { value: "message", label: "留言" },
+  { value: "gift", label: "礼盒" },
+  { value: "nfc", label: "NFC" },
+];
+
+function emptyCategory(): CategoryCard {
+  return { slug: "", title: "", description: "", image: "", imageAlt: "" };
+}
+
+function emptyStep(step: number): HowItWorksStep {
+  return { step, title: "", description: "" };
+}
+
+function emptyPersonalization(): PersonalizationOption {
+  return { icon: "type", label: "", description: "" };
+}
 
 interface Props {
   initial: HomepageContent;
@@ -91,6 +114,108 @@ export function HomepageEditor({ initial }: Props) {
         },
       },
     }));
+  }
+
+  function updateCategory(index: number, patch: Partial<CategoryCard>) {
+    setContent((c) => ({
+      ...c,
+      categories: c.categories.map((item, i) => (i === index ? { ...item, ...patch } : item)),
+    }));
+  }
+
+  function addCategory() {
+    setContent((c) => ({ ...c, categories: [...c.categories, emptyCategory()] }));
+  }
+
+  function removeCategory(index: number) {
+    setContent((c) => ({
+      ...c,
+      categories: c.categories.filter((_, i) => i !== index),
+    }));
+  }
+
+  function moveCategory(index: number, direction: -1 | 1) {
+    setContent((c) => {
+      const target = index + direction;
+      if (target < 0 || target >= c.categories.length) return c;
+      const next = [...c.categories];
+      [next[index], next[target]] = [next[target], next[index]];
+      return { ...c, categories: next };
+    });
+  }
+
+  function updateStep(index: number, patch: Partial<HowItWorksStep>) {
+    setContent((c) => ({
+      ...c,
+      howItWorksSteps: c.howItWorksSteps.map((item, i) =>
+        i === index ? { ...item, ...patch } : item
+      ),
+    }));
+  }
+
+  function addStep() {
+    setContent((c) => ({
+      ...c,
+      howItWorksSteps: [
+        ...c.howItWorksSteps,
+        emptyStep(c.howItWorksSteps.length + 1),
+      ],
+    }));
+  }
+
+  function removeStep(index: number) {
+    setContent((c) => ({
+      ...c,
+      howItWorksSteps: c.howItWorksSteps
+        .filter((_, i) => i !== index)
+        .map((step, i) => ({ ...step, step: i + 1 })),
+    }));
+  }
+
+  function moveStep(index: number, direction: -1 | 1) {
+    setContent((c) => {
+      const target = index + direction;
+      if (target < 0 || target >= c.howItWorksSteps.length) return c;
+      const next = [...c.howItWorksSteps];
+      [next[index], next[target]] = [next[target], next[index]];
+      return {
+        ...c,
+        howItWorksSteps: next.map((step, i) => ({ ...step, step: i + 1 })),
+      };
+    });
+  }
+
+  function updatePersonalization(index: number, patch: Partial<PersonalizationOption>) {
+    setContent((c) => ({
+      ...c,
+      personalizationOptions: c.personalizationOptions.map((item, i) =>
+        i === index ? { ...item, ...patch } : item
+      ),
+    }));
+  }
+
+  function addPersonalization() {
+    setContent((c) => ({
+      ...c,
+      personalizationOptions: [...c.personalizationOptions, emptyPersonalization()],
+    }));
+  }
+
+  function removePersonalization(index: number) {
+    setContent((c) => ({
+      ...c,
+      personalizationOptions: c.personalizationOptions.filter((_, i) => i !== index),
+    }));
+  }
+
+  function movePersonalization(index: number, direction: -1 | 1) {
+    setContent((c) => {
+      const target = index + direction;
+      if (target < 0 || target >= c.personalizationOptions.length) return c;
+      const next = [...c.personalizationOptions];
+      [next[index], next[target]] = [next[target], next[index]];
+      return { ...c, personalizationOptions: next };
+    });
   }
 
   async function handleSave(e: React.FormEvent) {
@@ -299,6 +424,248 @@ export function HomepageEditor({ initial }: Props) {
             onChange={(e) => updateNfcKeyPoints(e.target.value)}
           />
         </AdminField>
+      </section>
+
+      <section className="space-y-4">
+        <div className="flex items-center justify-between gap-4">
+          <h3 className="font-serif text-lg">分类卡片</h3>
+          <button
+            type="button"
+            onClick={addCategory}
+            className="inline-flex items-center gap-1 text-sm text-muted hover:text-text"
+          >
+            <Plus className="w-4 h-4" />
+            添加卡片
+          </button>
+        </div>
+        <p className="text-xs text-light">
+          Slug 对应合集路径，如 <code className="font-mono">dog-memorial-gifts</code>
+        </p>
+        <div className="space-y-4">
+          {content.categories.map((cat, index) => (
+            <div key={index} className="rounded-lg border border-border bg-card p-4 space-y-3">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-sm font-medium text-muted">卡片 {index + 1}</span>
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    onClick={() => moveCategory(index, -1)}
+                    disabled={index === 0}
+                    className="p-1 text-muted hover:text-text disabled:opacity-30"
+                    aria-label="上移"
+                  >
+                    <ChevronUp className="w-4 h-4" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => moveCategory(index, 1)}
+                    disabled={index === content.categories.length - 1}
+                    className="p-1 text-muted hover:text-text disabled:opacity-30"
+                    aria-label="下移"
+                  >
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => removeCategory(index)}
+                    className="p-1 text-muted hover:text-red-600"
+                    aria-label="删除"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <AdminField label="合集 Slug">
+                  <input
+                    className={adminInputClass}
+                    value={cat.slug}
+                    onChange={(e) => updateCategory(index, { slug: e.target.value })}
+                  />
+                </AdminField>
+                <AdminField label="标题">
+                  <input
+                    className={adminInputClass}
+                    value={cat.title}
+                    onChange={(e) => updateCategory(index, { title: e.target.value })}
+                  />
+                </AdminField>
+              </div>
+              <AdminField label="描述">
+                <input
+                  className={adminInputClass}
+                  value={cat.description}
+                  onChange={(e) => updateCategory(index, { description: e.target.value })}
+                />
+              </AdminField>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <AdminField label="图片 URL">
+                  <input
+                    className={adminInputClass}
+                    value={cat.image}
+                    onChange={(e) => updateCategory(index, { image: e.target.value })}
+                  />
+                </AdminField>
+                <AdminField label="图片 alt">
+                  <input
+                    className={adminInputClass}
+                    value={cat.imageAlt}
+                    onChange={(e) => updateCategory(index, { imageAlt: e.target.value })}
+                  />
+                </AdminField>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <div className="flex items-center justify-between gap-4">
+          <h3 className="font-serif text-lg">How It Works 步骤</h3>
+          <button
+            type="button"
+            onClick={addStep}
+            className="inline-flex items-center gap-1 text-sm text-muted hover:text-text"
+          >
+            <Plus className="w-4 h-4" />
+            添加步骤
+          </button>
+        </div>
+        <div className="space-y-4">
+          {content.howItWorksSteps.map((step, index) => (
+            <div key={index} className="rounded-lg border border-border bg-card p-4 space-y-3">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-sm font-medium text-muted">步骤 {step.step}</span>
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    onClick={() => moveStep(index, -1)}
+                    disabled={index === 0}
+                    className="p-1 text-muted hover:text-text disabled:opacity-30"
+                    aria-label="上移"
+                  >
+                    <ChevronUp className="w-4 h-4" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => moveStep(index, 1)}
+                    disabled={index === content.howItWorksSteps.length - 1}
+                    className="p-1 text-muted hover:text-text disabled:opacity-30"
+                    aria-label="下移"
+                  >
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => removeStep(index)}
+                    className="p-1 text-muted hover:text-red-600"
+                    aria-label="删除"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+              <AdminField label="标题">
+                <input
+                  className={adminInputClass}
+                  value={step.title}
+                  onChange={(e) => updateStep(index, { title: e.target.value })}
+                />
+              </AdminField>
+              <AdminField label="描述">
+                <textarea
+                  className={adminTextareaClass}
+                  value={step.description}
+                  onChange={(e) => updateStep(index, { description: e.target.value })}
+                />
+              </AdminField>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <div className="flex items-center justify-between gap-4">
+          <h3 className="font-serif text-lg">个性化选项</h3>
+          <button
+            type="button"
+            onClick={addPersonalization}
+            className="inline-flex items-center gap-1 text-sm text-muted hover:text-text"
+          >
+            <Plus className="w-4 h-4" />
+            添加选项
+          </button>
+        </div>
+        <div className="space-y-4">
+          {content.personalizationOptions.map((option, index) => (
+            <div key={index} className="rounded-lg border border-border bg-card p-4 space-y-3">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-sm font-medium text-muted">选项 {index + 1}</span>
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    onClick={() => movePersonalization(index, -1)}
+                    disabled={index === 0}
+                    className="p-1 text-muted hover:text-text disabled:opacity-30"
+                    aria-label="上移"
+                  >
+                    <ChevronUp className="w-4 h-4" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => movePersonalization(index, 1)}
+                    disabled={index === content.personalizationOptions.length - 1}
+                    className="p-1 text-muted hover:text-text disabled:opacity-30"
+                    aria-label="下移"
+                  >
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => removePersonalization(index)}
+                    className="p-1 text-muted hover:text-red-600"
+                    aria-label="删除"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <AdminField label="图标">
+                  <select
+                    className={adminInputClass}
+                    value={option.icon}
+                    onChange={(e) =>
+                      updatePersonalization(index, {
+                        icon: e.target.value as PersonalizationOption["icon"],
+                      })
+                    }
+                  >
+                    {PERSONALIZATION_ICONS.map(({ value, label }) => (
+                      <option key={value} value={value}>
+                        {label}
+                      </option>
+                    ))}
+                  </select>
+                </AdminField>
+                <AdminField label="标签">
+                  <input
+                    className={adminInputClass}
+                    value={option.label}
+                    onChange={(e) => updatePersonalization(index, { label: e.target.value })}
+                  />
+                </AdminField>
+              </div>
+              <AdminField label="描述">
+                <input
+                  className={adminInputClass}
+                  value={option.description}
+                  onChange={(e) => updatePersonalization(index, { description: e.target.value })}
+                />
+              </AdminField>
+            </div>
+          ))}
+        </div>
       </section>
 
       <div className="flex items-center gap-4 sticky bottom-0 bg-bg py-4 border-t border-border">

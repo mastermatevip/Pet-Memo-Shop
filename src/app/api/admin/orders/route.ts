@@ -1,8 +1,13 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/cms/require-admin";
 import { generateOrderNumber, loadOrders, saveOrders } from "@/lib/cms/store";
+import { queueOrderConfirmationEmail } from "@/lib/email/order-confirmation";
 import { upsertMemberFromOrder } from "@/lib/members/sync";
 import type { Order } from "@/types";
+
+interface CreateOrderBody extends Partial<Order> {
+  sendConfirmationEmail?: boolean;
+}
 
 export async function GET() {
   const denied = await requireAdmin();
@@ -16,7 +21,7 @@ export async function POST(request: Request) {
   const denied = await requireAdmin();
   if (denied) return denied;
 
-  const body = (await request.json()) as Partial<Order>;
+  const body = (await request.json()) as CreateOrderBody;
   const now = new Date().toISOString();
 
   const order: Order = {
@@ -50,6 +55,10 @@ export async function POST(request: Request) {
   orders.push(order);
   const file = saveOrders(orders);
   upsertMemberFromOrder(order);
+
+  if (body.sendConfirmationEmail !== false) {
+    queueOrderConfirmationEmail(order);
+  }
 
   return NextResponse.json({ order, ...file });
 }

@@ -4,6 +4,7 @@ import { generateOrderNumber, loadOrders, saveOrders } from "@/lib/cms/store";
 import type { Order } from "@/types";
 import type { CheckoutInput } from "./types";
 import { validateCheckout } from "./validate";
+import { queueOrderConfirmationEmail } from "@/lib/email/order-confirmation";
 import { upsertMemberFromOrder } from "@/lib/members/sync";
 import type { PayPalCaptureResult } from "@/lib/paypal/api";
 
@@ -51,6 +52,7 @@ export function createPaidOrder({ checkout, capture }: CreatePaidOrderInput): Or
   orders.push(order);
   saveOrders(orders);
   upsertMemberFromOrder(order);
+  queueOrderConfirmationEmail(order);
 
   return order;
 }

@@ -227,8 +227,8 @@ Slug: `how-to-create-a-pet-memory-corner-at-home`
 | P1 | Google Search Console 持续提交 sitemap | — |
 | P1 | 博客 Phase 3 多语言 | `docs/i18n-roadmap.md` |
 | P2 | 个性化商品照片上传 | — |
-| P2 | 订单确认邮件 | — |
-| P2 | 首页分类卡片/步骤可视化编辑 | — |
+| ~~P2~~ | ~~订单确认邮件~~ | `docs/email.md` ✅ |
+| ~~P2~~ | ~~首页分类卡片/步骤可视化编辑~~ | `docs/admin.md` ✅ |
 | P3 | 博客 Featured Image | — |
 | P4 | Cloudflare Access / IP 限制（可选） | `docs/admin.md` |
 
@@ -242,6 +242,7 @@ Slug: `how-to-create-a-pet-memory-corner-at-home`
 | `docs/deploy.md` | Coolify 部署指南 |
 | `docs/i18n-roadmap.md` | 多语言工作计划 |
 | `docs/paypal.md` | PayPal 结账配置 |
+| `docs/email.md` | 订单确认邮件 SMTP 配置 |
 | `docs/seo-and-layout.md` | SEO 与布局 |
 | `docs/product-catalog-bilingual.md` | 商品目录双语参考 |
 

@@ -49,6 +49,7 @@ export function OrderEditor({ initial, isNew = false }: Props) {
   const router = useRouter();
   const [order, setOrder] = useState(initial);
   const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
+  const [sendConfirmationEmail, setSendConfirmationEmail] = useState(isNew);
 
   function setField<K extends keyof Order>(key: K, value: Order[K]) {
     setOrder((current) => ({ ...current, [key]: value }));
@@ -71,6 +72,7 @@ export function OrderEditor({ initial, isNew = false }: Props) {
       ...order,
       totalAmount: calcTotal(order.items),
       updatedAt: new Date().toISOString(),
+      ...(isNew ? { sendConfirmationEmail } : {}),
     };
 
     const url = isNew ? "/api/admin/orders" : `/api/admin/orders/${encodeURIComponent(order.orderNumber)}`;
@@ -228,6 +230,18 @@ export function OrderEditor({ initial, isNew = false }: Props) {
           onChange={(e) => setField("internalNotes", e.target.value)}
         />
       </AdminField>
+
+      {isNew ? (
+        <label className="flex items-center gap-2 text-sm text-text">
+          <input
+            type="checkbox"
+            checked={sendConfirmationEmail}
+            onChange={(e) => setSendConfirmationEmail(e.target.checked)}
+            className="rounded border-border"
+          />
+          创建后发送订单确认邮件给客户
+        </label>
+      ) : null}
 
       <div className="flex items-center gap-4 sticky bottom-0 bg-bg py-4 border-t border-border">
         <button
