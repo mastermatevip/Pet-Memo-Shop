@@ -84,8 +84,23 @@ export default function ContactForm() {
       )}
 
       <div className="mt-12 pt-8 border-t border-border space-y-2 text-muted">
-        <p>Email: {BRAND.email}</p>
-        <p>Phone: {BRAND.phone}</p>
+        <p>
+          WhatsApp:{" "}
+          <a
+            href={BRAND.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold hover:underline"
+          >
+            {BRAND.whatsapp}
+          </a>
+        </p>
+        <p>
+          Email:{" "}
+          <a href={`mailto:${BRAND.email}`} className="text-gold hover:underline">
+            {BRAND.email}
+          </a>
+        </p>
       </div>
     </div>
   );

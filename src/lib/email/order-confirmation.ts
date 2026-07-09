@@ -99,7 +99,9 @@ function buildOrderConfirmationContent(order: Order) {
           <tr>
             <td style="padding:16px 32px;background:#F3E8D8;border-top:1px solid #DED0BD;">
               <p style="margin:0;font-size:12px;color:#6B5B4F;line-height:1.6;">
-                Questions? Reply to this email or contact us at
+                Questions? Message us on WhatsApp at
+                <a href="${BRAND.whatsappUrl}" style="color:#3A2E25;">${BRAND.whatsapp}</a>
+                or email
                 <a href="mailto:${BRAND.email}" style="color:#3A2E25;">${BRAND.email}</a>
               </p>
               <p style="margin:8px 0 0;font-size:12px;color:#6B5B4F;">${BRAND.name} · ${siteUrl}</p>
@@ -129,7 +131,7 @@ For personalized items, we will send a design proof for your review before produ
 Track your order: ${trackUrl}
 My account: ${accountUrl}
 
-Questions? Contact us at ${BRAND.email}
+Questions? WhatsApp ${BRAND.whatsapp} or email ${BRAND.email}
 
 ${BRAND.name}
 ${siteUrl}`;

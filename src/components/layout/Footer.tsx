@@ -42,6 +42,17 @@ export async function Footer() {
               <BrandLogo variant="icon" href="/" />
             </div>
             <p className="text-footer-muted text-sm leading-relaxed mb-4">{t("tagline")}</p>
+            <p className="text-footer-muted text-sm mb-4">
+              WhatsApp:{" "}
+              <a
+                href={BRAND.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-footer-text hover:text-gold transition-colors"
+              >
+                {BRAND.whatsapp}
+              </a>
+            </p>
             <div className="flex gap-4">
               {[
                 { href: "https://instagram.com/petmemoshop", label: "Instagram", text: "IG" },
