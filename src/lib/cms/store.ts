@@ -8,6 +8,7 @@ import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile,
 import type { Product, BlogCategory, BlogPost, Order, Member } from "@/types";
 import { isBlogPostPublished } from "@/lib/blog";
 import { syncAllMembersFromOrders } from "@/lib/members/sync";
+import { fixTextMojibake, hasTextMojibake } from "./text-encoding";
 
 function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) {
@@ -109,14 +110,73 @@ export function updateProductImageSrc(
 }
 
 function normalizeBlogPost(post: BlogPost): BlogPost {
+  const faqs = post.faqs.map((faq) => ({
+    question: fixTextMojibake(faq.question),
+    answer: fixTextMojibake(faq.answer),
+  }));
+
   return {
     ...post,
+    title: fixTextMojibake(post.title),
+    metaTitle: fixTextMojibake(post.metaTitle),
+    metaDescription: fixTextMojibake(post.metaDescription),
+    excerpt: fixTextMojibake(post.excerpt),
+    category: fixTextMojibake(post.category),
+    content: fixTextMojibake(post.content),
+    faqs,
     viewCount:
       typeof post.viewCount === "number" && Number.isFinite(post.viewCount) && post.viewCount >= 0
         ? Math.floor(post.viewCount)
         : 0,
     status: post.status === "draft" ? "draft" : "published",
   };
+}
+
+function blogPostHasMojibake(post: BlogPost): boolean {
+  const textFields = [
+    post.title,
+    post.metaTitle,
+    post.metaDescription,
+    post.excerpt,
+    post.category,
+    post.content,
+    ...post.faqs.flatMap((faq) => [faq.question, faq.answer]),
+  ];
+  return textFields.some(hasTextMojibake);
+}
+
+function repairBlogPostFromSeed(post: BlogPost, seedPost: BlogPost | undefined): BlogPost {
+  const normalized = normalizeBlogPost(post);
+  if (!blogPostHasMojibake(normalized) || !seedPost) {
+    return normalized;
+  }
+
+  const seedNormalized = normalizeBlogPost(seedPost);
+  return {
+    ...seedNormalized,
+    status: normalized.status,
+    viewCount: normalized.viewCount,
+    publishedAt: normalized.publishedAt,
+  };
+}
+
+function repairBlogMojibake(file: BlogFile): BlogFile {
+  const seedBySlug = new Map(defaultBlogFile().posts.map((post) => [post.slug, post]));
+  let changed = false;
+
+  const posts = file.posts.map((post) => {
+    const repaired = repairBlogPostFromSeed(post, seedBySlug.get(post.slug));
+    if (JSON.stringify(repaired) !== JSON.stringify(post)) {
+      changed = true;
+    }
+    return repaired;
+  });
+
+  if (!changed) {
+    return file;
+  }
+
+  return saveBlogData(file.categories, posts);
 }
 
 function mergeBlogPostsFromSeed(file: BlogFile): BlogFile {
@@ -141,9 +201,10 @@ function readBlogFile(): BlogFile {
   initCmsFiles();
   const file = readJson<BlogFile>(BLOG_FILE) ?? defaultBlogFile();
   const merged = mergeBlogPostsFromSeed(file);
+  const repaired = repairBlogMojibake(merged);
   return {
-    ...merged,
-    posts: merged.posts.map(normalizeBlogPost),
+    ...repaired,
+    posts: repaired.posts.map(normalizeBlogPost),
   };
 }
 
