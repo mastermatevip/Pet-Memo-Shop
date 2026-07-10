@@ -20,6 +20,9 @@
 | `/admin/members` | 会员列表 |
 | `/admin/members/new` | 新建会员 |
 | `/admin/members/[email]` | 单会员编辑（资料、状态、关联订单） |
+| `/admin/memorials` | 数字纪念页列表 |
+| `/admin/memorials/new` | 新建纪念页 |
+| `/admin/memorials/[slug]` | 编辑纪念页（照片、视频、故事、QR） |
 
 ## 环境变量
 
@@ -44,6 +47,7 @@ ADMIN_SECRET=至少32位随机字符串
 | `data/cms/blog.json` | 博客分类 + 全部文章 |
 | `data/cms/orders.json` | 全部订单（状态、物流、客户资料） |
 | `data/cms/members.json` | 全部会员（邮箱去重、消费统计、关联订单） |
+| `data/cms/memorials.json` | 数字纪念页（照片、视频、故事、留言） |
 
 首次启动时，若 JSON 不存在，会从 `src/data/*.static.ts` 静态数据自动 seed。
 
@@ -53,8 +57,8 @@ ADMIN_SECRET=至少32位随机字符串
 
 1. 在 Environment Variables 添加 `ADMIN_PASSWORD`、`ADMIN_SECRET`
 2. 挂载持久卷：
-   - `/app/data/cms` → CMS JSON（首页、商品、博客、订单、会员）
-   - `/app/public/uploads` → 上传的商品图片
+   - `/app/data/cms` → CMS JSON（首页、商品、博客、订单、会员、纪念页）
+   - `/app/public/uploads` → 上传的商品与纪念页媒体
 3. Redeploy 后访问 `https://petmemoshop.com/admin`
 
 > Docker 镜像通过 `docker-entrypoint.sh` 在启动时将 `/app/data`、`/app/public/uploads` 属主改为 `nextjs:nodejs`，解决 Coolify 卷默认 root 权限导致上传失败的问题。
@@ -111,6 +115,13 @@ Slug 只读（避免破坏 URL）。
 > **生产 CMS 卷说明：** Coolify 挂载 `/app/data/cms` 时，线上 `blog.json` 以卷内数据为准。部署后若后台看不到新文章，**重启/Redeploy 容器**后会自动从代码合并缺失文章（以**草稿**入库）。若正文出现 `鈥?` 等乱码，Redeploy 后会自动修复标点并从 seed 还原文案（保留发布状态与阅读量）。
 
 草稿不会出现在博客列表、首页推荐或 sitemap 中。
+
+### 数字纪念页
+
+- 客户购买 **数字纪念页 / NFC 吊牌 / NFC 卡** 后，PayPal 付款成功会自动创建 **草稿** 纪念页
+- 路径：`/admin/memorials` → 编辑 → 上传照片/视频、故事、家人留言 → **已发布**
+- 发布后专属链接：`https://petmemoshop.com/memorial/{slug}`，可下载 QR 码
+- 详细流程见 **`docs/digital-memorial.md`**
 
 ### 订单
 

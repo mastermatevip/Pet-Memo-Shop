@@ -7,6 +7,7 @@ import type {
   BlogPost,
   Order,
   Member,
+  MemorialPage,
 } from "@/types";
 
 export interface HomepageHero {
@@ -68,5 +69,10 @@ export interface OrdersFile {
 
 export interface MembersFile {
   members: Member[];
+  updatedAt: string;
+}
+
+export interface MemorialsFile {
+  pages: MemorialPage[];
   updatedAt: string;
 }

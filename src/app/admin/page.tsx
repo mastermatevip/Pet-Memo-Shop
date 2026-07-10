@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { isAdminConfigured } from "@/lib/cms/auth";
-import { loadHomepageContent, loadProducts, loadBlogPosts, loadOrders, loadMembers } from "@/lib/cms/store";
+import { loadHomepageContent, loadProducts, loadBlogPosts, loadOrders, loadMembers, loadMemorialPages } from "@/lib/cms/store";
 
 export const dynamic = "force-dynamic";
 
@@ -11,6 +11,7 @@ export default function AdminDashboardPage() {
   const blogCount = loadBlogPosts().length;
   const orderCount = loadOrders().length;
   const memberCount = loadMembers().length;
+  const memorialCount = loadMemorialPages().length;
   const homepage = loadHomepageContent();
 
   return (
@@ -22,7 +23,7 @@ export default function AdminDashboardPage() {
         </div>
       ) : null}
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-4 mb-8">
         <div className="rounded-xl border border-border bg-card p-6">
           <p className="text-sm text-light">商品数量</p>
           <p className="font-serif text-3xl mt-1">{productCount}</p>
@@ -38,6 +39,10 @@ export default function AdminDashboardPage() {
         <div className="rounded-xl border border-border bg-card p-6">
           <p className="text-sm text-light">会员数量</p>
           <p className="font-serif text-3xl mt-1">{memberCount}</p>
+        </div>
+        <div className="rounded-xl border border-border bg-card p-6">
+          <p className="text-sm text-light">纪念页</p>
+          <p className="font-serif text-3xl mt-1">{memorialCount}</p>
         </div>
         <div className="rounded-xl border border-border bg-card p-6">
           <p className="text-sm text-light">首页主标题</p>
@@ -73,6 +78,13 @@ export default function AdminDashboardPage() {
         >
           <p className="font-medium">管理订单</p>
           <p className="text-sm text-muted mt-1">订单状态、物流信息、客户资料</p>
+        </Link>
+        <Link
+          href="/admin/memorials"
+          className="block rounded-xl border border-border bg-card p-5 hover:border-gold transition-colors"
+        >
+          <p className="font-medium">数字纪念页</p>
+          <p className="text-sm text-muted mt-1">照片、视频、故事、链接与二维码</p>
         </Link>
         <Link
           href="/admin/members"

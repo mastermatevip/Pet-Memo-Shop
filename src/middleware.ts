@@ -35,7 +35,9 @@ export async function middleware(request: NextRequest) {
   if (
     pathname.startsWith("/admin") ||
     pathname.startsWith("/api/admin") ||
-    pathname.startsWith("/uploads")
+    pathname.startsWith("/uploads") ||
+    pathname.startsWith("/memorial") ||
+    pathname.startsWith("/api/memorial")
   ) {
     if (pathname.startsWith("/admin") || pathname.startsWith("/api/admin")) {
       const adminResponse = await handleAdminAuth(request);

@@ -2,10 +2,10 @@ import "server-only";
 
 import fs from "fs";
 import path from "path";
-import { defaultHomepageFile, defaultProductsFile, defaultBlogFile, defaultOrdersFile, defaultMembersFile } from "./defaults";
-import { CMS_DIR, HOMEPAGE_FILE, PRODUCTS_FILE, BLOG_FILE, ORDERS_FILE, MEMBERS_FILE, UPLOADS_DIR } from "./paths";
-import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile, MembersFile } from "./types";
-import type { Product, BlogCategory, BlogPost, Order, Member } from "@/types";
+import { defaultHomepageFile, defaultProductsFile, defaultBlogFile, defaultOrdersFile, defaultMembersFile, defaultMemorialsFile } from "./defaults";
+import { CMS_DIR, HOMEPAGE_FILE, PRODUCTS_FILE, BLOG_FILE, ORDERS_FILE, MEMBERS_FILE, MEMORIALS_FILE, UPLOADS_DIR, MEMORIALS_UPLOADS_DIR } from "./paths";
+import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile, MembersFile, MemorialsFile } from "./types";
+import type { Product, BlogCategory, BlogPost, Order, Member, MemorialPage } from "@/types";
 import { isBlogPostPublished } from "@/lib/blog";
 import { syncAllMembersFromOrders } from "@/lib/members/sync";
 import { fixTextMojibake, hasTextMojibake } from "./text-encoding";
@@ -33,6 +33,7 @@ function writeJson(file: string, data: unknown) {
 export function initCmsFiles() {
   ensureDir(CMS_DIR);
   ensureDir(UPLOADS_DIR);
+  ensureDir(MEMORIALS_UPLOADS_DIR);
   if (!fs.existsSync(HOMEPAGE_FILE)) {
     writeJson(HOMEPAGE_FILE, defaultHomepageFile());
   }
@@ -48,6 +49,9 @@ export function initCmsFiles() {
   if (!fs.existsSync(MEMBERS_FILE)) {
     writeJson(MEMBERS_FILE, defaultMembersFile());
     syncAllMembersFromOrders(loadOrders());
+  }
+  if (!fs.existsSync(MEMORIALS_FILE)) {
+    writeJson(MEMORIALS_FILE, defaultMemorialsFile());
   }
 }
 
@@ -250,6 +254,7 @@ function normalizeOrder(order: Order): Order {
     ...order,
     orderNumber: order.orderNumber.trim().toUpperCase(),
     customerEmail: order.customerEmail.trim(),
+    memorialSlugs: order.memorialSlugs?.filter(Boolean),
     items: order.items.map((item) => ({
       ...item,
       quantity: Math.max(1, Math.floor(item.quantity) || 1),
@@ -341,4 +346,143 @@ export function saveMembers(members: Member[]): MembersFile {
 export function getMemberByEmailFromStore(email: string): Member | undefined {
   const normalized = email.trim().toLowerCase();
   return loadMembers().find((m) => m.email === normalized);
+}
+
+function normalizeMemorialPage(page: MemorialPage): MemorialPage {
+  return {
+    ...page,
+    slug: page.slug.trim().toLowerCase(),
+    customerEmail: page.customerEmail.trim().toLowerCase(),
+    petName: page.petName.trim(),
+    petType: page.petType?.trim() || undefined,
+    birthDate: page.birthDate?.trim() || undefined,
+    memorialDate: page.memorialDate?.trim() || undefined,
+    portraitUrl: page.portraitUrl?.trim() || undefined,
+    story: page.story?.trim() || undefined,
+    gallery: page.gallery.map((item) => ({
+      url: item.url.trim(),
+      alt: item.alt?.trim() || undefined,
+      type: item.type === "video" ? "video" : "image",
+    })),
+    familyMessages: page.familyMessages.map((msg) => ({
+      author: msg.author.trim(),
+      text: msg.text.trim(),
+    })),
+    guestbookEnabled: Boolean(page.guestbookEnabled),
+    guestbook: page.guestbook.map((entry) => ({
+      ...entry,
+      name: entry.name.trim(),
+      message: entry.message.trim(),
+      approved: Boolean(entry.approved),
+    })),
+    status:
+      page.status === "published" || page.status === "archived" ? page.status : "draft",
+    orderNumber: page.orderNumber?.trim().toUpperCase() || undefined,
+  };
+}
+
+function readMemorialsFile(): MemorialsFile {
+  initCmsFiles();
+  const file = readJson<MemorialsFile>(MEMORIALS_FILE) ?? defaultMemorialsFile();
+  return {
+    ...file,
+    pages: file.pages.map(normalizeMemorialPage),
+  };
+}
+
+export function loadMemorialPages(): MemorialPage[] {
+  return readMemorialsFile().pages;
+}
+
+export function getMemorialSlugs(): string[] {
+  return loadMemorialPages().map((page) => page.slug);
+}
+
+export function getMemorialBySlug(slug: string): MemorialPage | undefined {
+  const normalized = slug.trim().toLowerCase();
+  return loadMemorialPages().find((page) => page.slug === normalized);
+}
+
+export function getPublishedMemorialBySlug(slug: string): MemorialPage | undefined {
+  const page = getMemorialBySlug(slug);
+  if (!page || page.status !== "published") return undefined;
+  return page;
+}
+
+export function getMemorialByOrderNumber(orderNumber: string): MemorialPage | undefined {
+  const normalized = orderNumber.trim().toUpperCase();
+  return loadMemorialPages().find((page) => page.orderNumber === normalized);
+}
+
+export function saveMemorialPages(pages: MemorialPage[]): MemorialsFile {
+  initCmsFiles();
+  const file: MemorialsFile = {
+    pages: pages.map(normalizeMemorialPage),
+    updatedAt: new Date().toISOString(),
+  };
+  writeJson(MEMORIALS_FILE, file);
+  return file;
+}
+
+export function saveMemorialPage(page: MemorialPage): MemorialPage {
+  const pages = loadMemorialPages();
+  const normalized = normalizeMemorialPage(page);
+  const index = pages.findIndex((p) => p.slug === normalized.slug);
+  if (index === -1) {
+    pages.push(normalized);
+  } else {
+    pages[index] = normalized;
+  }
+  saveMemorialPages(pages);
+  return normalized;
+}
+
+export function deleteMemorialPage(slug: string): boolean {
+  const normalized = slug.trim().toLowerCase();
+  const pages = loadMemorialPages();
+  const next = pages.filter((page) => page.slug !== normalized);
+  if (next.length === pages.length) return false;
+  saveMemorialPages(next);
+  return true;
+}
+
+export function updateOrderMemorialSlugs(orderNumber: string, slugs: string[]): Order | undefined {
+  const normalized = orderNumber.trim().toUpperCase();
+  const orders = loadOrders();
+  const index = orders.findIndex((order) => order.orderNumber === normalized);
+  if (index === -1) return undefined;
+
+  orders[index] = {
+    ...orders[index],
+    memorialSlugs: [...new Set(slugs.filter(Boolean))],
+    updatedAt: new Date().toISOString(),
+  };
+  saveOrders(orders);
+  return orders[index];
+}
+
+export function addGuestbookEntry(
+  slug: string,
+  entry: { name: string; message: string }
+): MemorialPage | undefined {
+  const page = getMemorialBySlug(slug);
+  if (!page || !page.guestbookEnabled || page.status !== "published") return undefined;
+
+  const now = new Date().toISOString();
+  const updated: MemorialPage = {
+    ...page,
+    guestbook: [
+      ...page.guestbook,
+      {
+        id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+        name: entry.name.trim(),
+        message: entry.message.trim(),
+        createdAt: now,
+        approved: false,
+      },
+    ],
+    updatedAt: now,
+  };
+
+  return saveMemorialPage(updated);
 }

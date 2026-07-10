@@ -131,6 +131,8 @@ export interface Order {
   createdAt: string;
   updatedAt: string;
   shippedAt?: string;
+  /** Linked digital memorial page slugs */
+  memorialSlugs?: string[];
 }
 
 export type MemberStatus = "active" | "blocked";
@@ -171,4 +173,45 @@ export interface PersonalizationOption {
   icon: string;
   label: string;
   description: string;
+}
+
+export type MemorialPageStatus = "draft" | "published" | "archived";
+
+export interface MemorialGalleryItem {
+  url: string;
+  alt?: string;
+  type: "image" | "video";
+}
+
+export interface MemorialFamilyMessage {
+  author: string;
+  text: string;
+}
+
+export interface MemorialGuestbookEntry {
+  id: string;
+  name: string;
+  message: string;
+  createdAt: string;
+  approved: boolean;
+}
+
+export interface MemorialPage {
+  slug: string;
+  orderNumber?: string;
+  customerEmail: string;
+  petName: string;
+  petType?: string;
+  birthDate?: string;
+  memorialDate?: string;
+  portraitUrl?: string;
+  story?: string;
+  gallery: MemorialGalleryItem[];
+  familyMessages: MemorialFamilyMessage[];
+  guestbookEnabled: boolean;
+  guestbook: MemorialGuestbookEntry[];
+  status: MemorialPageStatus;
+  publishedAt?: string;
+  createdAt: string;
+  updatedAt: string;
 }

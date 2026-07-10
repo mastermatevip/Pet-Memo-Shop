@@ -6,6 +6,7 @@ import type { CheckoutInput } from "./types";
 import { validateCheckout } from "./validate";
 import { queueOrderConfirmationEmail } from "@/lib/email/order-confirmation";
 import { upsertMemberFromOrder } from "@/lib/members/sync";
+import { provisionMemorialsFromOrder } from "@/lib/memorial/provision";
 import type { PayPalCaptureResult } from "@/lib/paypal/api";
 
 interface CreatePaidOrderInput {
@@ -52,6 +53,15 @@ export function createPaidOrder({ checkout, capture }: CreatePaidOrderInput): Or
   orders.push(order);
   saveOrders(orders);
   upsertMemberFromOrder(order);
+
+  const memorial = provisionMemorialsFromOrder(order);
+  if (memorial) {
+    const linked = loadOrders().find((o) => o.orderNumber === order.orderNumber);
+    if (linked) {
+      order.memorialSlugs = linked.memorialSlugs;
+    }
+  }
+
   queueOrderConfirmationEmail(order);
 
   return order;
