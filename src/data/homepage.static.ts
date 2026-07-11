@@ -1,46 +1,47 @@
 import type { CategoryCard, HowItWorksStep, PersonalizationOption } from "@/types";
+import { HOMEPAGE_IMAGES } from "@/config/homepage-images";
 
 export const homepageCategories: CategoryCard[] = [
   {
     slug: "dog-memorial-gifts",
     title: "Dog Memorial Gifts",
     description: "Personalized keepsakes to honor your loyal companion.",
-    image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=400&fit=crop",
+    image: HOMEPAGE_IMAGES.categories["dog-memorial-gifts"],
     imageAlt: "dog memorial gifts including personalized photo frame",
   },
   {
     slug: "cat-memorial-gifts",
     title: "Cat Memorial Gifts",
     description: "Gentle tributes for your beloved feline friend.",
-    image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop",
+    image: HOMEPAGE_IMAGES.categories["cat-memorial-gifts"],
     imageAlt: "cat memorial gifts with personalized keepsakes",
   },
   {
     slug: "pet-memorial-jewelry",
     title: "Pet Memorial Jewelry",
     description: "Wearable keepsakes to keep their memory close.",
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=400&fit=crop",
+    image: HOMEPAGE_IMAGES.categories["pet-memorial-jewelry"],
     imageAlt: "pet memorial jewelry with engraved pendant",
   },
   {
     slug: "pet-urns",
     title: "Pet Urns",
     description: "Elegant urns with personalized nameplates.",
-    image: "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&h=400&fit=crop",
+    image: HOMEPAGE_IMAGES.categories["pet-urns"],
     imageAlt: "wooden pet cremation urn with nameplate",
   },
   {
     slug: "nfc-memorial-cards",
     title: "NFC Memorial Tags",
     description: "Carbon fiber tags that open an online memorial.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+    image: HOMEPAGE_IMAGES.categories["nfc-memorial-cards"],
     imageAlt: "carbon fiber NFC pet memorial tag with smartphone",
   },
   {
     slug: "memorial-gift-boxes",
     title: "Memorial Gift Boxes",
     description: "Curated gift sets for remembrance.",
-    image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&h=400&fit=crop",
+    image: HOMEPAGE_IMAGES.categories["memorial-gift-boxes"],
     imageAlt: "memorial gift box with keepsakes",
   },
 ];

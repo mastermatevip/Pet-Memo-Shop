@@ -24,10 +24,11 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/* \
   && addgroup --system --gid 1001 nodejs \
   && adduser --system --uid 1001 --ingroup nodejs nextjs \
-  && mkdir -p /app/data/cms /app/public/uploads/products \
+  && mkdir -p /app/data/cms /app/public/uploads/products /app/public/uploads/homepage \
   && chown -R nextjs:nodejs /app/data /app/public/uploads
 
 COPY --from=builder /app/public ./public
+COPY --from=builder /app/data/cms /app/data/cms-seed
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY docker-entrypoint.sh /docker-entrypoint.sh

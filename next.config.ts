@@ -23,6 +23,11 @@ const nextConfig: NextConfig = {
         pathname: "/uploads/**",
       },
       {
+        protocol: "https",
+        hostname: "petmemoshop.com",
+        pathname: "/images/**",
+      },
+      {
         protocol: "http",
         hostname: "localhost",
         pathname: "/uploads/**",

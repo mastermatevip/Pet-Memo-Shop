@@ -6,7 +6,9 @@ import { ChevronDown, ChevronUp, Plus, Trash2 } from "lucide-react";
 import type { HomepageContent } from "@/lib/cms/types";
 import type { CategoryCard, HowItWorksStep, PersonalizationOption } from "@/types";
 import { AdminField, adminInputClass, adminTextareaClass } from "@/components/admin/AdminField";
+import { HomepageImageField } from "@/components/admin/HomepageImageField";
 import { SaveStatus } from "@/components/admin/SaveStatus";
+import { normalizeImageSrc } from "@/lib/images";
 
 const PERSONALIZATION_ICONS: { value: PersonalizationOption["icon"]; label: string }[] = [
   { value: "type", label: "文字" },
@@ -238,9 +240,44 @@ export function HomepageEditor({ initial }: Props) {
     setTimeout(() => setStatus("idle"), 2000);
   }
 
+  async function handleRestoreSeedImages() {
+    if (!window.confirm("将 Hero、NFC 区块、分类卡片的图片恢复为 Git 默认种子（/images/homepage/），文字内容不变。继续？")) {
+      return;
+    }
+
+    setStatus("saving");
+    const res = await fetch("/api/admin/homepage/restore-images", { method: "POST" });
+    if (!res.ok) {
+      setStatus("error");
+      return;
+    }
+
+    const data = (await res.json()) as { content: HomepageContent };
+    setContent(data.content);
+    setStatus("saved");
+    router.refresh();
+    setTimeout(() => setStatus("idle"), 2000);
+  }
+
   return (
     <form onSubmit={handleSave} className="space-y-10">
-      <section className="space-y-4">
+      <nav className="flex flex-wrap gap-2 text-sm">
+        {[
+          { href: "#hero-section", label: "Hero" },
+          { href: "#nfc-section", label: "NFC 介绍区" },
+          { href: "#categories-section", label: "分类卡片" },
+        ].map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            className="rounded-full border border-border px-3 py-1 text-muted hover:text-text hover:bg-highlight"
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <section id="hero-section" className="space-y-4 scroll-mt-24">
         <h3 className="font-serif text-lg">首屏 Hero</h3>
         <AdminField label="主标题">
           <input
@@ -286,18 +323,97 @@ export function HomepageEditor({ initial }: Props) {
             />
           </AdminField>
         </div>
-        <AdminField label="Hero 图片 URL">
+        <HomepageImageField
+          label="Hero 图片"
+          value={content.hero.image.src}
+          onChange={(url) => updateHeroImage("src", url)}
+          alt={content.hero.image.alt}
+          altLabel="Hero 图片 alt"
+          onAltChange={(alt) => updateHeroImage("alt", alt)}
+        />
+      </section>
+
+      <section id="nfc-section" className="space-y-4 rounded-xl border-2 border-gold/40 bg-highlight/40 p-5 scroll-mt-24">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h3 className="font-serif text-lg text-text">NFC 纪念卡介绍区</h3>
+            <p className="text-sm text-muted mt-1">
+              对应首页「一张纪念卡，打开它们的故事」——左侧大图可在下方上传替换
+            </p>
+          </div>
+          <a
+            href="/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-gold hover:underline shrink-0"
+          >
+            预览首页 ↗
+          </a>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-4 rounded-lg border border-border bg-card p-4">
+          <div className="relative aspect-square rounded-lg overflow-hidden bg-bg">
+            {content.sections.nfc.image.src ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={normalizeImageSrc(content.sections.nfc.image.src)}
+                alt={content.sections.nfc.image.alt}
+                className="h-full w-full object-cover"
+              />
+            ) : (
+              <div className="flex h-full items-center justify-center text-sm text-light">暂无图片</div>
+            )}
+          </div>
+          <div className="space-y-2 text-sm">
+            <p className="font-serif text-base text-text">{content.sections.nfc.title}</p>
+            <p className="text-muted line-clamp-4">{content.sections.nfc.description}</p>
+            <p className="text-xs text-light">{content.sections.nfc.keyPoints.length} 条要点</p>
+          </div>
+        </div>
+
+        <HomepageImageField
+          label="左侧展示图"
+          value={content.sections.nfc.image.src}
+          onChange={(url) => updateNfcImage("src", url)}
+          alt={content.sections.nfc.image.alt}
+          altLabel="图片 alt（SEO）"
+          onAltChange={(alt) => updateNfcImage("alt", alt)}
+        />
+        <AdminField label="标题">
           <input
             className={adminInputClass}
-            value={content.hero.image.src}
-            onChange={(e) => updateHeroImage("src", e.target.value)}
+            value={content.sections.nfc.title}
+            onChange={(e) => updateNfc("title", e.target.value)}
           />
         </AdminField>
-        <AdminField label="Hero 图片 alt">
-          <input
-            className={adminInputClass}
-            value={content.hero.image.alt}
-            onChange={(e) => updateHeroImage("alt", e.target.value)}
+        <AdminField label="描述">
+          <textarea
+            className={adminTextareaClass}
+            value={content.sections.nfc.description}
+            onChange={(e) => updateNfc("description", e.target.value)}
+          />
+        </AdminField>
+        <div className="grid sm:grid-cols-2 gap-4">
+          <AdminField label="按钮文字">
+            <input
+              className={adminInputClass}
+              value={content.sections.nfc.cta.label}
+              onChange={(e) => updateNfcCta("label", e.target.value)}
+            />
+          </AdminField>
+          <AdminField label="按钮链接">
+            <input
+              className={adminInputClass}
+              value={content.sections.nfc.cta.href}
+              onChange={(e) => updateNfcCta("href", e.target.value)}
+            />
+          </AdminField>
+        </div>
+        <AdminField label="要点列表" hint="每行一条">
+          <textarea
+            className={adminTextareaClass}
+            value={content.sections.nfc.keyPoints.join("\n")}
+            onChange={(e) => updateNfcKeyPoints(e.target.value)}
           />
         </AdminField>
       </section>
@@ -371,62 +487,7 @@ export function HomepageEditor({ initial }: Props) {
         </div>
       </section>
 
-      <section className="space-y-4">
-        <h3 className="font-serif text-lg">NFC 区块</h3>
-        <AdminField label="标题">
-          <input
-            className={adminInputClass}
-            value={content.sections.nfc.title}
-            onChange={(e) => updateNfc("title", e.target.value)}
-          />
-        </AdminField>
-        <AdminField label="描述">
-          <textarea
-            className={adminTextareaClass}
-            value={content.sections.nfc.description}
-            onChange={(e) => updateNfc("description", e.target.value)}
-          />
-        </AdminField>
-        <AdminField label="图片 URL">
-          <input
-            className={adminInputClass}
-            value={content.sections.nfc.image.src}
-            onChange={(e) => updateNfcImage("src", e.target.value)}
-          />
-        </AdminField>
-        <AdminField label="图片 alt">
-          <input
-            className={adminInputClass}
-            value={content.sections.nfc.image.alt}
-            onChange={(e) => updateNfcImage("alt", e.target.value)}
-          />
-        </AdminField>
-        <div className="grid sm:grid-cols-2 gap-4">
-          <AdminField label="按钮文字">
-            <input
-              className={adminInputClass}
-              value={content.sections.nfc.cta.label}
-              onChange={(e) => updateNfcCta("label", e.target.value)}
-            />
-          </AdminField>
-          <AdminField label="按钮链接">
-            <input
-              className={adminInputClass}
-              value={content.sections.nfc.cta.href}
-              onChange={(e) => updateNfcCta("href", e.target.value)}
-            />
-          </AdminField>
-        </div>
-        <AdminField label="要点列表" hint="每行一条">
-          <textarea
-            className={adminTextareaClass}
-            value={content.sections.nfc.keyPoints.join("\n")}
-            onChange={(e) => updateNfcKeyPoints(e.target.value)}
-          />
-        </AdminField>
-      </section>
-
-      <section className="space-y-4">
+      <section id="categories-section" className="space-y-4 scroll-mt-24">
         <div className="flex items-center justify-between gap-4">
           <h3 className="font-serif text-lg">分类卡片</h3>
           <button
@@ -498,22 +559,14 @@ export function HomepageEditor({ initial }: Props) {
                   onChange={(e) => updateCategory(index, { description: e.target.value })}
                 />
               </AdminField>
-              <div className="grid sm:grid-cols-2 gap-3">
-                <AdminField label="图片 URL">
-                  <input
-                    className={adminInputClass}
-                    value={cat.image}
-                    onChange={(e) => updateCategory(index, { image: e.target.value })}
-                  />
-                </AdminField>
-                <AdminField label="图片 alt">
-                  <input
-                    className={adminInputClass}
-                    value={cat.imageAlt}
-                    onChange={(e) => updateCategory(index, { imageAlt: e.target.value })}
-                  />
-                </AdminField>
-              </div>
+              <HomepageImageField
+                label="分类图片"
+                value={cat.image}
+                onChange={(url) => updateCategory(index, { image: url })}
+                alt={cat.imageAlt}
+                altLabel="图片 alt"
+                onAltChange={(alt) => updateCategory(index, { imageAlt: alt })}
+              />
             </div>
           ))}
         </div>
@@ -668,12 +721,19 @@ export function HomepageEditor({ initial }: Props) {
         </div>
       </section>
 
-      <div className="flex items-center gap-4 sticky bottom-0 bg-bg py-4 border-t border-border">
+      <div className="flex flex-wrap items-center gap-4 sticky bottom-0 bg-bg py-4 border-t border-border">
         <button
           type="submit"
           className="rounded-full bg-btn text-btn-text px-6 py-2.5 text-sm font-medium hover:bg-btn-hover"
         >
           保存首页
+        </button>
+        <button
+          type="button"
+          onClick={() => void handleRestoreSeedImages()}
+          className="rounded-full border border-border px-6 py-2.5 text-sm font-medium text-muted hover:text-text hover:bg-highlight"
+        >
+          恢复 Git 默认图片
         </button>
         <SaveStatus status={status} />
       </div>

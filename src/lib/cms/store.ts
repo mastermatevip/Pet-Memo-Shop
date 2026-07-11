@@ -3,7 +3,19 @@ import "server-only";
 import fs from "fs";
 import path from "path";
 import { defaultHomepageFile, defaultProductsFile, defaultBlogFile, defaultOrdersFile, defaultMembersFile, defaultMemorialsFile } from "./defaults";
-import { CMS_DIR, HOMEPAGE_FILE, PRODUCTS_FILE, BLOG_FILE, ORDERS_FILE, MEMBERS_FILE, MEMORIALS_FILE, UPLOADS_DIR, MEMORIALS_UPLOADS_DIR } from "./paths";
+import {
+  CMS_DIR,
+  CMS_SEED_DIR,
+  HOMEPAGE_FILE,
+  PRODUCTS_FILE,
+  BLOG_FILE,
+  ORDERS_FILE,
+  MEMBERS_FILE,
+  MEMORIALS_FILE,
+  UPLOADS_DIR,
+  HOMEPAGE_UPLOADS_DIR,
+  MEMORIALS_UPLOADS_DIR,
+} from "./paths";
 import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile, MembersFile, MemorialsFile } from "./types";
 import type { Product, BlogCategory, BlogPost, Order, Member, MemorialPage } from "@/types";
 import { isBlogPostPublished } from "@/lib/blog";
@@ -30,29 +42,43 @@ function writeJson(file: string, data: unknown) {
   fs.writeFileSync(file, JSON.stringify(data, null, 2), "utf-8");
 }
 
+function getCmsSeedPath(filename: string): string | null {
+  const seedDirs = [CMS_SEED_DIR, CMS_DIR];
+  for (const dir of seedDirs) {
+    const seedPath = path.join(dir, filename);
+    if (fs.existsSync(seedPath)) return seedPath;
+  }
+  return null;
+}
+
+/** Prefer git-tracked seed JSON; fall back to code defaults when the volume is empty. */
+function initCmsFile(filename: string, target: string, fallback: () => unknown) {
+  if (fs.existsSync(target)) return;
+
+  const seedPath = getCmsSeedPath(filename);
+  if (seedPath && seedPath !== target) {
+    ensureDir(path.dirname(target));
+    fs.copyFileSync(seedPath, target);
+    return;
+  }
+
+  writeJson(target, fallback());
+}
+
 export function initCmsFiles() {
   ensureDir(CMS_DIR);
   ensureDir(UPLOADS_DIR);
+  ensureDir(HOMEPAGE_UPLOADS_DIR);
   ensureDir(MEMORIALS_UPLOADS_DIR);
-  if (!fs.existsSync(HOMEPAGE_FILE)) {
-    writeJson(HOMEPAGE_FILE, defaultHomepageFile());
-  }
-  if (!fs.existsSync(PRODUCTS_FILE)) {
-    writeJson(PRODUCTS_FILE, defaultProductsFile());
-  }
-  if (!fs.existsSync(BLOG_FILE)) {
-    writeJson(BLOG_FILE, defaultBlogFile());
-  }
-  if (!fs.existsSync(ORDERS_FILE)) {
-    writeJson(ORDERS_FILE, defaultOrdersFile());
-  }
+  initCmsFile("homepage.json", HOMEPAGE_FILE, defaultHomepageFile);
+  initCmsFile("products.json", PRODUCTS_FILE, defaultProductsFile);
+  initCmsFile("blog.json", BLOG_FILE, defaultBlogFile);
+  initCmsFile("orders.json", ORDERS_FILE, defaultOrdersFile);
   if (!fs.existsSync(MEMBERS_FILE)) {
-    writeJson(MEMBERS_FILE, defaultMembersFile());
+    initCmsFile("members.json", MEMBERS_FILE, defaultMembersFile);
     syncAllMembersFromOrders(loadOrders());
   }
-  if (!fs.existsSync(MEMORIALS_FILE)) {
-    writeJson(MEMORIALS_FILE, defaultMemorialsFile());
-  }
+  initCmsFile("memorials.json", MEMORIALS_FILE, defaultMemorialsFile);
 }
 
 export function loadHomepageContent(): HomepageContent {
@@ -66,6 +92,39 @@ export function saveHomepageContent(content: HomepageContent): HomepageFile {
   const file: HomepageFile = { content, updatedAt: new Date().toISOString() };
   writeJson(HOMEPAGE_FILE, file);
   return file;
+}
+
+function readHomepageSeedFile(): HomepageFile {
+  const seedPath = getCmsSeedPath("homepage.json");
+  if (seedPath) {
+    const file = readJson<HomepageFile>(seedPath);
+    if (file?.content) return file;
+  }
+  return defaultHomepageFile();
+}
+
+/** Restore homepage image URLs from Git seed without changing copy text. */
+export function restoreHomepageImagesFromSeed(): HomepageContent {
+  initCmsFiles();
+  const seed = readHomepageSeedFile().content;
+  const current = loadHomepageContent();
+
+  const merged: HomepageContent = {
+    ...current,
+    hero: { ...current.hero, image: { ...seed.hero.image } },
+    sections: {
+      ...current.sections,
+      nfc: { ...current.sections.nfc, image: { ...seed.sections.nfc.image } },
+    },
+    categories: current.categories.map((cat) => {
+      const seedCat = seed.categories.find((c) => c.slug === cat.slug);
+      if (!seedCat) return cat;
+      return { ...cat, image: seedCat.image, imageAlt: seedCat.imageAlt };
+    }),
+  };
+
+  saveHomepageContent(merged);
+  return merged;
 }
 
 export function loadProducts(): Product[] {

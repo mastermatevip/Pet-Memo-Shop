@@ -1,24 +1,26 @@
 import Image from "next/image";
-import { isLocalUpload, isSiteStaticImage, normalizeImageSrc } from "@/lib/images";
+import { isSiteStaticImage, normalizeImageSrc } from "@/lib/images";
 
-interface ProductImageDisplayProps {
+interface SiteImageProps {
   src: string;
   alt: string;
   fill?: boolean;
   className?: string;
   sizes?: string;
   priority?: boolean;
+  quality?: number;
 }
 
-/** Product and CMS images — uploads/static assets skip _next/image optimization. */
-export function ProductImageDisplay({
+/** Site images: normalizes same-origin URLs and bypasses optimizer for /images/ and /uploads/. */
+export function SiteImage({
   src,
   alt,
   fill = true,
   className = "object-cover",
   sizes,
   priority,
-}: ProductImageDisplayProps) {
+  quality,
+}: SiteImageProps) {
   const normalized = normalizeImageSrc(src);
 
   return (
@@ -27,8 +29,9 @@ export function ProductImageDisplay({
       alt={alt}
       fill={fill}
       className={className}
-      sizes={sizes ?? (isLocalUpload(normalized) ? "(max-width: 768px) 50vw, 25vw" : undefined)}
+      sizes={sizes}
       priority={priority}
+      quality={quality}
       unoptimized={isSiteStaticImage(normalized)}
     />
   );

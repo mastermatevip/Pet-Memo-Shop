@@ -52,11 +52,18 @@ export default function AdminDashboardPage() {
 
       <div className="space-y-3">
         <Link
+          href="/admin/homepage#nfc-section"
+          className="block rounded-xl border border-border bg-card p-5 hover:border-gold transition-colors"
+        >
+          <p className="font-medium">编辑首页 · NFC 介绍区图片</p>
+          <p className="text-sm text-muted mt-1">「一张纪念卡，打开它们的故事」左侧大图上传与文案</p>
+        </Link>
+        <Link
           href="/admin/homepage"
           className="block rounded-xl border border-border bg-card p-5 hover:border-gold transition-colors"
         >
-          <p className="font-medium">编辑首页</p>
-          <p className="text-sm text-muted mt-1">Hero 区、分类、NFC 区块、各区块标题</p>
+          <p className="font-medium">编辑首页（全部区块）</p>
+          <p className="text-sm text-muted mt-1">Hero、分类卡片、NFC 区块、各区块标题</p>
         </Link>
         <Link
           href="/admin/products"

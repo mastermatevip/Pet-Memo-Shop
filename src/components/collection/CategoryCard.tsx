@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/shared/SiteImage";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import type { CategoryCard as CategoryCardType } from "@/types";
@@ -11,10 +11,9 @@ export function CategoryCard({ category }: CategoryCardProps) {
   return (
     <div className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300">
       <Link href={`/collections/${category.slug}`} className="block relative aspect-[3/2] overflow-hidden">
-        <Image
+        <SiteImage
           src={category.image}
           alt={category.imageAlt}
-          fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
           sizes="(max-width: 768px) 100vw, 33vw"
         />

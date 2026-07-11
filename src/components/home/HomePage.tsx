@@ -1,5 +1,5 @@
+import { SiteImage } from "@/components/shared/SiteImage";
 import { Link } from "@/i18n/navigation";
-import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/Button";
 import { CategoryCard } from "@/components/collection/CategoryCard";
@@ -56,11 +56,9 @@ export async function HomePage() {
               </div>
             </div>
             <div className="order-1 lg:order-2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
+              <SiteImage
                 src={hero.image.src}
                 alt={hero.image.alt}
-                fill
-                className="object-cover"
                 priority
                 quality={75}
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 50vw"
@@ -104,11 +102,9 @@ export async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-square rounded-2xl overflow-hidden">
-              <Image
+              <SiteImage
                 src={sections.nfc.image.src}
                 alt={sections.nfc.image.alt}
-                fill
-                className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

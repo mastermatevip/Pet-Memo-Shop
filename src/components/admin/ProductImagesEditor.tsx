@@ -6,6 +6,8 @@ import { ChevronDown, ChevronUp, Plus, Trash2, Upload } from "lucide-react";
 import type { Product, ProductImage } from "@/types";
 import { ProductImageDisplay } from "@/components/shared/ProductImageDisplay";
 import { AdminField, adminInputClass } from "@/components/admin/AdminField";
+import { AdminImagePreview } from "@/components/admin/AdminImagePreview";
+import { normalizeImageSrc } from "@/lib/images";
 
 const IMAGE_TYPES: { value: ProductImage["type"]; label: string }[] = [
   { value: "main", label: "主图" },
@@ -119,7 +121,7 @@ export function ProductImagesEditor({ productSlug, images, onChange }: Props) {
       </div>
 
       <p className="text-sm text-muted">
-        点击「上传并替换」会立即更新该图并同步到前台（自动压缩为 WebP，最长边 2000px）。修改 URL 或顺序后仍需点「保存商品」。
+        点击缩略图可放大查看。上传会立即更新该图并同步到前台（自动压缩为 WebP，最长边 2000px）。修改 URL 或顺序后仍需点「保存商品」。
       </p>
 
       {uploadError ? <p className="text-sm text-red-700">{uploadError}</p> : null}
@@ -132,13 +134,19 @@ export function ProductImagesEditor({ productSlug, images, onChange }: Props) {
             className="rounded-xl border border-border bg-card p-4 space-y-3"
           >
             <div className="flex gap-4">
-              <div className="relative w-24 h-24 shrink-0 rounded-lg overflow-hidden bg-bg border border-border">
+              <div className="relative w-28 h-28 shrink-0 rounded-lg overflow-hidden bg-bg border border-border">
                 {image.src ? (
-                  <ProductImageDisplay
+                  <AdminImagePreview
                     src={image.src}
                     alt={image.alt || "预览"}
-                    sizes="96px"
-                  />
+                    className="relative block h-full w-full"
+                  >
+                    <ProductImageDisplay
+                      src={image.src}
+                      alt={image.alt || "预览"}
+                      sizes="112px"
+                    />
+                  </AdminImagePreview>
                 ) : (
                   <div className="flex items-center justify-center h-full text-xs text-light">
                     无预览
@@ -174,12 +182,13 @@ export function ProductImagesEditor({ productSlug, images, onChange }: Props) {
                   </AdminField>
                 </div>
 
-                <AdminField label="图片 URL">
+                <AdminField label="图片 URL" hint="填 /uploads/products/xxx.webp，不要填 _next/image 地址">
                   <input
                     className={adminInputClass}
                     value={image.src}
                     onChange={(e) => updateImage(index, { src: e.target.value })}
-                    placeholder="https://... 或 /uploads/products/..."
+                    onBlur={(e) => updateImage(index, { src: normalizeImageSrc(e.target.value) })}
+                    placeholder="/uploads/products/xxx.webp"
                   />
                 </AdminField>
 

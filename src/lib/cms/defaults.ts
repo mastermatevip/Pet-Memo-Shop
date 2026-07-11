@@ -1,3 +1,4 @@
+import { HOMEPAGE_IMAGES } from "@/config/homepage-images";
 import {
   homepageCategories,
   howItWorksSteps,
@@ -18,7 +19,7 @@ export function defaultHomepageContent(): HomepageContent {
       primaryCta: { label: "Shop Memorial Gifts", href: "/collections/pet-memorial-gifts" },
       secondaryCta: { label: "Create Digital Memorial", href: "/digital-pet-memorial" },
       image: {
-        src: "/images/hero-memorial.jpg",
+        src: HOMEPAGE_IMAGES.hero,
         alt: "personalized pet memorial frame with candle and flowers in warm natural light",
       },
     },
@@ -36,7 +37,7 @@ export function defaultHomepageContent(): HomepageContent {
         description:
           "Our NFC pet memorial cards allow families to keep photos, videos, stories, and loving messages in one digital memorial page. Simply tap the card with a smartphone to open the memory page.",
         image: {
-          src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=800&fit=crop",
+          src: HOMEPAGE_IMAGES.nfc,
           alt: "NFC pet memorial card opening a digital memory page on smartphone",
         },
         cta: { label: "Explore NFC Memorial Cards", href: "/collections/nfc-memorial-cards" },
