@@ -27,6 +27,8 @@ const fallback = {
   message: "Message",
   send: "Send Message",
   thanks: "Thank you for reaching out. We'll get back to you soon.",
+  error: "We couldn't send your message. Please try WhatsApp or email us directly.",
+  sending: "Sending...",
   subjects: [
     "Order Inquiry",
     "Personalization Help",
@@ -40,46 +42,95 @@ const fallback = {
 export default function ContactForm() {
   const locale = useLocale();
   const copy = bundles[locale]?.contact ?? fallback;
-  const [submitted, setSubmitted] = useState(false);
+  const subjects = copy.subjects ?? fallback.subjects;
+  const ui = { ...fallback, ...copy };
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState(subjects[0] ?? "Other");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("submitting");
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, subject, message }),
+    });
+
+    if (!res.ok) {
+      setStatus("error");
+      return;
+    }
+
+    setStatus("success");
+  }
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-      <h1 className="font-serif text-4xl text-text mb-3">{copy.title ?? fallback.title}</h1>
-      <p className="text-muted mb-8 leading-relaxed">{copy.intro ?? fallback.intro}</p>
+      <h1 className="font-serif text-4xl text-text mb-3">{ui.title}</h1>
+      <p className="text-muted mb-8 leading-relaxed">{ui.intro}</p>
 
-      {submitted ? (
+      {status === "success" ? (
         <div className="p-8 bg-highlight rounded-2xl text-center">
-          <p className="text-text font-medium">{copy.thanks ?? fallback.thanks}</p>
+          <p className="text-text font-medium">{ui.thanks}</p>
         </div>
       ) : (
-        <form
-          className="space-y-5"
-          onSubmit={(e) => {
-            e.preventDefault();
-            setSubmitted(true);
-          }}
-        >
+        <form className="space-y-5" onSubmit={handleSubmit}>
           <div>
-            <label className="block text-sm font-medium text-text mb-1.5">{copy.name}</label>
-            <input type="text" required className="w-full px-4 py-2.5 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-gold" />
+            <label className="block text-sm font-medium text-text mb-1.5">{ui.name}</label>
+            <input
+              type="text"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-gold"
+            />
           </div>
           <div>
-            <label className="block text-sm font-medium text-text mb-1.5">{copy.email}</label>
-            <input type="email" required className="w-full px-4 py-2.5 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-gold" />
+            <label className="block text-sm font-medium text-text mb-1.5">{ui.email}</label>
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-gold"
+            />
           </div>
           <div>
-            <label className="block text-sm font-medium text-text mb-1.5">{copy.subject}</label>
-            <select className="w-full px-4 py-2.5 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-gold">
-              {(copy.subjects ?? fallback.subjects).map((option) => (
-                <option key={option}>{option}</option>
+            <label className="block text-sm font-medium text-text mb-1.5">{ui.subject}</label>
+            <select
+              required
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-gold"
+            >
+              {subjects.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
               ))}
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-text mb-1.5">{copy.message}</label>
-            <textarea rows={5} required className="w-full px-4 py-2.5 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-gold resize-none" />
+            <label className="block text-sm font-medium text-text mb-1.5">{ui.message}</label>
+            <textarea
+              rows={5}
+              required
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-gold resize-none"
+            />
           </div>
-          <Button type="submit" size="lg">{copy.send ?? fallback.send}</Button>
+          {status === "error" ? (
+            <p className="text-sm text-red-600">{ui.error}</p>
+          ) : null}
+          <Button type="submit" size="lg" disabled={status === "submitting"}>
+            {status === "submitting" ? ui.sending : ui.send}
+          </Button>
         </form>
       )}
 

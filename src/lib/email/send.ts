@@ -8,6 +8,7 @@ export interface SendEmailInput {
   subject: string;
   html: string;
   text: string;
+  replyTo?: string;
 }
 
 export async function sendEmail(input: SendEmailInput): Promise<void> {
@@ -30,6 +31,7 @@ export async function sendEmail(input: SendEmailInput): Promise<void> {
   await transport.sendMail({
     from: config.from,
     to: input.to,
+    replyTo: input.replyTo,
     subject: input.subject,
     html: input.html,
     text: input.text,

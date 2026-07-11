@@ -1,4 +1,26 @@
-# 订单确认邮件
+# 邮件配置
+
+> 订单确认邮件与联系表单留言均通过 SMTP 发送。
+
+---
+
+## 联系表单
+
+客户提交 `/contact` 表单后，留言发送至 **`hello@petmemoshop.com`**（即 `CONTACT_INBOX`，默认与 `BRAND.email` 相同）。
+
+- API：`POST /api/contact`
+- 邮件 `Reply-To` 设为客户填写的邮箱，便于直接回复
+- 未配置 SMTP 时表单返回 503，页面提示改用 WhatsApp 或直接发邮件
+
+可选环境变量：
+
+```env
+CONTACT_INBOX=hello@petmemoshop.com
+```
+
+---
+
+## 订单确认邮件
 
 > PayPal 结账或后台新建订单后，自动向客户邮箱发送订单确认邮件。
 
