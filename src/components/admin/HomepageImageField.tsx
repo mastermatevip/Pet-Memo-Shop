@@ -56,6 +56,7 @@ export function HomepageImageField({
     <>
       <AdminField
         label={label}
+        unlabeled
         hint="点击预览图可放大。推荐使用相对路径，如 /images/homepage/xxx.jpg 或 /uploads/homepage/xxx.webp。"
       >
         <div className="space-y-3">
@@ -63,7 +64,7 @@ export function HomepageImageField({
             <AdminImagePreview
               src={previewSrc}
               alt={alt || label}
-              className="block max-w-md cursor-zoom-in"
+              className="block w-full max-w-md cursor-zoom-in"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
