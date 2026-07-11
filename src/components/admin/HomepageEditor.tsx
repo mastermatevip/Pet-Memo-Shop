@@ -41,15 +41,51 @@ export function HomepageEditor({ initial }: Props) {
   const [content, setContent] = useState(initial);
   const [status, setStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
 
+  async function persistHomepage(next: HomepageContent) {
+    setStatus("saving");
+
+    const res = await fetch("/api/admin/homepage", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(next),
+    });
+
+    if (!res.ok) {
+      setStatus("error");
+      return false;
+    }
+
+    setStatus("saved");
+    router.refresh();
+    setTimeout(() => setStatus("idle"), 2000);
+    return true;
+  }
+
+  function commitContent(
+    updater: (current: HomepageContent) => HomepageContent,
+    options?: { persist?: boolean }
+  ) {
+    setContent((current) => {
+      const next = updater(current);
+      if (options?.persist) {
+        void persistHomepage(next);
+      }
+      return next;
+    });
+  }
+
   function updateHero(field: keyof HomepageContent["hero"], value: string) {
     setContent((c) => ({ ...c, hero: { ...c.hero, [field]: value } }));
   }
 
-  function updateHeroImage(field: "src" | "alt", value: string) {
-    setContent((c) => ({
-      ...c,
-      hero: { ...c.hero, image: { ...c.hero.image, [field]: value } },
-    }));
+  function updateHeroImage(field: "src" | "alt", value: string, persist = false) {
+    commitContent(
+      (c) => ({
+        ...c,
+        hero: { ...c.hero, image: { ...c.hero.image, [field]: value } },
+      }),
+      { persist }
+    );
   }
 
   function updateHeroCta(which: "primaryCta" | "secondaryCta", field: "label" | "href", value: string) {
@@ -83,17 +119,20 @@ export function HomepageEditor({ initial }: Props) {
     }));
   }
 
-  function updateNfcImage(field: "src" | "alt", value: string) {
-    setContent((c) => ({
-      ...c,
-      sections: {
-        ...c.sections,
-        nfc: {
-          ...c.sections.nfc,
-          image: { ...c.sections.nfc.image, [field]: value },
+  function updateNfcImage(field: "src" | "alt", value: string, persist = false) {
+    commitContent(
+      (c) => ({
+        ...c,
+        sections: {
+          ...c.sections,
+          nfc: {
+            ...c.sections.nfc,
+            image: { ...c.sections.nfc.image, [field]: value },
+          },
         },
-      },
-    }));
+      }),
+      { persist }
+    );
   }
 
   function updateNfcCta(field: "label" | "href", value: string) {
@@ -119,11 +158,14 @@ export function HomepageEditor({ initial }: Props) {
     }));
   }
 
-  function updateCategory(index: number, patch: Partial<CategoryCard>) {
-    setContent((c) => ({
-      ...c,
-      categories: c.categories.map((item, i) => (i === index ? { ...item, ...patch } : item)),
-    }));
+  function updateCategory(index: number, patch: Partial<CategoryCard>, persist = false) {
+    commitContent(
+      (c) => ({
+        ...c,
+        categories: c.categories.map((item, i) => (i === index ? { ...item, ...patch } : item)),
+      }),
+      { persist }
+    );
   }
 
   function addCategory() {
@@ -223,22 +265,7 @@ export function HomepageEditor({ initial }: Props) {
 
   async function handleSave(e: React.FormEvent) {
     e.preventDefault();
-    setStatus("saving");
-
-    const res = await fetch("/api/admin/homepage", {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(content),
-    });
-
-    if (!res.ok) {
-      setStatus("error");
-      return;
-    }
-
-    setStatus("saved");
-    router.refresh();
-    setTimeout(() => setStatus("idle"), 2000);
+    await persistHomepage(content);
   }
 
   async function handleRestoreSeedImages() {
@@ -327,7 +354,7 @@ export function HomepageEditor({ initial }: Props) {
         <HomepageImageField
           label="Hero 图片"
           value={content.hero.image.src}
-          onChange={(url) => updateHeroImage("src", url)}
+          onImageChange={(url, options) => updateHeroImage("src", url, options?.persist)}
           alt={content.hero.image.alt}
           altLabel="Hero 图片 alt"
           onAltChange={(alt) => updateHeroImage("alt", alt)}
@@ -381,7 +408,7 @@ export function HomepageEditor({ initial }: Props) {
         <HomepageImageField
           label="左侧展示图"
           value={content.sections.nfc.image.src}
-          onChange={(url) => updateNfcImage("src", url)}
+          onImageChange={(url, options) => updateNfcImage("src", url, options?.persist)}
           alt={content.sections.nfc.image.alt}
           altLabel="图片 alt（SEO）"
           onAltChange={(alt) => updateNfcImage("alt", alt)}
@@ -569,7 +596,9 @@ export function HomepageEditor({ initial }: Props) {
               <HomepageImageField
                 label="分类图片"
                 value={cat.image}
-                onChange={(url) => updateCategory(index, { image: url })}
+                onImageChange={(url, options) =>
+                  updateCategory(index, { image: url }, options?.persist)
+                }
                 alt={cat.imageAlt}
                 altLabel="图片 alt"
                 onAltChange={(alt) => updateCategory(index, { imageAlt: alt })}

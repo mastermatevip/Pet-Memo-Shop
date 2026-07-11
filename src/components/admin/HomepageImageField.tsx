@@ -9,7 +9,7 @@ import { normalizeImageSrc } from "@/lib/images";
 interface Props {
   label: string;
   value: string;
-  onChange: (url: string) => void;
+  onImageChange: (url: string, options?: { persist?: boolean }) => void;
   alt?: string;
   altLabel?: string;
   onAltChange?: (alt: string) => void;
@@ -18,7 +18,7 @@ interface Props {
 export function HomepageImageField({
   label,
   value,
-  onChange,
+  onImageChange,
   alt,
   altLabel,
   onAltChange,
@@ -41,7 +41,7 @@ export function HomepageImageField({
         setError(data.error ?? "上传失败");
         return;
       }
-      onChange(data.url);
+      onImageChange(data.url, { persist: true });
     } catch {
       setError("上传失败");
     } finally {
@@ -57,7 +57,7 @@ export function HomepageImageField({
       <AdminField
         label={label}
         unlabeled
-        hint="点击预览图可放大。推荐使用相对路径，如 /images/homepage/xxx.jpg 或 /uploads/homepage/xxx.webp。"
+        hint="上传后会自动保存到服务器。点击预览图可放大。"
       >
         <div className="space-y-3">
           {previewSrc ? (
@@ -104,8 +104,8 @@ export function HomepageImageField({
             <input
               className={adminInputClass}
               value={value}
-            onChange={(e) => onChange(e.target.value)}
-            onBlur={(e) => onChange(normalizeImageSrc(e.target.value))}
+            onChange={(e) => onImageChange(e.target.value)}
+            onBlur={(e) => onImageChange(normalizeImageSrc(e.target.value))}
             placeholder="/images/homepage/... 或 /uploads/homepage/..."
             />
           </div>

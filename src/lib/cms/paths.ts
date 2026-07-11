@@ -12,3 +12,6 @@ export const MEMORIALS_FILE = path.join(CMS_DIR, "memorials.json");
 export const UPLOADS_DIR = path.join(process.cwd(), "public", "uploads");
 export const HOMEPAGE_UPLOADS_DIR = path.join(UPLOADS_DIR, "homepage");
 export const MEMORIALS_UPLOADS_DIR = path.join(UPLOADS_DIR, "memorials");
+/** Homepage CMS backup on the uploads volume (survives cms volume resets). */
+export const CMS_BACKUP_DIR = path.join(UPLOADS_DIR, ".cms-backup");
+export const HOMEPAGE_BACKUP_FILE = path.join(CMS_BACKUP_DIR, "homepage.json");

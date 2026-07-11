@@ -10,8 +10,9 @@ export default function AdminHomepagePage() {
   return (
     <AdminShell title="首页编辑">
       <p className="mb-6 text-sm text-muted leading-relaxed rounded-lg border border-border bg-highlight px-4 py-3">
-        <strong className="font-medium text-text">NFC 介绍区图片：</strong>
-        点上方快捷导航「NFC 介绍区」，在金色边框区块里点「从本地上传」替换左侧大图，然后点底部「保存首页」。
+        <strong className="font-medium text-text">首页图片：</strong>
+        上传后会<strong className="font-medium text-text">自动保存</strong>；改文字后请点底部「保存首页」。请确认 Coolify 已挂载{" "}
+        <code className="text-xs">/app/data/cms</code> 与 <code className="text-xs">/app/public/uploads</code>。
       </p>
       <HomepageEditor initial={content} />
     </AdminShell>

@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   trailingSlash: false,
+  outputFileTracingExcludes: {
+    "*": ["./data/cms/**/*"],
+  },
 
   images: {
     formats: ["image/avif", "image/webp"],

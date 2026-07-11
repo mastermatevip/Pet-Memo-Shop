@@ -15,6 +15,8 @@ import {
   UPLOADS_DIR,
   HOMEPAGE_UPLOADS_DIR,
   MEMORIALS_UPLOADS_DIR,
+  CMS_BACKUP_DIR,
+  HOMEPAGE_BACKUP_FILE,
 } from "./paths";
 import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile, MembersFile, MemorialsFile } from "./types";
 import type { Product, BlogCategory, BlogPost, Order, Member, MemorialPage } from "@/types";
@@ -65,12 +67,45 @@ function initCmsFile(filename: string, target: string, fallback: () => unknown) 
   writeJson(target, fallback());
 }
 
+function homepageFileTimestamp(file: HomepageFile | null): number {
+  if (!file?.updatedAt) return 0;
+  const parsed = Date.parse(file.updatedAt);
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function backupHomepageFile(file: HomepageFile) {
+  ensureDir(CMS_BACKUP_DIR);
+  writeJson(HOMEPAGE_BACKUP_FILE, file);
+}
+
+/** Restore homepage.json from uploads backup when cms volume is empty or stale. */
+function initHomepageFile() {
+  ensureDir(CMS_DIR);
+
+  const existing = readJson<HomepageFile>(HOMEPAGE_FILE);
+  const backup = readJson<HomepageFile>(HOMEPAGE_BACKUP_FILE);
+
+  if (existing && backup && homepageFileTimestamp(backup) > homepageFileTimestamp(existing)) {
+    writeJson(HOMEPAGE_FILE, backup);
+    return;
+  }
+
+  if (existing?.content) return;
+
+  if (backup?.content) {
+    writeJson(HOMEPAGE_FILE, backup);
+    return;
+  }
+
+  initCmsFile("homepage.json", HOMEPAGE_FILE, defaultHomepageFile);
+}
+
 export function initCmsFiles() {
   ensureDir(CMS_DIR);
   ensureDir(UPLOADS_DIR);
   ensureDir(HOMEPAGE_UPLOADS_DIR);
   ensureDir(MEMORIALS_UPLOADS_DIR);
-  initCmsFile("homepage.json", HOMEPAGE_FILE, defaultHomepageFile);
+  initHomepageFile();
   initCmsFile("products.json", PRODUCTS_FILE, defaultProductsFile);
   initCmsFile("blog.json", BLOG_FILE, defaultBlogFile);
   initCmsFile("orders.json", ORDERS_FILE, defaultOrdersFile);
@@ -91,6 +126,7 @@ export function saveHomepageContent(content: HomepageContent): HomepageFile {
   initCmsFiles();
   const file: HomepageFile = { content, updatedAt: new Date().toISOString() };
   writeJson(HOMEPAGE_FILE, file);
+  backupHomepageFile(file);
   return file;
 }
 
