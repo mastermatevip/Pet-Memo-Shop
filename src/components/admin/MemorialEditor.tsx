@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import type { MemorialFamilyMessage, MemorialGalleryItem, MemorialPage } from "@/types";
 import { AdminField, adminInputClass, adminTextareaClass } from "@/components/admin/AdminField";
+import { AdminImagePreview } from "@/components/admin/AdminImagePreview";
 import { SaveStatus } from "@/components/admin/SaveStatus";
 import { getMemorialPublicUrl } from "@/lib/memorial/url";
 
@@ -179,8 +180,10 @@ export function MemorialEditor({ initial, isNew = false }: Props) {
         <div className="rounded-xl border border-border bg-card p-5 flex flex-col sm:flex-row gap-6 items-start">
           <div>
             <p className="text-sm font-medium text-text mb-2">二维码（NFC / 卡片备用）</p>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={qrUrl} alt="Memorial QR code" className="w-40 h-40 rounded-lg border border-border" />
+            <AdminImagePreview src={qrUrl} alt="Memorial QR code" className="inline-block cursor-zoom-in">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={qrUrl} alt="Memorial QR code" className="w-40 h-40 rounded-lg border border-border" />
+            </AdminImagePreview>
           </div>
           <div className="text-sm text-muted space-y-2">
             <p>专属链接：</p>
@@ -267,8 +270,14 @@ export function MemorialEditor({ initial, isNew = false }: Props) {
       <AdminField label="主图（头像）">
         <div className="space-y-3">
           {page.portraitUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={page.portraitUrl} alt="" className="w-32 h-32 rounded-full object-cover border border-border" />
+            <AdminImagePreview src={page.portraitUrl} alt={page.petName} className="inline-block cursor-zoom-in">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={page.portraitUrl}
+                alt=""
+                className="w-32 h-32 rounded-full object-cover border border-border"
+              />
+            </AdminImagePreview>
           ) : null}
           <input type="file" accept="image/*" onChange={handlePortraitUpload} disabled={uploading} />
         </div>
@@ -303,7 +312,17 @@ export function MemorialEditor({ initial, isNew = false }: Props) {
           <ul className="space-y-2">
             {page.gallery.map((item, index) => (
               <li key={`${item.url}-${index}`} className="flex items-center gap-3 text-sm bg-highlight rounded-lg px-3 py-2">
-                <span className="text-light w-14">{item.type === "video" ? "视频" : "图片"}</span>
+                {item.type === "image" ? (
+                  <AdminImagePreview src={item.url} alt={item.alt || page.petName} className="shrink-0 cursor-zoom-in">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={item.url} alt="" className="w-14 h-14 rounded object-cover border border-border" />
+                  </AdminImagePreview>
+                ) : (
+                  <span className="shrink-0 w-14 h-14 flex items-center justify-center rounded bg-card text-xs text-light border border-border">
+                    视频
+                  </span>
+                )}
+                <span className="text-light w-14 hidden sm:inline">{item.type === "video" ? "视频" : "图片"}</span>
                 <code className="flex-1 truncate text-xs">{item.url}</code>
                 <button type="button" className="text-red-600 hover:underline" onClick={() => removeGalleryItem(index)}>
                   删除

@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { Upload } from "lucide-react";
 import { AdminField, adminInputClass } from "@/components/admin/AdminField";
+import { AdminImagePreview } from "@/components/admin/AdminImagePreview";
 import { normalizeImageSrc } from "@/lib/images";
 
 interface Props {
@@ -55,16 +56,22 @@ export function HomepageImageField({
     <>
       <AdminField
         label={label}
-        hint="推荐使用相对路径，如 /images/homepage/xxx.jpg 或上传后自动生成的 /uploads/homepage/xxx.webp。不要填完整域名。"
+        hint="点击预览图可放大。推荐使用相对路径，如 /images/homepage/xxx.jpg 或 /uploads/homepage/xxx.webp。"
       >
         <div className="space-y-3">
           {previewSrc ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
+            <AdminImagePreview
               src={previewSrc}
-              alt=""
-              className="h-32 w-full max-w-md rounded-lg border border-border object-cover bg-card"
-            />
+              alt={alt || label}
+              className="block max-w-md cursor-zoom-in"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={previewSrc}
+                alt=""
+                className="h-32 w-full rounded-lg border border-border object-cover bg-card"
+              />
+            </AdminImagePreview>
           ) : (
             <div className="flex h-32 max-w-md items-center justify-center rounded-lg border border-dashed border-border bg-card text-sm text-light">
               暂无图片

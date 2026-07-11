@@ -7,6 +7,7 @@ import type { HomepageContent } from "@/lib/cms/types";
 import type { CategoryCard, HowItWorksStep, PersonalizationOption } from "@/types";
 import { AdminField, adminInputClass, adminTextareaClass } from "@/components/admin/AdminField";
 import { HomepageImageField } from "@/components/admin/HomepageImageField";
+import { AdminImagePreview } from "@/components/admin/AdminImagePreview";
 import { SaveStatus } from "@/components/admin/SaveStatus";
 import { normalizeImageSrc } from "@/lib/images";
 
@@ -354,12 +355,18 @@ export function HomepageEditor({ initial }: Props) {
         <div className="grid md:grid-cols-2 gap-4 rounded-lg border border-border bg-card p-4">
           <div className="relative aspect-square rounded-lg overflow-hidden bg-bg">
             {content.sections.nfc.image.src ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={normalizeImageSrc(content.sections.nfc.image.src)}
+              <AdminImagePreview
+                src={content.sections.nfc.image.src}
                 alt={content.sections.nfc.image.alt}
-                className="h-full w-full object-cover"
-              />
+                className="block h-full w-full cursor-zoom-in"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={normalizeImageSrc(content.sections.nfc.image.src)}
+                  alt={content.sections.nfc.image.alt}
+                  className="h-full w-full object-cover"
+                />
+              </AdminImagePreview>
             ) : (
               <div className="flex h-full items-center justify-center text-sm text-light">暂无图片</div>
             )}
