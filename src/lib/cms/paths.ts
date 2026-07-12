@@ -9,6 +9,7 @@ export const BLOG_FILE = path.join(CMS_DIR, "blog.json");
 export const ORDERS_FILE = path.join(CMS_DIR, "orders.json");
 export const MEMBERS_FILE = path.join(CMS_DIR, "members.json");
 export const MEMORIALS_FILE = path.join(CMS_DIR, "memorials.json");
+export const COUPONS_FILE = path.join(CMS_DIR, "coupons.json");
 export const UPLOADS_DIR = path.join(process.cwd(), "public", "uploads");
 export const HOMEPAGE_UPLOADS_DIR = path.join(UPLOADS_DIR, "homepage");
 export const MEMORIALS_UPLOADS_DIR = path.join(UPLOADS_DIR, "memorials");

@@ -17,9 +17,26 @@ export function CheckoutPageClient() {
   const [shippingAddress, setShippingAddress] = useState("");
   const [personalizationNotes, setPersonalizationNotes] = useState("");
   const [giftBox, setGiftBox] = useState(false);
+  const [couponInput, setCouponInput] = useState("");
+  const [appliedCoupon, setAppliedCoupon] = useState<{
+    code: string;
+    discountAmount: number;
+    cartSignature: string;
+  } | null>(null);
+  const [couponStatus, setCouponStatus] = useState<"idle" | "checking" | "error">("idle");
+  const [couponError, setCouponError] = useState<string | null>(null);
 
+  const cartSignature = useMemo(
+    () => items.map((item) => `${item.productSlug}:${item.quantity}`).join("|"),
+    [items]
+  );
+
+  const activeCoupon =
+    appliedCoupon && appliedCoupon.cartSignature === cartSignature ? appliedCoupon : null;
   const giftBoxAmount = giftBox ? GIFT_BOX_PRICE : 0;
-  const total = subtotal + giftBoxAmount;
+  const discountAmount = activeCoupon?.discountAmount ?? 0;
+  const total = Math.max(0, subtotal - discountAmount) + giftBoxAmount;
+  const couponStale = Boolean(appliedCoupon && !activeCoupon);
 
   const checkout = useMemo<CheckoutInput>(
     () => ({
@@ -33,6 +50,7 @@ export function CheckoutPageClient() {
       shippingAddress,
       personalizationNotes,
       giftBox,
+      couponCode: activeCoupon?.code,
     }),
     [
       items,
@@ -42,6 +60,7 @@ export function CheckoutPageClient() {
       shippingAddress,
       personalizationNotes,
       giftBox,
+      activeCoupon?.code,
     ]
   );
 
@@ -50,6 +69,57 @@ export function CheckoutPageClient() {
     customerName.trim() &&
     customerEmail.trim() &&
     shippingAddress.trim();
+
+  async function handleApplyCoupon() {
+    setCouponStatus("checking");
+    setCouponError(null);
+
+    try {
+      const res = await fetch("/api/checkout/validate-coupon", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          code: couponInput,
+          items: items.map((item) => ({
+            productSlug: item.productSlug,
+            quantity: item.quantity,
+          })),
+          giftBox,
+        }),
+      });
+      const data = (await res.json()) as {
+        code?: string;
+        discountAmount?: number;
+        error?: string;
+      };
+
+      if (!res.ok || !data.code || data.discountAmount == null) {
+        setAppliedCoupon(null);
+        setCouponStatus("error");
+        setCouponError(data.error ?? "Invalid coupon code");
+        return;
+      }
+
+      setAppliedCoupon({
+        code: data.code,
+        discountAmount: data.discountAmount,
+        cartSignature,
+      });
+      setCouponInput(data.code);
+      setCouponStatus("idle");
+    } catch {
+      setAppliedCoupon(null);
+      setCouponStatus("error");
+      setCouponError("Could not validate coupon");
+    }
+  }
+
+  function handleRemoveCoupon() {
+    setAppliedCoupon(null);
+    setCouponInput("");
+    setCouponError(null);
+    setCouponStatus("idle");
+  }
 
   if (items.length === 0) {
     return (
@@ -145,6 +215,52 @@ export function CheckoutPageClient() {
             </label>
           </section>
 
+          <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
+            <h2 className="font-medium text-text">Coupon</h2>
+            <p className="text-sm text-muted">
+              Have a promo code? Apply it here. Discount applies to product subtotal only.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input
+                value={couponInput}
+                onChange={(e) => {
+                  setCouponInput(e.target.value.toUpperCase());
+                  if (appliedCoupon) setAppliedCoupon(null);
+                }}
+                placeholder="Enter code"
+                disabled={Boolean(activeCoupon)}
+                className="flex-1 px-4 py-2.5 rounded-xl border border-border bg-bg focus:outline-none focus:ring-2 focus:ring-gold uppercase tracking-wide disabled:opacity-70"
+              />
+              {activeCoupon ? (
+                <button
+                  type="button"
+                  onClick={handleRemoveCoupon}
+                  className="rounded-full border border-border px-5 py-2.5 text-sm font-medium text-muted hover:text-text"
+                >
+                  Remove
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => void handleApplyCoupon()}
+                  disabled={!couponInput.trim() || couponStatus === "checking"}
+                  className="rounded-full bg-btn text-btn-text px-5 py-2.5 text-sm font-medium hover:bg-btn-hover disabled:opacity-50"
+                >
+                  {couponStatus === "checking" ? "Checking…" : "Apply"}
+                </button>
+              )}
+            </div>
+            {activeCoupon ? (
+              <p className="text-sm text-gold">
+                Coupon {activeCoupon.code} applied (−{formatPrice(activeCoupon.discountAmount)})
+              </p>
+            ) : null}
+            {couponStale ? (
+              <p className="text-sm text-amber-700">Cart changed — please re-apply your coupon.</p>
+            ) : null}
+            {couponError ? <p className="text-sm text-red-600">{couponError}</p> : null}
+          </section>
+
           <section className="rounded-2xl border border-border bg-card p-6">
             <h2 className="font-medium text-text mb-4">Pay with PayPal</h2>
             {!formValid ? (
@@ -203,6 +319,12 @@ export function CheckoutPageClient() {
                 <span>Subtotal</span>
                 <span>{formatPrice(subtotal)}</span>
               </div>
+              {activeCoupon ? (
+                <div className="flex justify-between text-gold">
+                  <span>Coupon ({activeCoupon.code})</span>
+                  <span>−{formatPrice(discountAmount)}</span>
+                </div>
+              ) : null}
               {giftBox ? (
                 <div className="flex justify-between text-muted">
                   <span>Gift box</span>

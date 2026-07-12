@@ -8,7 +8,7 @@ import {
 import { staticProducts } from "@/data/products.static";
 import { blogCategories, blogPosts } from "@/data/blog.static";
 import { seedOrders } from "@/data/orders.static";
-import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile, MembersFile, MemorialsFile } from "./types";
+import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile, MembersFile, MemorialsFile, CouponsFile } from "./types";
 
 export function defaultHomepageContent(): HomepageContent {
   return {
@@ -103,6 +103,13 @@ export function defaultMembersFile(): MembersFile {
 export function defaultMemorialsFile(): MemorialsFile {
   return {
     pages: [],
+    updatedAt: new Date().toISOString(),
+  };
+}
+
+export function defaultCouponsFile(): CouponsFile {
+  return {
+    coupons: [],
     updatedAt: new Date().toISOString(),
   };
 }

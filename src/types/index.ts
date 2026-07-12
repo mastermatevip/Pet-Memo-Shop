@@ -128,11 +128,30 @@ export interface Order {
   internalNotes?: string;
   totalAmount: number;
   currency: string;
+  couponCode?: string;
+  discountAmount?: number;
   createdAt: string;
   updatedAt: string;
   shippedAt?: string;
   /** Linked digital memorial page slugs */
   memorialSlugs?: string[];
+}
+
+export type CouponType = "percent" | "fixed";
+
+export interface Coupon {
+  code: string;
+  type: CouponType;
+  /** percent: 1–100; fixed: USD amount */
+  value: number;
+  active: boolean;
+  minSubtotal?: number;
+  maxUses?: number;
+  usedCount: number;
+  expiresAt?: string;
+  note?: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export type MemberStatus = "active" | "blocked";

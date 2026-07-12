@@ -2,6 +2,7 @@ import "server-only";
 
 import { BRAND } from "@/config/brand";
 import { loadProducts } from "@/lib/cms/store";
+import { applyCouponToSubtotal } from "@/lib/coupons/apply";
 import type { CheckoutInput, ValidatedCheckout, ValidatedCheckoutLine } from "./types";
 
 import { GIFT_BOX_PRICE } from "./constants";
@@ -47,13 +48,19 @@ export function validateCheckout(input: CheckoutInput): ValidatedCheckout {
     });
   }
 
-  const itemsTotal = lines.reduce((sum, line) => sum + line.quantity * line.unitPrice, 0);
+  const itemsTotal = Math.round(lines.reduce((sum, line) => sum + line.quantity * line.unitPrice, 0) * 100) / 100;
   const giftBox = Boolean(input.giftBox);
   const giftBoxAmount = giftBox ? GIFT_BOX_PRICE : 0;
-  const totalAmount = Math.round((itemsTotal + giftBoxAmount) * 100) / 100;
+
+  const applied = applyCouponToSubtotal(input.couponCode, itemsTotal);
+  const discountAmount = applied?.discountAmount ?? 0;
+  const totalAmount = Math.round((itemsTotal - discountAmount + giftBoxAmount) * 100) / 100;
 
   return {
     items: lines,
+    itemsTotal,
+    discountAmount,
+    couponCode: applied?.coupon.code,
     totalAmount,
     currency: BRAND.currency,
     giftBox,

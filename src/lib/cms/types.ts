@@ -8,6 +8,7 @@ import type {
   Order,
   Member,
   MemorialPage,
+  Coupon,
 } from "@/types";
 
 export interface HomepageHero {
@@ -74,5 +75,10 @@ export interface MembersFile {
 
 export interface MemorialsFile {
   pages: MemorialPage[];
+  updatedAt: string;
+}
+
+export interface CouponsFile {
+  coupons: Coupon[];
   updatedAt: string;
 }

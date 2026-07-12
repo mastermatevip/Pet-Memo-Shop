@@ -2,7 +2,7 @@ import "server-only";
 
 import fs from "fs";
 import path from "path";
-import { defaultHomepageFile, defaultProductsFile, defaultBlogFile, defaultOrdersFile, defaultMembersFile, defaultMemorialsFile } from "./defaults";
+import { defaultHomepageFile, defaultProductsFile, defaultBlogFile, defaultOrdersFile, defaultMembersFile, defaultMemorialsFile, defaultCouponsFile } from "./defaults";
 import {
   CMS_DIR,
   CMS_SEED_DIR,
@@ -12,14 +12,15 @@ import {
   ORDERS_FILE,
   MEMBERS_FILE,
   MEMORIALS_FILE,
+  COUPONS_FILE,
   UPLOADS_DIR,
   HOMEPAGE_UPLOADS_DIR,
   MEMORIALS_UPLOADS_DIR,
   CMS_BACKUP_DIR,
   HOMEPAGE_BACKUP_FILE,
 } from "./paths";
-import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile, MembersFile, MemorialsFile } from "./types";
-import type { Product, BlogCategory, BlogPost, Order, Member, MemorialPage } from "@/types";
+import type { HomepageContent, HomepageFile, ProductsFile, BlogFile, OrdersFile, MembersFile, MemorialsFile, CouponsFile } from "./types";
+import type { Product, BlogCategory, BlogPost, Order, Member, MemorialPage, Coupon } from "@/types";
 import { isBlogPostPublished } from "@/lib/blog";
 import { syncAllMembersFromOrders } from "@/lib/members/sync";
 import { fixTextMojibake, hasTextMojibake } from "./text-encoding";
@@ -114,6 +115,7 @@ export function initCmsFiles() {
     syncAllMembersFromOrders(loadOrders());
   }
   initCmsFile("memorials.json", MEMORIALS_FILE, defaultMemorialsFile);
+  initCmsFile("coupons.json", COUPONS_FILE, defaultCouponsFile);
 }
 
 export function loadHomepageContent(): HomepageContent {
@@ -350,6 +352,9 @@ function normalizeOrder(order: Order): Order {
     orderNumber: order.orderNumber.trim().toUpperCase(),
     customerEmail: order.customerEmail.trim(),
     memorialSlugs: order.memorialSlugs?.filter(Boolean),
+    couponCode: order.couponCode?.trim().toUpperCase() || undefined,
+    discountAmount:
+      order.discountAmount == null ? undefined : Math.max(0, Number(order.discountAmount) || 0),
     items: order.items.map((item) => ({
       ...item,
       quantity: Math.max(1, Math.floor(item.quantity) || 1),
@@ -580,4 +585,76 @@ export function addGuestbookEntry(
   };
 
   return saveMemorialPage(updated);
+}
+
+function normalizeCoupon(coupon: Coupon): Coupon {
+  const code = coupon.code.trim().toUpperCase();
+  const type: Coupon["type"] = coupon.type === "percent" ? "percent" : "fixed";
+  const value = Math.max(0, Number(coupon.value) || 0);
+  const usedCount = Math.max(0, Math.floor(Number(coupon.usedCount) || 0));
+  const maxUses =
+    coupon.maxUses == null || !Number.isFinite(Number(coupon.maxUses))
+      ? undefined
+      : Math.max(0, Math.floor(Number(coupon.maxUses)));
+  const minSubtotal =
+    coupon.minSubtotal == null || !Number.isFinite(Number(coupon.minSubtotal))
+      ? undefined
+      : Math.max(0, Number(coupon.minSubtotal));
+
+  return {
+    code,
+    type,
+    value: type === "percent" ? Math.min(100, value) : value,
+    active: coupon.active !== false,
+    minSubtotal,
+    maxUses,
+    usedCount,
+    expiresAt: coupon.expiresAt?.trim() || undefined,
+    note: coupon.note?.trim() || undefined,
+    createdAt: coupon.createdAt || new Date().toISOString(),
+    updatedAt: coupon.updatedAt || new Date().toISOString(),
+  };
+}
+
+function readCouponsFile(): CouponsFile {
+  initCmsFiles();
+  const file = readJson<CouponsFile>(COUPONS_FILE) ?? defaultCouponsFile();
+  return {
+    ...file,
+    coupons: file.coupons.map(normalizeCoupon),
+  };
+}
+
+export function loadCoupons(): Coupon[] {
+  return readCouponsFile().coupons;
+}
+
+export function saveCoupons(coupons: Coupon[]): CouponsFile {
+  initCmsFiles();
+  const file: CouponsFile = {
+    coupons: coupons.map(normalizeCoupon),
+    updatedAt: new Date().toISOString(),
+  };
+  writeJson(COUPONS_FILE, file);
+  return file;
+}
+
+export function getCouponByCode(code: string): Coupon | undefined {
+  const normalized = code.trim().toUpperCase();
+  return loadCoupons().find((c) => c.code === normalized);
+}
+
+export function incrementCouponUsage(code: string): Coupon | undefined {
+  const normalized = code.trim().toUpperCase();
+  const coupons = loadCoupons();
+  const index = coupons.findIndex((c) => c.code === normalized);
+  if (index === -1) return undefined;
+
+  coupons[index] = {
+    ...coupons[index],
+    usedCount: coupons[index].usedCount + 1,
+    updatedAt: new Date().toISOString(),
+  };
+  saveCoupons(coupons);
+  return coupons[index];
 }

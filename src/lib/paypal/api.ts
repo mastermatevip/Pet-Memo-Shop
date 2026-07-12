@@ -62,10 +62,7 @@ async function paypalFetch<T>(path: string, init?: RequestInit): Promise<T> {
 }
 
 export async function createPayPalOrder(checkout: ValidatedCheckout): Promise<string> {
-  const itemTotal = checkout.items.reduce(
-    (sum, item) => sum + item.quantity * item.unitPrice,
-    0
-  );
+  const itemTotal = checkout.itemsTotal + checkout.giftBoxAmount;
 
   const paypalItems = checkout.items.map((item) => ({
     name: item.title.slice(0, 127),
@@ -89,6 +86,20 @@ export async function createPayPalOrder(checkout: ValidatedCheckout): Promise<st
     });
   }
 
+  const breakdown: Record<string, { currency_code: string; value: string }> = {
+    item_total: {
+      currency_code: checkout.currency,
+      value: formatPayPalAmount(itemTotal),
+    },
+  };
+
+  if (checkout.discountAmount > 0) {
+    breakdown.discount = {
+      currency_code: checkout.currency,
+      value: formatPayPalAmount(checkout.discountAmount),
+    };
+  }
+
   const body = {
     intent: "CAPTURE",
     purchase_units: [
@@ -96,12 +107,7 @@ export async function createPayPalOrder(checkout: ValidatedCheckout): Promise<st
         amount: {
           currency_code: checkout.currency,
           value: formatPayPalAmount(checkout.totalAmount),
-          breakdown: {
-            item_total: {
-              currency_code: checkout.currency,
-              value: formatPayPalAmount(itemTotal + checkout.giftBoxAmount),
-            },
-          },
+          breakdown,
         },
         items: paypalItems,
       },

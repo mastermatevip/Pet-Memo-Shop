@@ -1,6 +1,6 @@
 import "server-only";
 
-import { generateOrderNumber, loadOrders, saveOrders } from "@/lib/cms/store";
+import { generateOrderNumber, incrementCouponUsage, loadOrders, saveOrders } from "@/lib/cms/store";
 import type { Order } from "@/types";
 import type { CheckoutInput } from "./types";
 import { validateCheckout } from "./validate";
@@ -21,6 +21,9 @@ export function createPaidOrder({ checkout, capture }: CreatePaidOrderInput): Or
   const noteParts = [
     checkout.personalizationNotes?.trim(),
     validated.giftBox ? "Premium gift box requested." : undefined,
+    validated.couponCode
+      ? `Coupon ${validated.couponCode}: -$${validated.discountAmount.toFixed(2)}`
+      : undefined,
     `PayPal capture: ${capture.captureId}`,
   ].filter(Boolean);
 
@@ -41,6 +44,8 @@ export function createPaidOrder({ checkout, capture }: CreatePaidOrderInput): Or
     internalNotes: noteParts.join("\n"),
     totalAmount: validated.totalAmount,
     currency: validated.currency,
+    couponCode: validated.couponCode,
+    discountAmount: validated.discountAmount > 0 ? validated.discountAmount : undefined,
     createdAt: now,
     updatedAt: now,
   };
@@ -52,6 +57,11 @@ export function createPaidOrder({ checkout, capture }: CreatePaidOrderInput): Or
   const orders = loadOrders();
   orders.push(order);
   saveOrders(orders);
+
+  if (validated.couponCode) {
+    incrementCouponUsage(validated.couponCode);
+  }
+
   upsertMemberFromOrder(order);
 
   const memorial = provisionMemorialsFromOrder(order);

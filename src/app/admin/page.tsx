@@ -87,6 +87,13 @@ export default function AdminDashboardPage() {
           <p className="text-sm text-muted mt-1">订单状态、物流信息、客户资料</p>
         </Link>
         <Link
+          href="/admin/coupons"
+          className="block rounded-xl border border-border bg-card p-5 hover:border-gold transition-colors"
+        >
+          <p className="font-medium">优惠券</p>
+          <p className="text-sm text-muted mt-1">折扣码、百分比/固定金额、使用次数</p>
+        </Link>
+        <Link
           href="/admin/memorials"
           className="block rounded-xl border border-border bg-card p-5 hover:border-gold transition-colors"
         >

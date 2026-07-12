@@ -11,6 +11,7 @@ export interface CheckoutInput {
   shippingAddress: string;
   personalizationNotes?: string;
   giftBox?: boolean;
+  couponCode?: string;
 }
 
 export interface ValidatedCheckoutLine {
@@ -22,6 +23,9 @@ export interface ValidatedCheckoutLine {
 
 export interface ValidatedCheckout {
   items: ValidatedCheckoutLine[];
+  itemsTotal: number;
+  discountAmount: number;
+  couponCode?: string;
   totalAmount: number;
   currency: string;
   giftBox: boolean;

@@ -222,6 +222,14 @@ export function OrderEditor({ initial, isNew = false }: Props) {
         />
       </AdminField>
 
+      {(order.couponCode || order.discountAmount) && (
+        <div className="rounded-lg border border-border bg-highlight px-4 py-3 text-sm text-muted">
+          优惠券：
+          <code className="font-mono text-text">{order.couponCode ?? "—"}</code>
+          {order.discountAmount != null ? ` · 减免 $${order.discountAmount.toFixed(2)}` : ""}
+        </div>
+      )}
+
       <AdminField label="内部备注">
         <textarea
           className={adminTextareaClass}
