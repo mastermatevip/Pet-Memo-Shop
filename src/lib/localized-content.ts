@@ -1,6 +1,7 @@
 import type { Locale } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
 import type { HomepageContent } from "@/lib/cms/types";
+import type { DigitalMemorialLandingContent } from "@/lib/cms/digital-memorial-landing-types";
 import type { Collection, Product } from "@/types";
 
 export interface PageSection {
@@ -87,6 +88,51 @@ export interface BestSellersPageContent {
 
 export interface ContentBundle {
   homepage?: HomepageContentBundle;
+  digitalMemorialLanding?: {
+    metaTitle?: string;
+    metaDescription?: string;
+    hero?: {
+      eyebrow?: string;
+      h1?: string;
+      subtitle?: string;
+      body?: string;
+      primaryCta?: string;
+      secondaryCta?: string;
+      imageAlt?: string;
+    };
+    whatIs?: { title?: string; paragraphs?: string[] };
+    carbonFiber?: {
+      title?: string;
+      subtitle?: string;
+      imageAlt?: string;
+      features?: string[];
+      cta?: string;
+    };
+    howItWorks?: {
+      title?: string;
+      items?: Array<{ title?: string; desc?: string }>;
+    };
+    included?: { title?: string; subtitle?: string; fields?: string[] };
+    example?: {
+      title?: string;
+      petName?: string;
+      dates?: string;
+      quote?: string;
+    };
+    orderSteps?: { title?: string; steps?: string[] };
+    pricing?: {
+      title?: string;
+      subtitle?: string;
+      options?: Array<{ name?: string; price?: string; desc?: string }>;
+    };
+    faqs?: Array<{ question?: string; answer?: string }>;
+    finalCta?: {
+      title?: string;
+      subtitle?: string;
+      primaryCta?: string;
+      secondaryCta?: string;
+    };
+  };
   products?: Record<string, ProductContentBundle>;
   collections?: Record<string, CollectionContentBundle>;
   pages?: Record<string, PageContent>;
@@ -266,4 +312,109 @@ export function getCollectionPageLabels(collection: Collection, bundle: ContentB
 
 export function getLocalizedPage(bundle: ContentBundle | null, key: string): PageContent | null {
   return bundle?.pages?.[key] ?? null;
+}
+
+export function localizeDigitalMemorialLanding(
+  base: DigitalMemorialLandingContent,
+  bundle: ContentBundle | null
+): DigitalMemorialLandingContent {
+  const t = bundle?.digitalMemorialLanding;
+  if (!t) return base;
+
+  return {
+    ...base,
+    metaTitle: t.metaTitle ?? base.metaTitle,
+    metaDescription: t.metaDescription ?? base.metaDescription,
+    hero: {
+      ...base.hero,
+      eyebrow: t.hero?.eyebrow ?? base.hero.eyebrow,
+      h1: t.hero?.h1 ?? base.hero.h1,
+      subtitle: t.hero?.subtitle ?? base.hero.subtitle,
+      body: t.hero?.body ?? base.hero.body,
+      primaryCta: {
+        ...base.hero.primaryCta,
+        label: t.hero?.primaryCta ?? base.hero.primaryCta.label,
+      },
+      secondaryCta: {
+        ...base.hero.secondaryCta,
+        label: t.hero?.secondaryCta ?? base.hero.secondaryCta.label,
+      },
+      image: {
+        ...base.hero.image,
+        alt: t.hero?.imageAlt ?? base.hero.image.alt,
+      },
+    },
+    whatIs: {
+      title: t.whatIs?.title ?? base.whatIs.title,
+      paragraphs: t.whatIs?.paragraphs ?? base.whatIs.paragraphs,
+    },
+    carbonFiber: {
+      ...base.carbonFiber,
+      title: t.carbonFiber?.title ?? base.carbonFiber.title,
+      subtitle: t.carbonFiber?.subtitle ?? base.carbonFiber.subtitle,
+      features: t.carbonFiber?.features ?? base.carbonFiber.features,
+      cta: {
+        ...base.carbonFiber.cta,
+        label: t.carbonFiber?.cta ?? base.carbonFiber.cta.label,
+      },
+      image: {
+        ...base.carbonFiber.image,
+        alt: t.carbonFiber?.imageAlt ?? base.carbonFiber.image.alt,
+      },
+    },
+    howItWorks: {
+      title: t.howItWorks?.title ?? base.howItWorks.title,
+      items: base.howItWorks.items.map((item, index) => ({
+        ...item,
+        title: t.howItWorks?.items?.[index]?.title ?? item.title,
+        desc: t.howItWorks?.items?.[index]?.desc ?? item.desc,
+      })),
+    },
+    included: {
+      title: t.included?.title ?? base.included.title,
+      subtitle: t.included?.subtitle ?? base.included.subtitle,
+      fields: t.included?.fields ?? base.included.fields,
+    },
+    example: {
+      ...base.example,
+      title: t.example?.title ?? base.example.title,
+      petName: t.example?.petName ?? base.example.petName,
+      dates: t.example?.dates ?? base.example.dates,
+      quote: t.example?.quote ?? base.example.quote,
+    },
+    orderSteps: {
+      title: t.orderSteps?.title ?? base.orderSteps.title,
+      steps: base.orderSteps.steps.map((step, index) => ({
+        ...step,
+        text: t.orderSteps?.steps?.[index] ?? step.text,
+      })),
+    },
+    pricing: {
+      title: t.pricing?.title ?? base.pricing.title,
+      subtitle: t.pricing?.subtitle ?? base.pricing.subtitle,
+      options: base.pricing.options.map((option, index) => ({
+        ...option,
+        name: t.pricing?.options?.[index]?.name ?? option.name,
+        price: t.pricing?.options?.[index]?.price ?? option.price,
+        desc: t.pricing?.options?.[index]?.desc ?? option.desc,
+      })),
+    },
+    faqs: base.faqs.map((faq, index) => ({
+      question: t.faqs?.[index]?.question ?? faq.question,
+      answer: t.faqs?.[index]?.answer ?? faq.answer,
+    })),
+    finalCta: {
+      ...base.finalCta,
+      title: t.finalCta?.title ?? base.finalCta.title,
+      subtitle: t.finalCta?.subtitle ?? base.finalCta.subtitle,
+      primaryCta: {
+        ...base.finalCta.primaryCta,
+        label: t.finalCta?.primaryCta ?? base.finalCta.primaryCta.label,
+      },
+      secondaryCta: {
+        ...base.finalCta.secondaryCta,
+        label: t.finalCta?.secondaryCta ?? base.finalCta.secondaryCta.label,
+      },
+    },
+  };
 }

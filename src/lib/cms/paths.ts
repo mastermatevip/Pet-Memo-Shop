@@ -15,6 +15,7 @@ export const ORDERS_FILE = path.join(CMS_DIR, "orders.json");
 export const MEMBERS_FILE = path.join(CMS_DIR, "members.json");
 export const MEMORIALS_FILE = path.join(CMS_DIR, "memorials.json");
 export const COUPONS_FILE = path.join(CMS_DIR, "coupons.json");
+export const DIGITAL_MEMORIAL_LANDING_FILE = path.join(CMS_DIR, "digital-memorial-landing.json");
 export const UPLOADS_DIR = uploadsRoot;
 export const HOMEPAGE_UPLOADS_DIR = path.join(UPLOADS_DIR, "homepage");
 export const MEMORIALS_UPLOADS_DIR = path.join(UPLOADS_DIR, "memorials");

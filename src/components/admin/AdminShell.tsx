@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Home, Package, LayoutDashboard, FileText, ShoppingBag, Users, Heart, Ticket } from "lucide-react";
+import { Home, Package, LayoutDashboard, FileText, ShoppingBag, Users, Heart, Ticket, Smartphone } from "lucide-react";
 import { AdminLogoutButton } from "@/components/admin/AdminLogoutButton";
 
 interface AdminShellProps {
@@ -10,11 +10,12 @@ interface AdminShellProps {
 const nav = [
   { href: "/admin", label: "控制台", icon: LayoutDashboard },
   { href: "/admin/homepage", label: "首页", icon: Home },
+  { href: "/admin/digital-memorial", label: "数字纪念页", icon: Smartphone },
   { href: "/admin/products", label: "商品", icon: Package },
   { href: "/admin/blog", label: "博客", icon: FileText },
   { href: "/admin/orders", label: "订单", icon: ShoppingBag },
   { href: "/admin/coupons", label: "优惠券", icon: Ticket },
-  { href: "/admin/memorials", label: "纪念页", icon: Heart },
+  { href: "/admin/memorials", label: "客户纪念页", icon: Heart },
   { href: "/admin/members", label: "会员", icon: Users },
 ];
 

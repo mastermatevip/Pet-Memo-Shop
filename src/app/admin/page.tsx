@@ -94,10 +94,17 @@ export default function AdminDashboardPage() {
           <p className="text-sm text-muted mt-1">折扣码、百分比/固定金额、使用次数</p>
         </Link>
         <Link
+          href="/admin/digital-memorial"
+          className="block rounded-xl border border-border bg-card p-5 hover:border-gold transition-colors"
+        >
+          <p className="font-medium">数字纪念营销页</p>
+          <p className="text-sm text-muted mt-1">/digital-pet-memorial 文案、图片、价格与 FAQ</p>
+        </Link>
+        <Link
           href="/admin/memorials"
           className="block rounded-xl border border-border bg-card p-5 hover:border-gold transition-colors"
         >
-          <p className="font-medium">数字纪念页</p>
+          <p className="font-medium">客户数字纪念页</p>
           <p className="text-sm text-muted mt-1">照片、视频、故事、链接与二维码</p>
         </Link>
         <Link

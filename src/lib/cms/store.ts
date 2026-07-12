@@ -3,6 +3,11 @@ import "server-only";
 import fs from "fs";
 import path from "path";
 import { defaultHomepageFile, defaultProductsFile, defaultBlogFile, defaultOrdersFile, defaultMembersFile, defaultMemorialsFile, defaultCouponsFile } from "./defaults";
+import { defaultDigitalMemorialLandingFile } from "./digital-memorial-landing-defaults";
+import type {
+  DigitalMemorialLandingContent,
+  DigitalMemorialLandingFile,
+} from "./digital-memorial-landing-types";
 import {
   CMS_DIR,
   CMS_SEED_DIR,
@@ -13,6 +18,7 @@ import {
   MEMBERS_FILE,
   MEMORIALS_FILE,
   COUPONS_FILE,
+  DIGITAL_MEMORIAL_LANDING_FILE,
   UPLOADS_DIR,
   HOMEPAGE_UPLOADS_DIR,
   MEMORIALS_UPLOADS_DIR,
@@ -183,6 +189,11 @@ export function initCmsFiles() {
   }
   initCmsFile("memorials.json", MEMORIALS_FILE, defaultMemorialsFile);
   initCmsFile("coupons.json", COUPONS_FILE, defaultCouponsFile);
+  initCmsFile(
+    "digital-memorial-landing.json",
+    DIGITAL_MEMORIAL_LANDING_FILE,
+    defaultDigitalMemorialLandingFile
+  );
 }
 
 export function loadHomepageContent(): HomepageContent {
@@ -725,4 +736,22 @@ export function incrementCouponUsage(code: string): Coupon | undefined {
   };
   saveCoupons(coupons);
   return coupons[index];
+}
+
+export function loadDigitalMemorialLanding(): DigitalMemorialLandingContent {
+  initCmsFiles();
+  const file = readJson<DigitalMemorialLandingFile>(DIGITAL_MEMORIAL_LANDING_FILE);
+  return file?.content ?? defaultDigitalMemorialLandingFile().content;
+}
+
+export function saveDigitalMemorialLanding(
+  content: DigitalMemorialLandingContent
+): DigitalMemorialLandingFile {
+  initCmsFiles();
+  const file: DigitalMemorialLandingFile = {
+    content,
+    updatedAt: new Date().toISOString(),
+  };
+  writeJson(DIGITAL_MEMORIAL_LANDING_FILE, file);
+  return file;
 }
