@@ -31,6 +31,14 @@ export interface DigitalMemorialOrderStep {
   text: string;
 }
 
+export interface DigitalMemorialSampleLink {
+  title: string;
+  /** Memorial page slug, e.g. companion-1ae0d3 → /memorial/companion-1ae0d3 */
+  slug: string;
+  image: string;
+  imageAlt?: string;
+}
+
 export interface DigitalMemorialLandingContent {
   metaTitle: string;
   metaDescription: string;
@@ -63,13 +71,13 @@ export interface DigitalMemorialLandingContent {
     subtitle: string;
     fields: string[];
   };
-  example: {
+  /** Three (or more) real memorial page examples shown as image + title link cards */
+  sampleLinks: {
     title: string;
-    petName: string;
-    dates: string;
-    quote: string;
-    portraitSrc: string;
-    gallerySrcs: string[];
+    subtitle?: string;
+    /** Short hint under each card title, e.g. "View memorial →" */
+    linkLabel?: string;
+    items: DigitalMemorialSampleLink[];
   };
   orderSteps: {
     title: string;

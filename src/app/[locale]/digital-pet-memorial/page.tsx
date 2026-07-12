@@ -1,6 +1,6 @@
 import { getLocale } from "next-intl/server";
 import { DigitalMemorialLandingPage } from "@/components/digital-memorial/DigitalMemorialLandingPage";
-import { loadDigitalMemorialLanding } from "@/lib/cms/store";
+import { getMemorialBySlug, loadDigitalMemorialLanding } from "@/lib/cms/store";
 import { buildMetadata } from "@/lib/seo";
 import {
   loadContentBundle,
@@ -12,6 +12,28 @@ export const dynamic = "force-dynamic";
 
 interface Props {
   params: Promise<{ locale: string }>;
+}
+
+function enrichSampleLinks<T extends { sampleLinks: { items: Array<{ title: string; slug: string; image: string; imageAlt?: string }> } }>(
+  content: T
+): T {
+  return {
+    ...content,
+    sampleLinks: {
+      ...content.sampleLinks,
+      items: content.sampleLinks.items.map((item) => {
+        if (!item.slug) return item;
+        const memorial = getMemorialBySlug(item.slug);
+        if (!memorial) return item;
+        return {
+          ...item,
+          title: item.title || memorial.petName,
+          image: item.image || memorial.portraitUrl || memorial.gallery.find((g) => g.type === "image")?.url || "",
+          imageAlt: item.imageAlt || memorial.petName,
+        };
+      }),
+    },
+  };
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -33,7 +55,9 @@ export default async function Page({ params }: Props) {
 
   const activeLocale = (await getLocale()) || locale;
   const bundle = await loadContentBundle(activeLocale);
-  const content = localizeDigitalMemorialLanding(loadDigitalMemorialLanding(), bundle);
+  const content = enrichSampleLinks(
+    localizeDigitalMemorialLanding(loadDigitalMemorialLanding(), bundle)
+  );
 
   return <DigitalMemorialLandingPage content={content} />;
 }

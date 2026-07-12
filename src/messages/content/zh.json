@@ -186,11 +186,15 @@
         "可选访客留言簿"
       ]
     },
-    "example": {
-      "title": "在线纪念页示例布局",
-      "petName": "Max",
-      "dates": "2012 – 2025 · 心爱的金毛寻回犬",
-      "quote": "Max 把阳光带进每一个房间。摇晃的尾巴和温柔的眼神，提醒我们爱往往藏在最简单的日常里。"
+    "sampleLinks": {
+      "title": "数字纪念页示例",
+      "subtitle": "点击卡片即可打开真实纪念页预览。",
+      "linkLabel": "查看纪念页 →",
+      "items": [
+        { "title": "BELLA" },
+        { "title": "COCO" },
+        { "title": "Milo" }
+      ]
     },
     "orderSteps": {
       "title": "如何下单",

@@ -525,6 +525,160 @@ export function DigitalMemorialLandingEditor({ initial }: Props) {
       </section>
 
       <section className="space-y-4">
+        <div className="flex items-center justify-between gap-4">
+          <h3 className="font-serif text-lg">示例纪念页链接</h3>
+          <button
+            type="button"
+            className="inline-flex items-center gap-1 text-sm text-muted hover:text-text"
+            onClick={() =>
+              setContent((c) => ({
+                ...c,
+                sampleLinks: {
+                  ...c.sampleLinks,
+                  items: [
+                    ...(c.sampleLinks?.items ?? []),
+                    { title: "", slug: "", image: "", imageAlt: "" },
+                  ],
+                },
+              }))
+            }
+          >
+            <Plus className="w-4 h-4" />
+            添加
+          </button>
+        </div>
+        <p className="text-sm text-muted">
+          前台三列展示：上方图片、下方标题链接到 <code className="text-xs">/memorial/&#123;slug&#125;</code>
+          。图片可留空，将自动使用该纪念页的主图。
+        </p>
+        <AdminField label="区块标题">
+          <input
+            className={adminInputClass}
+            value={content.sampleLinks?.title ?? ""}
+            onChange={(e) =>
+              setContent((c) => ({
+                ...c,
+                sampleLinks: { ...c.sampleLinks, title: e.target.value },
+              }))
+            }
+          />
+        </AdminField>
+        <AdminField label="副标题">
+          <input
+            className={adminInputClass}
+            value={content.sampleLinks?.subtitle ?? ""}
+            onChange={(e) =>
+              setContent((c) => ({
+                ...c,
+                sampleLinks: { ...c.sampleLinks, subtitle: e.target.value },
+              }))
+            }
+          />
+        </AdminField>
+        <AdminField label="卡片底部提示">
+          <input
+            className={adminInputClass}
+            value={content.sampleLinks?.linkLabel ?? ""}
+            onChange={(e) =>
+              setContent((c) => ({
+                ...c,
+                sampleLinks: { ...c.sampleLinks, linkLabel: e.target.value },
+              }))
+            }
+            placeholder="View memorial →"
+          />
+        </AdminField>
+        {(content.sampleLinks?.items ?? []).map((item, index) => (
+          <div key={index} className="rounded-lg border border-border p-4 space-y-3">
+            <div className="flex justify-between gap-2">
+              <p className="text-sm font-medium">示例 {index + 1}</p>
+              <button
+                type="button"
+                className="p-1 text-muted hover:text-red-600"
+                onClick={() =>
+                  setContent((c) => ({
+                    ...c,
+                    sampleLinks: {
+                      ...c.sampleLinks,
+                      items: c.sampleLinks.items.filter((_, i) => i !== index),
+                    },
+                  }))
+                }
+              >
+                <Trash2 className="w-4 h-4" />
+              </button>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3">
+              <AdminField label="标题（宠物名）">
+                <input
+                  className={adminInputClass}
+                  value={item.title}
+                  onChange={(e) =>
+                    setContent((c) => ({
+                      ...c,
+                      sampleLinks: {
+                        ...c.sampleLinks,
+                        items: c.sampleLinks.items.map((it, i) =>
+                          i === index ? { ...it, title: e.target.value } : it
+                        ),
+                      },
+                    }))
+                  }
+                  placeholder="BELLA"
+                />
+              </AdminField>
+              <AdminField label="纪念页 Slug" hint="来自「客户纪念页」列表">
+                <input
+                  className={adminInputClass}
+                  value={item.slug}
+                  onChange={(e) =>
+                    setContent((c) => ({
+                      ...c,
+                      sampleLinks: {
+                        ...c.sampleLinks,
+                        items: c.sampleLinks.items.map((it, i) =>
+                          i === index ? { ...it, slug: e.target.value.trim() } : it
+                        ),
+                      },
+                    }))
+                  }
+                  placeholder="companion-1ae0d3"
+                />
+              </AdminField>
+            </div>
+            <HomepageImageField
+              label="封面图（可选）"
+              value={item.image}
+              onImageChange={(url) =>
+                setContent((c) => ({
+                  ...c,
+                  sampleLinks: {
+                    ...c.sampleLinks,
+                    items: c.sampleLinks.items.map((it, i) =>
+                      i === index ? { ...it, image: url } : it
+                    ),
+                  },
+                }))
+              }
+              alt={item.imageAlt}
+              altLabel="图片 alt"
+              onAltChange={(alt) =>
+                setContent((c) => ({
+                  ...c,
+                  sampleLinks: {
+                    ...c.sampleLinks,
+                    items: c.sampleLinks.items.map((it, i) =>
+                      i === index ? { ...it, imageAlt: alt } : it
+                    ),
+                  },
+                }))
+              }
+            />
+          </div>
+        ))}
+      </section>
+
+      <section className="space-y-4">
         <h3 className="font-serif text-lg">下单步骤</h3>
         <AdminField label="标题">
           <input

@@ -27,7 +27,7 @@ export function DigitalMemorialLandingPage({ content }: Props) {
     carbonFiber,
     howItWorks,
     included,
-    example,
+    sampleLinks,
     orderSteps,
     pricing,
     faqs,
@@ -138,28 +138,41 @@ export function DigitalMemorialLandingPage({ content }: Props) {
       </section>
 
       <section className="py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading title={example.title} />
-          <div className="bg-card rounded-2xl border border-border overflow-hidden shadow-lg">
-            <div className="bg-highlight p-8 text-center">
-              <div className="w-24 h-24 rounded-full bg-bg-secondary mx-auto mb-4 overflow-hidden relative">
-                <SiteImage src={example.portraitSrc} alt={example.petName} />
-              </div>
-              <h3 className="font-serif text-2xl text-text">{example.petName}</h3>
-              <p className="text-light text-sm mt-1">{example.dates}</p>
-            </div>
-            <div className="p-8">
-              <p className="text-muted leading-relaxed italic text-center mb-6">
-                &ldquo;{example.quote}&rdquo;
-              </p>
-              <div className="grid grid-cols-3 gap-2">
-                {example.gallerySrcs.map((src, index) => (
-                  <div key={`${src}-${index}`} className="aspect-square rounded-lg bg-highlight relative overflow-hidden">
-                    <SiteImage src={src} alt={`${example.petName} memorial photo ${index + 1}`} />
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading title={sampleLinks.title} subtitle={sampleLinks.subtitle} />
+          <div className="grid sm:grid-cols-3 gap-6">
+            {sampleLinks.items.map((item) => (
+              <a
+                key={item.slug || item.title}
+                href={`/memorial/${item.slug}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-border bg-card overflow-hidden hover:border-gold hover:shadow-lg transition-all"
+              >
+                <div className="relative aspect-[4/3] bg-highlight">
+                  {item.image ? (
+                    <SiteImage
+                      src={item.image}
+                      alt={item.imageAlt || item.title}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-sm text-light">
+                      {item.title}
+                    </div>
+                  )}
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="font-serif text-xl text-text group-hover:text-gold transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-light mt-1">
+                    {sampleLinks.linkLabel || "View memorial →"}
+                  </p>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>

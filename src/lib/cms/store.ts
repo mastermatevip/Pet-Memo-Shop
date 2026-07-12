@@ -741,7 +741,33 @@ export function incrementCouponUsage(code: string): Coupon | undefined {
 export function loadDigitalMemorialLanding(): DigitalMemorialLandingContent {
   initCmsFiles();
   const file = readJson<DigitalMemorialLandingFile>(DIGITAL_MEMORIAL_LANDING_FILE);
-  return file?.content ?? defaultDigitalMemorialLandingFile().content;
+  const defaults = defaultDigitalMemorialLandingFile().content;
+  const raw = (file?.content ?? defaults) as DigitalMemorialLandingContent & {
+    example?: unknown;
+    sampleLinks?: DigitalMemorialLandingContent["sampleLinks"];
+  };
+
+  const sampleLinks =
+    raw.sampleLinks?.items?.length
+      ? {
+          title: raw.sampleLinks.title || defaults.sampleLinks.title,
+          subtitle: raw.sampleLinks.subtitle ?? defaults.sampleLinks.subtitle,
+          linkLabel: raw.sampleLinks.linkLabel ?? defaults.sampleLinks.linkLabel,
+          items: raw.sampleLinks.items.map((item) => ({
+            title: item.title?.trim() || "Memorial",
+            slug: item.slug?.trim().toLowerCase() || "",
+            image: item.image?.trim() || "",
+            imageAlt: item.imageAlt?.trim() || item.title?.trim() || "Memorial",
+          })),
+        }
+      : defaults.sampleLinks;
+
+  const { example: _legacyExample, ...rest } = raw;
+  return {
+    ...defaults,
+    ...rest,
+    sampleLinks,
+  };
 }
 
 export function saveDigitalMemorialLanding(

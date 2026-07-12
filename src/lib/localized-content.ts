@@ -113,11 +113,12 @@ export interface ContentBundle {
       items?: Array<{ title?: string; desc?: string }>;
     };
     included?: { title?: string; subtitle?: string; fields?: string[] };
-    example?: {
+    example?: never;
+    sampleLinks?: {
       title?: string;
-      petName?: string;
-      dates?: string;
-      quote?: string;
+      subtitle?: string;
+      linkLabel?: string;
+      items?: Array<{ title?: string }>;
     };
     orderSteps?: { title?: string; steps?: string[] };
     pricing?: {
@@ -375,12 +376,14 @@ export function localizeDigitalMemorialLanding(
       subtitle: t.included?.subtitle ?? base.included.subtitle,
       fields: t.included?.fields ?? base.included.fields,
     },
-    example: {
-      ...base.example,
-      title: t.example?.title ?? base.example.title,
-      petName: t.example?.petName ?? base.example.petName,
-      dates: t.example?.dates ?? base.example.dates,
-      quote: t.example?.quote ?? base.example.quote,
+    sampleLinks: {
+      title: t.sampleLinks?.title ?? base.sampleLinks.title,
+      subtitle: t.sampleLinks?.subtitle ?? base.sampleLinks.subtitle,
+      linkLabel: t.sampleLinks?.linkLabel ?? base.sampleLinks.linkLabel,
+      items: base.sampleLinks.items.map((item, index) => ({
+        ...item,
+        title: t.sampleLinks?.items?.[index]?.title ?? item.title,
+      })),
     },
     orderSteps: {
       title: t.orderSteps?.title ?? base.orderSteps.title,
