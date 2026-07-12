@@ -32,7 +32,9 @@ COPY --from=builder /app/data/cms /app/data/cms-seed
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 # Standalone trace may bundle data/cms JSON — remove so runtime only uses the volume or cms-seed.
-RUN rm -f /app/data/cms/*.json
+RUN rm -rf /app/data/cms \
+  && mkdir -p /app/data/cms /app/public/uploads/.cms-backup \
+  && chown -R nextjs:nodejs /app/data /app/public/uploads
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 

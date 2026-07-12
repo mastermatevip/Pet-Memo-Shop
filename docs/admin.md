@@ -58,10 +58,12 @@ ADMIN_SECRET=至少32位随机字符串
 1. 在 Environment Variables 添加 `ADMIN_PASSWORD`、`ADMIN_SECRET`
 2. 挂载持久卷：
    - `/app/data/cms` → CMS JSON（首页、商品、博客、订单、会员、纪念页）
-   - `/app/public/uploads` → 上传的商品与纪念页媒体
+   - `/app/public/uploads` → 上传的商品与纪念页媒体（**同时保存首页配置备份** `.cms-backup/homepage.json`）
 3. Redeploy 后访问 `https://petmemoshop.com/admin`
 
-> Docker 镜像通过 `docker-entrypoint.sh` 在启动时将 `/app/data`、`/app/public/uploads` 属主改为 `nextjs:nodejs`，解决 Coolify 卷默认 root 权限导致上传失败的问题。
+> Docker 镜像通过 `docker-entrypoint.sh` 在启动时将 `/app/data`、`/app/public/uploads` 属主改为 `nextjs:nodejs`，并在 CMS 卷被清空时从 uploads 备份自动恢复 `homepage.json`。
+>
+> 首页保存会双写到 CMS 卷与 uploads 备份；读取时自动取较新的一份。前台首页为 `force-dynamic`，保存后立即生效。
 
 ## 本地开发
 

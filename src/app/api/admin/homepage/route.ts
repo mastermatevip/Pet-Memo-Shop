@@ -8,8 +8,12 @@ export async function GET() {
   const denied = await requireAdmin();
   if (denied) return denied;
 
-  const { loadHomepageContent } = await import("@/lib/cms/store");
-  return NextResponse.json(loadHomepageContent());
+  const { loadHomepageFile, getHomepagePersistenceStatus } = await import("@/lib/cms/store");
+  const file = loadHomepageFile();
+  return NextResponse.json({
+    ...file,
+    persistence: getHomepagePersistenceStatus(),
+  });
 }
 
 export async function PUT(request: Request) {

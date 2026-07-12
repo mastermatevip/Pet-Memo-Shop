@@ -8,7 +8,9 @@ export async function POST() {
   if (denied) return denied;
 
   const content = restoreHomepageImagesFromSeed();
+  const { loadHomepageFile } = await import("@/lib/cms/store");
+  const file = loadHomepageFile();
   revalidateLocalizedPath("/");
 
-  return NextResponse.json({ content, restored: true });
+  return NextResponse.json({ content: file.content, updatedAt: file.updatedAt, restored: true });
 }

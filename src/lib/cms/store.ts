@@ -40,17 +40,19 @@ function readJson<T>(file: string): T | null {
   }
 }
 
+/** Atomic replace so a crash mid-write cannot leave a truncated JSON file. */
 function writeJson(file: string, data: unknown) {
   ensureDir(path.dirname(file));
-  fs.writeFileSync(file, JSON.stringify(data, null, 2), "utf-8");
+  const payload = JSON.stringify(data, null, 2);
+  const tmp = `${file}.${process.pid}.${Date.now()}.tmp`;
+  fs.writeFileSync(tmp, payload, "utf-8");
+  fs.renameSync(tmp, file);
 }
 
 function getCmsSeedPath(filename: string): string | null {
-  const seedDirs = [CMS_SEED_DIR, CMS_DIR];
-  for (const dir of seedDirs) {
-    const seedPath = path.join(dir, filename);
-    if (fs.existsSync(seedPath)) return seedPath;
-  }
+  // Only use the immutable image seed — never treat the live CMS volume as "seed".
+  const seedPath = path.join(CMS_SEED_DIR, filename);
+  if (fs.existsSync(seedPath)) return seedPath;
   return null;
 }
 
@@ -74,31 +76,94 @@ function homepageFileTimestamp(file: HomepageFile | null): number {
   return Number.isFinite(parsed) ? parsed : 0;
 }
 
-function backupHomepageFile(file: HomepageFile) {
+function pickNewestHomepage(
+  a: HomepageFile | null,
+  b: HomepageFile | null
+): HomepageFile | null {
+  if (a?.content && b?.content) {
+    return homepageFileTimestamp(b) > homepageFileTimestamp(a) ? b : a;
+  }
+  if (a?.content) return a;
+  if (b?.content) return b;
+  return null;
+}
+
+function writeHomepageBoth(file: HomepageFile) {
+  writeJson(HOMEPAGE_FILE, file);
   ensureDir(CMS_BACKUP_DIR);
   writeJson(HOMEPAGE_BACKUP_FILE, file);
 }
 
-/** Restore homepage.json from uploads backup when cms volume is empty or stale. */
-function initHomepageFile() {
+/**
+ * Resolve homepage from CMS volume + uploads backup.
+ * Always heals the older/missing copy so redeploys cannot resurrect seed defaults
+ * while a newer backup still exists.
+ */
+function resolveHomepageFile(): HomepageFile {
   ensureDir(CMS_DIR);
+  ensureDir(UPLOADS_DIR);
+  ensureDir(CMS_BACKUP_DIR);
 
-  const existing = readJson<HomepageFile>(HOMEPAGE_FILE);
+  const primary = readJson<HomepageFile>(HOMEPAGE_FILE);
+  const backup = readJson<HomepageFile>(HOMEPAGE_BACKUP_FILE);
+  const newest = pickNewestHomepage(primary, backup);
+
+  if (newest) {
+    const primaryTs = homepageFileTimestamp(primary);
+    const backupTs = homepageFileTimestamp(backup);
+    const newestTs = homepageFileTimestamp(newest);
+
+    if (!primary?.content || primaryTs < newestTs) {
+      writeJson(HOMEPAGE_FILE, newest);
+    }
+    if (!backup?.content || backupTs < newestTs) {
+      writeJson(HOMEPAGE_BACKUP_FILE, newest);
+    }
+    return newest;
+  }
+
+  const seedPath = getCmsSeedPath("homepage.json");
+  const seeded =
+    (seedPath ? readJson<HomepageFile>(seedPath) : null) ?? defaultHomepageFile();
+  writeHomepageBoth(seeded);
+  return seeded;
+}
+
+export function getHomepagePersistenceStatus() {
+  const resolved = resolveHomepageFile();
+  const primary = readJson<HomepageFile>(HOMEPAGE_FILE);
   const backup = readJson<HomepageFile>(HOMEPAGE_BACKUP_FILE);
 
-  if (existing && backup && homepageFileTimestamp(backup) > homepageFileTimestamp(existing)) {
-    writeJson(HOMEPAGE_FILE, backup);
-    return;
+  let writableCms = false;
+  let writableBackup = false;
+  try {
+    ensureDir(CMS_DIR);
+    fs.accessSync(CMS_DIR, fs.constants.W_OK);
+    writableCms = true;
+  } catch {
+    writableCms = false;
+  }
+  try {
+    ensureDir(CMS_BACKUP_DIR);
+    fs.accessSync(CMS_BACKUP_DIR, fs.constants.W_OK);
+    writableBackup = true;
+  } catch {
+    writableBackup = false;
   }
 
-  if (existing?.content) return;
-
-  if (backup?.content) {
-    writeJson(HOMEPAGE_FILE, backup);
-    return;
-  }
-
-  initCmsFile("homepage.json", HOMEPAGE_FILE, defaultHomepageFile);
+  return {
+    updatedAt: resolved.updatedAt,
+    cmsPath: HOMEPAGE_FILE,
+    backupPath: HOMEPAGE_BACKUP_FILE,
+    cmsUpdatedAt: primary?.updatedAt ?? null,
+    backupUpdatedAt: backup?.updatedAt ?? null,
+    writableCms,
+    writableBackup,
+    inSync:
+      Boolean(primary?.updatedAt) &&
+      Boolean(backup?.updatedAt) &&
+      primary?.updatedAt === backup?.updatedAt,
+  };
 }
 
 export function initCmsFiles() {
@@ -106,7 +171,9 @@ export function initCmsFiles() {
   ensureDir(UPLOADS_DIR);
   ensureDir(HOMEPAGE_UPLOADS_DIR);
   ensureDir(MEMORIALS_UPLOADS_DIR);
-  initHomepageFile();
+  ensureDir(CMS_BACKUP_DIR);
+  // Homepage: always reconcile cms + durable uploads backup before anything else.
+  resolveHomepageFile();
   initCmsFile("products.json", PRODUCTS_FILE, defaultProductsFile);
   initCmsFile("blog.json", BLOG_FILE, defaultBlogFile);
   initCmsFile("orders.json", ORDERS_FILE, defaultOrdersFile);
@@ -119,16 +186,18 @@ export function initCmsFiles() {
 }
 
 export function loadHomepageContent(): HomepageContent {
-  initCmsFiles();
-  const file = readJson<HomepageFile>(HOMEPAGE_FILE);
-  return file?.content ?? defaultHomepageFile().content;
+  return resolveHomepageFile().content;
+}
+
+export function loadHomepageFile(): HomepageFile {
+  return resolveHomepageFile();
 }
 
 export function saveHomepageContent(content: HomepageContent): HomepageFile {
-  initCmsFiles();
+  ensureDir(CMS_DIR);
+  ensureDir(CMS_BACKUP_DIR);
   const file: HomepageFile = { content, updatedAt: new Date().toISOString() };
-  writeJson(HOMEPAGE_FILE, file);
-  backupHomepageFile(file);
+  writeHomepageBoth(file);
   return file;
 }
 
@@ -143,7 +212,6 @@ function readHomepageSeedFile(): HomepageFile {
 
 /** Restore homepage image URLs from Git seed without changing copy text. */
 export function restoreHomepageImagesFromSeed(): HomepageContent {
-  initCmsFiles();
   const seed = readHomepageSeedFile().content;
   const current = loadHomepageContent();
 

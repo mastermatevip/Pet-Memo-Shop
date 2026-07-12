@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronDown, ChevronUp, Plus, Trash2 } from "lucide-react";
 import type { HomepageContent } from "@/lib/cms/types";
@@ -34,31 +34,69 @@ function emptyPersonalization(): PersonalizationOption {
 
 interface Props {
   initial: HomepageContent;
+  initialUpdatedAt?: string;
 }
 
-export function HomepageEditor({ initial }: Props) {
+export function HomepageEditor({ initial, initialUpdatedAt }: Props) {
   const router = useRouter();
   const [content, setContent] = useState(initial);
+  const [updatedAt, setUpdatedAt] = useState(initialUpdatedAt ?? "");
   const [status, setStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
+  const [dirty, setDirty] = useState(false);
+  const [restoreConfirm, setRestoreConfirm] = useState("");
+  const pendingPersist = useRef<HomepageContent | null>(null);
+
+  useEffect(() => {
+    setContent(initial);
+    setUpdatedAt(initialUpdatedAt ?? "");
+    setDirty(false);
+  }, [initial, initialUpdatedAt]);
+
+  useEffect(() => {
+    function onBeforeUnload(event: BeforeUnloadEvent) {
+      if (!dirty && status !== "saving") return;
+      event.preventDefault();
+      event.returnValue = "";
+    }
+    window.addEventListener("beforeunload", onBeforeUnload);
+    return () => window.removeEventListener("beforeunload", onBeforeUnload);
+  }, [dirty, status]);
+
+  useEffect(() => {
+    const pending = pendingPersist.current;
+    if (!pending) return;
+    pendingPersist.current = null;
+    void persistHomepage(pending);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- flush queued persist after commitContent
+  }, [content]);
 
   async function persistHomepage(next: HomepageContent) {
     setStatus("saving");
 
-    const res = await fetch("/api/admin/homepage", {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(next),
-    });
+    try {
+      const res = await fetch("/api/admin/homepage", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(next),
+      });
 
-    if (!res.ok) {
+      if (!res.ok) {
+        setStatus("error");
+        return false;
+      }
+
+      const data = (await res.json()) as { content?: HomepageContent; updatedAt?: string };
+      if (data.content) setContent(data.content);
+      if (data.updatedAt) setUpdatedAt(data.updatedAt);
+      setDirty(false);
+      setStatus("saved");
+      router.refresh();
+      setTimeout(() => setStatus("idle"), 2000);
+      return true;
+    } catch {
       setStatus("error");
       return false;
     }
-
-    setStatus("saved");
-    router.refresh();
-    setTimeout(() => setStatus("idle"), 2000);
-    return true;
   }
 
   function commitContent(
@@ -68,13 +106,15 @@ export function HomepageEditor({ initial }: Props) {
     setContent((current) => {
       const next = updater(current);
       if (options?.persist) {
-        void persistHomepage(next);
+        pendingPersist.current = next;
       }
       return next;
     });
+    if (!options?.persist) setDirty(true);
   }
 
   function updateHero(field: keyof HomepageContent["hero"], value: string) {
+    setDirty(true);
     setContent((c) => ({ ...c, hero: { ...c.hero, [field]: value } }));
   }
 
@@ -269,7 +309,8 @@ export function HomepageEditor({ initial }: Props) {
   }
 
   async function handleRestoreSeedImages() {
-    if (!window.confirm("将 Hero、NFC 区块、分类卡片的图片恢复为 Git 默认种子（/images/homepage/），文字内容不变。继续？")) {
+    if (restoreConfirm.trim().toUpperCase() !== "RESET") {
+      setStatus("error");
       return;
     }
 
@@ -280,8 +321,11 @@ export function HomepageEditor({ initial }: Props) {
       return;
     }
 
-    const data = (await res.json()) as { content: HomepageContent };
+    const data = (await res.json()) as { content: HomepageContent; updatedAt?: string };
     setContent(data.content);
+    if (data.updatedAt) setUpdatedAt(data.updatedAt);
+    setRestoreConfirm("");
+    setDirty(false);
     setStatus("saved");
     router.refresh();
     setTimeout(() => setStatus("idle"), 2000);
@@ -764,15 +808,40 @@ export function HomepageEditor({ initial }: Props) {
         >
           保存首页
         </button>
-        <button
-          type="button"
-          onClick={() => void handleRestoreSeedImages()}
-          className="rounded-full border border-border px-6 py-2.5 text-sm font-medium text-muted hover:text-text hover:bg-highlight"
-        >
-          恢复 Git 默认图片
-        </button>
         <SaveStatus status={status} />
+        {updatedAt ? (
+          <span className="text-xs text-light">
+            服务器保存于 {new Date(updatedAt).toLocaleString()}
+            {dirty ? " · 有未保存文字修改" : ""}
+          </span>
+        ) : null}
       </div>
+
+      <details className="rounded-xl border border-red-200 bg-red-50/40 p-4">
+        <summary className="cursor-pointer text-sm font-medium text-red-800">
+          危险操作：恢复 Git 默认图片
+        </summary>
+        <p className="mt-3 text-sm text-red-900/80 leading-relaxed">
+          会把 Hero、NFC、分类图片改回仓库默认路径（<code>/images/homepage/</code>），并同时覆盖 CMS
+          与 backups。日常改图请用「从本地上传」，不要点这里。
+        </p>
+        <div className="mt-3 flex flex-col sm:flex-row gap-3 sm:items-center">
+          <input
+            className={adminInputClass}
+            value={restoreConfirm}
+            onChange={(e) => setRestoreConfirm(e.target.value)}
+            placeholder='输入 RESET 确认'
+          />
+          <button
+            type="button"
+            onClick={() => void handleRestoreSeedImages()}
+            disabled={restoreConfirm.trim().toUpperCase() !== "RESET" || status === "saving"}
+            className="rounded-full border border-red-300 px-6 py-2.5 text-sm font-medium text-red-800 hover:bg-red-100 disabled:opacity-40"
+          >
+            确认恢复默认图片
+          </button>
+        </div>
+      </details>
     </form>
   );
 }
