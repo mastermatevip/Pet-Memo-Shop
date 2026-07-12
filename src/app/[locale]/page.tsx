@@ -3,8 +3,10 @@ import { buildMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 
-/** Always read live CMS — homepage content must not be ISR-cached for an hour. */
+/** Always read live CMS — homepage content must not be ISR-cached. */
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
+export const fetchCache = "force-no-store";
 
 interface Props {
   params: Promise<{ locale: string }>;

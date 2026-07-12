@@ -60,6 +60,25 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // Default-locale homepage must never be CDN/browser cached after CMS edits
+        source: "/",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "private, no-cache, no-store, max-age=0, must-revalidate",
+          },
+        ],
+      },
+      {
+        source: "/(en|de|es|fr|zh)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "private, no-cache, no-store, max-age=0, must-revalidate",
+          },
+        ],
+      },
+      {
         source: "/_next/static/(.*)",
         headers: [
           {

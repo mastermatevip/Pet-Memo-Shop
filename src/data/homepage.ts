@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from "next/cache";
 import { loadHomepageContent } from "@/lib/cms/store";
 import type { HomepageContent } from "@/lib/cms/types";
 
@@ -10,5 +11,6 @@ export {
 } from "@/data/homepage.static";
 
 export function getHomepageContent(): HomepageContent {
+  noStore();
   return loadHomepageContent();
 }

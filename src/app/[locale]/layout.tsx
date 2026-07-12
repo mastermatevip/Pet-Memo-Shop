@@ -14,6 +14,9 @@ interface Props {
   params: Promise<{ locale: string }>;
 }
 
+/** CMS-driven storefront must not be statically cached per locale. */
+export const dynamic = "force-dynamic";
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
