@@ -130,6 +130,20 @@ export async function Footer() {
             &copy; {new Date().getFullYear()} {BRAND.name}. {t("copyright")}
           </p>
         </div>
+
+        <div className="mt-6 pt-4 border-t border-footer-border text-center">
+          <p className="text-footer-muted text-sm">
+            {t("friendLinks")}:{" "}
+            <a
+              href="https://www.showmysites.com"
+              target="_blank"
+              rel="noopener"
+              className="text-footer-text hover:text-gold transition-colors"
+            >
+              ShowMySites
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
