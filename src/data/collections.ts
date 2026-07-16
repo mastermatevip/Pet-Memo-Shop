@@ -32,9 +32,9 @@ export const collections: Collection[] = [
       "Discover personalized pet memorial gifts and unique pet memorial gifts created to honor the bond you shared with your beloved dog, cat, or companion. Each keepsake can be customized with photos, names, dates, and loving messages.",
     image: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200&h=600&fit=crop",
     imageAlt: "personalized pet memorial gifts collection with photo frames and keepsakes",
-    metaTitle: "Pet Memorial Gifts | Personalized Keepsakes for Dogs & Cats",
+    metaTitle: "Personalized Pet Memorial Gifts – Free Design Proof",
     metaDescription:
-      "Shop personalized pet memorial gifts and unique pet memorial gifts. Custom photo frames, plaques, jewelry, urns, and NFC digital keepsakes with proof before production.",
+      "Honor your pet with personalized memorial gifts — photo frames, jewelry, urns & NFC digital tribute pages. Free design proof before production. Shop thoughtful keepsakes today.",
     relatedSlugs: ["dog-memorial-gifts", "cat-memorial-gifts", "memorial-gift-boxes", "nfc-memorial-cards"],
     faqs: defaultFaqs("Pet Memorial Gifts"),
     seoSections: {
@@ -57,9 +57,9 @@ export const collections: Collection[] = [
       "Honor the loyal spirit of your beloved dog with personalized dog pet memorial gifts and pet memorials for dogs. From engraved frames to NFC memory cards, each piece is created to keep their story close.",
     image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&h=600&fit=crop",
     imageAlt: "dog memorial gifts including personalized photo frame and keepsake box",
-    metaTitle: "Dog Memorial Gifts | Pet Memorials for Dogs",
+    metaTitle: "Dog Memorial Gifts Personalized with Name & Photo",
     metaDescription:
-      "Shop dog pet memorial gifts and pet memorials for dogs. Personalized frames, urns, jewelry, keepsake boxes, and NFC cards to honor your beloved dog.",
+      "Remember your dog with personalized memorial gifts — engraved frames, urns, jewelry & NFC memory cards. Free design proof. Meaningful tributes that keep their story close.",
     relatedSlugs: ["pet-memorial-gifts", "pet-memorial-frames", "nfc-memorial-cards", "pet-urns"],
     faqs: defaultFaqs("Dog Memorial Gifts"),
     seoSections: {
