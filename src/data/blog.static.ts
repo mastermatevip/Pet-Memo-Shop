@@ -1010,4 +1010,306 @@ Browse [pet memorial gifts](/collections/pet-memorial-gifts) for frames, plaques
 Your companion's story deserves a place in your daily life. A memory corner helps keep that story close.
     `,
   }),
+  createBlogPost({
+    slug: "dog-memorial-gifts-ideas-to-honor-a-beloved-dog",
+    title: "Dog Memorial Gifts: Thoughtful Ideas to Honor a Beloved Dog",
+    metaTitle: "Dog Memorial Gifts Ideas to Honor a Beloved Dog",
+    metaDescription:
+      "Explore dog memorial gifts ideas including personalized frames, keepsake boxes, urns, jewelry, and NFC cards. Find a meaningful tribute for a beloved dog.",
+    excerpt:
+      "Looking for dog memorial gifts that feel personal? These ideas help you honor a beloved dog with a keepsake that keeps their story close.",
+    category: "Dog Memorials",
+    categorySlug: "dog-memorials",
+    publishedAt: "2026-07-16",
+    readTime: 11,
+    status: "draft",
+    relatedProductSlugs: [
+      "dog-memorial-keepsake-box",
+      "personalized-pet-memorial-frame",
+      "nfc-pet-memorial-card",
+      "wooden-pet-cremation-urn",
+    ],
+    relatedCollectionSlugs: ["dog-memorial-gifts", "pet-memorial-gifts", "nfc-memorial-cards"],
+    faqs: [
+      {
+        question: "What are the best dog memorial gifts?",
+        answer:
+          "Personalized photo frames, keepsake boxes for collars and tags, urns, engraved jewelry, and NFC memorial cards are among the best dog memorial gifts. Choose the option that matches how you want to remember them day to day.",
+      },
+      {
+        question: "Can dog memorial gifts be personalized with a photo?",
+        answer:
+          "Yes. Most dog memorial gifts can include your dog's photo, name, and dates. We send a free design proof before production so you can approve every detail.",
+      },
+      {
+        question: "What dog memorial gift is best for a grieving friend?",
+        answer:
+          "A personalized frame, keepsake box, or sympathy gift box is usually the safest choice. If your friend loves sharing memories, an NFC memorial card that opens a digital tribute page is also deeply meaningful.",
+      },
+    ],
+    content: `
+## Why Dog Memorial Gifts Matter
+
+Dogs leave a loyalty that is hard to put into words. The right dog memorial gifts do not try to "fix" grief — they give that bond a quiet, lasting place at home, on a necklace, or in a shareable digital tribute.
+
+If you are shopping for yourself or for someone else, start with one clear intention: a home display, a wearable keepsake, or a digital memorial page.
+
+## Personalized Dog Memorial Gift Ideas
+
+### 1. Personalized Photo Frame
+A [personalized pet memorial frame](/products/personalized-pet-memorial-frame) engraved with your dog's name and dates turns a favorite portrait into a warm daily reminder.
+
+### 2. Dog Memorial Keepsake Box
+The [dog memorial keepsake box](/products/dog-memorial-keepsake-box) is made for collars, tags, and small mementos. Many families place it beside a frame to create a simple memory shelf.
+
+### 3. Cremation Urn with Nameplate
+If you are keeping ashes at home, a [wooden pet urn](/products/wooden-pet-cremation-urn) or [ceramic pet urn](/products/ceramic-pet-cremation-urn) with a personalized nameplate offers a dignified resting place.
+
+### 4. Engraved Memorial Jewelry
+An [engraved pet memorial pendant](/products/engraved-pet-memorial-pendant) or [photo locket](/products/pet-memorial-photo-locket) keeps their memory close throughout the day.
+
+### 5. NFC Memorial Card or Tag
+An [NFC pet memorial card](/products/nfc-pet-memorial-card) or [carbon fiber NFC memorial tag](/products/carbon-fiber-nfc-memorial-tag) opens a digital page with photos, videos, and family messages — a modern option that still feels personal.
+
+## How to Choose Dog Memorial Gifts
+
+| Goal | Best starting gift | Why it works |
+|------|--------------------|--------------|
+| Home tribute | Personalized frame | Easy to display and personalize |
+| Store collar & tags | Keepsake box | Practical and emotional |
+| Ashes at home | Personalized urn | Dignified and lasting |
+| Daily closeness | Jewelry or locket | Wearable remembrance |
+| Share with family | NFC card / digital page | Photos and stories in one place |
+
+## Personalization Tips That Make the Gift Feel Like Them
+
+- Choose one clear, well-lit photo
+- Include their name and the dates that matter most to you
+- Keep engraved messages short and sincere
+- Approve the free design proof before production
+
+These small details are what turn generic pet gifts into true dog memorial gifts.
+
+## Dog Memorial Gifts for a Grieving Friend
+
+When buying for someone else, choose gifts that feel gentle rather than overwhelming:
+
+1. Personalized frame with space for their favorite photo
+2. Sympathy gift box with a candle and card
+3. NFC memorial card they can build over time
+
+Avoid pressure. A simple note — "Thinking of you and [dog's name]" — often means as much as the gift itself.
+
+## Browse Dog Memorial Gifts
+
+Explore our full [dog memorial gifts](/collections/dog-memorial-gifts) collection for personalized frames, urns, jewelry, keepsake boxes, and NFC tributes. You can also browse all [personalized pet memorial gifts](/collections/pet-memorial-gifts) if you want a wider set of options.
+
+A meaningful tribute does not have to be complicated. It only needs to feel like them.
+    `,
+  }),
+  createBlogPost({
+    slug: "personalized-pet-memorial-gifts-buying-guide",
+    title: "Personalized Pet Memorial Gifts: A Complete Buying Guide",
+    metaTitle: "Personalized Pet Memorial Gifts Buying Guide",
+    metaDescription:
+      "Learn how to choose personalized pet memorial gifts with photo, name, and dates. Compare frames, jewelry, urns, gift boxes, and NFC digital keepsakes.",
+    excerpt:
+      "Not sure which personalized pet memorial gift is right? This buying guide helps you choose based on display style, personalization, and who the gift is for.",
+    category: "Personalized Gift Guides",
+    categorySlug: "personalized-gift-guides",
+    publishedAt: "2026-07-16",
+    readTime: 12,
+    status: "draft",
+    relatedProductSlugs: [
+      "personalized-pet-memorial-frame",
+      "memorial-sympathy-gift-box",
+      "carbon-fiber-nfc-memorial-tag",
+      "engraved-pet-memorial-pendant",
+    ],
+    relatedCollectionSlugs: ["pet-memorial-gifts", "dog-memorial-gifts", "cat-memorial-gifts"],
+    faqs: [
+      {
+        question: "What makes a pet memorial gift personalized?",
+        answer:
+          "A personalized pet memorial gift usually includes your pet's name, photo, dates, or a short message. The best options also include a free design proof before production.",
+      },
+      {
+        question: "What are the most popular personalized pet memorial gifts?",
+        answer:
+          "Photo frames, engraved jewelry, urns, memorial plaques, sympathy gift boxes, and NFC digital keepsakes are among the most popular personalized pet memorial gifts.",
+      },
+      {
+        question: "How long do personalized pet memorial gifts take?",
+        answer:
+          "After you approve the design proof, most personalized pet memorial gifts take about 3–5 business days to produce, plus shipping time.",
+      },
+    ],
+    content: `
+## What Are Personalized Pet Memorial Gifts?
+
+Personalized pet memorial gifts are custom keepsakes created to honor a beloved companion. Unlike generic sympathy items, they usually include a name, photo, dates, or story — so the tribute feels like your pet, not a one-size-fits-all product.
+
+Families choose personalized pet memorial gifts when they want a lasting home display, a wearable reminder, a sympathy gift for someone grieving, or a digital page relatives can visit anytime.
+
+## Compare Popular Personalized Pet Memorial Gifts
+
+| Gift type | Best for | Personalization | Display |
+|-----------|----------|-----------------|---------|
+| Photo frame | Daily home tribute | Name, dates, photo | Shelf / bedside |
+| Jewelry | Everyday closeness | Name, paw print, photo | Worn |
+| Urn | Ashes at home | Nameplate, dates, photo | Mantle / shelf |
+| Gift box | Sympathy gifting | Mixed keepsakes + card | Gift ready |
+| NFC card / tag | Photos + videos + messages | Digital memorial page | Beside frame or urn |
+
+## Step-by-Step Buying Guide
+
+### 1. Decide who the gift is for
+Buying for yourself? Choose the piece you will actually live with. Buying for a friend? Prefer frames, gift boxes, or NFC cards that feel supportive without being overly personal.
+
+### 2. Choose a display style
+Ask one simple question: do you want something to see, wear, or share?
+
+- See: frame, plaque, urn, keepsake box
+- Wear: pendant or photo locket
+- Share: NFC memorial card or digital memorial page
+
+### 3. Gather your personalization details
+Have ready:
+
+- One clear favorite photo
+- Pet's name
+- Birth and memorial dates (if you want them engraved)
+- A short message (optional)
+
+### 4. Approve a design proof
+Quality personalized pet memorial gifts should include a free design proof. Review spelling, dates, crop, and layout before production.
+
+### 5. Pair physical and digital when it feels right
+Many families keep a frame or urn at home and add an [NFC pet memorial card](/products/nfc-pet-memorial-card) or [carbon fiber NFC memorial tag](/products/carbon-fiber-nfc-memorial-tag) so photos and videos stay easy to revisit.
+
+## Best Starting Points by Situation
+
+### For your own pet
+Start with a [personalized pet memorial frame](/products/personalized-pet-memorial-frame) or a memorial jewelry piece you will wear often.
+
+### For a grieving friend
+A [memorial sympathy gift box](/products/memorial-sympathy-gift-box) is thoughtful and ready to give.
+
+### For dogs specifically
+Browse [dog memorial gifts](/collections/dog-memorial-gifts) for keepsake boxes, frames, urns, and NFC options.
+
+### For cats specifically
+Browse [cat memorial gifts](/collections/cat-memorial-gifts) for gentle frames, ornaments, jewelry, and digital keepsakes.
+
+## Common Mistakes to Avoid
+
+- Choosing a gift only because it is trendy, not because it fits the person
+- Using a low-quality or heavily filtered photo for engraving or printing
+- Skipping the design proof
+- Overfilling the engraving with a long message that becomes hard to read
+
+## Shop Personalized Pet Memorial Gifts
+
+Explore our full collection of [personalized pet memorial gifts](/collections/pet-memorial-gifts) — frames, jewelry, urns, gift boxes, and NFC digital keepsakes with free design proof before production.
+
+The best personalized tribute is the one that feels true to the bond you shared.
+    `,
+  }),
+  createBlogPost({
+    slug: "cat-memorial-gifts-gentle-ways-to-remember",
+    title: "Cat Memorial Gifts: Gentle Ways to Remember a Beloved Cat",
+    metaTitle: "Cat Memorial Gifts Ideas for a Beloved Cat",
+    metaDescription:
+      "Discover cat memorial gifts ideas including photo ornaments, frames, jewelry, urns, and NFC keepsakes. Gentle personalized tributes for a beloved cat.",
+    excerpt:
+      "Cats leave a quiet, lasting presence. These cat memorial gifts help you honor that gentle companionship with a keepsake that feels soft, personal, and lasting.",
+    category: "Cat Memorials",
+    categorySlug: "cat-memorials",
+    publishedAt: "2026-07-16",
+    readTime: 10,
+    status: "draft",
+    relatedProductSlugs: [
+      "cat-memorial-photo-ornament",
+      "personalized-pet-memorial-frame",
+      "engraved-pet-memorial-pendant",
+      "nfc-pet-memorial-card",
+    ],
+    relatedCollectionSlugs: ["cat-memorial-gifts", "pet-memorial-gifts", "nfc-memorial-cards"],
+    faqs: [
+      {
+        question: "What are the best cat memorial gifts?",
+        answer:
+          "Photo ornaments, personalized frames, engraved jewelry, urns, gift boxes, and NFC memorial cards are among the best cat memorial gifts. Choose a gentle option that matches how you want to remember them.",
+      },
+      {
+        question: "Can cat memorial gifts include a photo?",
+        answer:
+          "Yes. Many cat memorial gifts can be personalized with your cat's photo, name, and dates. A free design proof helps you approve the final look before production.",
+      },
+      {
+        question: "What cat memorial gift is good for a friend?",
+        answer:
+          "A personalized frame, photo ornament, or sympathy gift box is a thoughtful cat memorial gift for a grieving friend. An NFC card is also meaningful if they want a place to gather photos and stories.",
+      },
+    ],
+    content: `
+## Gentle Cat Memorial Gifts That Feel Personal
+
+Cats often leave a quieter kind of absence — the empty windowsill, the missing morning ritual, the soft presence that filled a room. The best cat memorial gifts honor that gentleness without feeling loud or impersonal.
+
+Whether you are creating a tribute at home or supporting a friend, start with a keepsake that feels calm, personal, and true to your cat.
+
+## Thoughtful Cat Memorial Gift Ideas
+
+### 1. Cat Memorial Photo Ornament
+The [cat memorial photo ornament](/products/cat-memorial-photo-ornament) is a delicate way to display their portrait year-round — soft, simple, and easy to place in a favorite corner.
+
+### 2. Personalized Photo Frame
+A [personalized pet memorial frame](/products/personalized-pet-memorial-frame) engraved with their name and dates creates a warm home tribute on a shelf or bedside table.
+
+### 3. Engraved Pendant or Photo Locket
+An [engraved pet memorial pendant](/products/engraved-pet-memorial-pendant) or [photo locket](/products/pet-memorial-photo-locket) keeps their memory close in a private, wearable way.
+
+### 4. Cremation Urn
+For families keeping ashes at home, a [ceramic pet urn](/products/ceramic-pet-cremation-urn) or [wooden pet urn](/products/wooden-pet-cremation-urn) with a personalized nameplate offers a dignified resting place.
+
+### 5. NFC Memorial Card
+An [NFC pet memorial card](/products/nfc-pet-memorial-card) opens a digital page with photos, videos, and messages — ideal if family members also want a place to visit your cat's story.
+
+## How to Choose Cat Memorial Gifts
+
+| If you want... | Start with | Why |
+|----------------|------------|-----|
+| A soft home display | Photo ornament or frame | Gentle and easy to live with |
+| Something wearable | Pendant or locket | Private daily remembrance |
+| A place for ashes | Personalized urn | Dignified and lasting |
+| A sympathy gift | Gift box or frame | Thoughtful without overstepping |
+| Shared family memories | NFC card / digital page | Photos and stories in one place |
+
+## Personalization Ideas for Cat Memorial Gifts
+
+- Use a clear photo that shows their face and expression
+- Include the name you called them every day
+- Add dates if they bring comfort
+- Keep engraved wording short — one line is often enough
+
+These details help cat memorial gifts feel intimate rather than generic.
+
+## Cat Memorial Gifts for Someone Who Is Grieving
+
+If you are shopping for a friend:
+
+1. Choose a frame, ornament, or gift box
+2. Include a short handwritten note
+3. Avoid pressure to "move on" or get another pet
+
+A simple message like "Holding you and [cat's name] in my thoughts" is often perfect.
+
+## Browse Cat Memorial Gifts
+
+Explore our full [cat memorial gifts](/collections/cat-memorial-gifts) collection for personalized ornaments, frames, jewelry, urns, and NFC keepsakes. You can also browse all [personalized pet memorial gifts](/collections/pet-memorial-gifts) for a wider range of tributes.
+
+The most meaningful cat memorial gift is the one that quietly feels like them.
+    `,
+  }),
 ];
