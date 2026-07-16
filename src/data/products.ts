@@ -38,6 +38,15 @@ export function getProductsByCollection(collectionSlug: string): Product[] {
       "memorial-gift-boxes",
       "pet-memorial-plaques",
     ],
+    "cat-memorial-gifts": [
+      "cat-memorial-gifts",
+      "pet-memorial-frames",
+      "pet-memorial-jewelry",
+      "pet-urns",
+      "nfc-memorial-cards",
+      "memorial-gift-boxes",
+      "pet-memorial-plaques",
+    ],
   };
 
   const sources = hubSources[collectionSlug];

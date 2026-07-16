@@ -124,8 +124,8 @@
         "memorial-sympathy-gift-box"
       ],
       "relatedCollectionSlugs": [
+        "cat-memorial-gifts",
         "pet-memorial-gifts",
-        "pet-loss-sympathy-gifts",
         "nfc-memorial-cards"
       ],
       "slug": "best-cat-memorial-gifts-to-remember-a-beloved-cat",
@@ -135,7 +135,7 @@
       "excerpt": "Cats leave a quiet, lasting presence in our hearts. These memorial gifts help honor that gentle companionship.",
       "category": "Cat Memorials",
       "categorySlug": "cat-memorials",
-      "content": "\n## Remembering a Beloved Cat\n\nCats offer a unique kind of companionship —quiet, warm, and deeply personal. A cat memorial gift should reflect that gentle spirit.\n\n## Top Cat Memorial Gift Ideas\n\n### Cat Memorial Photo Ornament\nThe [cat memorial photo ornament](/products/cat-memorial-photo-ornament) features their portrait in a delicate ceramic form, perfect for year-round display.\n\n### Engraved Pendant\nAn [engraved pet memorial pendant](/products/engraved-pet-memorial-pendant) with the cat's name and a paw print is a wearable tribute.\n\n### Digital Memorial Page\nCreate a [digital pet memorial page](/products/digital-memorial-page-standalone) where family can share photos and stories of their beloved cat.\n\nBrowse our [cat memorial gifts](/collections/cat-memorial-gifts) for more ideas.\n    ",
+      "content": "\n## Remembering a Beloved Cat\n\nCats offer a unique kind of companionship —quiet, warm, and deeply personal. A cat memorial gift should reflect that gentle spirit.\n\n## Top Cat Memorial Gift Ideas\n\n### Cat Memorial Photo Ornament\nThe [cat memorial photo ornament](/products/cat-memorial-photo-ornament) features their portrait in a delicate ceramic form, perfect for year-round display.\n\n### Engraved Pendant\nAn [engraved pet memorial pendant](/products/engraved-pet-memorial-pendant) with the cat's name and a paw print is a wearable tribute.\n\n### Digital Memorial Page\nCreate a [digital pet memorial page](/products/digital-memorial-page-standalone) where family can share photos and stories of their beloved cat.\n\nBrowse our full [cat memorial gifts](/collections/cat-memorial-gifts) collection for personalized frames, ornaments, jewelry, urns, and NFC keepsakes.\n    ",
       "status": "published",
       "viewCount": 0
     },
@@ -160,7 +160,7 @@
       "relatedCollectionSlugs": [
         "pet-memorial-gifts",
         "dog-memorial-gifts",
-        "nfc-memorial-cards"
+        "cat-memorial-gifts"
       ],
       "slug": "how-to-choose-a-pet-memorial-gift",
       "title": "How to Choose a Pet Memorial Gift",
@@ -169,7 +169,7 @@
       "excerpt": "Not sure which memorial gift is right? This guide helps you choose based on relationship, preference, and type of tribute.",
       "category": "Pet Memorial Gift Ideas",
       "categorySlug": "pet-memorial-gift-ideas",
-      "content": "\n## Choosing the Right Memorial Gift\n\nThe best pet memorial gift depends on who it's for, how they prefer to remember their companion, and where they want to display the tribute.\n\n## By Type of Tribute\n\n| Gift Type | Best For | Display |\n|-----------|----------|---------|\n| Photo Frame | Home tribute | Shelf, bedside |\n| Jewelry | Daily remembrance | Worn close |\n| Urn | Cremation ashes | Shelf, mantle |\n| NFC Card | Digital + physical | Beside urn or frame |\n| Gift Box | Sympathy gifting | Gift giving |\n\n## Personalization Matters\n\nMost of our [personalized pet memorial gifts](/collections/pet-memorial-gifts) can be customized with name, photo, dates, and custom messages. We always send a design proof before production. If you are shopping for a dog specifically, also browse [dog memorial gifts](/collections/dog-memorial-gifts).\n    ",
+      "content": "\n## Choosing the Right Memorial Gift\n\nThe best pet memorial gift depends on who it's for, how they prefer to remember their companion, and where they want to display the tribute.\n\n## By Type of Tribute\n\n| Gift Type | Best For | Display |\n|-----------|----------|---------|\n| Photo Frame | Home tribute | Shelf, bedside |\n| Jewelry | Daily remembrance | Worn close |\n| Urn | Cremation ashes | Shelf, mantle |\n| NFC Card | Digital + physical | Beside urn or frame |\n| Gift Box | Sympathy gifting | Gift giving |\n\n## Personalization Matters\n\nMost of our [personalized pet memorial gifts](/collections/pet-memorial-gifts) can be customized with name, photo, dates, and custom messages. We always send a design proof before production. If you are shopping for a dog, browse [dog memorial gifts](/collections/dog-memorial-gifts); for cats, see [cat memorial gifts](/collections/cat-memorial-gifts).\n    ",
       "status": "published",
       "viewCount": 0
     },
@@ -441,7 +441,7 @@
       "excerpt": "From personalized keepsakes to digital memorial pages, here are meaningful ways to honor your beloved companion.",
       "category": "Pet Loss Support",
       "categorySlug": "pet-loss-support",
-      "content": "\n## Ways to Remember Your Companion\n\nThere is no single right way to remember a beloved pet. Here are gentle ideas that many families find meaningful.\n\n## At Home\n\n- Display a [personalized photo frame](/products/personalized-pet-memorial-frame)\n- Create a memory shelf with their collar and tags in a [keepsake box](/products/dog-memorial-keepsake-box)\n- Light a [remembrance candle](/products/pet-loss-candle-set)\n\n## Digital\n\n- Create a [digital memorial page](/products/digital-memorial-page-standalone)\n- Use an [NFC memorial card](/products/nfc-pet-memorial-card) beside their urn or frame\n\n## Wearable\n\n- Wear an [engraved pendant](/products/engraved-pet-memorial-pendant) or [photo locket](/products/pet-memorial-photo-locket)\n\nExplore [dog memorial gifts](/collections/dog-memorial-gifts) and [personalized pet memorial gifts](/collections/pet-memorial-gifts).\n    ",
+      "content": "\n## Ways to Remember Your Companion\n\nThere is no single right way to remember a beloved pet. Here are gentle ideas that many families find meaningful.\n\n## At Home\n\n- Display a [personalized photo frame](/products/personalized-pet-memorial-frame)\n- Create a memory shelf with their collar and tags in a [keepsake box](/products/dog-memorial-keepsake-box)\n- Light a [remembrance candle](/products/pet-loss-candle-set)\n\n## Digital\n\n- Create a [digital memorial page](/products/digital-memorial-page-standalone)\n- Use an [NFC memorial card](/products/nfc-pet-memorial-card) beside their urn or frame\n\n## Wearable\n\n- Wear an [engraved pendant](/products/engraved-pet-memorial-pendant) or [photo locket](/products/pet-memorial-photo-locket)\n\nExplore [dog memorial gifts](/collections/dog-memorial-gifts), [cat memorial gifts](/collections/cat-memorial-gifts), and [personalized pet memorial gifts](/collections/pet-memorial-gifts).\n    ",
       "status": "published",
       "viewCount": 0
     },
@@ -673,5 +673,5 @@
       "status": "draft"
     }
   ],
-  "updatedAt": "2026-07-16T03:12:45.195Z"
+  "updatedAt": "2026-07-16T03:17:37.546Z"
 }

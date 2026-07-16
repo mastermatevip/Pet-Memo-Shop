@@ -136,25 +136,56 @@ export const collections: Collection[] = [
   {
     slug: "cat-memorial-gifts",
     name: "Cat Memorial Gifts",
+    h1: "Cat Memorial Gifts Personalized for Beloved Cats",
     description: "Gentle keepsakes to remember a beloved cat.",
     intro:
-      "Celebrate the quiet companionship of your beloved cat with personalized memorial gifts. Each piece is designed with warmth and respect to honor their unique spirit.",
+      "Browse cat memorial gifts made to honor the quiet companionship of a beloved cat. From personalized photo frames and ornaments to jewelry, urns, gift boxes, and NFC memory cards, each tribute can include your cat's name, photo, and dates — with a free design proof before production so every detail feels gentle and personal.",
     image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200&h=600&fit=crop",
     imageAlt: "cat memorial gifts with personalized photo frame and engraved plaque",
-    metaTitle: "Cat Memorial Gifts | Personalized Cat Keepsakes",
+    metaTitle: "Cat Memorial Gifts Personalized with Name & Photo",
     metaDescription:
-      "Shop personalized cat memorial gifts. Photo frames, jewelry, urns, and digital keepsakes to remember your beloved cat.",
+      "Remember your cat with personalized memorial gifts — photo frames, ornaments, jewelry, urns & NFC keepsakes. Free design proof. Gentle tributes for a beloved cat.",
     relatedSlugs: ["pet-memorial-gifts", "pet-memorial-jewelry", "pet-urns", "memorial-gift-boxes"],
-    faqs: defaultFaqs("Cat Memorial Gifts"),
+    faqs: [
+      {
+        question: "What are the best cat memorial gifts?",
+        answer:
+          "The best cat memorial gifts feel personal and gentle: a photo frame or ornament with your cat's portrait, engraved jewelry, an urn, a sympathy gift box, or an NFC card that opens a digital memorial page. Choose the piece that matches how you want to remember them day to day.",
+      },
+      {
+        question: "Can I personalize cat memorial gifts with my cat's photo?",
+        answer:
+          "Yes. Most cat memorial gifts can be personalized with your cat's photo, name, and memorial dates. We send a free design proof for approval before production.",
+      },
+      {
+        question: "What cat memorial gift should I give a grieving friend?",
+        answer:
+          "A personalized frame, photo ornament, or memorial gift box is a thoughtful cat memorial gift for a grieving friend. If they like sharing memories, an NFC memorial card that opens a digital tribute page is also deeply meaningful.",
+      },
+      {
+        question: "Do you offer cat memorial gifts for ashes?",
+        answer:
+          "Yes. Our urns and many home tributes work beautifully as cat memorial gifts when you want a dignified place for ashes alongside a photo or engraved plaque.",
+      },
+      {
+        question: "How long does it take to receive a personalized cat memorial gift?",
+        answer:
+          "After design-proof approval, most personalized cat memorial gifts take about 3–5 business days to produce, plus shipping time to your address.",
+      },
+    ],
     seoSections: {
       whatAre:
-        "Cat memorial gifts are personalized keepsakes created to honor a beloved cat. They offer a gentle way to remember the comfort and companionship they brought.",
+        "Cat memorial gifts are personalized keepsakes created to honor a beloved cat — from photo frames and ornaments to jewelry, urns, plaques, gift boxes, and NFC cards that open an online memorial. They offer a gentle way to keep a cat's quiet companionship close at home, on a necklace, or in a shareable digital page.",
       whenToChoose:
-        "Choose a cat memorial gift when creating a home tribute, marking a remembrance date, or sending a thoughtful sympathy gift.",
+        "Choose cat memorial gifts when remembering your own companion, marking a birthday or passing anniversary, creating a soft memory corner at home, or offering comfort to a friend who lost their cat. They are especially helpful when you want something more personal than a generic sympathy card.",
       personalization:
-        "Add your cat's name, photo, memorial date, custom message, and optional NFC digital memorial page with photos and stories.",
+        "Personalize cat memorial gifts with your cat's name, photo, birth and memorial dates, a short message, and gift packaging. NFC cat memorial keepsakes can also link to a digital page with photos, videos, and family messages. Every personalized order includes a free design proof.",
       whyChoose:
-        "Our cat memorial gifts are designed with soft, elegant aesthetics and meaningful personalization options that families cherish.",
+        "Our cat memorial gifts combine soft, elegant design with meaningful personalization, so the tribute feels like your cat — not a generic product. Families value the free proof step, gentle aesthetics, and the option to add an NFC digital memorial alongside a physical keepsake.",
+      popularTypes:
+        "Popular cat memorial gifts include personalized photo frames, cat memorial photo ornaments, engraved jewelry, wooden or ceramic urns, memorial plaques, sympathy gift boxes, and NFC memorial cards. Many families pair a home display piece with a digital memorial page.",
+      buyingGuide:
+        "When shopping for cat memorial gifts: start with one clear favorite photo, decide between a home keepsake or wearable tribute, and choose whether you also want a digital memorial page. If you are gifting for someone else, a frame, ornament, or gift box is usually safest. Approve the free design proof, then we craft the piece and ship it ready to display or gift.",
     },
   },
   {

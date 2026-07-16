@@ -154,6 +154,7 @@ Explore our full [dog memorial gifts](/collections/dog-memorial-gifts) collectio
       "Cats leave a quiet, lasting presence in our hearts. These memorial gifts help honor that gentle companionship.",
     category: "Cat Memorials",
     categorySlug: "cat-memorials",
+    relatedCollectionSlugs: ["cat-memorial-gifts", "pet-memorial-gifts", "nfc-memorial-cards"],
     content: `
 ## Remembering a Beloved Cat
 
@@ -170,7 +171,7 @@ An [engraved pet memorial pendant](/products/engraved-pet-memorial-pendant) with
 ### Digital Memorial Page
 Create a [digital pet memorial page](/products/digital-memorial-page-standalone) where family can share photos and stories of their beloved cat.
 
-Browse our [cat memorial gifts](/collections/cat-memorial-gifts) for more ideas.
+Browse our full [cat memorial gifts](/collections/cat-memorial-gifts) collection for personalized frames, ornaments, jewelry, urns, and NFC keepsakes.
     `,
   }),
   createBlogPost({
@@ -183,7 +184,7 @@ Browse our [cat memorial gifts](/collections/cat-memorial-gifts) for more ideas.
       "Not sure which memorial gift is right? This guide helps you choose based on relationship, preference, and type of tribute.",
     category: "Pet Memorial Gift Ideas",
     categorySlug: "pet-memorial-gift-ideas",
-    relatedCollectionSlugs: ["pet-memorial-gifts", "dog-memorial-gifts", "nfc-memorial-cards"],
+    relatedCollectionSlugs: ["pet-memorial-gifts", "dog-memorial-gifts", "cat-memorial-gifts"],
     content: `
 ## Choosing the Right Memorial Gift
 
@@ -201,7 +202,7 @@ The best pet memorial gift depends on who it's for, how they prefer to remember 
 
 ## Personalization Matters
 
-Most of our [personalized pet memorial gifts](/collections/pet-memorial-gifts) can be customized with name, photo, dates, and custom messages. We always send a design proof before production. If you are shopping for a dog specifically, also browse [dog memorial gifts](/collections/dog-memorial-gifts).
+Most of our [personalized pet memorial gifts](/collections/pet-memorial-gifts) can be customized with name, photo, dates, and custom messages. We always send a design proof before production. If you are shopping for a dog, browse [dog memorial gifts](/collections/dog-memorial-gifts); for cats, see [cat memorial gifts](/collections/cat-memorial-gifts).
     `,
   }),
   createBlogPost({
@@ -431,7 +432,7 @@ There is no single right way to remember a beloved pet. Here are gentle ideas th
 
 - Wear an [engraved pendant](/products/engraved-pet-memorial-pendant) or [photo locket](/products/pet-memorial-photo-locket)
 
-Explore [dog memorial gifts](/collections/dog-memorial-gifts) and [personalized pet memorial gifts](/collections/pet-memorial-gifts).
+Explore [dog memorial gifts](/collections/dog-memorial-gifts), [cat memorial gifts](/collections/cat-memorial-gifts), and [personalized pet memorial gifts](/collections/pet-memorial-gifts).
     `,
   }),
   createBlogPost({
