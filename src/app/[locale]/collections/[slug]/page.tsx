@@ -6,7 +6,7 @@ import { FAQSection } from "@/components/shared/FAQSection";
 import { buildMetadata } from "@/lib/seo";
 import { getCollectionBySlug, getAllCollectionSlugs } from "@/data/collections";
 import { getProductsByCollection } from "@/data/products";
-import { getLatestBlogPosts } from "@/data/blog";
+import { getBlogPostsForCollection } from "@/data/blog";
 import { localizeCollection, localizeProduct, loadContentBundle, getCollectionPageLabels } from "@/lib/localized-content";
 import { routing, type Locale } from "@/i18n/routing";
 
@@ -53,7 +53,16 @@ export default async function CollectionPage({ params }: Props) {
       return rel ? localizeCollection(rel, bundle) : undefined;
     })
     .filter(Boolean);
-  const blogPosts = getLatestBlogPosts(2);
+  const blogPosts = getBlogPostsForCollection(slug, 4);
+
+  const seoBlocks = [
+    { title: labels.whatAre, body: collection.seoSections.whatAre },
+    { title: labels.popularTypes, body: collection.seoSections.popularTypes },
+    { title: labels.whenToChoose, body: collection.seoSections.whenToChoose },
+    { title: labels.personalization, body: collection.seoSections.personalization },
+    { title: labels.buyingGuide, body: collection.seoSections.buyingGuide },
+    { title: labels.whyChoose, body: collection.seoSections.whyChoose },
+  ].filter((block) => Boolean(block.body));
 
   return (
     <>
@@ -91,22 +100,12 @@ export default async function CollectionPage({ params }: Props) {
         )}
 
         <div className="prose-memorial max-w-3xl mx-auto mb-16 space-y-8">
-          <div>
-            <h2>{labels.whatAre}</h2>
-            <p>{collection.seoSections.whatAre}</p>
-          </div>
-          <div>
-            <h2>{labels.whenToChoose}</h2>
-            <p>{collection.seoSections.whenToChoose}</p>
-          </div>
-          <div>
-            <h2>{labels.personalization}</h2>
-            <p>{collection.seoSections.personalization}</p>
-          </div>
-          <div>
-            <h2>{labels.whyChoose}</h2>
-            <p>{collection.seoSections.whyChoose}</p>
-          </div>
+          {seoBlocks.map((block) => (
+            <div key={block.title}>
+              <h2>{block.title}</h2>
+              <p>{block.body}</p>
+            </div>
+          ))}
         </div>
 
         <FAQSection faqs={collection.faqs} />

@@ -16,6 +16,10 @@ export interface Collection {
     whenToChoose: string;
     personalization: string;
     whyChoose: string;
+    /** Optional buying-guide block for hub collections */
+    buyingGuide?: string;
+    /** Optional popular gift-types block */
+    popularTypes?: string;
   };
 }
 

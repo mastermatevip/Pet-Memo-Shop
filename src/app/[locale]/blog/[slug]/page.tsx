@@ -7,6 +7,7 @@ import { BlogRelatedProducts } from "@/components/blog/BlogRelatedProducts";
 import { buildMetadata } from "@/lib/seo";
 import { getBlogPostBySlug, getLatestBlogPosts } from "@/data/blog";
 import { getRelatedProducts } from "@/data/products";
+import { getCollectionBySlug } from "@/data/collections";
 import { formatDate } from "@/lib/utils";
 import { getTranslations } from "next-intl/server";
 
@@ -131,6 +132,16 @@ export default async function BlogPostPage({ params }: Props) {
   const t = await getTranslations("common");
   const relatedPosts = getLatestBlogPosts(3).filter((p) => p.slug !== slug);
   const relatedProducts = getRelatedProducts(post.relatedProductSlugs);
+  const relatedCollections = (post.relatedCollectionSlugs || [])
+    .map((collectionSlug) => getCollectionBySlug(collectionSlug))
+    .filter(Boolean);
+  const primaryCollection = relatedCollections[0];
+  const ctaHref = primaryCollection
+    ? `/collections/${primaryCollection.slug}`
+    : "/collections/pet-memorial-gifts";
+  const ctaLabel = primaryCollection
+    ? `Shop ${primaryCollection.name}`
+    : "Shop Memorial Gifts";
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -169,11 +180,32 @@ export default async function BlogPostPage({ params }: Props) {
 
       <FAQSection faqs={post.faqs} />
 
+      {relatedCollections.length > 0 && (
+        <section className="mt-10">
+          <h2 className="font-serif text-xl text-text mb-4">Shop Related Collections</h2>
+          <div className="flex flex-wrap gap-3">
+            {relatedCollections.map((collection) =>
+              collection ? (
+                <Link
+                  key={collection.slug}
+                  href={`/collections/${collection.slug}`}
+                  className="px-4 py-2 rounded-xl bg-bg border border-border text-sm text-text hover:border-gold hover:text-gold transition-colors"
+                >
+                  {collection.name}
+                </Link>
+              ) : null
+            )}
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
       <div className="mt-12 p-8 bg-highlight rounded-2xl text-center">
         <h2 className="font-serif text-2xl text-text mb-3">Find the Perfect Memorial Gift</h2>
-        <p className="text-muted mb-6">Browse our collection of personalized pet memorial keepsakes.</p>
-        <Button href="/collections/pet-memorial-gifts">Shop Memorial Gifts</Button>
+        <p className="text-muted mb-6">
+          Browse personalized keepsakes chosen to match this guide.
+        </p>
+        <Button href={ctaHref}>{ctaLabel}</Button>
       </div>
 
       {/* Related Posts */}

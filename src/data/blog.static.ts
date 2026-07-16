@@ -122,6 +122,7 @@ The most meaningful gift is one that acknowledges the depth of their bond. Brows
       "When a friend loses their dog, a personalized memorial gift can offer comfort and honor the loyal bond they shared.",
     category: "Dog Memorials",
     categorySlug: "dog-memorials",
+    relatedCollectionSlugs: ["dog-memorial-gifts", "pet-memorial-gifts", "nfc-memorial-cards"],
     content: `
 ## Honoring a Beloved Dog
 
@@ -140,7 +141,7 @@ Share the dog's story digitally with an [NFC pet memorial card](/products/nfc-pe
 
 ## Browse More
 
-Explore our full [dog memorial gifts](/collections/dog-memorial-gifts) collection for more options.
+Explore our full [dog memorial gifts](/collections/dog-memorial-gifts) collection for personalized frames, urns, jewelry, and NFC keepsakes.
     `,
   }),
   createBlogPost({
@@ -182,6 +183,7 @@ Browse our [cat memorial gifts](/collections/cat-memorial-gifts) for more ideas.
       "Not sure which memorial gift is right? This guide helps you choose based on relationship, preference, and type of tribute.",
     category: "Pet Memorial Gift Ideas",
     categorySlug: "pet-memorial-gift-ideas",
+    relatedCollectionSlugs: ["pet-memorial-gifts", "dog-memorial-gifts", "nfc-memorial-cards"],
     content: `
 ## Choosing the Right Memorial Gift
 
@@ -199,7 +201,7 @@ The best pet memorial gift depends on who it's for, how they prefer to remember 
 
 ## Personalization Matters
 
-Most of our [pet memorial gifts](/collections/pet-memorial-gifts) can be personalized with name, photo, dates, and custom messages. We always send a design proof before production.
+Most of our [personalized pet memorial gifts](/collections/pet-memorial-gifts) can be customized with name, photo, dates, and custom messages. We always send a design proof before production. If you are shopping for a dog specifically, also browse [dog memorial gifts](/collections/dog-memorial-gifts).
     `,
   }),
   createBlogPost({
@@ -226,7 +228,7 @@ A pet memorial keepsake is any personalized item created to honor the memory of 
 - **NFC cards** —Physical cards that open digital memorial pages
 - **Gift boxes** —Curated sympathy gift sets
 
-Explore our full range of [pet memorial gifts](/collections/pet-memorial-gifts).
+Explore our full range of [personalized pet memorial gifts](/collections/pet-memorial-gifts).
     `,
   }),
   createBlogPost({
@@ -395,7 +397,7 @@ The Rainbow Bridge is a beloved poem that brings comfort to many pet families. O
 - Engraved plaques for home or garden
 - NFC cards that preserve their full story digitally
 
-Browse [pet memorial gifts](/collections/pet-memorial-gifts) for more.
+Browse [personalized pet memorial gifts](/collections/pet-memorial-gifts) for more.
     `,
   }),
   createBlogPost({
@@ -408,6 +410,7 @@ Browse [pet memorial gifts](/collections/pet-memorial-gifts) for more.
       "From personalized keepsakes to digital memorial pages, here are meaningful ways to honor your beloved companion.",
     category: "Pet Loss Support",
     categorySlug: "pet-loss-support",
+    relatedCollectionSlugs: ["dog-memorial-gifts", "pet-memorial-gifts", "cat-memorial-gifts"],
     content: `
 ## Ways to Remember Your Companion
 
@@ -428,7 +431,7 @@ There is no single right way to remember a beloved pet. Here are gentle ideas th
 
 - Wear an [engraved pendant](/products/engraved-pet-memorial-pendant) or [photo locket](/products/pet-memorial-photo-locket)
 
-Explore all [pet memorial gifts](/collections/pet-memorial-gifts).
+Explore [dog memorial gifts](/collections/dog-memorial-gifts) and [personalized pet memorial gifts](/collections/pet-memorial-gifts).
     `,
   }),
   createBlogPost({

@@ -68,12 +68,16 @@ export interface CollectionContentBundle {
     whenToChoose?: string;
     personalization?: string;
     whyChoose?: string;
+    buyingGuide?: string;
+    popularTypes?: string;
   };
   seoHeadings?: {
     whatAre?: string;
     whenToChoose?: string;
     personalization?: string;
     whyChoose?: string;
+    buyingGuide?: string;
+    popularTypes?: string;
   };
   relatedCategories?: string;
   helpfulGuides?: string;
@@ -293,6 +297,8 @@ export function localizeCollection(collection: Collection, bundle: ContentBundle
       whenToChoose: t.seoSections?.whenToChoose ?? collection.seoSections.whenToChoose,
       personalization: t.seoSections?.personalization ?? collection.seoSections.personalization,
       whyChoose: t.seoSections?.whyChoose ?? collection.seoSections.whyChoose,
+      buyingGuide: t.seoSections?.buyingGuide ?? collection.seoSections.buyingGuide,
+      popularTypes: t.seoSections?.popularTypes ?? collection.seoSections.popularTypes,
     },
   };
 }
@@ -306,6 +312,8 @@ export function getCollectionPageLabels(collection: Collection, bundle: ContentB
     whenToChoose: t?.seoHeadings?.whenToChoose ?? "When to Choose This Type of Pet Memorial Gift",
     personalization: t?.seoHeadings?.personalization ?? "Personalization Options",
     whyChoose: t?.seoHeadings?.whyChoose ?? "Why Families Choose Our Memorial Keepsakes",
+    popularTypes: t?.seoHeadings?.popularTypes ?? `Popular ${name}`,
+    buyingGuide: t?.seoHeadings?.buyingGuide ?? "How to Choose the Right Memorial Gift",
     relatedCategories: t?.relatedCategories ?? "Related Categories",
     helpfulGuides: t?.helpfulGuides ?? "Helpful Guides",
   };
