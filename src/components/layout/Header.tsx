@@ -36,11 +36,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-bg/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center gap-3 h-16 md:h-20">
           <BrandLogo variant="full" priority />
 
-          <nav className="hidden lg:flex items-center gap-5 xl:gap-8 min-w-0">
-            <Link href="/" className="text-muted hover:text-text transition-colors text-sm font-medium whitespace-nowrap">
+          <nav className="ml-auto hidden min-[1100px]:flex items-center gap-5 xl:gap-7">
+            <Link
+              href="/"
+              className="text-text/80 hover:text-text transition-colors text-sm font-medium whitespace-nowrap"
+            >
               {t("home")}
             </Link>
 
@@ -49,12 +52,15 @@ export function Header() {
               onMouseEnter={() => setShopOpen(true)}
               onMouseLeave={() => setShopOpen(false)}
             >
-              <button className="flex items-center gap-1 text-muted hover:text-text transition-colors text-sm font-medium whitespace-nowrap">
+              <button
+                type="button"
+                className="flex items-center gap-1 text-text/80 hover:text-text transition-colors text-sm font-medium whitespace-nowrap"
+              >
                 {t("shop")}
                 <ChevronDown className="w-4 h-4" />
               </button>
               {shopOpen && (
-                <div className="absolute top-full left-0 pt-2 w-64">
+                <div className="absolute top-full left-0 pt-2 w-64 z-50">
                   <div className="bg-card rounded-xl shadow-lg border border-border py-2">
                     {collectionSlugs.map((slug) => (
                       <Link
@@ -74,29 +80,33 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-muted hover:text-text transition-colors text-sm font-medium whitespace-nowrap"
+                className="text-text/80 hover:text-text transition-colors text-sm font-medium whitespace-nowrap"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
 
-          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 shrink-0">
-            <LanguageSwitcher className="hidden sm:block" />
-            <button aria-label={t("search")} className="p-2 text-muted hover:text-text transition-colors shrink-0">
+          <div className="flex items-center gap-1 sm:gap-2 shrink-0 min-[1100px]:ml-2 ml-auto">
+            <LanguageSwitcher />
+            <button
+              type="button"
+              aria-label={t("search")}
+              className="p-2 text-text/80 hover:text-text transition-colors shrink-0"
+            >
               <Search className="w-5 h-5" />
             </button>
             <Link
               href="/account"
               aria-label={t("account")}
-              className="hidden sm:block p-2 text-muted hover:text-text transition-colors"
+              className="p-2 text-text/80 hover:text-text transition-colors shrink-0"
             >
               <User className="w-5 h-5" />
             </Link>
             <Link
               href="/cart"
               aria-label={t("cart")}
-              className="relative p-2 text-muted hover:text-text transition-colors shrink-0"
+              className="relative p-2 text-text/80 hover:text-text transition-colors shrink-0"
             >
               <ShoppingBag className="w-5 h-5" />
               {itemCount > 0 ? (
@@ -105,18 +115,10 @@ export function Header() {
                 </span>
               ) : null}
             </Link>
-            <select
-              aria-label={t("currency")}
-              className="hidden xl:block text-sm text-muted bg-transparent border-none cursor-pointer focus:outline-none"
-              defaultValue="USD"
-            >
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="GBP">GBP</option>
-            </select>
             <button
+              type="button"
               aria-label={t("menu")}
-              className="lg:hidden p-2 text-muted hover:text-text shrink-0"
+              className="min-[1100px]:hidden p-2 text-text hover:text-gold shrink-0"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -127,7 +129,7 @@ export function Header() {
 
       <div
         className={cn(
-          "lg:hidden overflow-hidden transition-all duration-300 bg-card border-t border-border",
+          "min-[1100px]:hidden overflow-hidden transition-all duration-300 bg-card border-t border-border",
           mobileOpen ? "max-h-[80vh] overflow-y-auto" : "max-h-0"
         )}
       >
@@ -156,20 +158,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/account"
-            className="block py-2.5 text-text font-medium"
-            onClick={() => setMobileOpen(false)}
-          >
-            {t("account")}
-          </Link>
-          <Link
-            href="/cart"
-            className="block py-2.5 text-text font-medium"
-            onClick={() => setMobileOpen(false)}
-          >
-            {t("cart")}
-          </Link>
           <div className="pt-3 border-t border-border mt-2">
             <LanguageSwitcher variant="mobile" />
           </div>

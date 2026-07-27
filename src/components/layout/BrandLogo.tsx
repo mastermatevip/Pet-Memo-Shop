@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { BRAND } from "@/config/brand";
 import { cn } from "@/lib/utils";
@@ -18,44 +17,47 @@ export function BrandLogo({
 }: BrandLogoProps) {
   const isFull = variant === "full";
 
-  const image = isFull ? (
-    <>
-      {/* Compact mark on small screens so header nav/actions stay visible */}
-      <Image
+  const image = (
+    <span className={cn("inline-flex items-center gap-2.5", className)}>
+      {/* Serve brand assets directly — skip next/image optimizer (JPEG wash / blank paint). */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={BRAND.logoIcon}
+        alt={isFull ? "" : BRAND.logoAlt}
+        width={40}
+        height={40}
+        decoding="async"
+        {...(priority ? { fetchPriority: "high" as const } : {})}
+        className="h-10 w-10 object-contain shrink-0"
+      />
+      {isFull ? (
+        <span className="font-serif text-lg md:text-xl text-text leading-none tracking-tight whitespace-nowrap">
+          {BRAND.name}
+        </span>
+      ) : null}
+    </span>
+  );
+
+  if (href === false) {
+    return isFull ? image : (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
         src={BRAND.logoIcon}
         alt={BRAND.logoAlt}
         width={40}
         height={40}
-        priority={priority}
-        className={cn("h-10 w-10 object-contain lg:hidden", className)}
+        decoding="async"
+        className={cn("h-10 w-10 object-contain", className)}
       />
-      <Image
-        src={BRAND.logoFull}
-        alt={BRAND.logoAlt}
-        width={200}
-        height={50}
-        priority={priority}
-        className={cn(
-          "hidden lg:block h-auto w-auto max-h-12 max-w-[200px] object-contain object-left",
-          className
-        )}
-      />
-    </>
-  ) : (
-    <Image
-      src={BRAND.logoIcon}
-      alt={BRAND.logoAlt}
-      width={48}
-      height={48}
-      priority={priority}
-      className={cn("max-h-10 w-10 object-contain", className)}
-    />
-  );
-
-  if (href === false) return image;
+    );
+  }
 
   return (
-    <Link href={href} className="flex-shrink-0 inline-flex items-center">
+    <Link
+      href={href}
+      className="flex-shrink-0 inline-flex items-center"
+      aria-label={BRAND.name}
+    >
       {image}
     </Link>
   );

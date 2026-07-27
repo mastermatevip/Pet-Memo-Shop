@@ -35,7 +35,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <NextIntlClientProvider messages={messages}>
       <StorefrontGoogleTagManager />
       <CartProvider>
-        <div lang={locale} className={locale === "zh" ? "locale-zh contents" : "contents"}>
+        <div lang={locale} className={locale === "zh" ? "locale-zh flex flex-col flex-1 w-full" : "flex flex-col flex-1 w-full"}>
           <AnnouncementBar />
           <Header />
           <main className="flex-1">{children}</main>
