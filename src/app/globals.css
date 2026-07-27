@@ -54,6 +54,13 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
+/* Guaranteed visible storefront nav (avoid breakpoint `hidden` bugs) */
+.site-header-nav {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif), Georgia, serif;
   color: var(--color-text);

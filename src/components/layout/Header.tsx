@@ -1,13 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { Search, User, ShoppingBag, Menu, X, ChevronDown } from "lucide-react";
+import { Search, User, ShoppingBag, ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { useCart } from "@/components/cart/CartProvider";
-import { cn } from "@/lib/utils";
 
 const collectionSlugs = [
   "pet-memorial-gifts",
@@ -22,10 +21,10 @@ const collectionSlugs = [
 export function Header() {
   const t = useTranslations("nav");
   const { itemCount } = useCart();
-  const [mobileOpen, setMobileOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
 
   const mainLinks = [
+    { href: "/" as const, label: t("home") },
     { href: "/digital-pet-memorial" as const, label: t("digitalMemorial") },
     { href: "/best-sellers" as const, label: t("bestSellers") },
     { href: "/blog" as const, label: t("blog") },
@@ -34,79 +33,31 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-bg/95 backdrop-blur-sm border-b border-border">
+    <header className="sticky top-0 z-50 bg-bg border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-3 h-16 md:h-20">
+        <div className="flex items-center justify-between gap-3 h-16 md:h-18">
           <BrandLogo variant="full" priority />
 
-          <nav className="ml-auto hidden min-[1100px]:flex items-center gap-5 xl:gap-7">
-            <Link
-              href="/"
-              className="text-text/80 hover:text-text transition-colors text-sm font-medium whitespace-nowrap"
-            >
-              {t("home")}
-            </Link>
-
-            <div
-              className="relative"
-              onMouseEnter={() => setShopOpen(true)}
-              onMouseLeave={() => setShopOpen(false)}
-            >
-              <button
-                type="button"
-                className="flex items-center gap-1 text-text/80 hover:text-text transition-colors text-sm font-medium whitespace-nowrap"
-              >
-                {t("shop")}
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              {shopOpen && (
-                <div className="absolute top-full left-0 pt-2 w-64 z-50">
-                  <div className="bg-card rounded-xl shadow-lg border border-border py-2">
-                    {collectionSlugs.map((slug) => (
-                      <Link
-                        key={slug}
-                        href={`/collections/${slug}`}
-                        className="block px-4 py-2.5 text-sm text-muted hover:bg-highlight hover:text-text transition-colors"
-                      >
-                        {t(`collections.${slug}`)}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {mainLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-text/80 hover:text-text transition-colors text-sm font-medium whitespace-nowrap"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-1 sm:gap-2 shrink-0 min-[1100px]:ml-2 ml-auto">
+          <div className="flex items-center gap-1 sm:gap-2 shrink-0">
             <LanguageSwitcher />
             <button
               type="button"
               aria-label={t("search")}
-              className="p-2 text-text/80 hover:text-text transition-colors shrink-0"
+              className="p-2 text-text hover:text-gold transition-colors"
             >
               <Search className="w-5 h-5" />
             </button>
             <Link
               href="/account"
               aria-label={t("account")}
-              className="p-2 text-text/80 hover:text-text transition-colors shrink-0"
+              className="p-2 text-text hover:text-gold transition-colors"
             >
               <User className="w-5 h-5" />
             </Link>
             <Link
               href="/cart"
               aria-label={t("cart")}
-              className="relative p-2 text-text/80 hover:text-text transition-colors shrink-0"
+              className="relative p-2 text-text hover:text-gold transition-colors"
             >
               <ShoppingBag className="w-5 h-5" />
               {itemCount > 0 ? (
@@ -115,51 +66,50 @@ export function Header() {
                 </span>
               ) : null}
             </Link>
-            <button
-              type="button"
-              aria-label={t("menu")}
-              className="min-[1100px]:hidden p-2 text-text hover:text-gold shrink-0"
-              onClick={() => setMobileOpen(!mobileOpen)}
-            >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
           </div>
         </div>
-      </div>
 
-      <div
-        className={cn(
-          "min-[1100px]:hidden overflow-hidden transition-all duration-300 bg-card border-t border-border",
-          mobileOpen ? "max-h-[80vh] overflow-y-auto" : "max-h-0"
-        )}
-      >
-        <nav className="px-4 py-4 space-y-1">
-          <Link href="/" className="block py-2.5 text-text font-medium" onClick={() => setMobileOpen(false)}>
-            {t("home")}
-          </Link>
-          <p className="pt-3 pb-1 text-xs uppercase tracking-wider text-light font-medium">{t("shop")}</p>
-          {collectionSlugs.map((slug) => (
-            <Link
-              key={slug}
-              href={`/collections/${slug}`}
-              className="block py-2 pl-3 text-muted"
-              onClick={() => setMobileOpen(false)}
-            >
-              {t(`collections.${slug}`)}
-            </Link>
-          ))}
+        {/* Always-visible nav — do not use Tailwind `hidden` breakpoints here */}
+        <nav className="site-header-nav flex flex-wrap items-center gap-x-4 gap-y-2 pb-3 pt-0 text-sm font-medium">
           {mainLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="block py-2.5 text-text font-medium"
-              onClick={() => setMobileOpen(false)}
+              className="text-text hover:text-gold transition-colors whitespace-nowrap"
             >
               {link.label}
             </Link>
           ))}
-          <div className="pt-3 border-t border-border mt-2">
-            <LanguageSwitcher variant="mobile" />
+
+          <div
+            className="relative"
+            onMouseEnter={() => setShopOpen(true)}
+            onMouseLeave={() => setShopOpen(false)}
+          >
+            <button
+              type="button"
+              className="inline-flex items-center gap-1 text-text hover:text-gold transition-colors whitespace-nowrap"
+              onClick={() => setShopOpen((open) => !open)}
+            >
+              {t("shop")}
+              <ChevronDown className="w-4 h-4" />
+            </button>
+            {shopOpen ? (
+              <div className="absolute left-0 top-full z-50 pt-2 w-64">
+                <div className="bg-card rounded-xl shadow-lg border border-border py-2">
+                  {collectionSlugs.map((slug) => (
+                    <Link
+                      key={slug}
+                      href={`/collections/${slug}`}
+                      className="block px-4 py-2.5 text-sm text-muted hover:bg-highlight hover:text-text transition-colors"
+                      onClick={() => setShopOpen(false)}
+                    >
+                      {t(`collections.${slug}`)}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : null}
           </div>
         </nav>
       </div>
