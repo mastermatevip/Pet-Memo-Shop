@@ -54,11 +54,32 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-/* Guaranteed visible storefront nav (avoid breakpoint `hidden` bugs) */
-.site-header-nav {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+/* Header nav: one row with logo on desktop; plain CSS avoids Tailwind `hidden` bugs */
+.site-header-desktop-nav {
+  display: none;
+}
+.site-header-menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-header-mobile-panel {
+  display: block;
+}
+@media (min-width: 1024px) {
+  .site-header-desktop-nav {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .site-header-menu-btn {
+    display: none !important;
+  }
+  .site-header-mobile-panel,
+  .site-header-mobile-panel.is-open {
+    display: none !important;
+    max-height: 0 !important;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
