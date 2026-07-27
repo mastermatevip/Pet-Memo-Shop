@@ -1,0 +1,16 @@
+---
+description: Fix storefront UI without changing established header/nav layout
+globs: src/components/layout/**/*
+alwaysApply: false
+---
+
+# Header / 导航栏修改约束
+
+修显示、Logo、favicon、响应式问题时：
+
+- **不要改布局结构**：Logo 与主导航保持同一行
+- **不要改导航顺序**：Home → Shop → Digital Memorial → Best Sellers → Blog → About Us → Contact
+- **不要**为了修 bug 把导航拆到第二行，或重排链接
+- 必须改布局时，先问用户
+
+可见性修复优先：资源加载、`display:contents`、普通 CSS media query；不要用会改变用户感知布局的重构。
