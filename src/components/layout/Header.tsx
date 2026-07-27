@@ -37,10 +37,10 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-bg/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <BrandLogo variant="full" />
+          <BrandLogo variant="full" priority />
 
-          <nav className="hidden lg:flex items-center gap-8">
-            <Link href="/" className="text-muted hover:text-text transition-colors text-sm font-medium">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-8 min-w-0">
+            <Link href="/" className="text-muted hover:text-text transition-colors text-sm font-medium whitespace-nowrap">
               {t("home")}
             </Link>
 
@@ -49,7 +49,7 @@ export function Header() {
               onMouseEnter={() => setShopOpen(true)}
               onMouseLeave={() => setShopOpen(false)}
             >
-              <button className="flex items-center gap-1 text-muted hover:text-text transition-colors text-sm font-medium">
+              <button className="flex items-center gap-1 text-muted hover:text-text transition-colors text-sm font-medium whitespace-nowrap">
                 {t("shop")}
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -74,15 +74,15 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-muted hover:text-text transition-colors text-sm font-medium"
+                className="text-muted hover:text-text transition-colors text-sm font-medium whitespace-nowrap"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
 
-          <div className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-0">
-            <LanguageSwitcher />
+          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 shrink-0">
+            <LanguageSwitcher className="hidden sm:block" />
             <button aria-label={t("search")} className="p-2 text-muted hover:text-text transition-colors shrink-0">
               <Search className="w-5 h-5" />
             </button>
@@ -96,7 +96,7 @@ export function Header() {
             <Link
               href="/cart"
               aria-label={t("cart")}
-              className="relative p-2 text-muted hover:text-text transition-colors"
+              className="relative p-2 text-muted hover:text-text transition-colors shrink-0"
             >
               <ShoppingBag className="w-5 h-5" />
               {itemCount > 0 ? (
@@ -107,7 +107,7 @@ export function Header() {
             </Link>
             <select
               aria-label={t("currency")}
-              className="hidden md:block text-sm text-muted bg-transparent border-none cursor-pointer focus:outline-none"
+              className="hidden xl:block text-sm text-muted bg-transparent border-none cursor-pointer focus:outline-none"
               defaultValue="USD"
             >
               <option value="USD">USD</option>
@@ -116,7 +116,7 @@ export function Header() {
             </select>
             <button
               aria-label={t("menu")}
-              className="lg:hidden p-2 text-muted"
+              className="lg:hidden p-2 text-muted hover:text-text shrink-0"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

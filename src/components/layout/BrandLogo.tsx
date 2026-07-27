@@ -18,18 +18,37 @@ export function BrandLogo({
 }: BrandLogoProps) {
   const isFull = variant === "full";
 
-  const image = (
+  const image = isFull ? (
+    <>
+      {/* Compact mark on small screens so header nav/actions stay visible */}
+      <Image
+        src={BRAND.logoIcon}
+        alt={BRAND.logoAlt}
+        width={40}
+        height={40}
+        priority={priority}
+        className={cn("h-10 w-10 object-contain lg:hidden", className)}
+      />
+      <Image
+        src={BRAND.logoFull}
+        alt={BRAND.logoAlt}
+        width={200}
+        height={50}
+        priority={priority}
+        className={cn(
+          "hidden lg:block h-auto w-auto max-h-12 max-w-[200px] object-contain object-left",
+          className
+        )}
+      />
+    </>
+  ) : (
     <Image
-      src={isFull ? BRAND.logoFull : BRAND.logoIcon}
+      src={BRAND.logoIcon}
       alt={BRAND.logoAlt}
-      width={isFull ? 220 : 48}
-      height={isFull ? 56 : 48}
+      width={48}
+      height={48}
       priority={priority}
-      className={cn(
-        "h-auto w-auto object-contain",
-        isFull ? "max-h-12 md:max-h-14" : "max-h-10 w-10",
-        className
-      )}
+      className={cn("max-h-10 w-10 object-contain", className)}
     />
   );
 
