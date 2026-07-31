@@ -1,0 +1,32 @@
+---
+description: Official Pet Memo Shop logo mark and header lockup
+globs: src/components/layout/**/*,src/config/brand.ts,public/brand/**
+alwaysApply: false
+---
+
+# Brand logo
+
+## Official mark (第一张图)
+
+- File: `public/brand/logo-icon.png`
+- Content: **circular dog + cat emblem only** (leaves + pink heart). **No text baked into the image.**
+- This is the site LOGO graphic for header, footer, favicon/`src/app/icon.png`.
+
+## Wordmark text (第二张图的文字)
+
+Place beside the mark in the header lockup (`BrandLogo` `variant="full"`), left → right:
+
+1. Circular mark (`logo-icon.png`)
+2. Text block on the **right**:
+   - **Pet Memo Shop** (serif)
+   - divider with small paw
+   - **FOREVER IN OUR HEARTS**
+   - **Memories Never Fade, Love Never Ends** (can hide on very small screens)
+
+Do **not** stack wordmark text under the circular mark in the header (that caused cropped text bugs).
+
+## Rules
+
+- Do not replace the mark with `logo-full.png` (that asset includes stacked text under the icon).
+- Do not change header nav order when adjusting the logo: Home → Shop → Digital Memorial → Best Sellers → Blog → About Us → Contact, same row as the logo.
+- Keep logo + nav on one row on desktop.

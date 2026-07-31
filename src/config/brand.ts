@@ -1,6 +1,10 @@
 export const BRAND = {
   name: "Pet Memo Shop",
   tagline: "Personalized Pet Memorial Gifts & Digital Keepsakes",
+  /** Wordmark line under the brand name in the header logo lockup */
+  logoTagline: "FOREVER IN OUR HEARTS",
+  /** Secondary slogan in the header logo lockup */
+  logoSlogan: "Memories Never Fade, Love Never Ends",
   description:
     "Create meaningful memorial gifts for beloved dogs, cats, and companions. Personalized with photos, names, dates, and optional NFC digital memorial pages.",
   url: "https://petmemoshop.com",
@@ -10,7 +14,9 @@ export const BRAND = {
   freeShippingThreshold: 75,
   currency: "USD",
   locale: "en-US",
+  /** Horizontal reference art (icon + stacked text) — not used directly in header */
   logoFull: "/brand/logo-full.png",
+  /** Official site mark: circular dog + cat only — always use this as the logo graphic */
   logoIcon: "/brand/logo-icon.png",
   logoAlt: "Pet Memo Shop — dog and cat memorial logo",
 } as const;

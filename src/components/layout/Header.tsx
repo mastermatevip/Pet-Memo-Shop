@@ -36,8 +36,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-bg/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20 gap-4">
-          <BrandLogo variant="icon" priority className="h-12 w-12 md:h-14 md:w-14" />
+        <div className="flex items-center justify-between h-[4.5rem] md:h-24 gap-4">
+          <BrandLogo variant="full" priority />
 
           {/* Same row as logo — visibility controlled by globals.css, not Tailwind `hidden` */}
           <nav className="site-header-desktop-nav items-center gap-6 xl:gap-8">
