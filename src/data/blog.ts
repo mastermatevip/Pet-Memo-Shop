@@ -29,22 +29,53 @@ export function getLatestBlogPosts(count = 3): BlogPost[] {
     .slice(0, count);
 }
 
-/** Posts that explicitly relate to a collection, falling back to latest guides. */
+/** Featured SEO guides that should surface first on hub collection pages. */
+const COLLECTION_FEATURED_GUIDES: Record<string, string[]> = {
+  "pet-memorial-gifts": [
+    "personalized-pet-memorial-gifts-buying-guide",
+    "dog-memorial-gifts-ideas-to-honor-a-beloved-dog",
+    "cat-memorial-gifts-gentle-ways-to-remember",
+    "how-to-choose-a-pet-memorial-gift",
+  ],
+  "dog-memorial-gifts": [
+    "dog-memorial-gifts-ideas-to-honor-a-beloved-dog",
+    "personalized-pet-memorial-gifts-buying-guide",
+    "best-dog-memorial-gifts-for-a-grieving-friend",
+    "meaningful-ways-to-remember-a-dog-or-cat",
+  ],
+  "cat-memorial-gifts": [
+    "cat-memorial-gifts-gentle-ways-to-remember",
+    "personalized-pet-memorial-gifts-buying-guide",
+    "best-cat-memorial-gifts-to-remember-a-beloved-cat",
+    "meaningful-ways-to-remember-a-dog-or-cat",
+  ],
+};
+
+/** Posts that explicitly relate to a collection, with featured guides prioritized. */
 export function getBlogPostsForCollection(collectionSlug: string, count = 4): BlogPost[] {
   const posts = getBlogPosts();
-  const related = posts.filter((p) => p.relatedCollectionSlugs?.includes(collectionSlug));
-  if (related.length >= count) {
-    return related
-      .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
-      .slice(0, count);
-  }
+  const bySlug = new Map(posts.map((p) => [p.slug, p]));
+  const featuredSlugs = COLLECTION_FEATURED_GUIDES[collectionSlug] ?? [];
+  const featured = featuredSlugs
+    .map((slug) => bySlug.get(slug))
+    .filter((p): p is BlogPost => Boolean(p));
 
-  const relatedSlugs = new Set(related.map((p) => p.slug));
-  const extras = posts
-    .filter((p) => !relatedSlugs.has(p.slug))
+  if (featured.length >= count) return featured.slice(0, count);
+
+  const used = new Set(featured.map((p) => p.slug));
+  const related = posts
+    .filter((p) => !used.has(p.slug) && p.relatedCollectionSlugs?.includes(collectionSlug))
     .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
-  return [...related, ...extras].slice(0, count);
+  const merged = [...featured, ...related];
+  if (merged.length >= count) return merged.slice(0, count);
+
+  const usedAll = new Set(merged.map((p) => p.slug));
+  const extras = posts
+    .filter((p) => !usedAll.has(p.slug))
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+
+  return [...merged, ...extras].slice(0, count);
 }
 
 export function getAllBlogSlugs(): string[] {

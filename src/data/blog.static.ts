@@ -1022,7 +1022,7 @@ Your companion's story deserves a place in your daily life. A memory corner help
     categorySlug: "dog-memorials",
     publishedAt: "2026-07-16",
     readTime: 11,
-    status: "draft",
+    status: "published",
     relatedProductSlugs: [
       "dog-memorial-keepsake-box",
       "personalized-pet-memorial-frame",
@@ -1119,7 +1119,7 @@ A meaningful tribute does not have to be complicated. It only needs to feel like
     categorySlug: "personalized-gift-guides",
     publishedAt: "2026-07-16",
     readTime: 12,
-    status: "draft",
+    status: "published",
     relatedProductSlugs: [
       "personalized-pet-memorial-frame",
       "memorial-sympathy-gift-box",
@@ -1227,7 +1227,7 @@ The best personalized tribute is the one that feels true to the bond you shared.
     categorySlug: "cat-memorials",
     publishedAt: "2026-07-16",
     readTime: 10,
-    status: "draft",
+    status: "published",
     relatedProductSlugs: [
       "cat-memorial-photo-ornament",
       "personalized-pet-memorial-frame",

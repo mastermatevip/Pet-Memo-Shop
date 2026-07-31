@@ -6,13 +6,20 @@ import { FAQSection } from "@/components/shared/FAQSection";
 import { buildMetadata } from "@/lib/seo";
 import { getCollectionBySlug, getAllCollectionSlugs } from "@/data/collections";
 import { getProductsByCollection } from "@/data/products";
-import { getBlogPostsForCollection } from "@/data/blog";
+import { getBlogPostBySlug, getBlogPostsForCollection } from "@/data/blog";
 import { localizeCollection, localizeProduct, loadContentBundle, getCollectionPageLabels } from "@/lib/localized-content";
 import { routing, type Locale } from "@/i18n/routing";
 
 interface Props {
   params: Promise<{ locale: string; slug: string }>;
 }
+
+/** Primary SEO guide linked near the top of each hub collection. */
+const COLLECTION_PRIMARY_GUIDE: Record<string, string> = {
+  "pet-memorial-gifts": "personalized-pet-memorial-gifts-buying-guide",
+  "dog-memorial-gifts": "dog-memorial-gifts-ideas-to-honor-a-beloved-dog",
+  "cat-memorial-gifts": "cat-memorial-gifts-gentle-ways-to-remember",
+};
 
 export const dynamic = "force-dynamic";
 
@@ -54,6 +61,8 @@ export default async function CollectionPage({ params }: Props) {
     })
     .filter(Boolean);
   const blogPosts = getBlogPostsForCollection(slug, 4);
+  const primaryGuideSlug = COLLECTION_PRIMARY_GUIDE[slug];
+  const primaryGuide = primaryGuideSlug ? getBlogPostBySlug(primaryGuideSlug) : undefined;
 
   const seoBlocks = [
     { title: labels.whatAre, body: collection.seoSections.whatAre },
@@ -83,9 +92,24 @@ export default async function CollectionPage({ params }: Props) {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-        <p className="text-muted text-lg leading-relaxed max-w-3xl mb-10">
+        <p className="text-muted text-lg leading-relaxed max-w-3xl mb-6">
           {collection.intro}
         </p>
+
+        {primaryGuide ? (
+          <p className="max-w-3xl mb-10 text-sm text-muted">
+            Need help choosing? Read our guide:{" "}
+            <Link
+              href={`/blog/${primaryGuide.slug}`}
+              className="text-gold hover:text-gold-dark underline underline-offset-2 font-medium"
+            >
+              {primaryGuide.title}
+            </Link>
+            .
+          </p>
+        ) : (
+          <div className="mb-10" />
+        )}
 
         {products.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-16">
@@ -126,15 +150,29 @@ export default async function CollectionPage({ params }: Props) {
         </section>
 
         <section className="py-8 border-t border-border">
-          <h2 className="font-serif text-xl text-text mb-4">{labels.helpfulGuides}</h2>
-          <div className="flex flex-wrap gap-4">
+          <h2 className="font-serif text-xl text-text mb-2">{labels.helpfulGuides}</h2>
+          <p className="text-muted text-sm mb-6 max-w-2xl">
+            Read these guides for gift ideas and buying tips, then come back to shop this collection.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
             {blogPosts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="text-gold hover:text-gold-dark text-sm underline underline-offset-2"
+                className="block rounded-xl border border-border bg-card p-5 hover:border-gold hover:shadow-md transition-all"
               >
-                {post.title}
+                <p className="text-xs uppercase tracking-wider text-gold font-medium mb-2">
+                  {post.category}
+                </p>
+                <h3 className="font-serif text-lg text-text mb-2">
+                  {post.title}
+                </h3>
+                <p className="text-sm text-muted leading-relaxed line-clamp-2">
+                  {post.excerpt}
+                </p>
+                <span className="inline-block mt-3 text-sm text-gold">
+                  Read guide →
+                </span>
               </Link>
             ))}
           </div>
