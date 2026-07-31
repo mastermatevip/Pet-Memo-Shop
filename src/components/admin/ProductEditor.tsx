@@ -21,12 +21,15 @@ function productSlug(text: string) {
 export function ProductEditor({ initial, isNew = false, collectionOptions = [] }: Props) {
   const router = useRouter();
   const [product, setProduct] = useState(initial);
+  const [originalSlug, setOriginalSlug] = useState(initial.slug);
   const [status, setStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState<string | undefined>();
   const [slugTouched, setSlugTouched] = useState(false);
 
   useEffect(() => {
     setProduct(initial);
+    setOriginalSlug(initial.slug);
+    setSlugTouched(false);
   }, [initial]);
 
   function setField<K extends keyof Product>(key: K, value: Product[K]) {
@@ -66,9 +69,7 @@ export function ProductEditor({ initial, isNew = false, collectionOptions = [] }
       return;
     }
 
-    const slug = isNew
-      ? productSlug(product.slug || product.title)
-      : product.slug;
+    const slug = productSlug(product.slug || product.title);
 
     if (!slug) {
       setErrorMessage("请填写商品 Slug");
@@ -87,7 +88,9 @@ export function ProductEditor({ initial, isNew = false, collectionOptions = [] }
 
     const payload = { ...product, slug, images };
 
-    const url = isNew ? "/api/admin/products" : `/api/admin/products/${encodeURIComponent(product.slug)}`;
+    const url = isNew
+      ? "/api/admin/products"
+      : `/api/admin/products/${encodeURIComponent(originalSlug)}`;
     const method = isNew ? "POST" : "PUT";
 
     const res = await fetch(url, {
@@ -110,9 +113,10 @@ export function ProductEditor({ initial, isNew = false, collectionOptions = [] }
     const data = (await res.json()) as { product?: Product };
     const saved = data.product ?? payload;
     setProduct(saved);
+    setOriginalSlug(saved.slug);
     setStatus("saved");
 
-    if (isNew) {
+    if (isNew || saved.slug !== originalSlug) {
       router.replace(`/admin/products/${saved.slug}`);
     } else {
       router.refresh();
@@ -122,26 +126,29 @@ export function ProductEditor({ initial, isNew = false, collectionOptions = [] }
 
   return (
     <form onSubmit={handleSave} className="space-y-8">
-      {isNew ? (
-        <div className="rounded-lg bg-highlight px-4 py-3 text-sm text-muted space-y-3">
-          <p>新建商品：填写标题、Slug、分类与图片后保存。</p>
-          <AdminField label="商品 URL Slug" hint="英文小写，用连字符分隔，保存后不可改">
-            <input
-              className={adminInputClass}
-              value={product.slug}
-              onChange={(e) => {
-                setSlugTouched(true);
-                setField("slug", productSlug(e.target.value));
-              }}
-              required
-            />
-          </AdminField>
-        </div>
-      ) : (
-        <div className="rounded-lg bg-highlight px-4 py-3 text-sm text-muted">
-          Slug：<code className="font-mono">{product.slug}</code>（只读）
-        </div>
-      )}
+      <div className="rounded-lg bg-highlight px-4 py-3 text-sm text-muted space-y-3">
+        {isNew ? <p>新建商品：填写标题、Slug、分类与图片后保存。</p> : null}
+        <AdminField
+          label="商品 URL Slug"
+          hint="英文小写，用连字符分隔。修改后前台商品链接会同步更新。"
+        >
+          <input
+            className={adminInputClass}
+            value={product.slug}
+            onChange={(e) => {
+              setSlugTouched(true);
+              setField("slug", productSlug(e.target.value));
+            }}
+            required
+          />
+        </AdminField>
+        {!isNew ? (
+          <p className="text-xs">
+            前台链接：
+            <code className="font-mono">/products/{product.slug}</code>
+          </p>
+        ) : null}
+      </div>
 
       <AdminField label="商品标题">
         <input
