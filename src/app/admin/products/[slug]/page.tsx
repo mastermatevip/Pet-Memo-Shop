@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { ProductEditor } from "@/components/admin/ProductEditor";
+import { getAllCollectionSlugs } from "@/data/collections";
 import { getProductBySlugFromStore } from "@/lib/cms/store";
 
 export const dynamic = "force-dynamic";
@@ -16,7 +17,7 @@ export default async function AdminProductEditPage({ params }: Props) {
 
   return (
     <AdminShell title={`编辑商品：${product.title}`}>
-      <ProductEditor initial={product} />
+      <ProductEditor initial={product} collectionOptions={getAllCollectionSlugs()} />
     </AdminShell>
   );
 }

@@ -75,6 +75,31 @@ function makeProduct(p: Partial<Product> & Pick<Product, "slug" | "title" | "col
   };
 }
 
+/** Blank product for admin "add product" flow. */
+export function createBlankProduct(existingSlugs: Iterable<string>): Product {
+  const used = new Set(existingSlugs);
+  let slug = "new-product";
+  let n = 2;
+  while (used.has(slug)) {
+    slug = `new-product-${n++}`;
+  }
+
+  return makeProduct({
+    slug,
+    title: "New Memorial Product",
+    collection: "pet-memorial-gifts",
+    price: 29.99,
+    shortDescription: "",
+    description: "",
+    story: "",
+    rating: 5,
+    reviewCount: 0,
+    tags: [],
+    images: [{ src: "", alt: "", type: "main" }],
+    relatedSlugs: [],
+  });
+}
+
 export const staticProducts: Product[] = [
   makeProduct({
     slug: "personalized-pet-memorial-frame",

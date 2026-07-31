@@ -6,15 +6,24 @@ import type { Product } from "@/types";
 import { AdminField, adminInputClass, adminTextareaClass } from "@/components/admin/AdminField";
 import { ProductImagesEditor } from "@/components/admin/ProductImagesEditor";
 import { SaveStatus } from "@/components/admin/SaveStatus";
+import { slugify } from "@/lib/utils";
 
 interface Props {
   initial: Product;
+  isNew?: boolean;
+  collectionOptions?: string[];
 }
 
-export function ProductEditor({ initial }: Props) {
+function productSlug(text: string) {
+  return slugify(text).slice(0, 80) || "new-product";
+}
+
+export function ProductEditor({ initial, isNew = false, collectionOptions = [] }: Props) {
   const router = useRouter();
   const [product, setProduct] = useState(initial);
   const [status, setStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState<string | undefined>();
+  const [slugTouched, setSlugTouched] = useState(false);
 
   useEffect(() => {
     setProduct(initial);
@@ -52,44 +61,126 @@ export function ProductEditor({ initial }: Props) {
 
     const images = normalizeImages(product.images);
     if (images.length === 0) {
+      setErrorMessage("至少保留一张有效图片");
+      setStatus("error");
+      return;
+    }
+
+    const slug = isNew
+      ? productSlug(product.slug || product.title)
+      : product.slug;
+
+    if (!slug) {
+      setErrorMessage("请填写商品 Slug");
+      setStatus("error");
+      return;
+    }
+
+    if (!product.title.trim()) {
+      setErrorMessage("请填写商品标题");
       setStatus("error");
       return;
     }
 
     setStatus("saving");
+    setErrorMessage(undefined);
 
-    const payload = { ...product, images };
+    const payload = { ...product, slug, images };
 
-    const res = await fetch(`/api/admin/products/${product.slug}`, {
-      method: "PUT",
+    const url = isNew ? "/api/admin/products" : `/api/admin/products/${encodeURIComponent(product.slug)}`;
+    const method = isNew ? "POST" : "PUT";
+
+    const res = await fetch(url, {
+      method,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
 
     if (!res.ok) {
+      const data = (await res.json().catch(() => null)) as { error?: string } | null;
+      setErrorMessage(
+        data?.error === "Slug already exists"
+          ? "该 Slug 已存在，请换一个"
+          : data?.error || "保存失败"
+      );
       setStatus("error");
       return;
     }
 
-    setProduct(payload);
+    const data = (await res.json()) as { product?: Product };
+    const saved = data.product ?? payload;
+    setProduct(saved);
     setStatus("saved");
-    router.refresh();
+
+    if (isNew) {
+      router.replace(`/admin/products/${saved.slug}`);
+    } else {
+      router.refresh();
+    }
     setTimeout(() => setStatus("idle"), 2000);
   }
 
   return (
     <form onSubmit={handleSave} className="space-y-8">
-      <div className="rounded-lg bg-highlight px-4 py-3 text-sm text-muted">
-        Slug：<code className="font-mono">{product.slug}</code>（只读）
-      </div>
+      {isNew ? (
+        <div className="rounded-lg bg-highlight px-4 py-3 text-sm text-muted space-y-3">
+          <p>新建商品：填写标题、Slug、分类与图片后保存。</p>
+          <AdminField label="商品 URL Slug" hint="英文小写，用连字符分隔，保存后不可改">
+            <input
+              className={adminInputClass}
+              value={product.slug}
+              onChange={(e) => {
+                setSlugTouched(true);
+                setField("slug", productSlug(e.target.value));
+              }}
+              required
+            />
+          </AdminField>
+        </div>
+      ) : (
+        <div className="rounded-lg bg-highlight px-4 py-3 text-sm text-muted">
+          Slug：<code className="font-mono">{product.slug}</code>（只读）
+        </div>
+      )}
 
       <AdminField label="商品标题">
         <input
           className={adminInputClass}
           value={product.title}
-          onChange={(e) => setField("title", e.target.value)}
+          onChange={(e) => {
+            const title = e.target.value;
+            setField("title", title);
+            if (isNew && !slugTouched) {
+              setField("slug", productSlug(title));
+            }
+          }}
+          required
         />
       </AdminField>
+
+      {collectionOptions.length > 0 ? (
+        <AdminField label="所属分类">
+          <select
+            className={adminInputClass}
+            value={product.collection}
+            onChange={(e) => setField("collection", e.target.value)}
+          >
+            {collectionOptions.map((slug) => (
+              <option key={slug} value={slug}>
+                {slug}
+              </option>
+            ))}
+          </select>
+        </AdminField>
+      ) : (
+        <AdminField label="所属分类">
+          <input
+            className={adminInputClass}
+            value={product.collection}
+            onChange={(e) => setField("collection", e.target.value)}
+          />
+        </AdminField>
+      )}
 
       <div className="grid sm:grid-cols-2 gap-4">
         <AdminField label="价格">
@@ -207,12 +298,9 @@ export function ProductEditor({ initial }: Props) {
           type="submit"
           className="rounded-full bg-btn text-btn-text px-6 py-2.5 text-sm font-medium hover:bg-btn-hover"
         >
-          保存商品
+          {isNew ? "创建商品" : "保存商品"}
         </button>
-        <SaveStatus
-          status={status}
-          message={status === "error" && normalizeImages(product.images).length === 0 ? "至少保留一张有效图片" : undefined}
-        />
+        <SaveStatus status={status} message={status === "error" ? errorMessage : undefined} />
       </div>
     </form>
   );

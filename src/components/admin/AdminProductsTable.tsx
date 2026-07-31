@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { AdminShell } from "@/components/admin/AdminShell";
 import { AdminImagePreview } from "@/components/admin/AdminImagePreview";
 import { ProductImageDisplay } from "@/components/shared/ProductImageDisplay";
 import type { Product } from "@/types";

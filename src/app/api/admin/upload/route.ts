@@ -83,11 +83,11 @@ export async function POST(request: Request) {
     if (!Number.isFinite(imageIndex) || imageIndex < 0) {
       return NextResponse.json({ error: "图片序号无效" }, { status: 400 });
     }
+    // New products may not be saved yet — still accept the file and return URL.
     product = updateProductImageSrc(slug.trim(), imageIndex, url);
-    if (!product) {
-      return NextResponse.json({ error: "商品不存在" }, { status: 404 });
+    if (product) {
+      revalidateProduct(slug.trim());
     }
-    revalidateProduct(slug.trim());
   }
 
   return NextResponse.json({
