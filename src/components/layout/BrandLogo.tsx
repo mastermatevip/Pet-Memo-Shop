@@ -15,33 +15,22 @@ export function BrandLogo({
   href = "/",
   priority = false,
 }: BrandLogoProps) {
-  const isFull = variant === "full";
+  // Icon mark only — no wordmark / tagline (avoids cropped text under the circle).
+  const sizeClass =
+    variant === "full" ? "h-12 w-12 md:h-14 md:w-14" : "h-10 w-10";
+  const px = variant === "full" ? 56 : 40;
 
   // Serve brand assets directly — skip next/image optimizer.
-  const image = isFull ? (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={BRAND.logoFull}
-      alt={BRAND.logoAlt}
-      width={280}
-      height={65}
-      decoding="async"
-      {...(priority ? { fetchPriority: "high" as const } : {})}
-      className={cn(
-        "h-12 md:h-14 w-auto max-w-[240px] md:max-w-[300px] object-contain object-left",
-        className
-      )}
-    />
-  ) : (
+  const image = (
     // eslint-disable-next-line @next/next/no-img-element
     <img
       src={BRAND.logoIcon}
       alt={BRAND.logoAlt}
-      width={40}
-      height={40}
+      width={px}
+      height={px}
       decoding="async"
       {...(priority ? { fetchPriority: "high" as const } : {})}
-      className={cn("h-10 w-10 object-contain", className)}
+      className={cn(sizeClass, "object-contain", className)}
     />
   );
 
