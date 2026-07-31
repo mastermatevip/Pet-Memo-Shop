@@ -39,15 +39,15 @@ const COLLECTION_FEATURED_GUIDES: Record<string, string[]> = {
   ],
   "dog-memorial-gifts": [
     "dog-memorial-gifts-ideas-to-honor-a-beloved-dog",
+    "dog-memorial-gifts-for-ashes-urns-and-tributes",
     "personalized-pet-memorial-gifts-buying-guide",
     "best-dog-memorial-gifts-for-a-grieving-friend",
-    "meaningful-ways-to-remember-a-dog-or-cat",
   ],
   "cat-memorial-gifts": [
     "cat-memorial-gifts-gentle-ways-to-remember",
+    "sympathy-cat-memorial-gifts-for-a-grieving-friend",
     "personalized-pet-memorial-gifts-buying-guide",
     "best-cat-memorial-gifts-to-remember-a-beloved-cat",
-    "meaningful-ways-to-remember-a-dog-or-cat",
   ],
 };
 

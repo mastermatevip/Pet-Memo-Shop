@@ -1312,4 +1312,173 @@ Explore our full [cat memorial gifts](/collections/cat-memorial-gifts) collectio
 The most meaningful cat memorial gift is the one that quietly feels like them.
     `,
   }),
+  createBlogPost({
+    slug: "dog-memorial-gifts-for-ashes-urns-and-tributes",
+    title: "Dog Memorial Gifts for Ashes: Urns and Gentle Tributes",
+    metaTitle: "Dog Memorial Gifts for Ashes | Urns & Tributes",
+    metaDescription:
+      "Find dog memorial gifts for ashes including personalized urns, frames, keepsake boxes, and NFC cards. Create a dignified tribute that keeps their memory close.",
+    excerpt:
+      "Looking for dog memorial gifts for ashes? These urn and tribute ideas help you create a calm, personal resting place for a beloved dog.",
+    category: "Dog Memorials",
+    categorySlug: "dog-memorials",
+    publishedAt: "2026-07-31",
+    readTime: 10,
+    status: "draft",
+    relatedProductSlugs: [
+      "wooden-pet-cremation-urn",
+      "ceramic-pet-cremation-urn",
+      "personalized-pet-memorial-frame",
+      "nfc-pet-memorial-card",
+    ],
+    relatedCollectionSlugs: ["dog-memorial-gifts", "pet-urns", "pet-memorial-gifts"],
+    faqs: [
+      {
+        question: "What are the best dog memorial gifts for ashes?",
+        answer:
+          "A personalized urn is the foundation. Many families also add a photo frame, keepsake box for the collar and tags, or an NFC memorial card that opens a digital tribute page.",
+      },
+      {
+        question: "How do I choose the right urn size for my dog?",
+        answer:
+          "A common guideline is about 1 cubic inch of capacity per pound of your dog's weight. Check each product page for size details before ordering.",
+      },
+      {
+        question: "Can dog memorial gifts for ashes be personalized?",
+        answer:
+          "Yes. Most urns and matching tributes can include your dog's name, dates, and photo. We send a free design proof before production.",
+      },
+    ],
+    content: `
+## Choosing Dog Memorial Gifts for Ashes
+
+When you are keeping your dog's ashes at home, the right tribute should feel calm, dignified, and personal. The best dog memorial gifts for ashes usually start with an urn, then add one or two pieces that help you remember them day to day.
+
+## Start with a Personalized Urn
+
+A [wooden pet urn](/products/wooden-pet-cremation-urn) or [ceramic pet urn](/products/ceramic-pet-cremation-urn) with a nameplate creates a respectful resting place. Choose a finish that fits your home, and personalize with your dog's name and dates.
+
+### Quick size tip
+As a general guide, plan for about **1 cubic inch per pound** of your dog's weight. If you are unsure, choose a slightly larger capacity for peace of mind.
+
+## Pair the Urn with a Home Tribute
+
+### Personalized photo frame
+Place a [personalized pet memorial frame](/products/personalized-pet-memorial-frame) beside the urn. One clear favorite photo often feels warmer than a crowded display.
+
+### Keepsake box for collar and tags
+A [dog memorial keepsake box](/products/dog-memorial-keepsake-box) holds the everyday items that still feel like them — collar, tags, a favorite toy tag, or a folded note.
+
+### NFC memorial card
+An [NFC pet memorial card](/products/nfc-pet-memorial-card) can sit beside the urn and open a digital page with photos, videos, and family messages.
+
+## Simple Tribute Layout Ideas
+
+| Style | What to include | Best for |
+|-------|-----------------|----------|
+| Quiet shelf | Urn + photo frame | Small spaces |
+| Memory corner | Urn + frame + keepsake box | A dedicated home tribute |
+| Shared family memorial | Urn + NFC card / digital page | Relatives who live far away |
+
+## Personalization That Feels Like Your Dog
+
+- Use one clear photo for the frame or digital page
+- Engrave the name you actually called them
+- Add birth and memorial dates if they bring comfort
+- Keep messages short so they stay readable
+
+Approve the free design proof before production so spelling and layout feel right.
+
+## Browse Dog Memorial Gifts for Ashes
+
+Explore [dog memorial gifts](/collections/dog-memorial-gifts) for urns, frames, keepsake boxes, and NFC tributes. You can also browse [pet urns](/collections/pet-urns) if you want to compare urn styles first, or see all [personalized pet memorial gifts](/collections/pet-memorial-gifts).
+
+A meaningful resting place does not need many pieces — just the ones that help you feel close to them.
+    `,
+  }),
+  createBlogPost({
+    slug: "sympathy-cat-memorial-gifts-for-a-grieving-friend",
+    title: "Sympathy Cat Memorial Gifts for a Grieving Friend",
+    metaTitle: "Sympathy Cat Memorial Gifts for a Grieving Friend",
+    metaDescription:
+      "Thoughtful sympathy cat memorial gifts for a grieving friend — personalized frames, ornaments, jewelry, gift boxes, and gentle digital keepsakes.",
+    excerpt:
+      "Not sure what to give after a friend loses their cat? These sympathy cat memorial gifts are gentle, personal, and easy to send with care.",
+    category: "Cat Memorials",
+    categorySlug: "cat-memorials",
+    publishedAt: "2026-07-31",
+    readTime: 9,
+    status: "draft",
+    relatedProductSlugs: [
+      "cat-memorial-photo-ornament",
+      "personalized-pet-memorial-frame",
+      "memorial-sympathy-gift-box",
+      "engraved-pet-memorial-pendant",
+    ],
+    relatedCollectionSlugs: ["cat-memorial-gifts", "pet-loss-sympathy-gifts", "pet-memorial-gifts"],
+    faqs: [
+      {
+        question: "What is a good sympathy cat memorial gift?",
+        answer:
+          "A personalized frame, photo ornament, or sympathy gift box is usually the safest choice. If your friend likes sharing memories, an NFC memorial card is also meaningful.",
+      },
+      {
+        question: "When should I send a cat memorial sympathy gift?",
+        answer:
+          "Within the first few weeks is thoughtful, but a memorial gift is meaningful at any time — including birthdays, anniversaries, or quiet moments later on.",
+      },
+      {
+        question: "What should I write with a sympathy cat memorial gift?",
+        answer:
+          "Keep it simple and personal. A short note like “Holding you and [cat’s name] in my thoughts” is often enough.",
+      },
+    ],
+    content: `
+## Gentle Sympathy Cat Memorial Gifts
+
+Losing a cat can leave a quiet, heavy space in someone's home. The best sympathy cat memorial gifts acknowledge that bond without pressure — soft, personal, and easy to receive.
+
+## Thoughtful Gift Ideas
+
+### Cat memorial photo ornament
+The [cat memorial photo ornament](/products/cat-memorial-photo-ornament) is a delicate way to display their portrait year-round. It feels personal without taking over a room.
+
+### Personalized memorial frame
+A [personalized pet memorial frame](/products/personalized-pet-memorial-frame) with the cat's name and dates is one of the most appreciated sympathy gifts.
+
+### Sympathy gift box
+A [memorial sympathy gift box](/products/memorial-sympathy-gift-box) is ready to give — helpful when you want something complete and gentle.
+
+### Engraved pendant
+An [engraved pet memorial pendant](/products/engraved-pet-memorial-pendant) is a wearable option if your friend likes keepsakes they can carry close.
+
+### NFC memorial card
+An [NFC pet memorial card](/products/nfc-pet-memorial-card) opens a digital page where family can gather photos and messages over time.
+
+## How to Choose the Right Sympathy Gift
+
+| If your friend... | Choose | Why it works |
+|-------------------|--------|--------------|
+| Loves home displays | Frame or ornament | Easy to place and personalize |
+| Prefers something private | Pendant or locket | Quiet daily remembrance |
+| Needs a ready-to-give option | Sympathy gift box | Complete and thoughtful |
+| Shares memories with family | NFC card / digital page | Photos and messages in one place |
+
+## What to Write in the Card
+
+Keep the note short and sincere:
+
+- "I'm so sorry for the loss of [cat's name]. They were lucky to have you."
+- "Holding you and [cat's name] in my thoughts."
+- "May the quiet memories of them bring you comfort."
+
+Avoid suggesting a new pet right away, and avoid minimizing the loss.
+
+## Browse Sympathy Cat Memorial Gifts
+
+Explore our [cat memorial gifts](/collections/cat-memorial-gifts) collection for ornaments, frames, jewelry, and gentle keepsakes. For broader sympathy options, see [pet loss sympathy gifts](/collections/pet-loss-sympathy-gifts) or all [personalized pet memorial gifts](/collections/pet-memorial-gifts).
+
+A small, personal tribute can say what is hard to put into words.
+    `,
+  }),
 ];
