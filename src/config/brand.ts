@@ -17,7 +17,7 @@ export const BRAND = {
   /** Horizontal reference art (icon + stacked text) — not used directly in header */
   logoFull: "/brand/logo-full.png",
   /** Official site mark: circular dog + cat only — always use this as the logo graphic */
-  logoIcon: "/brand/logo-icon.png",
+  logoIcon: "/brand/logo-dog-cat.png",
   logoAlt: "Pet Memo Shop — dog and cat memorial logo",
 } as const;
 

@@ -8,7 +8,7 @@ alwaysApply: false
 
 ## Official mark (第一张图)
 
-- File: `public/brand/logo-icon.png`
+- File: `public/brand/logo-dog-cat.png` (also mirrored as `logo-icon.png` / favicon source)
 - Content: **circular dog + cat emblem only** (leaves + pink heart). **No text baked into the image.**
 - This is the site LOGO graphic for header, footer, favicon/`src/app/icon.png`.
 
