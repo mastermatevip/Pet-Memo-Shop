@@ -23,12 +23,12 @@ export function BrandLogo({
     <img
       src={BRAND.logoFull}
       alt={BRAND.logoAlt}
-      width={220}
-      height={116}
+      width={280}
+      height={65}
       decoding="async"
       {...(priority ? { fetchPriority: "high" as const } : {})}
       className={cn(
-        "h-11 md:h-14 w-auto max-w-[180px] md:max-w-[220px] object-contain object-left",
+        "h-12 md:h-14 w-auto max-w-[240px] md:max-w-[300px] object-contain object-left",
         className
       )}
     />
