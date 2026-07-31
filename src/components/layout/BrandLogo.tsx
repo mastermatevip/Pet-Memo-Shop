@@ -17,40 +17,35 @@ export function BrandLogo({
 }: BrandLogoProps) {
   const isFull = variant === "full";
 
-  const image = (
-    <span className={cn("inline-flex items-center gap-2.5", className)}>
-      {/* Serve brand assets directly — skip next/image optimizer (JPEG wash / blank paint). */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={BRAND.logoIcon}
-        alt={isFull ? "" : BRAND.logoAlt}
-        width={40}
-        height={40}
-        decoding="async"
-        {...(priority ? { fetchPriority: "high" as const } : {})}
-        className="h-10 w-10 object-contain shrink-0"
-      />
-      {isFull ? (
-        <span className="font-serif text-lg md:text-xl text-text leading-none tracking-tight whitespace-nowrap">
-          {BRAND.name}
-        </span>
-      ) : null}
-    </span>
+  // Serve brand assets directly — skip next/image optimizer.
+  const image = isFull ? (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={BRAND.logoFull}
+      alt={BRAND.logoAlt}
+      width={220}
+      height={116}
+      decoding="async"
+      {...(priority ? { fetchPriority: "high" as const } : {})}
+      className={cn(
+        "h-11 md:h-14 w-auto max-w-[180px] md:max-w-[220px] object-contain object-left",
+        className
+      )}
+    />
+  ) : (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={BRAND.logoIcon}
+      alt={BRAND.logoAlt}
+      width={40}
+      height={40}
+      decoding="async"
+      {...(priority ? { fetchPriority: "high" as const } : {})}
+      className={cn("h-10 w-10 object-contain", className)}
+    />
   );
 
-  if (href === false) {
-    return isFull ? image : (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img
-        src={BRAND.logoIcon}
-        alt={BRAND.logoAlt}
-        width={40}
-        height={40}
-        decoding="async"
-        className={cn("h-10 w-10 object-contain", className)}
-      />
-    );
-  }
+  if (href === false) return image;
 
   return (
     <Link

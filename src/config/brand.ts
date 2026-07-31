@@ -12,7 +12,7 @@ export const BRAND = {
   locale: "en-US",
   logoFull: "/brand/logo-full.png",
   logoIcon: "/brand/logo-icon.png",
-  logoAlt: "Pet Memo Shop — paw print with heart memorial logo",
+  logoAlt: "Pet Memo Shop — dog and cat memorial logo",
 } as const;
 
 /** Warm premium palette — also defined in src/app/globals.css */
