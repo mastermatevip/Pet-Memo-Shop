@@ -90,12 +90,14 @@ export function ProductImagesEditor({ productSlug, images, onChange }: Props) {
       if (data.product?.images) {
         onChange(data.product.images);
         setUploadOk(`图片 ${index + 1} 已上传并替换，前台已更新`);
+        // Only refresh when the product already exists in CMS.
+        // On /admin/products/new, refresh would remount a blank product and wipe the upload.
+        router.refresh();
       } else {
         updateImage(index, { src: data.url });
-        setUploadOk(`图片 ${index + 1} 已上传，请点击「保存商品」写入`);
+        setUploadOk(`图片 ${index + 1} 已上传，请点击「创建商品 / 保存商品」写入`);
       }
 
-      router.refresh();
       setTimeout(() => setUploadOk(null), 4000);
     } catch {
       setUploadError("上传失败，请重试");
@@ -121,7 +123,7 @@ export function ProductImagesEditor({ productSlug, images, onChange }: Props) {
       </div>
 
       <p className="text-sm text-muted">
-        点击缩略图可放大查看。上传会立即更新该图并同步到前台（自动压缩为 WebP，最长边 2000px）。修改 URL 或顺序后仍需点「保存商品」。
+        点击缩略图可放大查看。已有商品：上传后立即同步前台。新建商品：上传后先写入表单，需再点「创建商品」保存。图片会自动压缩为 WebP（最长边 2000px）。
       </p>
 
       {uploadError ? <p className="text-sm text-red-700">{uploadError}</p> : null}
@@ -130,7 +132,7 @@ export function ProductImagesEditor({ productSlug, images, onChange }: Props) {
       <div className="space-y-4">
         {list.map((image, index) => (
           <div
-            key={`${index}-${image.src}`}
+            key={`image-slot-${index}`}
             className="rounded-xl border border-border bg-card p-4 space-y-3"
           >
             <div className="flex gap-4">

@@ -42,7 +42,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "未选择文件" }, { status: 400 });
   }
 
-  if (!ALLOWED.has(file.type)) {
+  const mimeFromName = (() => {
+    const name = file.name.toLowerCase();
+    if (name.endsWith(".jpg") || name.endsWith(".jpeg")) return "image/jpeg";
+    if (name.endsWith(".png")) return "image/png";
+    if (name.endsWith(".webp")) return "image/webp";
+    if (name.endsWith(".gif")) return "image/gif";
+    return "";
+  })();
+  const mime = ALLOWED.has(file.type) ? file.type : mimeFromName;
+
+  if (!ALLOWED.has(mime)) {
     return NextResponse.json({ error: "仅支持 JPG、PNG、WebP、GIF" }, { status: 400 });
   }
 
@@ -55,7 +65,7 @@ export async function POST(request: Request) {
 
   let processed;
   try {
-    processed = await processProductUpload(raw, file.type);
+    processed = await processProductUpload(raw, mime);
   } catch {
     return NextResponse.json({ error: "图片处理失败，请换一张试试" }, { status: 400 });
   }

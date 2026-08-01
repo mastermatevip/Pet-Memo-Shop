@@ -27,10 +27,12 @@ export function ProductEditor({ initial, isNew = false, collectionOptions = [] }
   const [slugTouched, setSlugTouched] = useState(false);
 
   useEffect(() => {
+    // New-product page regenerates a blank `initial` on every refresh — don't wipe local edits/uploads.
+    if (isNew) return;
     setProduct(initial);
     setOriginalSlug(initial.slug);
     setSlugTouched(false);
-  }, [initial]);
+  }, [initial, isNew]);
 
   function setField<K extends keyof Product>(key: K, value: Product[K]) {
     setProduct((p) => ({ ...p, [key]: value }));
