@@ -88,7 +88,13 @@ export function ProductEditor({ initial, isNew = false, collectionOptions = [] }
     setStatus("saving");
     setErrorMessage(undefined);
 
-    const payload = { ...product, slug, images };
+    const payload = {
+      ...product,
+      slug,
+      images,
+      published: product.published !== false,
+      inStock: product.inStock !== false,
+    };
 
     const url = isNew
       ? "/api/admin/products"
@@ -124,6 +130,24 @@ export function ProductEditor({ initial, isNew = false, collectionOptions = [] }
       router.refresh();
     }
     setTimeout(() => setStatus("idle"), 2000);
+  }
+
+  async function handleDelete() {
+    if (isNew) return;
+    if (!window.confirm(`确定删除商品「${product.title}」？此操作不可恢复。`)) return;
+
+    setStatus("saving");
+    setErrorMessage(undefined);
+    const res = await fetch(`/api/admin/products/${encodeURIComponent(originalSlug)}`, {
+      method: "DELETE",
+    });
+    if (!res.ok) {
+      setErrorMessage("删除失败");
+      setStatus("error");
+      return;
+    }
+    router.push("/admin/products");
+    router.refresh();
   }
 
   return (
@@ -190,6 +214,29 @@ export function ProductEditor({ initial, isNew = false, collectionOptions = [] }
           />
         </AdminField>
       )}
+
+      <div className="grid sm:grid-cols-2 gap-4">
+        <AdminField label="上架状态" hint="下架后前台不可见，后台仍可编辑">
+          <select
+            className={adminInputClass}
+            value={product.published === false ? "off" : "on"}
+            onChange={(e) => setField("published", e.target.value === "on")}
+          >
+            <option value="on">已上架</option>
+            <option value="off">已下架</option>
+          </select>
+        </AdminField>
+        <AdminField label="库存状态" hint="缺货时前台仍可见，但无法加入购物车">
+          <select
+            className={adminInputClass}
+            value={product.inStock ? "in" : "out"}
+            onChange={(e) => setField("inStock", e.target.value === "in")}
+          >
+            <option value="in">有货</option>
+            <option value="out">缺货</option>
+          </select>
+        </AdminField>
+      </div>
 
       <div className="grid sm:grid-cols-2 gap-4">
         <AdminField label="价格">
@@ -309,6 +356,15 @@ export function ProductEditor({ initial, isNew = false, collectionOptions = [] }
         >
           {isNew ? "创建商品" : "保存商品"}
         </button>
+        {!isNew ? (
+          <button
+            type="button"
+            onClick={() => void handleDelete()}
+            className="rounded-full border border-red-300 text-red-700 px-5 py-2.5 text-sm font-medium hover:bg-red-50"
+          >
+            删除商品
+          </button>
+        ) : null}
         <SaveStatus status={status} message={status === "error" ? errorMessage : undefined} />
       </div>
     </form>

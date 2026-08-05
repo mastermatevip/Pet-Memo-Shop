@@ -33,6 +33,10 @@ export function validateCheckout(input: CheckoutInput): ValidatedCheckout {
       throw new Error(`Product not found: ${item.productSlug}`);
     }
 
+    if (product.published === false) {
+      throw new Error(`${product.title} is currently unavailable`);
+    }
+
     if (!product.inStock) {
       throw new Error(`${product.title} is currently out of stock`);
     }

@@ -65,6 +65,7 @@ function makeProduct(p: Partial<Product> & Pick<Product, "slug" | "title" | "col
     reviewCount: p.reviewCount ?? 24,
     customizable: p.customizable ?? true,
     inStock: p.inStock ?? true,
+    published: p.published ?? true,
     hasNfc: p.hasNfc ?? false,
     tags: p.tags ?? [],
     specifications: { ...defaultSpecs, ...p.specifications },

@@ -60,6 +60,7 @@ export async function POST(request: Request) {
     reviewCount: body.reviewCount ?? 0,
     customizable: body.customizable ?? true,
     inStock: body.inStock ?? true,
+    published: body.published !== false,
     hasNfc: body.hasNfc ?? false,
     description: body.description ?? "",
     shortDescription: body.shortDescription ?? "",

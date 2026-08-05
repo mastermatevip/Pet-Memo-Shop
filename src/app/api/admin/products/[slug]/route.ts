@@ -16,6 +16,16 @@ function normalizeSlug(slug: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+function revalidateProductPaths(product: Product, previousSlug?: string) {
+  revalidateLocalizedPath("/");
+  revalidateLocalizedPath("/best-sellers");
+  revalidateLocalizedPath(`/products/${product.slug}`);
+  if (previousSlug && previousSlug !== product.slug) {
+    revalidateLocalizedPath(`/products/${previousSlug}`);
+  }
+  revalidateLocalizedPath(`/collections/${product.collection}`);
+}
+
 export async function GET(_request: Request, context: RouteContext) {
   const denied = await requireAdmin();
   if (denied) return denied;
@@ -73,11 +83,12 @@ export async function PUT(request: Request, context: RouteContext) {
     benefits: body.benefits ?? [],
     faqs: body.faqs ?? [],
     relatedSlugs: body.relatedSlugs ?? [],
+    inStock: body.inStock ?? true,
+    published: body.published !== false,
   };
 
   products[index] = product;
 
-  // Keep related-product links in sync when slug changes.
   if (nextSlug !== currentSlug) {
     for (let i = 0; i < products.length; i++) {
       if (i === index) continue;
@@ -92,14 +103,66 @@ export async function PUT(request: Request, context: RouteContext) {
   }
 
   saveProducts(products);
-
-  revalidateLocalizedPath("/");
-  revalidateLocalizedPath("/best-sellers");
-  revalidateLocalizedPath(`/products/${currentSlug}`);
-  if (nextSlug !== currentSlug) {
-    revalidateLocalizedPath(`/products/${nextSlug}`);
-  }
-  revalidateLocalizedPath(`/collections/${product.collection}`);
+  revalidateProductPaths(product, currentSlug);
 
   return NextResponse.json({ product });
+}
+
+/** Quick updates: published / inStock toggles from the product list. */
+export async function PATCH(request: Request, context: RouteContext) {
+  const denied = await requireAdmin();
+  if (denied) return denied;
+
+  const { slug } = await context.params;
+  const body = (await request.json()) as {
+    published?: boolean;
+    inStock?: boolean;
+  };
+
+  const products = loadProducts();
+  const index = products.findIndex((p) => p.slug === slug);
+  if (index === -1) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
+  const current = products[index];
+  const product: Product = {
+    ...current,
+    published:
+      typeof body.published === "boolean" ? body.published : current.published !== false,
+    inStock: typeof body.inStock === "boolean" ? body.inStock : current.inStock,
+  };
+
+  products[index] = product;
+  saveProducts(products);
+  revalidateProductPaths(product);
+
+  return NextResponse.json({ product });
+}
+
+export async function DELETE(_request: Request, context: RouteContext) {
+  const denied = await requireAdmin();
+  if (denied) return denied;
+
+  const { slug } = await context.params;
+  const products = loadProducts();
+  const index = products.findIndex((p) => p.slug === slug);
+  if (index === -1) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
+  const [removed] = products.splice(index, 1);
+
+  for (let i = 0; i < products.length; i++) {
+    if (!products[i].relatedSlugs.includes(slug)) continue;
+    products[i] = {
+      ...products[i],
+      relatedSlugs: products[i].relatedSlugs.filter((s) => s !== slug),
+    };
+  }
+
+  saveProducts(products);
+  revalidateProductPaths(removed);
+
+  return NextResponse.json({ ok: true });
 }

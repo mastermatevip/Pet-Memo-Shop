@@ -39,6 +39,8 @@ export interface Product {
   reviewCount: number;
   customizable: boolean;
   inStock: boolean;
+  /** Storefront visibility — false = 下架 (hidden from shop, still in admin) */
+  published?: boolean;
   hasNfc: boolean;
   tags: string[];
   specifications: Record<string, string>;

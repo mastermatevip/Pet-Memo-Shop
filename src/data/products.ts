@@ -3,16 +3,23 @@ import "server-only";
 import type { Product } from "@/types";
 import { loadProducts } from "@/lib/cms/store";
 
+/** Missing `published` means listed (legacy products). */
+export function isProductPublished(product: Product): boolean {
+  return product.published !== false;
+}
+
 export function getProducts(): Product[] {
-  return loadProducts();
+  return loadProducts().filter(isProductPublished);
 }
 
 export function getProductBySlug(slug: string): Product | undefined {
-  return loadProducts().find((p) => p.slug === slug);
+  const product = loadProducts().find((p) => p.slug === slug);
+  if (!product || !isProductPublished(product)) return undefined;
+  return product;
 }
 
 export function getProductsByCollection(collectionSlug: string): Product[] {
-  const products = loadProducts();
+  const products = getProducts();
   const direct = products.filter((p) => p.collection === collectionSlug);
 
   // Hub collections often have few direct products — include related categories so the page is shoppable.
@@ -66,13 +73,13 @@ export function getProductsByCollection(collectionSlug: string): Product[] {
 }
 
 export function getBestSellers(count = 8): Product[] {
-  const products = loadProducts();
+  const products = getProducts();
   const bestsellers = products.filter((p) => p.tags.includes("bestseller"));
   return bestsellers.length >= count ? bestsellers.slice(0, count) : products.slice(0, count);
 }
 
 export function getAllProductSlugs(): string[] {
-  return loadProducts().map((p) => p.slug);
+  return getProducts().map((p) => p.slug);
 }
 
 export function getRelatedProducts(slugs: string[]): Product[] {
