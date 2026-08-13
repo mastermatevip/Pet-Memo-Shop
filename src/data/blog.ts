@@ -49,6 +49,12 @@ const COLLECTION_FEATURED_GUIDES: Record<string, string[]> = {
     "personalized-pet-memorial-gifts-buying-guide",
     "best-cat-memorial-gifts-to-remember-a-beloved-cat",
   ],
+  "memorial-gift-boxes": [
+    "pet-memorial-gift-boxes-thoughtful-sets-for-pet-loss",
+    "pet-loss-sympathy-gift-ideas",
+    "what-to-give-someone-who-lost-a-pet",
+    "personalized-pet-memorial-gifts-buying-guide",
+  ],
 };
 
 /** Posts that explicitly relate to a collection, with featured guides prioritized. */
