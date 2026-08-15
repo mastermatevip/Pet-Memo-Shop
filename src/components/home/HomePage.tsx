@@ -12,7 +12,7 @@ import { getHomepageContent } from "@/data/homepage";
 import { getBestSellers } from "@/data/products";
 import { getFeaturedReviews } from "@/data/reviews";
 import { getLatestBlogPosts } from "@/data/blog";
-import { localizeHomepage, localizeProduct, loadContentBundle } from "@/lib/localized-content";
+import { localizeHomepage, localizeProduct, localizeBlogPost, loadContentBundle } from "@/lib/localized-content";
 import { Check, Type, ImageIcon, Calendar, MessageSquare, Gift, Nfc } from "lucide-react";
 
 const personalizationIcons: Record<string, React.ReactNode> = {
@@ -32,7 +32,7 @@ export async function HomePage() {
   const { hero, sections } = content;
   const bestSellers = getBestSellers(8).map((p) => localizeProduct(p, bundle));
   const reviews = getFeaturedReviews(6);
-  const blogPosts = getLatestBlogPosts(3);
+  const blogPosts = getLatestBlogPosts(3).map((p) => localizeBlogPost(p, bundle));
 
   return (
     <>

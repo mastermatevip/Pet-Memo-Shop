@@ -27,6 +27,7 @@ interface ProductPageContentProps {
 export function ProductPageContent({ product, relatedProducts }: ProductPageContentProps) {
   const router = useRouter();
   const t = useTranslations("common");
+  const tp = useTranslations("productPage");
   const { addItem } = useCart();
   const [activeImage, setActiveImage] = useState(0);
   const [toast, setToast] = useState<string | null>(null);
@@ -139,13 +140,13 @@ export function ProductPageContent({ product, relatedProducts }: ProductPageCont
 
         {/* Product Story */}
         <section className="py-12 md:py-16 max-w-3xl">
-          <h2 className="font-serif text-2xl md:text-3xl text-text mb-4">The Story Behind This Keepsake</h2>
+          <h2 className="font-serif text-2xl md:text-3xl text-text mb-4">{tp("storyTitle")}</h2>
           <p className="text-muted leading-relaxed text-lg">{product.story}</p>
         </section>
 
         {/* Specifications */}
         <section className="py-8 border-t border-border">
-          <h2 className="font-serif text-2xl text-text mb-6">Specifications</h2>
+          <h2 className="font-serif text-2xl text-text mb-6">{tp("specsTitle")}</h2>
           <div className="overflow-x-auto">
             <table className="w-full max-w-2xl">
               <tbody>
@@ -165,7 +166,7 @@ export function ProductPageContent({ product, relatedProducts }: ProductPageCont
 
         {/* Emotional Benefits */}
         <section className="py-12">
-          <h2 className="font-serif text-2xl text-text mb-6">Why Families Love This Keepsake</h2>
+          <h2 className="font-serif text-2xl text-text mb-6">{tp("benefitsTitle")}</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {product.benefits.map((benefit) => (
               <div key={benefit} className="flex items-start gap-3 p-4 bg-bg rounded-xl">
@@ -178,25 +179,30 @@ export function ProductPageContent({ product, relatedProducts }: ProductPageCont
 
         {/* Shipping & Returns */}
         <section className="py-8 border-t border-border max-w-3xl">
-          <h2 className="font-serif text-2xl text-text mb-4">Shipping & Returns</h2>
+          <h2 className="font-serif text-2xl text-text mb-4">{tp("shippingTitle")}</h2>
           <div className="space-y-3 text-muted leading-relaxed">
             <p>
-              We ship worldwide with tracking provided for every order. See our{" "}
-              <Link href="/shipping-policy" className="text-gold hover:underline">
-                shipping policy
-              </Link>{" "}
-              for timelines by region.
+              {tp.rich("shippingBody", {
+                shipping: (chunks) => (
+                  <Link href="/shipping-policy" className="text-gold hover:underline">
+                    {chunks}
+                  </Link>
+                ),
+              })}
             </p>
             <p>
-              Customized products cannot be returned unless damaged or incorrect. Review{" "}
-              <Link href="/returns-refunds" className="text-gold hover:underline">
-                returns &amp; refunds
-              </Link>{" "}
-              for details, or visit{" "}
-              <Link href="/faqs" className="text-gold hover:underline">
-                FAQs
-              </Link>{" "}
-              for personalization and proof questions.
+              {tp.rich("returnsBody", {
+                returns: (chunks) => (
+                  <Link href="/returns-refunds" className="text-gold hover:underline">
+                    {chunks}
+                  </Link>
+                ),
+                faqs: (chunks) => (
+                  <Link href="/faqs" className="text-gold hover:underline">
+                    {chunks}
+                  </Link>
+                ),
+              })}
             </p>
           </div>
         </section>

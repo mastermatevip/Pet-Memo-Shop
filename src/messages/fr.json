@@ -70,6 +70,114 @@
     "relatedProducts": "Produits recommandés",
     "addedToCart": "Ajouté au panier"
   },
+  "productPage": {
+    "storyTitle": "L'histoire derrière ce souvenir",
+    "specsTitle": "Caractéristiques",
+    "benefitsTitle": "Pourquoi les familles aiment ce souvenir",
+    "shippingTitle": "Livraison et retours",
+    "shippingBody": "Nous expédions dans le monde entier avec un suivi pour chaque commande. Consultez notre <shipping>politique d'expédition</shipping> pour les délais par région.",
+    "returnsBody": "Les produits personnalisés ne peuvent pas être retournés sauf s'ils sont endommagés ou incorrects. Consultez <returns>retours et remboursements</returns>, ou visitez la <faqs>FAQ</faqs> pour la personnalisation et les épreuves.",
+    "shippingLink": "politique d'expédition",
+    "returnsLink": "retours et remboursements",
+    "faqsLink": "FAQ"
+  },
+  "nfcModule": {
+    "title": "Comment fonctionne le souvenir commémoratif NFC",
+    "introBefore": "Touchez ou scannez pour ouvrir un hommage numérique privé. Découvrez la différence entre",
+    "nfcVsQr": "NFC et codes QR",
+    "introMid": ", ou commencez par notre",
+    "cardsGuide": "guide des cartes commémoratives NFC",
+    "introAfter": ".",
+    "steps": {
+      "chip": {
+        "title": "Puce NFC intégrée",
+        "desc": "Une petite puce NFC est intégrée dans la carte ou le tag lors de la production — aucune batterie requise."
+      },
+      "tap": {
+        "title": "Touchez avec un smartphone",
+        "desc": "Approchez un téléphone compatible du souvenir. Aucune application n'est nécessaire sur les téléphones modernes."
+      },
+      "qr": {
+        "title": "Code QR de secours",
+        "desc": "Chaque souvenir inclut un code QR afin que chacun puisse ouvrir la même page commémorative avec l'appareil photo."
+      },
+      "media": {
+        "title": "Photos et vidéos",
+        "desc": "La page numérique peut inclure une galerie photo, des liens vidéo, le nom, les dates et leur histoire."
+      },
+      "update": {
+        "title": "Mettez à jour à tout moment",
+        "desc": "Vous pouvez modifier photos et texte commémoratif plus tard — le lien physique NFC/QR reste le même."
+      },
+      "guestbook": {
+        "title": "Livre d'or optionnel",
+        "desc": "Amis et famille peuvent laisser des messages sur la page commémorative numérique privée."
+      }
+    },
+    "links": {
+      "overview": "Aperçu du mémorial numérique pour animaux",
+      "shop": "Acheter des tags commémoratifs NFC",
+      "carbonGuide": "Guide du tag en fibre de carbone",
+      "createPage": "Créer une page d'hommage numérique"
+    }
+  },
+  "faqsPage": {
+    "title": "Questions fréquentes",
+    "metaTitle": "Questions fréquentes",
+    "metaDescription": "Trouvez des réponses aux questions courantes sur les cadeaux commémoratifs pour animaux Pet Memo Shop, la personnalisation, la livraison et les pages mémoriales numériques NFC.",
+    "items": {
+      "0": {
+        "q": "Puis-je prévisualiser le design avant la production ?",
+        "a": "Oui. Nous envoyons une épreuve de design pour votre relecture et votre approbation avant qu'un article personnalisé ne soit mis en production."
+      },
+      "1": {
+        "q": "Combien de temps prend la personnalisation ?",
+        "a": "La production prend généralement 3 à 5 jours ouvrés après l'approbation de votre épreuve de design."
+      },
+      "2": {
+        "q": "Puis-je téléverser la photo de mon animal ?",
+        "a": "Oui. Vous pouvez téléverser la photo de votre animal lors de l'étape de personnalisation au moment du paiement."
+      },
+      "3": {
+        "q": "Comment fonctionne la page mémoriale NFC ?",
+        "a": "La carte contient une puce NFC. Touchez-la avec un smartphone pour ouvrir la page mémoriale numérique de votre animal. Un code QR de secours est également inclus."
+      },
+      "4": {
+        "q": "Livrez-vous à l'international ?",
+        "a": "Oui. Nous expédions dans le monde entier avec un suivi pour chaque commande."
+      },
+      "5": {
+        "q": "Les produits personnalisés peuvent-ils être retournés ?",
+        "a": "Les produits personnalisés ne peuvent être retournés que s'ils sont endommagés ou incorrects. Les articles non personnalisés peuvent être retournés sous 30 jours."
+      },
+      "6": {
+        "q": "Est-ce adapté comme cadeau de condoléances ?",
+        "a": "Absolument. Nos souvenirs commémoratifs sont conçus avec soin comme des cadeaux de condoléances délicats."
+      },
+      "7": {
+        "q": "Quels modes de paiement acceptez-vous ?",
+        "a": "Nous acceptons PayPal au moment du paiement. PayPal permet également de payer avec Visa, Mastercard, Apple Pay et Google Pay selon votre région."
+      }
+    }
+  },
+  "reviewsPage": {
+    "title": "Avis clients",
+    "metaTitle": "Avis clients",
+    "metaDescription": "Lisez les témoignages de familles qui aiment leurs animaux et ont choisi des souvenirs commémoratifs Pet Memo Shop."
+  },
+  "blogPage": {
+    "title": "Guides mémoriaux pour animaux et idées de cadeaux de condoléances",
+    "subtitle": "Des guides délicats et des idées réfléchies pour honorer un compagnon bien-aimé ou accompagner quelqu'un qui a perdu un animal.",
+    "metaTitle": "Guides mémoriaux pour animaux et idées de cadeaux de condoléances",
+    "metaDescription": "Guides délicats pour le soutien face à la perte d'un animal, idées de cadeaux commémoratifs, guides d'urnes et conseils de mémorial numérique. Des ressources réfléchies pour honorer un compagnon bien-aimé.",
+    "inThisGuide": "Dans ce guide",
+    "relatedCollections": "Acheter les collections associées",
+    "ctaTitle": "Trouver le cadeau mémorial parfait",
+    "ctaBody": "Parcourez des souvenirs personnalisés choisis pour accompagner ce guide.",
+    "moreGuides": "Plus de guides",
+    "shopCollection": "Acheter {name}",
+    "shopMemorialGifts": "Acheter des cadeaux mémoriaux"
+  },
   "contactFab": {
     "whatsapp": "WhatsApp {number}",
     "whatsappLabel": "WhatsApp",

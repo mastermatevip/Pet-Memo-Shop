@@ -70,6 +70,114 @@
     "relatedProducts": "相关商品",
     "addedToCart": "已加入购物车"
   },
+  "productPage": {
+    "storyTitle": "这件纪念品背后的故事",
+    "specsTitle": "规格说明",
+    "benefitsTitle": "为什么家人喜爱这件纪念品",
+    "shippingTitle": "配送与退换",
+    "shippingBody": "我们提供全球配送，每笔订单均含物流追踪。各地区时效请参阅我们的<shipping>配送政策</shipping>。",
+    "returnsBody": "定制商品除损坏或错误外不可退货。详情请查看<returns>退换货政策</returns>，或访问<faqs>常见问题</faqs>了解个性化与设计稿说明。",
+    "shippingLink": "配送政策",
+    "returnsLink": "退换与退款",
+    "faqsLink": "常见问题"
+  },
+  "nfcModule": {
+    "title": "NFC 纪念纪念品如何使用",
+    "introBefore": "轻触或扫描即可打开私密数字纪念页。了解",
+    "nfcVsQr": "NFC 与二维码",
+    "introMid": "的区别，或从我们的",
+    "cardsGuide": "NFC 纪念卡片指南",
+    "introAfter": "开始。",
+    "steps": {
+      "chip": {
+        "title": "内置 NFC 芯片",
+        "desc": "生产时会在卡片或吊牌中嵌入小型 NFC 芯片——无需电池。"
+      },
+      "tap": {
+        "title": "用手机轻触",
+        "desc": "将兼容手机靠近纪念品即可。现代手机通常无需下载应用。"
+      },
+      "qr": {
+        "title": "二维码备用",
+        "desc": "每件纪念品都附带二维码，任何人都能用相机打开同一纪念页面。"
+      },
+      "media": {
+        "title": "照片与视频",
+        "desc": "数字页面可包含相册、视频链接、名字、日期以及他们的故事。"
+      },
+      "update": {
+        "title": "随时更新",
+        "desc": "之后可更新照片与纪念文案——实体 NFC/二维码链接保持不变。"
+      },
+      "guestbook": {
+        "title": "可选留言簿",
+        "desc": "亲友可在私密数字纪念页留下寄语。"
+      }
+    },
+    "links": {
+      "overview": "宠物数字纪念概览",
+      "shop": "选购 NFC 纪念吊牌",
+      "carbonGuide": "碳纤维吊牌指南",
+      "createPage": "创建数字纪念页"
+    }
+  },
+  "faqsPage": {
+    "title": "常见问题",
+    "metaTitle": "常见问题",
+    "metaDescription": "关于 Pet Memo Shop 宠物纪念礼物、个性化定制、配送以及 NFC 数字纪念页的常见问题解答。",
+    "items": {
+      "0": {
+        "q": "生产前可以预览设计吗？",
+        "a": "可以。任何个性化商品进入生产前，我们都会发送设计稿供您审阅并确认。"
+      },
+      "1": {
+        "q": "个性化制作需要多久？",
+        "a": "您确认设计稿后，制作通常需要 3–5 个工作日。"
+      },
+      "2": {
+        "q": "可以上传宠物照片吗？",
+        "a": "可以。您可在结账时的个性化步骤中上传宠物照片。"
+      },
+      "3": {
+        "q": "NFC 纪念页如何使用？",
+        "a": "卡片内含 NFC 芯片。用智能手机轻触即可打开宠物的数字纪念页，同时附带二维码备用。"
+      },
+      "4": {
+        "q": "支持国际配送吗？",
+        "a": "支持。我们提供全球配送，每笔订单均含物流追踪。"
+      },
+      "5": {
+        "q": "定制商品可以退货吗？",
+        "a": "定制商品除损坏或发错外不可退货。非定制商品可在 30 天内退货。"
+      },
+      "6": {
+        "q": "适合作为慰问礼物吗？",
+        "a": "非常适合。我们的纪念纪念品专为温柔的慰问心意而设计。"
+      },
+      "7": {
+        "q": "支持哪些付款方式？",
+        "a": "结账时支持 PayPal。PayPal 在部分地区也支持使用 Visa、Mastercard、Apple Pay 和 Google Pay 付款。"
+      }
+    }
+  },
+  "reviewsPage": {
+    "title": "顾客评价",
+    "metaTitle": "顾客评价",
+    "metaDescription": "阅读选择 Pet Memo Shop 纪念纪念品的爱宠家庭故事。"
+  },
+  "blogPage": {
+    "title": "宠物纪念指南与慰问礼物灵感",
+    "subtitle": "温柔的指南与贴心想法，帮助您纪念挚爱伴侣，或陪伴经历宠物离别的人。",
+    "metaTitle": "宠物纪念指南与慰问礼物灵感",
+    "metaDescription": "关于宠物离别支持、纪念礼物灵感、骨灰盒指南与数字纪念提示的温柔资源，帮助您纪念挚爱伴侣。",
+    "inThisGuide": "本指南内容",
+    "relatedCollections": "选购相关系列",
+    "ctaTitle": "找到合适的纪念礼物",
+    "ctaBody": "浏览与本指南匹配的个性化纪念品。",
+    "moreGuides": "更多指南",
+    "shopCollection": "选购 {name}",
+    "shopMemorialGifts": "选购纪念礼物"
+  },
   "contactFab": {
     "whatsapp": "WhatsApp 联系 {number}",
     "whatsappLabel": "WhatsApp",

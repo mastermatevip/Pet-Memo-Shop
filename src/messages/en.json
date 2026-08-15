@@ -70,6 +70,72 @@
     "relatedProducts": "Featured Products",
     "addedToCart": "Added to cart"
   },
+  "productPage": {
+    "storyTitle": "The Story Behind This Keepsake",
+    "specsTitle": "Specifications",
+    "benefitsTitle": "Why Families Love This Keepsake",
+    "shippingTitle": "Shipping & Returns",
+    "shippingBody": "We ship worldwide with tracking provided for every order. See our <shipping>shipping policy</shipping> for timelines by region.",
+    "returnsBody": "Customized products cannot be returned unless damaged or incorrect. Review <returns>returns & refunds</returns> for details, or visit <faqs>FAQs</faqs> for personalization and proof questions.",
+    "shippingLink": "shipping policy",
+    "returnsLink": "returns & refunds",
+    "faqsLink": "FAQs"
+  },
+  "nfcModule": {
+    "title": "How the NFC Memorial Keepsake Works",
+    "introBefore": "Tap or scan to open a private digital tribute. Learn the difference between",
+    "nfcVsQr": "NFC and QR codes",
+    "introMid": ", or start with our",
+    "cardsGuide": "NFC memorial cards guide",
+    "introAfter": ".",
+    "steps": {
+      "chip": { "title": "NFC Chip Inside", "desc": "A small NFC chip is embedded in the card or tag during production — no battery required." },
+      "tap": { "title": "Tap with Smartphone", "desc": "Hold a compatible phone near the keepsake. No app download is required on modern phones." },
+      "qr": { "title": "QR Code Backup", "desc": "Every keepsake includes a QR code so anyone can open the same memorial page with a camera." },
+      "media": { "title": "Photos & Videos", "desc": "The digital page can include a photo gallery, video links, name, dates, and their story." },
+      "update": { "title": "Update Anytime", "desc": "You can update photos and memorial text later — the physical NFC/QR link stays the same." },
+      "guestbook": { "title": "Optional Guestbook", "desc": "Friends and family can leave messages on the private digital memorial page." }
+    },
+    "links": {
+      "overview": "Digital Pet Memorial overview",
+      "shop": "Shop NFC memorial tags",
+      "carbonGuide": "Carbon fiber tag guide",
+      "createPage": "Create a digital tribute page"
+    }
+  },
+  "faqsPage": {
+    "title": "Frequently Asked Questions",
+    "metaTitle": "Frequently Asked Questions",
+    "metaDescription": "Find answers to common questions about Pet Memo Shop pet memorial gifts, personalization, shipping, and NFC digital memorial pages.",
+    "items": {
+      "0": { "q": "Can I preview the design before production?", "a": "Yes. We send a design proof for your review and approval before any personalized item goes into production." },
+      "1": { "q": "How long does personalization take?", "a": "Production typically takes 3–5 business days after you approve your design proof." },
+      "2": { "q": "Can I upload my pet's photo?", "a": "Yes. You can upload your pet's photo during the personalization step at checkout." },
+      "3": { "q": "How does the NFC memorial page work?", "a": "The card contains an NFC chip. Tap it with a smartphone to open your pet's digital memorial page. A QR code backup is also included." },
+      "4": { "q": "Do you ship internationally?", "a": "Yes. We ship worldwide with tracking provided for every order." },
+      "5": { "q": "Can customized products be returned?", "a": "Customized products cannot be returned unless damaged or incorrect. Non-customized items may be returned within 30 days." },
+      "6": { "q": "Is this suitable as a sympathy gift?", "a": "Absolutely. Our memorial keepsakes are thoughtfully designed as gentle sympathy gifts." },
+      "7": { "q": "What payment methods do you accept?", "a": "We accept PayPal at checkout. PayPal also supports paying with Visa, Mastercard, Apple Pay, and Google Pay where available in your region." }
+    }
+  },
+  "reviewsPage": {
+    "title": "Customer Reviews",
+    "metaTitle": "Customer Reviews",
+    "metaDescription": "Read stories from loving pet families who chose Pet Memo Shop memorial keepsakes."
+  },
+  "blogPage": {
+    "title": "Pet Memorial Guides & Sympathy Gift Ideas",
+    "subtitle": "Gentle guides and thoughtful ideas to help you honor a beloved companion or support someone who has lost a pet.",
+    "metaTitle": "Pet Memorial Guides & Sympathy Gift Ideas",
+    "metaDescription": "Gentle guides for pet loss support, memorial gift ideas, urn guides, and digital memorial tips. Thoughtful resources for honoring a beloved companion.",
+    "inThisGuide": "In This Guide",
+    "relatedCollections": "Shop Related Collections",
+    "ctaTitle": "Find the Perfect Memorial Gift",
+    "ctaBody": "Browse personalized keepsakes chosen to match this guide.",
+    "moreGuides": "More Guides",
+    "shopCollection": "Shop {name}",
+    "shopMemorialGifts": "Shop Memorial Gifts"
+  },
   "contactFab": {
     "whatsapp": "Chat on WhatsApp {number}",
     "whatsappLabel": "WhatsApp",

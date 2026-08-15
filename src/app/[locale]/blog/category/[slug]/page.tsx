@@ -3,35 +3,38 @@ import { buildMetadata } from "@/lib/seo";
 import { getBlogPostsByCategory, getBlogCategoryBySlug } from "@/data/blog";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
+import { loadContentBundle, localizeBlogPost } from "@/lib/localized-content";
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const category = getBlogCategoryBySlug(slug);
   if (!category) return {};
   return buildMetadata({
     title: `${category.name} | Pet Memorial Blog`,
     description: category.description,
     path: `/blog/category/${slug}`,
+    locale,
   });
 }
 
 export default async function BlogCategoryPage({ params }: Props) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const category = getBlogCategoryBySlug(slug);
   if (!category) notFound();
 
   const t = await getTranslations("common");
-  const posts = getBlogPostsByCategory(slug);
+  const bundle = await loadContentBundle(locale);
+  const posts = getBlogPostsByCategory(slug).map((post) => localizeBlogPost(post, bundle));
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-      <Link href="/blog" className="text-sm text-gold hover:underline">&larr; Back to Blog</Link>
+      <Link href="/blog" className="text-sm text-gold hover:underline">&larr; {t("backToBlog")}</Link>
       <h1 className="font-serif text-4xl text-text mt-4 mb-3">{category.name}</h1>
       <p className="text-muted text-lg mb-10">{category.description}</p>
 

@@ -121,79 +121,152 @@
       "title": "Marco conmemorativo personalizado para mascota",
       "shortDescription": "Un marco cálido y elegante grabado con el nombre y las fechas de tu mascota. Un homenaje delicado para el hogar.",
       "metaTitle": "Marco conmemorativo para mascota | Marco de foto personalizado",
-      "metaDescription": "Marco conmemorativo personalizado para mascota con grabado de nombre y fechas. Muestra tu foto favorita como un homenaje cálido para tu perro o gato."
+      "metaDescription": "Marco conmemorativo personalizado para mascota con grabado de nombre y fechas. Muestra tu foto favorita como un homenaje cálido para tu perro o gato.",
+      "story": "Algunos vínculos dejan una calidez silenciosa que permanece con nosotros. Este marco conmemorativo fue creado para guardar esa calidez — un lugar para tu foto favorita y el nombre del compañero que compartió tus días. Colócalo en una estantería, mesita de noche o donde su recuerdo se sienta más en casa."
     },
     "nfc-pet-memorial-card": {
       "title": "Tarjeta conmemorativa NFC para mascota",
       "shortDescription": "Una tarjeta conmemorativa física con chip NFC integrado. Acércala al smartphone para abrir una página digital llena de fotos, vídeos e historias.",
       "metaTitle": "Tarjeta conmemorativa NFC para mascota | Recuerdo digital",
-      "metaDescription": "La tarjeta conmemorativa NFC para mascota abre una página digital con fotos, vídeos e historias. Acércala o escanea el código QR — un homenaje físico y digital."
+      "metaDescription": "La tarjeta conmemorativa NFC para mascota abre una página digital con fotos, vídeos e historias. Acércala o escanea el código QR — un homenaje físico y digital.",
+      "story": "Algunas historias son demasiado ricas para una sola foto. Nuestra tarjeta conmemorativa NFC une lo físico y lo digital — un hermoso recuerdo que puedes sostener y que abre un mundo de memorias con un suave toque. Comparte su historia con la familia, revive momentos favoritos y mantén viva su memoria de una forma que crece contigo.",
+      "faqs": [
+        {
+          "question": "¿Puedo ver una prueba del diseño antes de la producción?",
+          "answer": "Sí. Te enviamos una prueba de diseño para tu revisión y aprobación antes de que cualquier artículo personalizado entre en producción."
+        },
+        {
+          "question": "¿Cuánto tarda la personalización?",
+          "answer": "La producción suele tardar de 3 a 5 días laborables después de que apruebes la prueba de diseño. Los plazos de envío dependen de tu ubicación."
+        },
+        {
+          "question": "¿Puedo subir la foto de mi mascota?",
+          "answer": "Por supuesto. Puedes subir la foto de tu mascota durante el paso de personalización en el pago."
+        },
+        {
+          "question": "¿Puedo cambiar el texto después de hacer el pedido?",
+          "answer": "Puedes solicitar cambios antes de aprobar la prueba de diseño. Una vez aprobada y en producción, es posible que no se puedan realizar cambios."
+        },
+        {
+          "question": "¿Es adecuado como regalo de condolencia?",
+          "answer": "Sí. Nuestros recuerdos conmemorativos están pensados con cariño como delicados regalos de condolencia para amigos y familiares que están de luto por una mascota."
+        },
+        {
+          "question": "¿Cómo funciona la página conmemorativa NFC?",
+          "answer": "La tarjeta contiene un chip NFC. Acércala con un smartphone compatible para abrir la página conmemorativa digital de tu mascota. También hay un código QR impreso en la tarjeta como respaldo."
+        }
+      ]
     },
     "carbon-fiber-nfc-memorial-tag": {
       "title": "Etiqueta conmemorativa NFC de fibra de carbono",
       "shortDescription": "Etiqueta conmemorativa premium de fibra de carbono con chip NFC. Acércala para abrir el memorial en línea o escanea el código QR de respaldo. Grabado láser con nombre y fechas.",
       "metaTitle": "Etiqueta conmemorativa digital para mascota | Recuerdo NFC de fibra de carbono",
-      "metaDescription": "Etiqueta conmemorativa NFC premium de fibra de carbono que abre un memorial en línea con fotos y vídeos. Para perros y gatos — para llevar o exhibir."
+      "metaDescription": "Etiqueta conmemorativa NFC premium de fibra de carbono que abre un memorial en línea con fotos y vídeos. Para perros y gatos — para llevar o exhibir.",
+      "story": "Algunos homenajes merecen durar para siempre. Nuestra etiqueta conmemorativa NFC de fibra de carbono combina material de grado aeroespacial con tecnología discreta — una placa conmemorativa para mascotas que puedes llevar, exhibir junto a una urna o colocar en una caja de recuerdos. Un suave toque abre un memorial en línea lleno de fotos, vídeos y la historia que solo tú puedes contar. Duradera, ligera y profundamente personal.",
+      "faqs": [
+        {
+          "question": "¿Puedo ver una prueba del diseño antes de la producción?",
+          "answer": "Sí. Te enviamos una prueba de diseño para tu revisión y aprobación antes de que cualquier artículo personalizado entre en producción."
+        },
+        {
+          "question": "¿Cuánto tarda la personalización?",
+          "answer": "La producción suele tardar de 3 a 5 días laborables después de que apruebes la prueba de diseño. Los plazos de envío dependen de tu ubicación."
+        },
+        {
+          "question": "¿Puedo subir la foto de mi mascota?",
+          "answer": "Por supuesto. Puedes subir la foto de tu mascota durante el paso de personalización en el pago."
+        },
+        {
+          "question": "¿Puedo cambiar el texto después de hacer el pedido?",
+          "answer": "Puedes solicitar cambios antes de aprobar la prueba de diseño. Una vez aprobada y en producción, es posible que no se puedan realizar cambios."
+        },
+        {
+          "question": "¿Es adecuado como regalo de condolencia?",
+          "answer": "Sí. Nuestros recuerdos conmemorativos están pensados con cariño como delicados regalos de condolencia para amigos y familiares que están de luto por una mascota."
+        },
+        {
+          "question": "¿Cómo funciona la etiqueta NFC de fibra de carbono?",
+          "answer": "La etiqueta contiene un chip NFC integrado programado con la página conmemorativa en línea de tu mascota. Acércala con un smartphone compatible para abrir la página al instante. En la parte posterior hay un código QR marcado con láser como respaldo."
+        },
+        {
+          "question": "¿Puedo llevar o exhibir la etiqueta conmemorativa?",
+          "answer": "Sí. Colócala en una cadena como collar con placa conmemorativa para perro, exhíbela junto a una urna o marco de fotos, o guárdala en una caja de recuerdos. La fibra de carbono está hecha para el uso diario."
+        },
+        {
+          "question": "¿Qué incluye la página conmemorativa digital?",
+          "answer": "Tu memorial en línea incluye galería de fotos, enlaces de vídeo, la historia de tu mascota, fechas conmemorativas, mensajes familiares y un libro de visitas opcional. Puedes actualizar el contenido en cualquier momento."
+        }
+      ]
     },
     "engraved-pet-memorial-pendant": {
       "title": "Colgante conmemorativo grabado para mascota",
       "shortDescription": "Un delicado colgante grabado con el nombre y la huella de tu mascota. Un recuerdo que puedes llevar contigo cada día.",
       "metaTitle": "Colgante conmemorativo para mascota | Collar grabado",
-      "metaDescription": "Colgante conmemorativo para mascota grabado con nombre y huella. Collar de plata de ley para llevar su memoria contigo cada día."
+      "metaDescription": "Colgante conmemorativo para mascota grabado con nombre y huella. Collar de plata de ley para llevar su memoria contigo cada día.",
+      "story": "Hay días en los que buscas algo familiar — un suave recordatorio de que el amor no se desvanece. Este colgante fue diseñado para esos momentos. Llévalo cerca, siente su presencia y lleva con gracia el nombre de tu querido compañero."
     },
     "wooden-pet-cremation-urn": {
       "title": "Urna de cremación de madera para mascota",
       "shortDescription": "Urna de madera artesanal con placa de identificación personalizada. Un lugar de descanso cálido y digno.",
       "metaTitle": "Urna conmemorativa para mascota | Urna de cremación de madera",
-      "metaDescription": "Urna conmemorativa de madera para mascota con placa personalizada. Urna cálida y digna para perros y gatos, con opciones de foto y tarjeta NFC."
+      "metaDescription": "Urna conmemorativa de madera para mascota con placa personalizada. Urna cálida y digna para perros y gatos, con opciones de foto y tarjeta NFC.",
+      "story": "El hogar es donde el amor perdura. Esta urna de madera fue elaborada para guardar no solo cenizas, sino la esencia de una vida bien amada. La veta natural de la madera, la placa cuidadosamente grabada — cada detalle habla de respeto, calidez y la tranquila belleza del recuerdo."
     },
     "memorial-sympathy-gift-box": {
       "title": "Caja de regalo conmemorativa de condolencia",
       "shortDescription": "Un set seleccionado con marco conmemorativo personalizado, vela y tarjeta de condolencia. Una forma delicada de consolar a quien ha perdido a su mascota.",
       "metaTitle": "Regalos conmemorativos únicos | Caja de regalo de condolencia",
-      "metaDescription": "Caja de regalo conmemorativa única con marco personalizado, vela y tarjeta de condolencia. Un regalo considerado para quien ha perdido a su querida mascota."
+      "metaDescription": "Caja de regalo conmemorativa única con marco personalizado, vela y tarjeta de condolencia. Un regalo considerado para quien ha perdido a su querida mascota.",
+      "story": "Cuando las palabras no bastan, un gesto delicado puede decir mucho. Esta caja de regalo reúne un marco personalizado, una vela suave y una tarjeta de condolencia sincera — todo lo necesario para ofrecer consuelo y honrar la memoria de un querido compañero."
     },
     "engraved-pet-memorial-plaque": {
       "title": "Placa conmemorativa grabada para mascota",
       "shortDescription": "Placa conmemorativa de pizarra grabada con el nombre, las fechas y un mensaje de cariño. Perfecta para estantería o jardín.",
       "metaTitle": "Placa conmemorativa para mascota | Placa personalizada grabada",
-      "metaDescription": "Placa conmemorativa personalizada para mascota con grabado de nombre, fechas y mensaje. Pizarra para interior o jardín, con integración NFC opcional."
+      "metaDescription": "Placa conmemorativa personalizada para mascota con grabado de nombre, fechas y mensaje. Pizarra para interior o jardín, con integración NFC opcional.",
+      "story": "Algunos homenajes pertenecen a la luz del día — donde el sol toca las palabras y los recuerdos cobran vida. Esta placa grabada captura el nombre de tu mascota y las fechas que importan, creando un marcador duradero del amor que compartiste."
     },
     "dog-memorial-keepsake-box": {
       "title": "Caja de recuerdos conmemorativa para perro",
       "shortDescription": "Caja de madera grabada con el nombre de tu perro. Guarda collares, placas, fotos y recuerdos preciados en un solo lugar.",
       "metaTitle": "Caja de recuerdos para mascota | Caja conmemorativa para perro",
-      "metaDescription": "Caja de recuerdos personalizada para guardar collares, placas y fotos. Caja de madera grabada con forro de terciopelo."
+      "metaDescription": "Caja de recuerdos personalizada para guardar collares, placas y fotos. Caja de madera grabada con forro de terciopelo.",
+      "story": "Cada collar cuenta una historia. Cada placa guarda un recuerdo. Esta caja de recuerdos fue hecha para reunir esas pequeñas cosas preciosas — los fragmentos tangibles de una vida compartida — y mantenerlos a salvo en un lugar de honor."
     },
     "cat-memorial-photo-ornament": {
       "title": "Adorno conmemorativo con foto para gato",
       "shortDescription": "Adorno de cerámica con el retrato y el nombre de tu gato. Un homenaje delicado para las fiestas o todo el año.",
       "metaTitle": "Adorno conmemorativo para gato | Adorno con foto personalizado",
-      "metaDescription": "Adorno conmemorativo con foto para gato en cerámica con retrato y nombre personalizados. Un homenaje delicado para las fiestas o el día a día."
+      "metaDescription": "Adorno conmemorativo con foto para gato en cerámica con retrato y nombre personalizados. Un homenaje delicado para las fiestas o el día a día.",
+      "story": "Para los compañeros silenciosos que llenaron nuestros hogares de calidez, este adorno guarda su retrato y nombre en una delicada forma de cerámica — un pequeño y hermoso recordatorio de que siguen formando parte de la familia."
     },
     "ceramic-pet-cremation-urn": {
       "title": "Urna de cremación de cerámica para mascota",
       "shortDescription": "Urna de cerámica elegante con placa de identificación personalizada. Esmalte blanco suave con delicados acentos dorados.",
       "metaTitle": "Urna conmemorativa para mascota | Urna de cremación de cerámica",
-      "metaDescription": "Urna de cerámica para mascota con placa personalizada. Esmalte blanco suave con acentos dorados — un lugar sereno de descanso para tu compañero."
+      "metaDescription": "Urna de cerámica para mascota con placa personalizada. Esmalte blanco suave con acentos dorados — un lugar sereno de descanso para tu compañero.",
+      "story": "La sencillez puede guardar el significado más profundo. Esta urna de cerámica, con su esmalte suave y placa personalizada, ofrece un lugar sereno de descanso — un recipiente tranquilo y hermoso para un compañero que aportó tanta luz."
     },
     "pet-memorial-photo-locket": {
       "title": "Medallón conmemorativo con foto para mascota",
       "shortDescription": "Medallón de plata de ley con la foto de tu mascota en el interior. Nombre grabado con elegancia en la parte frontal.",
       "metaTitle": "Collar conmemorativo para mascota | Medallón con foto",
-      "metaDescription": "Collar conmemorativo para mascota con medallón para foto. Plata de ley con nombre grabado en la parte frontal — un recuerdo profundamente personal."
+      "metaDescription": "Collar conmemorativo para mascota con medallón para foto. Plata de ley con nombre grabado en la parte frontal — un recuerdo profundamente personal.",
+      "story": "Algunos recuerdos pertenecen cerca del corazón — literalmente. Abre este medallón y encontrarás la foto de tu mascota en el interior, con su nombre grabado con elegancia en la parte frontal. Un homenaje íntimo y privado que puedes llevar a todas partes."
     },
     "digital-memorial-page-standalone": {
       "title": "Página conmemorativa digital para mascota",
       "shortDescription": "Página conmemorativa digital independiente con fotos, vídeos, historia y mensajes familiares. Accesible mediante enlace único y código QR.",
       "metaTitle": "Página conmemorativa digital para mascota | Homenaje en línea",
-      "metaDescription": "Crea una página conmemorativa digital para mascota con fotos, vídeos, historia y mensajes familiares. Compártela mediante enlace único y código QR."
+      "metaDescription": "Crea una página conmemorativa digital para mascota con fotos, vídeos, historia y mensajes familiares. Compártela mediante enlace único y código QR.",
+      "story": "No todo homenaje necesita sostenerse en la mano. A veces el memorial más significativo es uno que puede compartirse — una página digital donde familia y amigos pueden visitar, aportar recuerdos y mantener viva juntos la historia de tu mascota."
     },
     "pet-loss-candle-set": {
       "title": "Set de velas conmemorativas por pérdida de mascota",
       "shortDescription": "Tres velas de cera de soja con aromas suaves y etiquetas conmemorativas. Un regalo de condolencia cálido y reconfortante.",
       "metaTitle": "Velas conmemorativas por pérdida de mascota | Set de velas",
-      "metaDescription": "Set de velas conmemorativas por pérdida de mascota: tres velas de cera de soja con aromas suaves y etiquetas de recuerdo. Un regalo de condolencia delicado."
+      "metaDescription": "Set de velas conmemorativas por pérdida de mascota: tres velas de cera de soja con aromas suaves y etiquetas de recuerdo. Un regalo de condolencia delicado.",
+      "story": "La luz lleva la memoria de forma silenciosa. Estas velas de cera de soja vertidas a mano, cada una con una delicada etiqueta conmemorativa, ofrecen un brillo suave y un aroma calmante — un gesto sencillo y hermoso de consuelo."
     }
   },
   "collections": {
@@ -203,7 +276,23 @@
       "description": "Recuerdos personalizados y significativos para honrar a un querido compañero.",
       "intro": "Descubre regalos conmemorativos personalizados para mascotas creados para honrar el vínculo que compartiste con tu perro, gato o compañero. Cada recuerdo puede personalizarse con fotos, nombres, fechas y mensajes de cariño.",
       "metaTitle": "Regalos conmemorativos para mascotas | Recuerdos personalizados para perros y gatos",
-      "metaDescription": "Compra regalos conmemorativos personalizados para mascotas. Marcos, placas, joyería, urnas y recuerdos digitales NFC con prueba de diseño antes de la producción."
+      "metaDescription": "Compra regalos conmemorativos personalizados para mascotas. Marcos, placas, joyería, urnas y recuerdos digitales NFC con prueba de diseño antes de la producción.",
+      "seoHeadings": {
+        "whatAre": "¿Qué son los regalos conmemorativos personalizados para mascotas?",
+        "popularTypes": "Regalos conmemorativos personalizados más populares",
+        "whenToChoose": "Cuándo elegir un regalo conmemorativo personalizado",
+        "personalization": "Qué se puede personalizar",
+        "buyingGuide": "Cómo elegir el regalo conmemorativo adecuado",
+        "whyChoose": "Por qué elegir nuestros regalos conmemorativos"
+      },
+      "seoSections": {
+        "whatAre": "Los regalos conmemorativos personalizados para mascotas son recuerdos hechos a medida para honrar a un querido compañero. A diferencia de artículos genéricos de condolencia, suelen incluir el nombre, la foto, las fechas o la historia de tu mascota — convirtiendo un marco, un collar, una urna, una placa o una tarjeta NFC en un homenaje duradero que puedes guardar en casa o compartir con la familia.",
+        "popularTypes": "Entre las opciones más populares están los marcos de fotos grabados para exhibir en casa, la joyería conmemorativa que puedes llevar, urnas de madera o cerámica, placas de pizarra, cajas de regalo de condolencia y tarjetas NFC conmemorativas que abren un homenaje digital. Empieza con el recuerdo que mejor encaje con tu forma diaria de recordarlos.",
+        "whenToChoose": "Elige regalos conmemorativos personalizados cuando quieras un homenaje duradero para tu propia mascota, al conmemorar un aniversario de su partida o al consolar a alguien en duelo. También son una opción considerada si deseas un recuerdo físico y una página conmemorativa digital que la familia pueda visitar en cualquier momento.",
+        "personalization": "La mayoría de los regalos pueden personalizarse con una foto favorita, el nombre de tu mascota, fechas de nacimiento y recuerdo, una dedicatoria breve, estilo de fuente y embalaje de regalo opcional. En recuerdos NFC, la personalización incluye crear una página conmemorativa en línea con fotos, vídeos y mensajes en el libro de visitas. Siempre enviamos una prueba de diseño gratuita antes de la producción.",
+        "buyingGuide": "Para elegir el regalo conmemorativo personalizado adecuado: (1) decide si es para ti o como regalo de condolencia, (2) elige un estilo de exhibición — estantería en casa, para llevar o digital, (3) reúne una foto clara más el nombre y las fechas que deseas grabar, y (4) aprueba la prueba de diseño gratuita antes de fabricarlo. Si no estás seguro, un marco personalizado o una caja de regalo conmemorativa es un punto de partida delicado y muy apreciado.",
+        "whyChoose": "Las familias eligen nuestros regalos conmemorativos personalizados por el diseño cálido, la artesanía cuidadosa, la prueba gratuita antes de la producción y las páginas conmemorativas digitales NFC opcionales. Ya sea un marco sencillo o una caja de regalo completa, cada pieza está hecha para sentirse personal — no producida en serie."
+      }
     },
     "dog-memorial-gifts": {
       "name": "Regalos conmemorativos para perros",
@@ -211,7 +300,23 @@
       "description": "Recuerdos significativos para recordar a un perro querido.",
       "intro": "Honra el espíritu leal de tu perro con regalos conmemorativos personalizados. Desde marcos grabados hasta tarjetas de recuerdo NFC, cada pieza mantiene su historia cerca.",
       "metaTitle": "Regalos conmemorativos para perros | Homenajes para perros",
-      "metaDescription": "Compra regalos conmemorativos para perros. Marcos, urnas, joyería, cajas de recuerdos y tarjetas NFC personalizadas para honrar a tu perro."
+      "metaDescription": "Compra regalos conmemorativos para perros. Marcos, urnas, joyería, cajas de recuerdos y tarjetas NFC personalizadas para honrar a tu perro.",
+      "seoHeadings": {
+        "whatAre": "¿Qué son los regalos conmemorativos para perros?",
+        "popularTypes": "Regalos conmemorativos para perros más populares",
+        "whenToChoose": "Cuándo elegir un regalo conmemorativo para perros",
+        "personalization": "Qué se puede personalizar",
+        "buyingGuide": "Cómo elegir regalos conmemorativos para perros",
+        "whyChoose": "Por qué elegir nuestros regalos conmemorativos para perros"
+      },
+      "seoSections": {
+        "whatAre": "Los regalos conmemorativos para perros son homenajes personalizados creados para honrar a un perro querido — desde marcos conmemorativos grabados y cajas de recuerdos hasta urnas, joyería, placas y tarjetas NFC que abren un memorial en línea. Ayudan a las familias a mantener la historia de su perro cerca en casa, en un collar o en una página digital compartible.",
+        "popularTypes": "Entre los regalos conmemorativos para perros más populares están los marcos de fotos personalizados, las cajas de recuerdos para collares y placas, urnas de madera o cerámica, joyería grabada, placas conmemorativas, cajas de regalo de condolencia y tarjetas NFC conmemorativas. Muchas familias combinan una pieza para el hogar con una página conmemorativa digital.",
+        "whenToChoose": "Elige regalos conmemorativos para perros al recordar a tu propio compañero, conmemorar un cumpleaños o aniversario de su partida, crear un rincón de recuerdos en casa u ofrecer consuelo a un amigo que ha perdido a su perro. Son especialmente útiles cuando buscas algo más personal que una tarjeta de condolencia genérica.",
+        "personalization": "Personaliza regalos conmemorativos para perros con el nombre, la foto, las fechas de nacimiento y recuerdo, un mensaje breve, detalles opcionales de huella y embalaje de regalo. Los recuerdos NFC para perros también pueden enlazar a una página digital con fotos, vídeos y mensajes familiares. Cada pedido personalizado incluye una prueba de diseño gratuita.",
+        "buyingGuide": "Al comprar regalos conmemorativos para perros: empieza con una foto favorita clara, decide entre un recuerdo para el hogar o uno para llevar, y elige si también deseas una página conmemorativa digital. Si es un regalo para otra persona, un marco o caja de recuerdos suele ser la opción más segura. Aprueba la prueba de diseño gratuita y fabricamos la pieza lista para exhibir o regalar.",
+        "whyChoose": "Nuestros regalos conmemorativos para perros combinan un diseño delicado con una personalización significativa, para que el homenaje se sienta como tu perro — no como un producto genérico. Las familias valoran la prueba gratuita, los materiales cálidos y la opción de añadir un memorial digital NFC junto al recuerdo físico."
+      }
     },
     "cat-memorial-gifts": {
       "name": "Regalos conmemorativos para gatos",
@@ -219,7 +324,23 @@
       "description": "Recuerdos delicados para recordar a un gato querido.",
       "intro": "Celebra la compañía silenciosa de tu gato con regalos conmemorativos personalizados. Cada pieza está diseñada con calidez y respeto para honrar su espíritu único.",
       "metaTitle": "Regalos conmemorativos para gatos | Recuerdos personalizados para gatos",
-      "metaDescription": "Compra regalos conmemorativos personalizados para gatos. Marcos, joyería, urnas y recuerdos digitales para recordar a tu querido gato."
+      "metaDescription": "Compra regalos conmemorativos personalizados para gatos. Marcos, joyería, urnas y recuerdos digitales para recordar a tu querido gato.",
+      "seoHeadings": {
+        "whatAre": "¿Qué son los regalos conmemorativos para gatos?",
+        "popularTypes": "Regalos conmemorativos para gatos más populares",
+        "whenToChoose": "Cuándo elegir un regalo conmemorativo para gatos",
+        "personalization": "Qué se puede personalizar",
+        "buyingGuide": "Cómo elegir regalos conmemorativos para gatos",
+        "whyChoose": "Por qué elegir nuestros regalos conmemorativos para gatos"
+      },
+      "seoSections": {
+        "whatAre": "Los regalos conmemorativos para gatos son recuerdos personalizados creados para honrar a un gato querido — desde marcos de fotos y adornos hasta joyería, urnas, placas, cajas de regalo y tarjetas NFC que abren un memorial en línea. Ofrecen una forma delicada de mantener cerca la compañía silenciosa de un gato en casa, en un collar o en una página digital compartible.",
+        "popularTypes": "Entre los regalos conmemorativos para gatos más populares están los marcos de fotos personalizados, adornos conmemorativos con foto, joyería grabada, urnas de madera o cerámica, placas conmemorativas, cajas de regalo de condolencia y tarjetas NFC conmemorativas. Muchas familias combinan una pieza para el hogar con una página conmemorativa digital.",
+        "whenToChoose": "Elige regalos conmemorativos para gatos al recordar a tu propio compañero, conmemorar un cumpleaños o aniversario de su partida, crear un rincón de recuerdos en casa u ofrecer consuelo a un amigo que ha perdido a su gato. Son especialmente útiles cuando buscas algo más personal que una tarjeta de condolencia genérica.",
+        "personalization": "Personaliza regalos conmemorativos para gatos con el nombre, la foto, las fechas de nacimiento y recuerdo, un mensaje breve y embalaje de regalo. Los recuerdos NFC para gatos también pueden enlazar a una página digital con fotos, vídeos y mensajes familiares. Cada pedido personalizado incluye una prueba de diseño gratuita.",
+        "buyingGuide": "Al comprar regalos conmemorativos para gatos: empieza con una foto favorita clara, decide entre un recuerdo para el hogar o uno para llevar, y elige si también deseas una página conmemorativa digital. Si es un regalo para otra persona, un marco, adorno o caja de regalo suele ser la opción más segura. Aprueba la prueba de diseño gratuita y fabricamos la pieza lista para exhibir o regalar.",
+        "whyChoose": "Nuestros regalos conmemorativos para gatos combinan un diseño suave y elegante con una personalización significativa, para que el homenaje se sienta como tu gato — no como un producto genérico. Las familias valoran la prueba gratuita, la estética delicada y la opción de añadir un memorial digital NFC junto al recuerdo físico."
+      }
     },
     "pet-memorial-jewelry": {
       "name": "Joyería conmemorativa para mascotas",
@@ -227,7 +348,19 @@
       "description": "Recuerdos que puedes llevar contigo para mantener su memoria cerca.",
       "intro": "Mantén cerca a tu querido compañero con joyería conmemorativa personalizada: colgantes grabados, collares conmemorativos, medallones con foto y diseños de huella, elaborados con cuidado y elegancia.",
       "metaTitle": "Joyería conmemorativa para mascotas | Colgantes, collares y medallones",
-      "metaDescription": "Compra joyería conmemorativa para mascotas: colgantes, collares y medallones con foto. Grabados con nombre, fechas y huella — recuerdos personalizados para honrar a tu mascota."
+      "metaDescription": "Compra joyería conmemorativa para mascotas: colgantes, collares y medallones con foto. Grabados con nombre, fechas y huella — recuerdos personalizados para honrar a tu mascota.",
+      "seoHeadings": {
+        "whatAre": "¿Qué es la joyería conmemorativa para mascotas?",
+        "whenToChoose": "Cuándo elegir joyería conmemorativa",
+        "personalization": "Opciones de personalización",
+        "whyChoose": "Por qué elegir nuestra joyería conmemorativa"
+      },
+      "seoSections": {
+        "whatAre": "La joyería conmemorativa para mascotas incluye collares, colgantes, pulseras y medallones — joyería conmemorativa que puedes llevar, grabada o personalizada con el nombre, las fechas o la foto de tu mascota.",
+        "whenToChoose": "Elige joyería conmemorativa cuando quieras un recuerdo que puedas llevar contigo durante el día, o como un regalo de condolencia íntimo.",
+        "personalization": "Las opciones incluyen grabado del nombre, fechas conmemorativas, diseños de huella, medallones con foto, selección de fuente y embalaje premium para regalo.",
+        "whyChoose": "Nuestra joyería conmemorativa para mascotas está elaborada con materiales premium y un diseño delicado, ofreciendo una forma significativa de llevar la memoria de tu mascota contigo."
+      }
     },
     "pet-urns": {
       "name": "Urnas para mascotas",
@@ -235,7 +368,19 @@
       "description": "Urnas de cremación elegantes con placas de identificación personalizadas.",
       "intro": "Honra a tu querido compañero con una urna conmemorativa para mascota elaborada con esmero. Elige entre urnas de madera, cerámica y metal con placas personalizadas y marcos de foto opcionales.",
       "metaTitle": "Urnas conmemorativas para mascotas | Urnas de cremación personalizadas",
-      "metaDescription": "Compra urnas conmemorativas para perros y gatos. Urnas de madera, cerámica y metal con placas personalizadas, opciones de foto y tarjetas NFC opcionales."
+      "metaDescription": "Compra urnas conmemorativas para perros y gatos. Urnas de madera, cerámica y metal con placas personalizadas, opciones de foto y tarjetas NFC opcionales.",
+      "seoHeadings": {
+        "whatAre": "¿Qué son las urnas conmemorativas para mascotas?",
+        "whenToChoose": "Cuándo elegir una urna para mascotas",
+        "personalization": "Opciones de personalización",
+        "whyChoose": "Por qué elegir nuestras urnas conmemorativas"
+      },
+      "seoSections": {
+        "whatAre": "Las urnas conmemorativas para mascotas son recipientes diseñados para guardar con respeto las cenizas de un querido compañero tras la cremación. Pueden exhibirse en casa como un homenaje delicado y digno.",
+        "whenToChoose": "Elige una urna para mascotas cuando desees conservar las cenizas de tu compañero en un recipiente hermoso y personalizado en el hogar.",
+        "personalization": "Personaliza con placas grabadas, fechas conmemorativas, marcos de fotos y tarjetas conmemorativas digitales NFC opcionales.",
+        "whyChoose": "Nuestras urnas presentan diseños cálidos y elegantes, artesanía cuidadosa y opciones de personalización en las que confían las familias."
+      }
     },
     "nfc-memorial-cards": {
       "name": "Etiquetas conmemorativas NFC",
@@ -243,7 +388,19 @@
       "description": "Acércala para abrir una página conmemorativa en línea llena de recuerdos.",
       "intro": "Conecta un recuerdo físico con un memorial en línea duradero. Nuestras etiquetas y tarjetas NFC — incluidas las premium de fibra de carbono — abren una página digital con fotos, vídeos, historias y mensajes familiares. Acércala al smartphone o escanea el código QR.",
       "metaTitle": "Etiquetas conmemorativas digitales para mascotas | Recuerdos NFC y código QR",
-      "metaDescription": "Compra etiquetas conmemorativas digitales para mascotas con acceso NFC y código QR. Etiquetas premium de fibra de carbono y tarjetas conmemorativas que abren páginas en línea con fotos, vídeos e historias."
+      "metaDescription": "Compra etiquetas conmemorativas digitales para mascotas con acceso NFC y código QR. Etiquetas premium de fibra de carbono y tarjetas conmemorativas que abren páginas en línea con fotos, vídeos e historias.",
+      "seoHeadings": {
+        "whatAre": "¿Qué son las etiquetas conmemorativas digitales para mascotas?",
+        "whenToChoose": "Cuándo elegir una etiqueta conmemorativa NFC",
+        "personalization": "Opciones de personalización",
+        "whyChoose": "Por qué elegir nuestras etiquetas NFC conmemorativas"
+      },
+      "seoSections": {
+        "whatAre": "Las etiquetas conmemorativas digitales para mascotas son recuerdos físicos — etiquetas de fibra de carbono o tarjetas conmemorativas — con chips NFC integrados. Un toque abre una página conmemorativa en línea con fotos, vídeos e historias.",
+        "whenToChoose": "Elige una etiqueta conmemorativa NFC cuando quieras un recuerdo físico premium y un memorial en línea compartible para familia y amigos.",
+        "personalization": "Graba el nombre y las fechas de tu mascota en la etiqueta, luego crea tu memorial en línea con fotos, vídeos, historia y mensajes familiares.",
+        "whyChoose": "Pet Memo Shop ofrece etiquetas NFC premium de fibra de carbono y tarjetas conmemorativas accesibles — una forma única de crear un memorial en línea para mascotas que crece con tu familia."
+      }
     },
     "memorial-gift-boxes": {
       "name": "Cajas de regalo conmemorativas",
@@ -256,15 +413,15 @@
         "whatAre": "¿Qué son las cajas de regalo conmemorativas?",
         "whenToChoose": "Cuándo elegir una caja de regalo conmemorativa",
         "personalization": "Opciones de personalización",
-        "whyChoose": "Por qué elegir nuestras cajas de regalo"
+        "whyChoose": "Por qué elegir nuestras cajas de regalo conmemorativas"
       },
       "relatedCategories": "Categorías relacionadas",
       "helpfulGuides": "Guías útiles",
       "seoSections": {
-        "whatAre": "Las cajas conmemorativas combinan recuerdos personalizados, velas, marcos o joyería en un embalaje premium.",
-        "whenToChoose": "Ideal como regalo de condolencia o cuando desea un set completo y coordinado de recuerdos.",
-        "personalization": "Cada caja puede incluir artículos personalizados con nombre, foto y fechas, más tarjeta de regalo.",
-        "whyChoose": "Presentación premium y personalización significativa para regalar o recordar."
+        "whatAre": "Las cajas de regalo conmemorativas son sets seleccionados que combinan recuerdos personalizados, velas, marcos o joyería en un embalaje premium para regalo.",
+        "whenToChoose": "Elige una caja de regalo conmemorativa al enviar un regalo de condolencia o cuando deseas un set completo y coordinado de recuerdos.",
+        "personalization": "Cada caja puede incluir artículos personalizados con el nombre, la foto y las fechas de tu mascota. Añade una tarjeta de mensaje para regalos de condolencia.",
+        "whyChoose": "Nuestras cajas de regalo ofrecen una presentación premium y una personalización significativa, ideales para regalar o para un recuerdo personal."
       }
     },
     "digital-pet-memorial-keepsakes": {
@@ -275,18 +432,18 @@
       "metaTitle": "Recuerdos digitales para mascotas | Páginas de memoria en línea",
       "metaDescription": "Cree una página conmemorativa digital con fotos, videos e historias. Acceso por tarjeta NFC o código QR.",
       "seoHeadings": {
-        "whatAre": "¿Qué son los recuerdos digitales para mascotas?",
+        "whatAre": "¿Qué son los recuerdos digitales conmemorativos para mascotas?",
         "whenToChoose": "Cuándo elegir un memorial digital",
         "personalization": "Opciones de personalización",
-        "whyChoose": "Por qué elegir nuestras páginas digitales"
+        "whyChoose": "Por qué elegir nuestras páginas conmemorativas digitales"
       },
       "relatedCategories": "Categorías relacionadas",
       "helpfulGuides": "Guías útiles",
       "seoSections": {
-        "whatAre": "Páginas en línea dedicadas a honrar a un compañero con fotos, videos, historias y mensajes familiares.",
-        "whenToChoose": "Cuando desea compartir recuerdos con familia y amigos o combinar con tarjeta NFC o placa.",
-        "personalization": "Nombre, galería de fotos, fechas, historia, videos, mensajes y libro de visitas opcional.",
-        "whyChoose": "Diseño cálido y elegante, accesible en cualquier momento y lugar."
+        "whatAre": "Los recuerdos digitales conmemorativos para mascotas son páginas en línea dedicadas a honrar a un querido compañero con fotos, vídeos, historias y mensajes familiares.",
+        "whenToChoose": "Elige un memorial digital cuando quieras compartir recuerdos con familia y amigos, o combinarlo con una tarjeta NFC física o una placa conmemorativa.",
+        "personalization": "Incluye el nombre de la mascota, galería de fotos, fechas de nacimiento y recuerdo, historia, enlaces de vídeo, mensajes familiares y un libro de visitas opcional.",
+        "whyChoose": "Nuestras páginas conmemorativas digitales ofrecen un diseño cálido y elegante que preserva la historia de tu mascota y puede consultarse en cualquier momento y lugar."
       }
     },
     "pet-loss-sympathy-gifts": {
@@ -305,10 +462,10 @@
       "relatedCategories": "Categorías relacionadas",
       "helpfulGuides": "Guías útiles",
       "seoSections": {
-        "whatAre": "Recuerdos y regalos de condolencia que honran suavemente la memoria de una mascota fallecida.",
-        "whenToChoose": "Cuando un ser querido pierde su mascota y desea un gesto significativo y reconfortante.",
-        "personalization": "Muchos regalos personalizables con nombre, foto y fechas. Tarjetas y embalaje premium disponibles.",
-        "whyChoose": "Diseñados con calidez y respeto para apoyar en momentos difíciles."
+        "whatAre": "Los regalos de memoria y condolencia por pérdida de mascota son recuerdos considerados para alguien que ha perdido a un querido compañero, ofreciendo una forma delicada de honrar su memoria.",
+        "whenToChoose": "Elige un regalo de condolencia cuando un amigo, familiar o colega pierde a su mascota y deseas ofrecer un gesto significativo y reconfortante.",
+        "personalization": "Muchos regalos de condolencia pueden personalizarse con el nombre, la foto y las fechas de la mascota. Hay tarjetas de mensaje y embalaje premium disponibles.",
+        "whyChoose": "Nuestros regalos de condolencia están diseñados con calidez y respeto, lo que los convierte en una opción considerada para acompañar a alguien durante la pérdida de una mascota."
       }
     },
     "pet-memorial-frames": {
@@ -322,15 +479,15 @@
         "whatAre": "¿Qué son los marcos conmemorativos para mascotas?",
         "whenToChoose": "Cuándo elegir un marco conmemorativo",
         "personalization": "Opciones de personalización",
-        "whyChoose": "Por qué elegir nuestros marcos"
+        "whyChoose": "Por qué elegir nuestros marcos conmemorativos"
       },
       "relatedCategories": "Categorías relacionadas",
       "helpfulGuides": "Guías útiles",
       "seoSections": {
-        "whatAre": "Marcos de fotos personalizados con nombre, fechas y mensaje — una forma popular de tributo en el hogar.",
-        "whenToChoose": "Cuando desea un recordatorio diario visible de su compañero.",
-        "personalization": "Suba foto, añada nombre y fechas, elija fuente y estilo de marco.",
-        "whyChoose": "Materiales premium, grabado elegante y prueba antes de producción."
+        "whatAre": "Los marcos conmemorativos para mascotas son marcos de fotos personalizados con el nombre, las fechas y mensajes opcionales de tu mascota — una de las formas más populares de crear un homenaje en el hogar.",
+        "whenToChoose": "Elige un marco conmemorativo cuando quieras un recordatorio visible y cotidiano de tu querido compañero exhibido en casa.",
+        "personalization": "Sube la foto de tu mascota, añade su nombre y fechas conmemorativas, elige una fuente y selecciona entre estilos de marco de madera, metal o acrílico.",
+        "whyChoose": "Nuestros marcos cuentan con materiales premium, grabado elegante y un proceso de prueba antes de la producción para tu tranquilidad."
       }
     },
     "pet-memorial-plaques": {
@@ -344,15 +501,15 @@
         "whatAre": "¿Qué son las placas conmemorativas para mascotas?",
         "whenToChoose": "Cuándo elegir una placa conmemorativa",
         "personalization": "Opciones de personalización",
-        "whyChoose": "Por qué elegir nuestras placas"
+        "whyChoose": "Por qué elegir nuestras placas conmemorativas"
       },
       "relatedCategories": "Categorías relacionadas",
       "helpfulGuides": "Guías útiles",
       "seoSections": {
-        "whatAre": "Placas grabadas con nombre, fechas y mensaje — ideales para estante, jardín o junto a urna.",
-        "whenToChoose": "Para tributo en jardín, estante o junto a urna y marco.",
-        "personalization": "Grabado de nombre, fechas, mensaje, huella o foto opcional. Chip NFC disponible.",
-        "whyChoose": "Materiales de calidad, grabado preciso e integración NFC opcional."
+        "whatAre": "Las placas conmemorativas para mascotas son homenajes grabados que muestran el nombre, las fechas y un mensaje personalizado de tu mascota — ideales para estantería, jardín o junto a una urna.",
+        "whenToChoose": "Elige una placa conmemorativa para un homenaje en el jardín, exhibición en estantería o junto a una urna o marco de fotos.",
+        "personalization": "Graba el nombre de tu mascota, las fechas de nacimiento y recuerdo, un mensaje personalizado y opcionalmente una huella o foto. También puede integrarse un chip NFC.",
+        "whyChoose": "Nuestras placas están elaboradas con materiales de calidad, grabado preciso e integración opcional de memorial digital NFC."
       }
     }
   },
@@ -501,5 +658,411 @@
       "Consulta mayorista",
       "Otro"
     ]
+  },
+  "digitalMemorialLanding": {
+    "metaTitle": "Memorial en línea para mascotas | Crea una página conmemorativa digital",
+    "metaDescription": "Crea una página conmemorativa en línea para mascotas con fotos, vídeos y mensajes familiares. Accede mediante etiqueta NFC premium de fibra de carbono o código QR. Crea un memorial para mascotas en línea con Pet Memo Shop.",
+    "hero": {
+      "eyebrow": "Memorial digital de Pet Memo Shop",
+      "h1": "Crea un memorial en línea para mascotas",
+      "subtitle": "Conserva la historia de tu compañero en una hermosa página conmemorativa en línea. Comparte fotos, vídeos y mensajes de cariño — accesible en cualquier momento con un toque NFC o escaneando el código QR.",
+      "body": "Combina tu página digital con nuestra etiqueta conmemorativa NFC premium de fibra de carbono — un recuerdo físico duradero que puedes llevar, exhibir o colocar junto a su urna.",
+      "primaryCta": "Comprar etiqueta NFC de fibra de carbono",
+      "secondaryCta": "Crear página digital",
+      "imageAlt": "página conmemorativa en línea para mascotas con fotos y mensajes de cariño"
+    },
+    "whatIs": {
+      "title": "¿Qué es un memorial digital para mascotas?",
+      "paragraphs": [
+        "Un memorial digital para mascotas es una página en línea dedicada a honrar a tu querido compañero. A diferencia de un simple marco de fotos, guarda su historia completa — fotos, vídeos, fechas y mensajes de todos quienes lo amaron.",
+        "Pet Memo Shop facilita crear un memorial para mascotas en línea y mantenerlo cerca con una etiqueta NFC física o una tarjeta conmemorativa que abre la página con un solo toque."
+      ]
+    },
+    "carbonFiber": {
+      "title": "Etiqueta NFC premium de fibra de carbono",
+      "subtitle": "Nuestro recuerdo conmemorativo digital emblemático — duradero, elegante y siempre conectado a su historia.",
+      "imageAlt": "etiqueta conmemorativa NFC de fibra de carbono para mascotas grabada con el nombre",
+      "features": [
+        "Fibra de carbono auténtica — ligera, resistente a rayaduras y hecha para durar",
+        "Chip NFC integrado que abre al instante tu memorial en línea",
+        "Grabado láser con el nombre de tu mascota y las fechas conmemorativas",
+        "Código QR de respaldo en cada etiqueta",
+        "Llévala como placa conmemorativa para perro o colócala junto a urna y marco",
+        "Incluye la configuración completa de la página conmemorativa digital"
+      ],
+      "cta": "Ver etiqueta NFC de fibra de carbono"
+    },
+    "howItWorks": {
+      "title": "Cómo funciona el acceso NFC y código QR",
+      "items": [
+        {
+          "title": "Toca o escanea",
+          "desc": "Acerca tu etiqueta conmemorativa NFC o escanea el código QR para abrir la página en línea en cualquier smartphone."
+        },
+        {
+          "title": "Contenido multimedia",
+          "desc": "Crea un memorial digital para mascotas con fotos, vídeos y una galería completa de momentos entrañables."
+        },
+        {
+          "title": "Su historia",
+          "desc": "Escribe su historia, comparte recuerdos favoritos y añade mensajes familiares a la página conmemorativa."
+        },
+        {
+          "title": "Libro de visitas",
+          "desc": "Libro de visitas opcional para que amigos y familiares dejen mensajes en el memorial en línea."
+        }
+      ]
+    },
+    "included": {
+      "title": "Qué puede incluirse",
+      "subtitle": "Crea un homenaje en línea completo con todo lo que hacía especial a tu compañero.",
+      "fields": [
+        "Nombre de la mascota",
+        "Foto de la mascota",
+        "Fecha de nacimiento",
+        "Fecha conmemorativa",
+        "Historia de la mascota",
+        "Galería de fotos",
+        "Enlace de vídeo",
+        "Mensaje familiar",
+        "Recuerdo favorito",
+        "Libro de visitas opcional"
+      ]
+    },
+    "sampleLinks": {
+      "title": "Ejemplos de páginas conmemorativas digitales",
+      "subtitle": "Previsualiza páginas conmemorativas reales — toca una tarjeta para abrir el homenaje en línea.",
+      "linkLabel": "Ver memorial →",
+      "items": [
+        {
+          "title": "BELLA"
+        },
+        {
+          "title": "COCO"
+        },
+        {
+          "title": "Milo"
+        }
+      ]
+    },
+    "orderSteps": {
+      "title": "Cómo hacer el pedido",
+      "steps": [
+        "Elige una etiqueta NFC de fibra de carbono, tarjeta conmemorativa o página digital independiente",
+        "Sube la foto de tu mascota e introduce su nombre y fechas",
+        "Crea tu memorial en línea con fotos, vídeos e historia",
+        "Revisa y aprueba la prueba de diseño",
+        "Recibe tu recuerdo y comparte la página conmemorativa con la familia"
+      ]
+    },
+    "pricing": {
+      "title": "Opciones de precio",
+      "subtitle": "Empieza solo con una página digital o combínala con un recuerdo físico NFC.",
+      "options": [
+        {
+          "name": "Solo página digital",
+          "price": "$19.99",
+          "desc": "Memorial en línea independiente con enlace único y código QR. Crea un memorial para mascotas en línea en minutos."
+        },
+        {
+          "name": "Etiqueta NFC de fibra de carbono",
+          "price": "$69.99",
+          "desc": "Etiqueta conmemorativa premium de fibra de carbono con chip NFC integrado + página conmemorativa en línea completa. Nuestro recuerdo emblemático."
+        },
+        {
+          "name": "Tarjeta conmemorativa NFC",
+          "price": "$34.99",
+          "desc": "Tarjeta conmemorativa clásica con chip NFC + página digital. Un homenaje físico y digital accesible para empezar."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "¿Qué es un memorial en línea para mascotas?",
+        "answer": "Un memorial en línea para mascotas es una página web dedicada a honrar a tu querido compañero. Conserva fotos, vídeos, su historia, fechas y mensajes familiares — accesible en cualquier momento mediante enlace, código QR o toque NFC."
+      },
+      {
+        "question": "¿Cómo creo un memorial para mascotas en línea?",
+        "answer": "Elige una página digital independiente o combínala con una etiqueta NFC de fibra de carbono o una tarjeta conmemorativa. Sube la foto de tu mascota, introduce sus datos y crea tu memorial con fotos, vídeos e historia. Te enviamos una prueba antes de enviar la etiqueta física."
+      },
+      {
+        "question": "¿Qué es la etiqueta conmemorativa NFC de fibra de carbono?",
+        "answer": "Nuestra etiqueta premium de fibra de carbono integra un chip NFC vinculado al memorial en línea de tu mascota. Acércala con un smartphone para abrir la página al instante. Es duradera, ligera y puede llevarse o exhibirse junto a una urna o marco de fotos."
+      },
+      {
+        "question": "¿Puedo actualizar la página conmemorativa después de crearla?",
+        "answer": "Sí. Añade fotos, actualiza historias y edita mensajes en cualquier momento — nuestro equipo puede actualizar tu página después de realizar el pedido."
+      },
+      {
+        "question": "¿Necesito una aplicación?",
+        "answer": "No se requiere ninguna aplicación. El memorial en línea se abre directamente en el navegador web de tu teléfono."
+      },
+      {
+        "question": "¿Pueden contribuir los familiares?",
+        "answer": "Sí. Invita a familiares y amigos a añadir fotos y mensajes. El libro de visitas opcional permite a los visitantes dejar notas."
+      }
+    ],
+    "finalCta": {
+      "title": "Mantén su historia cerca",
+      "subtitle": "Crea un memorial en línea que honre a tu querido compañero — con una etiqueta NFC premium de fibra de carbono o una tarjeta conmemorativa clásica.",
+      "primaryCta": "Comprar etiqueta NFC de fibra de carbono",
+      "secondaryCta": "Ver todos los recuerdos NFC"
+    }
+  },
+  "blogPosts": {
+    "what-to-give-someone-who-lost-a-pet": {
+      "title": "Qué regalar a alguien que ha perdido una mascota",
+      "metaTitle": "Qué regalar a alguien que ha perdido una mascota | Guía de regalos de condolencia",
+      "metaDescription": "Descubre ideas de regalo de condolencia por la pérdida de una mascota. Marcos conmemorativos personalizados, joyería, cajas de regalo y recuerdos digitales para consolar a un amigo en duelo.",
+      "excerpt": "Encontrar el regalo de condolencia adecuado cuando alguien pierde una mascota puede resultar difícil. Aquí tienes ideas delicadas y significativas para demostrar que te importa.",
+      "category": "Apoyo ante la pérdida de una mascota"
+    },
+    "best-dog-memorial-gifts-for-a-grieving-friend": {
+      "title": "Los mejores regalos conmemorativos para perros para un amigo en duelo",
+      "metaTitle": "Los mejores regalos conmemorativos para perros para un amigo en duelo",
+      "metaDescription": "Encuentra los mejores regalos conmemorativos para perros para un amigo en duelo. Marcos personalizados, cajas de recuerdos, urnas y tarjetas NFC para honrar a un perro querido.",
+      "excerpt": "Cuando un amigo pierde a su perro, un regalo conmemorativo personalizado puede ofrecer consuelo y honrar el vínculo leal que compartieron.",
+      "category": "Conmemorativos para perros"
+    },
+    "best-cat-memorial-gifts-to-remember-a-beloved-cat": {
+      "title": "Los mejores regalos conmemorativos para gatos para recordar a un felino querido",
+      "metaTitle": "Los mejores regalos conmemorativos para gatos para recordar a un felino querido",
+      "metaDescription": "Descubre los mejores regalos conmemorativos para gatos, incluidos adornos con foto, joyería, marcos y recuerdos digitales para honrar a un gato querido.",
+      "excerpt": "Los gatos dejan una presencia tranquila y duradera en nuestro corazón. Estos regalos conmemorativos ayudan a honrar esa compañía tan especial.",
+      "category": "Conmemorativos para gatos"
+    },
+    "how-to-choose-a-pet-memorial-gift": {
+      "title": "Cómo elegir un regalo conmemorativo para mascotas",
+      "metaTitle": "Cómo elegir un regalo conmemorativo para mascotas | Guía de compra",
+      "metaDescription": "Aprende a elegir el regalo conmemorativo perfecto para mascotas. Compara marcos, joyería, urnas, tarjetas NFC y cajas de regalo con nuestra guía práctica.",
+      "excerpt": "¿No sabes qué regalo conmemorativo es el adecuado? Esta guía te ayuda a elegir según la relación, las preferencias y el tipo de homenaje.",
+      "category": "Ideas de regalos conmemorativos para mascotas"
+    },
+    "what-is-a-pet-memorial-keepsake": {
+      "title": "¿Qué es un recuerdo conmemorativo para mascotas?",
+      "metaTitle": "¿Qué es un recuerdo conmemorativo para mascotas? | Guía completa",
+      "metaDescription": "Descubre qué es un recuerdo conmemorativo para mascotas, los distintos tipos disponibles y cómo elegir uno para honrar a tu querido compañero.",
+      "excerpt": "Un recuerdo conmemorativo para mascotas es un artículo personalizado diseñado para honrar y recordar a un compañero querido. Conoce los diferentes tipos.",
+      "category": "Ideas de regalos conmemorativos para mascotas"
+    },
+    "how-to-choose-a-pet-urn": {
+      "title": "Cómo elegir una urna para mascotas",
+      "metaTitle": "Cómo elegir una urna para mascotas | Guía de tamaño y material",
+      "metaDescription": "Aprende a elegir la urna de cremación adecuada para mascotas. Guía de tamaños, opciones de material y consejos de personalización para urnas de perros y gatos.",
+      "excerpt": "Elegir una urna para mascotas implica considerar el tamaño, el material y la personalización. Esta guía te ayuda a encontrar la adecuada.",
+      "category": "Guías de urnas para mascotas"
+    },
+    "pet-loss-sympathy-gift-ideas": {
+      "title": "Ideas de regalos de condolencia por la pérdida de una mascota",
+      "metaTitle": "Ideas de regalos de condolencia por la pérdida de una mascota | Guía de regalo",
+      "metaDescription": "Explora ideas de regalo de condolencia por la pérdida de una mascota, incluidos marcos conmemorativos, velas, cajas de regalo y joyería para consolar a alguien en duelo.",
+      "excerpt": "Ideas de regalo de condolencia para alguien que ha perdido una mascota, desde velas y marcos hasta cajas de regalo completas.",
+      "category": "Apoyo ante la pérdida de una mascota"
+    },
+    "how-to-create-a-digital-pet-memorial-page": {
+      "title": "Cómo crear una página conmemorativa digital para mascotas",
+      "metaTitle": "Cómo crear una página conmemorativa digital para mascotas | Paso a paso",
+      "metaDescription": "Aprende a crear una página conmemorativa digital para mascotas con fotos, vídeos, historias y mensajes familiares. Accesible mediante NFC o código QR.",
+      "excerpt": "Crea un homenaje digital duradero con fotos, vídeos e historias. Accesible mediante tarjeta NFC o código QR.",
+      "category": "Memoriales digitales",
+      "content": "## Crear un memorial digital\r\n\r\nUna página conmemorativa digital para mascotas preserva la historia de tu compañero en línea, accesible para familiares y amigos en cualquier momento.\r\n\r\n## Qué incluir\r\n\r\n- Nombre y foto de la mascota\r\n- Fechas de nacimiento y conmemoración\r\n- Su historia y personalidad\r\n- Galería de fotos y enlaces a vídeos\r\n- Mensajes familiares y recuerdos favoritos\r\n- Libro de visitas opcional para quienes la visiten\r\n\r\n## Cómo empezar\r\n\r\nPide una [página conmemorativa digital para mascotas](/products/digital-memorial-page-standalone) como homenaje en línea independiente, o combínala con una [etiqueta conmemorativa NFC de fibra de carbono](/products/carbon-fiber-nfc-memorial-tag) o una [tarjeta conmemorativa NFC](/products/nfc-pet-memorial-card) para una experiencia física y digital.\r\n\r\nMás información en nuestra página de [Memorial digital para mascotas](/digital-pet-memorial).\r\n    "
+    },
+    "nfc-pet-memorial-cards-how-they-work": {
+      "title": "Tarjetas conmemorativas NFC para mascotas: cómo funcionan",
+      "metaTitle": "Tarjetas conmemorativas NFC para mascotas: cómo funcionan | Guía completa",
+      "metaDescription": "Descubre cómo funcionan las tarjetas conmemorativas NFC para mascotas. Acerca tu smartphone para abrir una página conmemorativa digital con fotos, vídeos e historias.",
+      "excerpt": "Las tarjetas conmemorativas NFC conectan un recuerdo físico con una página digital. Acerca el teléfono para abrir fotos, vídeos e historias.",
+      "category": "Memoriales digitales",
+      "content": "## Cómo funcionan las etiquetas conmemorativas NFC\r\n\r\nNFC (Near Field Communication) permite que una etiqueta o tarjeta física abra una página conmemorativa en línea al acercarla a un smartphone.\r\n\r\n## Paso a paso\r\n\r\n1. **Recibe tu recuerdo** —Personalizado con el nombre y las fechas de tu mascota\r\n2. **Acerca el teléfono** —Coloca tu smartphone cerca del chip NFC\r\n3. **Se abre la página conmemorativa** —Consulta fotos, vídeos, historia y mensajes\r\n4. **Código QR de respaldo** —Escanea el código QR si NFC no está disponible\r\n\r\n## Etiqueta de fibra de carbono vs tarjeta conmemorativa\r\n\r\n| Opción | Ideal para | Precio |\r\n|--------|------------|--------|\r\n| [Etiqueta NFC de fibra de carbono](/products/carbon-fiber-nfc-memorial-tag) | Premium, para llevar o exhibir a largo plazo | $69.99 |\r\n| [Tarjeta conmemorativa NFC](/products/nfc-pet-memorial-card) | Formato clásico tipo tarjeta de cartera | $34.99 |\r\n\r\nAmbas incluyen acceso completo a tu página conmemorativa en línea para mascotas.\r\n\r\n## Qué puedes incluir\r\n\r\nFotos, vídeos, nombre, fechas, historia, mensajes familiares, recuerdos favoritos y un libro de visitas opcional.\r\n\r\n## Preguntas frecuentes\r\n\r\n- **¿Necesito una app?** No — los teléfonos modernos abren la página directamente tras un toque o escaneo QR.\r\n- **¿Puedo actualizar la página más adelante?** Sí — las fotos y el texto conmemorativo se pueden actualizar; el enlace NFC/QR permanece igual.\r\n- **¿NFC o QR?** Ambos abren la misma página. Consulta nuestra comparación completa: [NFC vs código QR para memoriales de mascotas](/blog/nfc-vs-qr-code-pet-memorial).\r\n\r\n## Explora el cluster de memoriales NFC\r\n\r\n- [Guía de la etiqueta conmemorativa NFC de fibra de carbono](/blog/carbon-fiber-nfc-memorial-tag-guide)\r\n- [Etiqueta conmemorativa NFC para collar de perro](/blog/nfc-memorial-tag-for-dog-collar)\r\n- [Cómo crear una página conmemorativa digital para mascotas](/blog/how-to-create-a-digital-pet-memorial-page)\r\n- [¿Qué es un memorial digital para mascotas?](/blog/what-is-a-digital-pet-memorial)\r\n\r\nCompra [etiquetas conmemorativas NFC](/collections/nfc-memorial-cards) o descubre más en nuestra página de [Memorial digital para mascotas](/digital-pet-memorial).\r\n    "
+    },
+    "personalized-pet-memorial-jewelry-guide": {
+      "title": "Guía de joyería conmemorativa personalizada para mascotas",
+      "metaTitle": "Guía de joyería conmemorativa personalizada para mascotas | Collares y relicarios",
+      "metaDescription": "Guía de joyería conmemorativa personalizada para mascotas, incluidos colgantes grabados, relicarios con foto y diseños de huella.",
+      "excerpt": "Recuerdos que puedes llevar contigo para mantener cerca la memoria de tu mascota. Una guía de colgantes, relicarios y joyería grabada.",
+      "category": "Guías de regalos personalizados"
+    },
+    "rainbow-bridge-pet-memorial-gift-ideas": {
+      "title": "Ideas de regalos conmemorativos inspirados en el Puente del Arcoíris",
+      "metaTitle": "Ideas de regalos conmemorativos del Puente del Arcoíris | Homenajes delicados",
+      "metaDescription": "Ideas de regalo conmemorativo inspiradas en el Puente del Arcoíris, incluidos marcos personalizados, joyería y recuerdos digitales.",
+      "excerpt": "Ideas de regalo conmemorativo inspiradas en el poema del Puente del Arcoíris: cálidas, reconfortantes y profundamente personales.",
+      "category": "Ideas de regalos conmemorativos para mascotas"
+    },
+    "meaningful-ways-to-remember-a-dog-or-cat": {
+      "title": "Formas significativas de recordar a un perro o gato",
+      "metaTitle": "Formas significativas de recordar a un perro o gato | Ideas de recuerdo",
+      "metaDescription": "Descubre formas significativas de recordar a un perro o gato, incluidos regalos conmemorativos, páginas digitales, homenajes en casa y gestos de condolencia.",
+      "excerpt": "Desde recuerdos personalizados hasta páginas conmemorativas digitales, aquí tienes formas significativas de honrar a tu querido compañero.",
+      "category": "Apoyo ante la pérdida de una mascota"
+    },
+    "pet-memorial-ideas": {
+      "title": "Ideas conmemorativas para mascotas: 15 formas significativas de honrar a tu compañero",
+      "metaTitle": "Ideas conmemorativas para mascotas | Homenajes y regalos significativos",
+      "metaDescription": "Descubre ideas conmemorativas para perros y gatos: marcos con foto, joyería, urnas, páginas digitales, etiquetas NFC y regalos de condolencia. Inspiración para homenajes personalizados únicos.",
+      "excerpt": "¿Buscas ideas conmemorativas para mascotas? Desde recuerdos personalizados hasta homenajes en línea, aquí tienes formas significativas de honrar a tu perro o gato querido.",
+      "category": "Ideas de regalos conmemorativos para mascotas"
+    },
+    "what-is-a-digital-pet-memorial": {
+      "title": "¿Qué es un memorial digital para mascotas?",
+      "metaTitle": "¿Qué es un memorial digital para mascotas? | Guía de homenaje en línea",
+      "metaDescription": "Descubre qué es un memorial digital para mascotas, qué incluir y cómo las etiquetas NFC y los códigos QR hacen accesibles los memoriales en línea para familiares y amigos.",
+      "excerpt": "Un memorial digital para mascotas es una página en línea dedicada a tu querido compañero. Descubre cómo funciona y por qué las familias eligen esta forma moderna de recuerdo.",
+      "category": "Memoriales digitales",
+      "content": "## Entender los memoriales digitales para mascotas\r\n\r\nUn **memorial digital para mascotas** es una página de homenaje en línea creada para honrar y preservar la memoria de un perro, gato o compañero querido. A diferencia de una sola foto en redes sociales, es un espacio dedicado al recuerdo —con espacio para contar toda su historia.\r\n\r\n## ¿Qué puedes incluir?\r\n\r\nLa mayoría de las páginas conmemorativas en línea para mascotas incluyen:\r\n\r\n- **Nombre y retrato de la mascota** —El corazón del homenaje\r\n- **Fechas de nacimiento y conmemoración** —Marcando el tiempo que compartisteis\r\n- **Galería de fotos** —Momentos favoritos a lo largo de su vida\r\n- **Vídeos** —Clips que capturan su personalidad\r\n- **Su historia** —Quién era, qué la hacía especial\r\n- **Mensajes familiares** —Notas de quienes la querían\r\n- **Libro de visitas** —Espacio opcional para que amigos dejen mensajes\r\n\r\n## Por qué las familias eligen los memoriales digitales\r\n\r\n### Compartible con todos\r\nFamiliares a distancia pueden visitar la página en cualquier momento. No hace falta app —se abre en cualquier navegador web.\r\n\r\n### Siempre accesible\r\nA diferencia de un objeto físico que permanece en un solo hogar, un memorial en línea puede compartirse con abuelos, amigos y cualquiera que quisiera a tu mascota.\r\n\r\n### Crece con el tiempo\r\nPuedes añadir fotos, actualizar historias e invitar a la familia a aportar nuevos recuerdos con el paso del tiempo.\r\n\r\n### Se combina con recuerdos físicos\r\nMuchas familias exhiben un [marco con foto personalizado](/products/personalized-pet-memorial-frame) o una urna en casa y colocan una [etiqueta conmemorativa NFC](/products/carbon-fiber-nfc-memorial-tag) junto a ella. Un toque abre la página digital completa.\r\n\r\n## Cómo acceder a un memorial digital\r\n\r\n| Método | Cómo funciona |\r\n|--------|---------------|\r\n| **Enlace web** | Comparte una URL única con la familia |\r\n| **Código QR** | Escanea con la cámara de cualquier smartphone |\r\n| **Toque NFC** | Acerca una etiqueta o tarjeta conmemorativa para abrir al instante |\r\n\r\n## Memoriales digitales vs tradicionales\r\n\r\nLos memoriales digitales no sustituyen los recuerdos físicos —los complementan. Un marco en la estantería y una página en línea llena de vídeos cumplen propósitos distintos pero igualmente significativos. Juntos crean un homenaje completo.\r\n\r\n## Cómo empezar\r\n\r\n1. Elige una [página digital independiente](/products/digital-memorial-page-standalone) o combínala con un recuerdo NFC\r\n2. Sube fotos e introduce los datos de tu mascota\r\n3. Escribe su historia e invita mensajes familiares\r\n4. Comparte el enlace o acerca tu etiqueta NFC para visitarla cuando quieras\r\n\r\nMás información en nuestra página de [Memorial digital para mascotas](/digital-pet-memorial) o explora [recuerdos conmemorativos digitales para mascotas](/collections/digital-pet-memorial-keepsakes).\r\n    ",
+      "faqs": [
+        {
+          "question": "¿Qué es un memorial digital para mascotas?",
+          "answer": "Un memorial digital para mascotas es una página en línea dedicada a honrar a un compañero querido. Suele incluir fotos, vídeos, su historia, fechas conmemorativas y mensajes familiares —accesible mediante enlace web, código QR o toque NFC."
+        },
+        {
+          "question": "¿Es lo mismo que una publicación en redes sociales?",
+          "answer": "No. Un memorial digital es una página de homenaje dedicada y duradera que tú controlas. Permanece organizada en un solo lugar, puede incluir un libro de visitas y está diseñada específicamente para el recuerdo, no para el uso general de redes sociales."
+        },
+        {
+          "question": "¿Necesito un producto físico para un memorial digital?",
+          "answer": "No. Puedes crear una página digital independiente con un enlace único y código QR. Muchas familias también eligen una etiqueta o tarjeta conmemorativa NFC como recuerdo físico que abre la misma página."
+        }
+      ]
+    },
+    "how-to-make-a-pet-memorial-online": {
+      "title": "Cómo crear un memorial para mascotas en línea",
+      "metaTitle": "Cómo crear un memorial para mascotas en línea | Guía paso a paso",
+      "metaDescription": "Aprende a crear un memorial para mascotas en línea con fotos, vídeos y mensajes familiares. Crea una página conmemorativa en línea accesible mediante enlace, código QR o etiqueta NFC.",
+      "excerpt": "Crea un memorial para mascotas en línea en unos pocos pasos. Construye un homenaje en línea con fotos, vídeos, historia y mensajes que tu familia pueda visitar en cualquier momento.",
+      "category": "Memoriales digitales",
+      "content": "## ¿Por qué crear un memorial para mascotas en línea?\r\n\r\nUn **memorial en línea para mascotas** te permite preservar la historia de tu compañero en un espacio dedicado —no dispersa entre teléfonos y redes sociales. Familiares y amigos pueden visitarlo, aportar recuerdos y volver cuando necesiten sentirse cerca.\r\n\r\n## Paso a paso: crea tu memorial en línea\r\n\r\n### Paso 1: Elige tu formato\r\n\r\n| Opción | Incluye | Ideal para |\r\n|--------|---------|------------|\r\n| [Solo página digital](/products/digital-memorial-page-standalone) | Página en línea + enlace + QR | Compartir digitalmente |\r\n| [Tarjeta conmemorativa NFC](/products/nfc-pet-memorial-card) | Página + tarjeta física | Físico + digital a buen precio |\r\n| [Etiqueta NFC de fibra de carbono](/products/carbon-fiber-nfc-memorial-tag) | Página + etiqueta premium | Recuerdo para llevar o exhibir |\r\n\r\n### Paso 2: Reúne tus materiales\r\n\r\nAntes de empezar, recopila:\r\n- 5–10 fotos favoritas (retratos y momentos espontáneos)\r\n- 1–3 clips de vídeo cortos si los tienes\r\n- Fecha de nacimiento y fecha conmemorativa\r\n- Unas frases sobre su personalidad\r\n- Mensajes de familiares (opcional)\r\n\r\n### Paso 3: Sube fotos y datos\r\n\r\nIntroduce el nombre de tu mascota, sube su retrato y añade las fechas conmemorativas. Elige un diseño cálido y personal —esta página es su hogar en línea.\r\n\r\n### Paso 4: Escribe su historia\r\n\r\nEste es el corazón del memorial. Escribe sobre:\r\n- Cómo llegó a tu vida\r\n- Sus cosas favoritas (paseos, rincones soleados, juguetes)\r\n- Hábitos graciosos que aún te hacen sonreír\r\n- Lo que más echas de menos\r\n\r\nSé honesto y sencillo. No hay una forma incorrecta de contar su historia.\r\n\r\n### Paso 5: Añade mensajes familiares\r\n\r\nInvita a familiares a aportar sus propias fotos y notas. Un libro de visitas permite que amigos dejen mensajes al visitar la página.\r\n\r\n### Paso 6: Revisa y comparte\r\n\r\nPrevisualiza tu página, aprueba el diseño y comparte el enlace con la familia. Si pediste una etiqueta NFC, acércala para confirmar que la página se abre correctamente.\r\n\r\n## Consejos para un homenaje en línea significativo\r\n\r\n- **Destaca su mejor foto** —Elige una imagen que capture su espíritu\r\n- **Incluye momentos cotidianos** —No solo retratos posados, sino los tranquilos y reales\r\n- **Actualiza con el tiempo** —Añade nuevos recuerdos en aniversarios o fechas especiales\r\n- **Coloca un ancla física** —Exhibe una etiqueta NFC junto a su urna o marco para que la página digital esté siempre a un toque\r\n\r\n## Qué hace diferente a Pet Memo Shop\r\n\r\nCada memorial digital incluye prueba de diseño antes de la producción para recuerdos físicos, diseño premium cálido y acceso NFC opcional. Nuestra [etiqueta conmemorativa NFC de fibra de carbono](/products/carbon-fiber-nfc-memorial-tag) está pensada para familias que quieren un homenaje físico duradero y una historia en línea rica.\r\n\r\n[Crea tu memorial en línea para mascotas](/digital-pet-memorial) hoy.\r\n    ",
+      "faqs": [
+        {
+          "question": "¿Cómo creo un memorial para mascotas en línea?",
+          "answer": "Elige un servicio de página conmemorativa digital, sube la foto y los datos de tu mascota, añade fotos y vídeos, escribe su historia y comparte el enlace único o código QR con la familia. También puedes combinarlo con una etiqueta NFC para acceder con un toque."
+        },
+        {
+          "question": "¿Es gratis crear un memorial en línea para mascotas?",
+          "answer": "Pet Memo Shop ofrece una página conmemorativa digital independiente desde $19.99, que incluye un enlace único, código QR y personalización completa de la página. Las etiquetas NFC premium incluyen la página digital como parte del paquete."
+        },
+        {
+          "question": "¿Puedo actualizar mi memorial en línea más adelante?",
+          "answer": "Sí. Puedes añadir fotos, editar historias y actualizar mensajes en tu página conmemorativa digital para mascotas en cualquier momento desde tu cuenta."
+        }
+      ]
+    },
+    "carbon-fiber-nfc-memorial-tag-guide": {
+      "title": "Etiqueta conmemorativa NFC de fibra de carbono: guía completa",
+      "metaTitle": "Guía de la etiqueta conmemorativa NFC de fibra de carbono | Etiqueta digital para mascotas",
+      "metaDescription": "Todo sobre la etiqueta conmemorativa NFC de fibra de carbono: cómo funciona, qué grabar, cómo abrir tu memorial en línea para mascotas y por qué las familias eligen este recuerdo premium.",
+      "excerpt": "Nuestra etiqueta conmemorativa NFC de fibra de carbono combina materiales premium con tecnología de memorial digital al toque. Aquí tienes todo lo que necesitas saber.",
+      "category": "Memoriales digitales",
+      "content": "## ¿Qué es la etiqueta conmemorativa NFC de fibra de carbono?\r\n\r\nLa [etiqueta conmemorativa NFC de fibra de carbono](/products/carbon-fiber-nfc-memorial-tag) es el recuerdo conmemorativo digital emblemático de Pet Memo Shop. Combina fibra de carbono de grado aeroespacial con un chip NFC integrado —una **etiqueta conmemorativa digital para mascotas** que puedes llevar, exhibir o tener cerca.\r\n\r\nUn suave toque abre un **memorial en línea para mascotas** completo con fotos, vídeos y la historia que solo tú puedes contar.\r\n\r\n## Características principales\r\n\r\n- **Fibra de carbono auténtica** —Ligera, resistente, tejido negro mate\r\n- **Chip NFC integrado** —Toque para abrir la página conmemorativa al instante\r\n- **Grabado láser** —Nombre de tu mascota y fechas conmemorativas\r\n- **Código QR de respaldo** —Marcado con láser en la parte trasera para cualquier smartphone\r\n- **Página digital incluida** —Galería de fotos, vídeos, historia, libro de visitas\r\n- **Exhibición versátil** —Llévala como placa conmemorativa, cuelga junto a una urna o colócala en un estante de recuerdos\r\n\r\n## Cómo funciona\r\n\r\n1. Pide tu etiqueta e introduce los datos de tu mascota al pagar\r\n2. Configuramos tu página conmemorativa en línea y te enviamos una prueba de diseño\r\n3. Tu etiqueta grabada se envía con la página digital lista para usar\r\n4. Acerca la etiqueta a cualquier smartphone compatible con NFC\r\n5. La página conmemorativa se abre en tu navegador —sin app\r\n\r\n## Etiqueta de fibra de carbono vs tarjeta NFC\r\n\r\n| Característica | Etiqueta de fibra de carbono | Tarjeta NFC |\r\n|----------------|------------------------------|-------------|\r\n| Material | Fibra de carbono real | PVC premium |\r\n| Tamaño | Placa conmemorativa (1,25\" x 2\") | Tarjeta de cartera |\r\n| Durabilidad | Alta —uso diario | Moderada |\r\n| Exhibición | Llevar, junto a urna, estante | Junto a marco o urna |\r\n| Precio | $69.99 | $34.99 |\r\n| Página digital | Incluida | Incluida |\r\n\r\nElige la **etiqueta de fibra de carbono** para un recuerdo premium y duradero. Elige la **tarjeta NFC** para un formato clásico a un precio más accesible.\r\n\r\n## Qué grabar\r\n\r\nLa mayoría de las familias graban:\r\n- Nombre de la mascota\r\n- Año de nacimiento —Año conmemorativo (p. ej., 2012–2025)\r\n- Mensaje corto opcional o icono de huella\r\n\r\nEnviamos una prueba antes del grabado para que revises cada detalle.\r\n\r\n## ¿Para quién es?\r\n\r\n- Familias que quieren un homenaje **físico + digital premium**\r\n- Dueños de perros que buscan una **placa conmemorativa para perro** con tecnología moderna\r\n- Cualquiera que exhiba un memorial junto a una **urna o marco con foto**\r\n- Regalos de condolencia por la pérdida de una mascota —un gesto único y significativo\r\n\r\n## Pide tu etiqueta\r\n\r\n[Compra la etiqueta conmemorativa NFC de fibra de carbono](/products/carbon-fiber-nfc-memorial-tag) o explora todas las [etiquetas conmemorativas NFC](/collections/nfc-memorial-cards).\r\n    ",
+      "faqs": [
+        {
+          "question": "¿Qué es una etiqueta conmemorativa NFC de fibra de carbono?",
+          "answer": "Es una etiqueta conmemorativa premium para mascotas hecha de fibra de carbono real con un chip NFC integrado. Acércala a un smartphone para abrir la página conmemorativa en línea de tu mascota. Puedes llevarla, exhibirla junto a una urna o guardarla en una caja de recuerdos."
+        },
+        {
+          "question": "¿En qué se diferencia de una tarjeta conmemorativa NFC?",
+          "answer": "La etiqueta de fibra de carbono es más resistente, más ligera y está diseñada para uso o exhibición a largo plazo. La tarjeta conmemorativa tiene un formato clásico tipo cartera a un precio más bajo. Ambas abren el mismo tipo de página conmemorativa en línea."
+        },
+        {
+          "question": "¿La etiqueta incluye la página conmemorativa digital?",
+          "answer": "Sí. Cada etiqueta conmemorativa NFC de fibra de carbono incluye la configuración completa de tu página conmemorativa en línea para mascotas con fotos, vídeos, historia y mensajes familiares."
+        }
+      ]
+    },
+    "nfc-vs-qr-code-pet-memorial": {
+      "title": "NFC vs código QR para memoriales de mascotas: ¿cuál es mejor?",
+      "metaTitle": "NFC vs código QR para memoriales de mascotas | Guía comparativa",
+      "metaDescription": "Compara el acceso NFC y código QR para memoriales de mascotas. Descubre cómo funciona cada uno, sus ventajas e inconvenientes, y por qué Pet Memo Shop incluye ambos en cada recuerdo.",
+      "excerpt": "¿Debes usar NFC o código QR para tu memorial de mascotas? Ambos abren la misma página en línea —así se comparan y por qué tener ambos importa.",
+      "category": "Memoriales digitales",
+      "content": "## Dos formas de abrir el mismo memorial\r\n\r\nCada memorial digital de Pet Memo Shop —ya sea en una [etiqueta NFC de fibra de carbono](/products/carbon-fiber-nfc-memorial-tag), una [tarjeta NFC](/products/nfc-pet-memorial-card) o una [página independiente](/products/digital-memorial-page-standalone)— puede accederse de dos formas: **toque NFC** y **escaneo de código QR**. Ambos abren el mismo memorial en línea para mascotas.\r\n\r\n## Cómo funciona NFC\r\n\r\nAcerca tu smartphone al chip NFC integrado en la etiqueta o tarjeta. La página conmemorativa se abre automáticamente en tu navegador. Sin app, sin escribir —solo tocar.\r\n\r\n**Ventajas:**\r\n- Acceso instantáneo en un solo paso\r\n- Sensación moderna y fluida\r\n- No hace falta alinear la cámara\r\n\r\n**Inconvenientes:**\r\n- Requiere teléfono con NFC (la mayoría desde 2016+)\r\n- NFC debe estar activado en la configuración del teléfono\r\n\r\n## Cómo funciona el código QR\r\n\r\nApunta la cámara del teléfono al código QR impreso o marcado con láser en el recuerdo. Toca la notificación para abrir la página conmemorativa.\r\n\r\n**Ventajas:**\r\n- Funciona en prácticamente todos los smartphones\r\n- Familiar para la mayoría de usuarios\r\n- Fácil de compartir —imprime el QR en tarjetas de condolencia o programas\r\n\r\n**Inconvenientes:**\r\n- Requiere alinear la cámara\r\n- Toque adicional tras escanear\r\n\r\n## Comparación lado a lado\r\n\r\n| | Toque NFC | Escaneo QR |\r\n|---|-----------|------------|\r\n| Velocidad | Instantánea | 2–3 segundos |\r\n| Compatibilidad | La mayoría de teléfonos modernos | Todos los smartphones |\r\n| Experiencia | Toca y listo | Apunta, escanea, toca |\r\n| Ideal para | Visitas diarias, familia en casa | Teléfonos antiguos, materiales impresos |\r\n| Incluido en etiquetas Pet Memo Shop | Sí | Sí (respaldo) |\r\n\r\n## Por qué incluimos ambos\r\n\r\nCreemos que un memorial de mascotas debe ser accesible para todos quienes quisieron a tu compañero —abuelos con teléfonos antiguos, amigos en una reunión de recuerdo, familia en otras ciudades. NFC ofrece la mejor experiencia diaria; el código QR garantiza que nadie quede fuera.\r\n\r\n## ¿Cuál deberías elegir?\r\n\r\nNo tienes que elegir. Cada [etiqueta conmemorativa NFC](/collections/nfc-memorial-cards) de Pet Memo Shop incluye ambas tecnologías. Toca para el acceso diario; comparte el código QR cuando haga falta.\r\n\r\n[Crea tu memorial digital para mascotas](/digital-pet-memorial) o [compra recuerdos NFC](/collections/nfc-memorial-cards).\r\n    ",
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre NFC y código QR para memoriales de mascotas?",
+          "answer": "NFC requiere acercar el recuerdo a un smartphone compatible para abrir la página conmemorativa al instante. Los códigos QR se escanean con la cámara del teléfono. Ambos abren el mismo memorial en línea para mascotas —NFC es más rápido; los códigos QR funcionan en todos los teléfonos."
+        },
+        {
+          "question": "¿Todos los teléfonos admiten etiquetas conmemorativas NFC?",
+          "answer": "La mayoría de los smartphones modernos (iPhone 7+ y la mayoría de dispositivos Android) admiten NFC. Para teléfonos más antiguos o cuando NFC está desactivado, el código QR de respaldo en cada recuerdo de Pet Memo Shop ofrece acceso universal."
+        },
+        {
+          "question": "¿Cuál es mejor para un memorial de mascotas?",
+          "answer": "Ninguno sustituye al otro. NFC ofrece una experiencia de toque fluida; los códigos QR garantizan que todos puedan acceder a la página. Pet Memo Shop incluye ambos en cada etiqueta y tarjeta NFC por este motivo."
+        }
+      ]
+    },
+    "how-to-create-a-pet-memory-corner-at-home": {
+      "title": "Cómo crear un rincón de recuerdos para mascotas en casa",
+      "metaTitle": "Cómo crear un rincón de recuerdos para mascotas en casa | Guía conmemorativa",
+      "metaDescription": "Aprende a crear un rincón de recuerdos para mascotas en casa con marcos con foto, cajas de recuerdos, placas y velas. Una guía paso a paso para honrar a tu compañero.",
+      "excerpt": "Un rincón de recuerdos para mascotas te ofrece un lugar tranquilo para recordar a tu compañero cada día. Así puedes elegir el espacio, reunir objetos significativos y hacerlo personal.",
+      "category": "Apoyo ante la pérdida de una mascota"
+    },
+    "dog-memorial-gifts-ideas-to-honor-a-beloved-dog": {
+      "title": "Regalos conmemorativos para perros: ideas para honrar a un perro querido",
+      "metaTitle": "Ideas de regalos conmemorativos para perros para honrar a un perro querido",
+      "metaDescription": "Explora ideas de regalos conmemorativos para perros: marcos personalizados, cajas de recuerdos, urnas, joyería y tarjetas NFC. Encuentra un homenaje significativo para un perro querido.",
+      "excerpt": "¿Buscas regalos conmemorativos para perros que se sientan personales? Estas ideas te ayudan a honrar a un perro querido con un recuerdo que mantiene su historia cerca.",
+      "category": "Conmemorativos para perros",
+      "content": "## Por qué importan los regalos conmemorativos para perros\r\n\r\nLos perros dejan una lealtad difícil de expresar con palabras. Los regalos conmemorativos para perros adecuados no intentan \"arreglar\" el duelo — le dan a ese vínculo un lugar tranquilo y duradero en casa, en un collar o en un homenaje digital compartible.\r\n\r\nSi compras para ti o para otra persona, empieza con una intención clara: una exhibición en casa, un recuerdo para llevar o una página conmemorativa digital.\r\n\r\n## Ideas de regalos conmemorativos personalizados para perros\r\n\r\n### 1. Marco con foto personalizado\r\nUn [marco conmemorativo personalizado para mascotas](/products/personalized-pet-memorial-frame) grabado con el nombre y las fechas de tu perro convierte un retrato favorito en un cálido recordatorio diario.\r\n\r\n### 2. Caja de recuerdos conmemorativa para perros\r\nLa [caja de recuerdos conmemorativa para perros](/products/dog-memorial-keepsake-box) está hecha para collares, placas y pequeños recuerdos. Muchas familias la colocan junto a un marco para crear un sencillo estante de recuerdos.\r\n\r\n### 3. Urna de cremación con placa de identificación\r\nSi guardas las cenizas en casa, una [urna de madera para mascotas](/products/wooden-pet-cremation-urn) o una [urna de cerámica para mascotas](/products/ceramic-pet-cremation-urn) con placa personalizada ofrece un lugar digno de descanso.\r\n\r\n### 4. Joyería conmemorativa grabada\r\nUn [colgante conmemorativo grabado para mascotas](/products/engraved-pet-memorial-pendant) o un [relicario con foto](/products/pet-memorial-photo-locket) mantiene su memoria cerca durante todo el día.\r\n\r\n### 5. Tarjeta o etiqueta conmemorativa NFC\r\nUna [tarjeta conmemorativa NFC para mascotas](/products/nfc-pet-memorial-card) o una [etiqueta conmemorativa NFC de fibra de carbono](/products/carbon-fiber-nfc-memorial-tag) abre una página digital con fotos, vídeos y mensajes familiares — una opción moderna que sigue sintiéndose personal.\r\n\r\n## Cómo elegir regalos conmemorativos para perros\r\n\r\n| Objetivo | Mejor regalo inicial | Por qué funciona |\r\n|----------|----------------------|------------------|\r\n| Homenaje en casa | Marco personalizado | Fácil de exhibir y personalizar |\r\n| Guardar collar y placas | Caja de recuerdos | Práctica y emotiva |\r\n| Cenizas en casa | Urna personalizada | Digna y duradera |\r\n| Cercanía diaria | Joyería o relicario | Recuerdo para llevar |\r\n| Compartir con la familia | Tarjeta NFC / página digital | Fotos e historias en un solo lugar |\r\n\r\n## Consejos de personalización que hacen que el regalo se sienta como ellos\r\n\r\n- Elige una foto clara y bien iluminada\r\n- Incluye su nombre y las fechas que más importan para ti\r\n- Mantén los mensajes grabados breves y sinceros\r\n- Aprueba la prueba de diseño gratuita antes de la producción\r\n\r\nEstos pequeños detalles son lo que convierte regalos genéricos para mascotas en verdaderos regalos conmemorativos para perros.\r\n\r\n## Regalos conmemorativos para perros para un amigo en duelo\r\n\r\nAl comprar para otra persona, elige regalos que se sientan delicados en lugar de abrumadores:\r\n\r\n1. Marco personalizado con espacio para su foto favorita\r\n2. Caja de regalo de condolencia con vela y tarjeta\r\n3. Tarjeta conmemorativa NFC que puedan ir completando con el tiempo\r\n\r\nEvita presionar. Una nota sencilla — \"Pienso en ti y en [nombre del perro]\" — a menudo significa tanto como el regalo.\r\n\r\n## Explora regalos conmemorativos para perros\r\n\r\nDescubre nuestra colección completa de [regalos conmemorativos para perros](/collections/dog-memorial-gifts): marcos personalizados, urnas, joyería, cajas de recuerdos y homenajes NFC. También puedes explorar todos los [regalos conmemorativos personalizados para mascotas](/collections/pet-memorial-gifts) si quieres más opciones.\r\n\r\nUn homenaje significativo no tiene que ser complicado. Solo necesita sentirse como ellos.\r\n    ",
+      "faqs": [
+        {
+          "question": "¿Cuáles son los mejores regalos conmemorativos para perros?",
+          "answer": "Marcos con foto personalizados, cajas de recuerdos para collares y placas, urnas, joyería grabada y tarjetas conmemorativas NFC están entre los mejores regalos conmemorativos para perros. Elige la opción que encaje con cómo quieres recordarlo cada día."
+        },
+        {
+          "question": "¿Se pueden personalizar los regalos conmemorativos para perros con una foto?",
+          "answer": "Sí. La mayoría de los regalos conmemorativos para perros pueden incluir la foto, el nombre y las fechas de tu perro. Enviamos una prueba de diseño gratuita antes de la producción para que apruebes cada detalle."
+        },
+        {
+          "question": "¿Qué regalo conmemorativo para perros es mejor para un amigo en duelo?",
+          "answer": "Un marco personalizado, una caja de recuerdos o una caja de regalo de condolencia suele ser la opción más segura. Si tu amigo disfruta compartiendo recuerdos, una tarjeta conmemorativa NFC que abre una página de homenaje digital también es muy significativa."
+        }
+      ]
+    },
+    "personalized-pet-memorial-gifts-buying-guide": {
+      "title": "Regalos conmemorativos personalizados para mascotas: guía de compra completa",
+      "metaTitle": "Guía de compra de regalos conmemorativos personalizados para mascotas",
+      "metaDescription": "Aprende a elegir regalos conmemorativos personalizados para mascotas con foto, nombre y fechas. Compara marcos, joyería, urnas, cajas de regalo y recuerdos digitales NFC.",
+      "excerpt": "¿No sabes qué regalo conmemorativo personalizado es el adecuado? Esta guía de compra te ayuda a elegir según el estilo de exhibición, la personalización y para quién es el regalo.",
+      "category": "Guías de regalos personalizados",
+      "content": "## ¿Qué son los regalos conmemorativos personalizados para mascotas?\r\n\r\nLos regalos conmemorativos personalizados para mascotas son recuerdos hechos a medida para honrar a un compañero querido. A diferencia de artículos de condolencia genéricos, suelen incluir un nombre, foto, fechas o historia — para que el homenaje se sienta como tu mascota, no como un producto genérico.\r\n\r\nLas familias eligen regalos conmemorativos personalizados para mascotas cuando quieren una exhibición duradera en casa, un recordatorio para llevar, un regalo de condolencia para alguien en duelo o una página digital que familiares puedan visitar en cualquier momento.\r\n\r\n## Compara los regalos conmemorativos personalizados más populares\r\n\r\n| Tipo de regalo | Ideal para | Personalización | Exhibición |\r\n|----------------|------------|-----------------|------------|\r\n| Marco con foto | Homenaje diario en casa | Nombre, fechas, foto | Estantería / mesita de noche |\r\n| Joyería | Cercanía cotidiana | Nombre, huella, foto | Llevado |\r\n| Urna | Cenizas en casa | Placa, fechas, foto | Chimenea / estantería |\r\n| Caja de regalo | Regalo de condolencia | Recuerdos variados + tarjeta | Lista para regalar |\r\n| Tarjeta / etiqueta NFC | Fotos + vídeos + mensajes | Página conmemorativa digital | Junto a marco o urna |\r\n\r\n## Guía de compra paso a paso\r\n\r\n### 1. Decide para quién es el regalo\r\n¿Compras para ti? Elige la pieza con la que realmente vivirás. ¿Compras para un amigo? Prefiere marcos, cajas de regalo o tarjetas NFC que se sientan de apoyo sin ser demasiado personales.\r\n\r\n### 2. Elige un estilo de exhibición\r\nHazte una pregunta sencilla: ¿quieres algo para ver, llevar o compartir?\r\n\r\n- Ver: marco, placa, urna, caja de recuerdos\r\n- Llevar: colgante o relicario con foto\r\n- Compartir: tarjeta conmemorativa NFC o página conmemorativa digital\r\n\r\n### 3. Reúne los datos de personalización\r\nTen a mano:\r\n\r\n- Una foto favorita clara\r\n- Nombre de la mascota\r\n- Fechas de nacimiento y conmemoración (si quieres grabarlas)\r\n- Un mensaje corto (opcional)\r\n\r\n### 4. Aprueba una prueba de diseño\r\nLos regalos conmemorativos personalizados para mascotas de calidad deben incluir una prueba de diseño gratuita. Revisa ortografía, fechas, recorte y diseño antes de la producción.\r\n\r\n### 5. Combina físico y digital cuando tenga sentido\r\nMuchas familias mantienen un marco o urna en casa y añaden una [tarjeta conmemorativa NFC para mascotas](/products/nfc-pet-memorial-card) o una [etiqueta conmemorativa NFC de fibra de carbono](/products/carbon-fiber-nfc-memorial-tag) para que fotos y vídeos sigan siendo fáciles de revisitar.\r\n\r\n## Mejores puntos de partida según la situación\r\n\r\n### Para tu propia mascota\r\nEmpieza con un [marco conmemorativo personalizado para mascotas](/products/personalized-pet-memorial-frame) o una pieza de joyería conmemorativa que llevarás a menudo.\r\n\r\n### Para un amigo en duelo\r\nUna [caja de regalo de condolencia conmemorativa](/products/memorial-sympathy-gift-box) es considerada y lista para regalar.\r\n\r\n### Específicamente para perros\r\nExplora [regalos conmemorativos para perros](/collections/dog-memorial-gifts): cajas de recuerdos, marcos, urnas y opciones NFC.\r\n\r\n### Específicamente para gatos\r\nExplora [regalos conmemorativos para gatos](/collections/cat-memorial-gifts): marcos delicados, adornos, joyería y recuerdos digitales.\r\n\r\n## Errores comunes que evitar\r\n\r\n- Elegir un regalo solo porque está de moda, no porque encaje con la persona\r\n- Usar una foto de baja calidad o muy retocada para grabado o impresión\r\n- Saltarse la prueba de diseño\r\n- Sobrecargar el grabado con un mensaje largo que resulte difícil de leer\r\n\r\n## Compra regalos conmemorativos personalizados para mascotas\r\n\r\nExplora nuestra colección completa de [regalos conmemorativos personalizados para mascotas](/collections/pet-memorial-gifts) — marcos, joyería, urnas, cajas de regalo y recuerdos digitales NFC con prueba de diseño gratuita antes de la producción.\r\n\r\nEl mejor homenaje personalizado es el que se siente fiel al vínculo que compartisteis.\r\n    ",
+      "faqs": [
+        {
+          "question": "¿Qué hace personalizado un regalo conmemorativo para mascotas?",
+          "answer": "Un regalo conmemorativo personalizado para mascotas suele incluir el nombre, la foto, las fechas o un mensaje corto de tu mascota. Las mejores opciones también incluyen una prueba de diseño gratuita antes de la producción."
+        },
+        {
+          "question": "¿Cuáles son los regalos conmemorativos personalizados para mascotas más populares?",
+          "answer": "Marcos con foto, joyería grabada, urnas, placas conmemorativas, cajas de regalo de condolencia y recuerdos digitales NFC están entre los regalos conmemorativos personalizados para mascotas más populares."
+        },
+        {
+          "question": "¿Cuánto tardan los regalos conmemorativos personalizados para mascotas?",
+          "answer": "Tras aprobar la prueba de diseño, la mayoría de los regalos conmemorativos personalizados para mascotas tardan unos 3–5 días laborables en producirse, más el tiempo de envío."
+        }
+      ]
+    },
+    "cat-memorial-gifts-gentle-ways-to-remember": {
+      "title": "Regalos conmemorativos para gatos: formas delicadas de recordar a un felino querido",
+      "metaTitle": "Ideas de regalos conmemorativos para gatos para un felino querido",
+      "metaDescription": "Descubre ideas de regalos conmemorativos para gatos: adornos con foto, marcos, joyería, urnas y recuerdos NFC. Homenajes personalizados delicados para un gato querido.",
+      "excerpt": "Los gatos dejan una presencia tranquila y duradera. Estos regalos conmemorativos para gatos te ayudan a honrar esa compañía tan especial con un recuerdo suave, personal y duradero.",
+      "category": "Conmemorativos para gatos",
+      "content": "## Regalos conmemorativos para gatos delicados y personales\r\n\r\nLos gatos a menudo dejan una ausencia más silenciosa — el alféizar vacío, el ritual matutino que falta, la presencia suave que llenaba la habitación. Los mejores regalos conmemorativos para gatos honran esa delicadeza sin resultar estridentes o impersonales.\r\n\r\nYa sea que crees un homenaje en casa o apoyes a un amigo, empieza con un recuerdo que se sienta tranquilo, personal y fiel a tu gato.\r\n\r\n## Ideas de regalos conmemorativos para gatos\r\n\r\n### 1. Adorno conmemorativo con foto para gatos\r\nEl [adorno conmemorativo con foto para gatos](/products/cat-memorial-photo-ornament) es una forma delicada de exhibir su retrato todo el año — suave, sencillo y fácil de colocar en un rincón favorito.\r\n\r\n### 2. Marco con foto personalizado\r\nUn [marco conmemorativo personalizado para mascotas](/products/personalized-pet-memorial-frame) grabado con su nombre y fechas crea un cálido homenaje en casa en una estantería o mesita de noche.\r\n\r\n### 3. Colgante grabado o relicario con foto\r\nUn [colgante conmemorativo grabado para mascotas](/products/engraved-pet-memorial-pendant) o un [relicario con foto](/products/pet-memorial-photo-locket) mantiene su memoria cerca de forma privada y llevadera.\r\n\r\n### 4. Urna de cremación\r\nPara familias que guardan las cenizas en casa, una [urna de cerámica para mascotas](/products/ceramic-pet-cremation-urn) o una [urna de madera para mascotas](/products/wooden-pet-cremation-urn) con placa personalizada ofrece un lugar digno de descanso.\r\n\r\n### 5. Tarjeta conmemorativa NFC\r\nUna [tarjeta conmemorativa NFC para mascotas](/products/nfc-pet-memorial-card) abre una página digital con fotos, vídeos y mensajes — ideal si familiares también quieren un lugar para visitar la historia de tu gato.\r\n\r\n## Cómo elegir regalos conmemorativos para gatos\r\n\r\n| Si quieres... | Empieza con | Por qué |\r\n|---------------|-------------|---------|\r\n| Una exhibición suave en casa | Adorno con foto o marco | Delicado y fácil de convivir |\r\n| Algo para llevar | Colgante o relicario | Recuerdo diario privado |\r\n| Un lugar para las cenizas | Urna personalizada | Digna y duradera |\r\n| Un regalo de condolencia | Caja de regalo o marco | Considerado sin invadir |\r\n| Recuerdos familiares compartidos | Tarjeta NFC / página digital | Fotos e historias en un solo lugar |\r\n\r\n## Ideas de personalización para regalos conmemorativos para gatos\r\n\r\n- Usa una foto clara que muestre su rostro y expresión\r\n- Incluye el nombre con el que la llamabas cada día\r\n- Añade fechas si te traen consuelo\r\n- Mantén el texto grabado breve — una línea suele ser suficiente\r\n\r\nEstos detalles ayudan a que los regalos conmemorativos para gatos se sientan íntimos en lugar de genéricos.\r\n\r\n## Regalos conmemorativos para gatos para alguien en duelo\r\n\r\nSi compras para un amigo:\r\n\r\n1. Elige un marco, adorno o caja de regalo\r\n2. Incluye una nota escrita a mano breve\r\n3. Evita presionar para \"superarlo\" o adoptar otra mascota\r\n\r\nUn mensaje sencillo como \"Te acompaño en el recuerdo de [nombre del gato]\" suele ser perfecto.\r\n\r\n## Explora regalos conmemorativos para gatos\r\n\r\nDescubre nuestra colección completa de [regalos conmemorativos para gatos](/collections/cat-memorial-gifts): adornos personalizados, marcos, joyería, urnas y recuerdos NFC. También puedes explorar todos los [regalos conmemorativos personalizados para mascotas](/collections/pet-memorial-gifts) para una gama más amplia de homenajes.\r\n\r\nEl regalo conmemorativo para gatos más significativo es el que, en silencio, se siente como ellos.\r\n    ",
+      "faqs": [
+        {
+          "question": "¿Cuáles son los mejores regalos conmemorativos para gatos?",
+          "answer": "Adornos con foto, marcos personalizados, joyería grabada, urnas, cajas de regalo y tarjetas conmemorativas NFC están entre los mejores regalos conmemorativos para gatos. Elige una opción delicada que encaje con cómo quieres recordarlo."
+        },
+        {
+          "question": "¿Los regalos conmemorativos para gatos pueden incluir una foto?",
+          "answer": "Sí. Muchos regalos conmemorativos para gatos se pueden personalizar con la foto, el nombre y las fechas de tu gato. Una prueba de diseño gratuita te ayuda a aprobar el aspecto final antes de la producción."
+        },
+        {
+          "question": "¿Qué regalo conmemorativo para gatos es bueno para un amigo?",
+          "answer": "Un marco personalizado, un adorno con foto o una caja de regalo de condolencia es un regalo conmemorativo considerado para un amigo en duelo. Una tarjeta NFC también es significativa si quieren un lugar para reunir fotos e historias."
+        }
+      ]
+    }
   }
 }

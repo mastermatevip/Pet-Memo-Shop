@@ -121,79 +121,152 @@
       "title": "Cadre commémoratif personnalisé pour animal",
       "shortDescription": "Un cadre photo chaleureux et élégant gravé avec le nom et les dates de votre animal. Un hommage délicat pour la maison.",
       "metaTitle": "Cadre commémoratif pour animal | Cadre photo personnalisé",
-      "metaDescription": "Cadre commémoratif personnalisé pour animal avec gravure du nom et des dates. Affichez votre photo favorite comme un hommage chaleureux pour votre chien ou chat."
+      "metaDescription": "Cadre commémoratif personnalisé pour animal avec gravure du nom et des dates. Affichez votre photo favorite comme un hommage chaleureux pour votre chien ou chat.",
+      "story": "Certains liens laissent une chaleur silencieuse qui demeure en nous. Ce cadre commémoratif a été créé pour accueillir cette chaleur — un lieu pour votre photo favorite et le nom du compagnon qui a partagé vos journées. Exposez-le sur une étagère, une table de chevet ou là où son souvenir se sent le plus chez lui."
     },
     "nfc-pet-memorial-card": {
       "title": "Carte commémorative NFC pour animal",
       "shortDescription": "Une carte commémorative physique avec puce NFC intégrée. Approchez-la d'un smartphone pour ouvrir une page numérique remplie de photos, vidéos et histoires.",
       "metaTitle": "Carte commémorative NFC pour animal | Souvenir numérique",
-      "metaDescription": "La carte commémorative NFC pour animal ouvre une page numérique avec photos, vidéos et histoires. Approchez ou scannez le code QR — un hommage physique et numérique."
+      "metaDescription": "La carte commémorative NFC pour animal ouvre une page numérique avec photos, vidéos et histoires. Approchez ou scannez le code QR — un hommage physique et numérique.",
+      "story": "Certaines histoires sont trop riches pour une seule photo. Notre carte commémorative NFC relie le physique et le numérique — un beau souvenir que vous pouvez tenir en main, et qui ouvre un monde de souvenirs d'un simple geste. Partagez son histoire avec votre famille, revivez vos moments favoris et gardez sa mémoire vivante d'une façon qui grandit avec vous.",
+      "faqs": [
+        {
+          "question": "Puis-je prévisualiser le design avant la production ?",
+          "answer": "Oui. Nous vous envoyons un bon à tirer pour votre examen et votre approbation avant que tout article personnalisé entre en production."
+        },
+        {
+          "question": "Combien de temps prend la personnalisation ?",
+          "answer": "La production prend généralement 3 à 5 jours ouvrés après l'approbation de votre bon à tirer. Les délais d'expédition dépendent de votre localisation."
+        },
+        {
+          "question": "Puis-je télécharger la photo de mon animal ?",
+          "answer": "Absolument. Vous pouvez télécharger la photo de votre animal lors de l'étape de personnalisation au moment du paiement."
+        },
+        {
+          "question": "Puis-je modifier le texte après la commande ?",
+          "answer": "Vous pouvez demander des modifications avant d'approuver le bon à tirer. Une fois approuvé et en production, les changements ne sont plus possibles."
+        },
+        {
+          "question": "Est-ce adapté comme cadeau de condoléances ?",
+          "answer": "Oui. Nos souvenirs commémoratifs sont conçus avec tendresse comme de délicats cadeaux de condoléances pour les amis et la famille en deuil."
+        },
+        {
+          "question": "Comment fonctionne la page commémorative NFC ?",
+          "answer": "La carte contient une puce NFC. Approchez-la d'un smartphone compatible pour ouvrir la page commémorative numérique de votre animal. Un code QR de secours est également imprimé sur la carte."
+        }
+      ]
     },
     "carbon-fiber-nfc-memorial-tag": {
       "title": "Médaille commémorative NFC en fibre de carbone",
       "shortDescription": "Médaille commémorative premium en fibre de carbone avec puce NFC. Approchez pour ouvrir le mémorial en ligne ou scannez le code QR de secours. Gravure laser du nom et des dates.",
       "metaTitle": "Médaille commémorative numérique pour animal | Souvenir NFC en fibre de carbone",
-      "metaDescription": "Médaille commémorative NFC premium en fibre de carbone ouvrant un mémorial en ligne avec photos et vidéos. Pour chiens et chats — à porter ou à exposer."
+      "metaDescription": "Médaille commémorative NFC premium en fibre de carbone ouvrant un mémorial en ligne avec photos et vidéos. Pour chiens et chats — à porter ou à exposer.",
+      "story": "Certains hommages méritent de durer pour toujours. Notre médaille commémorative NFC en fibre de carbone allie un matériau de qualité aérospatiale à une technologie discrète — une médaille commémorative pour animal que vous pouvez porter, exposer près d'une urne ou fixer à une boîte à souvenirs. Un simple geste ouvre un riche mémorial en ligne rempli de photos, vidéos et de l'histoire que seul vous pouvez raconter. Durable, légère et profondément personnelle.",
+      "faqs": [
+        {
+          "question": "Puis-je prévisualiser le design avant la production ?",
+          "answer": "Oui. Nous vous envoyons un bon à tirer pour votre examen et votre approbation avant que tout article personnalisé entre en production."
+        },
+        {
+          "question": "Combien de temps prend la personnalisation ?",
+          "answer": "La production prend généralement 3 à 5 jours ouvrés après l'approbation de votre bon à tirer. Les délais d'expédition dépendent de votre localisation."
+        },
+        {
+          "question": "Puis-je télécharger la photo de mon animal ?",
+          "answer": "Absolument. Vous pouvez télécharger la photo de votre animal lors de l'étape de personnalisation au moment du paiement."
+        },
+        {
+          "question": "Puis-je modifier le texte après la commande ?",
+          "answer": "Vous pouvez demander des modifications avant d'approuver le bon à tirer. Une fois approuvé et en production, les changements ne sont plus possibles."
+        },
+        {
+          "question": "Est-ce adapté comme cadeau de condoléances ?",
+          "answer": "Oui. Nos souvenirs commémoratifs sont conçus avec tendresse comme de délicats cadeaux de condoléances pour les amis et la famille en deuil."
+        },
+        {
+          "question": "Comment fonctionne la médaille NFC en fibre de carbone ?",
+          "answer": "La médaille contient une puce NFC intégrée programmée avec la page commémorative en ligne de votre animal. Approchez-la d'un smartphone compatible pour ouvrir la page instantanément. Un code QR est gravé au laser au dos en secours."
+        },
+        {
+          "question": "Puis-je porter ou exposer la médaille commémorative ?",
+          "answer": "Oui. Fixez-la à une chaîne comme collier-médaille commémoratif, exposez-la près d'une urne ou d'un cadre photo, ou conservez-la dans une boîte à souvenirs. La fibre de carbone est conçue pour un usage quotidien."
+        },
+        {
+          "question": "Que comprend la page commémorative numérique ?",
+          "answer": "Votre mémorial en ligne comprend une galerie photos, des liens vidéo, l'histoire de votre animal, les dates commémoratives, des messages familiaux et un livre d'or optionnel. Vous pouvez mettre à jour le contenu à tout moment."
+        }
+      ]
     },
     "engraved-pet-memorial-pendant": {
       "title": "Pendentif commémoratif gravé pour animal",
       "shortDescription": "Un délicat pendentif gravé avec le nom et l'empreinte de patte de votre animal. Un souvenir portable à porter chaque jour.",
       "metaTitle": "Pendentif commémoratif pour animal | Collier gravé",
-      "metaDescription": "Pendentif commémoratif pour animal gravé avec nom et empreinte de patte. Collier en argent sterling pour garder leur mémoire près de vous chaque jour."
+      "metaDescription": "Pendentif commémoratif pour animal gravé avec nom et empreinte de patte. Collier en argent sterling pour garder leur mémoire près de vous chaque jour.",
+      "story": "Il y a des jours où l'on cherche quelque chose de familier — un doux rappel que l'amour ne s'efface pas. Ce pendentif a été conçu pour ces moments. Portez-le près de vous, sentez sa présence et emportez avec grâce le nom de votre compagnon bien-aimé."
     },
     "wooden-pet-cremation-urn": {
       "title": "Urne funéraire en bois pour animal",
       "shortDescription": "Urne en bois artisanale avec plaque nominative personnalisée. Un lieu de repos chaleureux et digne.",
       "metaTitle": "Urne commémorative pour animal | Urne funéraire en bois",
-      "metaDescription": "Urne commémorative en bois pour animal avec plaque personnalisée. Urne chaleureuse et digne pour chiens et chats, avec options photo et carte NFC."
+      "metaDescription": "Urne commémorative en bois pour animal avec plaque personnalisée. Urne chaleureuse et digne pour chiens et chats, avec options photo et carte NFC.",
+      "story": "La maison est là où l'amour perdure. Cette urne en bois a été façonnée pour contenir non seulement des cendres, mais l'essence d'une vie bien aimée. Le grain naturel du bois, la plaque soigneusement gravée — chaque détail parle de respect, de chaleur et de la beauté tranquille du souvenir."
     },
     "memorial-sympathy-gift-box": {
       "title": "Coffret cadeau commémoratif de condoléances",
       "shortDescription": "Un ensemble composé d'un cadre commémoratif personnalisé, d'une bougie et d'une carte de condoléances. Un geste délicat pour réconforter quelqu'un qui a perdu son animal.",
       "metaTitle": "Cadeaux commémoratifs uniques | Coffret cadeau de condoléances",
-      "metaDescription": "Coffret cadeau commémoratif unique avec cadre personnalisé, bougie et carte de condoléances. Un cadeau attentionné pour la perte d'un animal bien-aimé."
+      "metaDescription": "Coffret cadeau commémoratif unique avec cadre personnalisé, bougie et carte de condoléances. Un cadeau attentionné pour la perte d'un animal bien-aimé.",
+      "story": "Quand les mots ne suffisent pas, un geste délicat peut en dire long. Ce coffret cadeau réunit un cadre personnalisé, une bougie douce et une carte de condoléances sincère — tout ce qu'il faut pour apporter réconfort et honorer la mémoire d'un compagnon bien-aimé."
     },
     "engraved-pet-memorial-plaque": {
       "title": "Plaque commémorative gravée pour animal",
       "shortDescription": "Plaque commémorative en ardoise gravée avec le nom, les dates et un message affectueux. Parfaite pour une étagère ou le jardin.",
       "metaTitle": "Plaque commémorative pour animal | Plaque personnalisée gravée",
-      "metaDescription": "Plaque commémorative personnalisée pour animal avec gravure du nom, des dates et d'un message. Ardoise pour intérieur ou jardin, avec intégration NFC en option."
+      "metaDescription": "Plaque commémorative personnalisée pour animal avec gravure du nom, des dates et d'un message. Ardoise pour intérieur ou jardin, avec intégration NFC en option.",
+      "story": "Certains hommages appartiennent à la lumière du jour — là où le soleil effleure les mots et où les souvenirs prennent vie. Cette plaque gravée capture le nom de votre animal et les dates qui comptent, créant un marqueur durable de l'amour que vous avez partagé."
     },
     "dog-memorial-keepsake-box": {
       "title": "Boîte à souvenirs commémorative pour chien",
       "shortDescription": "Boîte en bois gravée avec le nom de votre chien. Rangez colliers, médailles, photos et précieux souvenirs en un seul endroit.",
       "metaTitle": "Boîte à souvenirs pour animal | Boîte commémorative pour chien",
-      "metaDescription": "Boîte à souvenirs personnalisée pour colliers, médailles et photos. Boîte en bois gravée avec intérieur en velours."
+      "metaDescription": "Boîte à souvenirs personnalisée pour colliers, médailles et photos. Boîte en bois gravée avec intérieur en velours.",
+      "story": "Chaque collier raconte une histoire. Chaque médaille garde un souvenir. Cette boîte à souvenirs a été faite pour rassembler ces petites choses précieuses — les fragments tangibles d'une vie partagée — et les conserver en sécurité dans un lieu d'honneur."
     },
     "cat-memorial-photo-ornament": {
       "title": "Ornement commémoratif photo pour chat",
       "shortDescription": "Ornement en céramique avec le portrait et le nom de votre chat. Un hommage délicat pour les fêtes ou toute l'année.",
       "metaTitle": "Ornement commémoratif pour chat | Ornement photo personnalisé",
-      "metaDescription": "Ornement commémoratif photo pour chat en céramique avec portrait et nom personnalisés. Un hommage délicat pour les fêtes ou au quotidien."
+      "metaDescription": "Ornement commémoratif photo pour chat en céramique avec portrait et nom personnalisés. Un hommage délicat pour les fêtes ou au quotidien.",
+      "story": "Pour les compagnons silencieux qui ont rempli nos foyers de chaleur, cet ornement conserve leur portrait et leur nom dans une délicate forme en céramique — un petit et beau rappel qu'ils font toujours partie de la famille."
     },
     "ceramic-pet-cremation-urn": {
       "title": "Urne funéraire en céramique pour animal",
       "shortDescription": "Urne en céramique élégante avec plaque nominative personnalisée. Émail blanc doux avec délicats accents dorés.",
       "metaTitle": "Urne commémorative pour animal | Urne funéraire en céramique",
-      "metaDescription": "Urne en céramique pour animal avec plaque personnalisée. Émail blanc doux avec accents dorés — un lieu serein de repos pour votre compagnon."
+      "metaDescription": "Urne en céramique pour animal avec plaque personnalisée. Émail blanc doux avec accents dorés — un lieu serein de repos pour votre compagnon.",
+      "story": "La simplicité peut porter le sens le plus profond. Cette urne en céramique, avec son émail doux et sa plaque personnalisée, offre un lieu serein de repos — un réceptacle tranquille et beau pour un compagnon qui a apporté tant de lumière."
     },
     "pet-memorial-photo-locket": {
       "title": "Médaillon commémoratif photo pour animal",
       "shortDescription": "Médaillon en argent sterling contenant la photo de votre animal. Nom gravé avec élégance sur le devant.",
       "metaTitle": "Collier commémoratif pour animal | Médaillon photo",
-      "metaDescription": "Collier commémoratif pour animal avec médaillon photo. Argent sterling, nom gravé sur le devant — un souvenir profondément personnel."
+      "metaDescription": "Collier commémoratif pour animal avec médaillon photo. Argent sterling, nom gravé sur le devant — un souvenir profondément personnel.",
+      "story": "Certains souvenirs appartiennent près du cœur — au sens propre. Ouvrez ce médaillon pour y trouver la photo de votre animal, avec son nom gravé avec élégance sur le devant. Un hommage intime et privé que vous pouvez emporter partout."
     },
     "digital-memorial-page-standalone": {
       "title": "Page commémorative numérique pour animal",
       "shortDescription": "Page commémorative numérique autonome avec photos, vidéos, histoire et messages familiaux. Accessible via lien unique et code QR.",
       "metaTitle": "Page commémorative numérique pour animal | Hommage en ligne",
-      "metaDescription": "Créez une page commémorative numérique pour animal avec photos, vidéos, histoire et messages familiaux. Partagez-la via lien unique et code QR."
+      "metaDescription": "Créez une page commémorative numérique pour animal avec photos, vidéos, histoire et messages familiaux. Partagez-la via lien unique et code QR.",
+      "story": "Tout hommage n'a pas besoin d'être tenu en main. Parfois, le mémorial le plus significatif est celui que l'on peut partager — une page numérique où famille et amis peuvent venir, apporter leurs souvenirs et garder ensemble l'histoire de votre animal vivante."
     },
     "pet-loss-candle-set": {
       "title": "Set de bougies commémoratives pour deuil animalier",
       "shortDescription": "Trois bougies en cire de soja aux parfums doux avec étiquettes commémoratives. Un cadeau de condoléances chaleureux et réconfortant.",
       "metaTitle": "Bougies commémoratives pour deuil animalier | Set de bougies",
-      "metaDescription": "Set de bougies commémoratives pour deuil animalier : trois bougies en cire de soja aux parfums doux et étiquettes de souvenir. Un cadeau de condoléances délicat."
+      "metaDescription": "Set de bougies commémoratives pour deuil animalier : trois bougies en cire de soja aux parfums doux et étiquettes de souvenir. Un cadeau de condoléances délicat.",
+      "story": "La lumière porte la mémoire d'une façon silencieuse. Ces bougies en cire de soja coulées à la main, chacune avec une étiquette commémorative délicate, offrent une douce lueur et un parfum apaisant — un geste simple et beau de réconfort."
     }
   },
   "collections": {
@@ -203,7 +276,23 @@
       "description": "Souvenirs personnalisés et attentionnés pour honorer un compagnon bien-aimé.",
       "intro": "Découvrez des cadeaux commémoratifs personnalisés pour animaux, créés pour honorer le lien que vous partagiez avec votre chien, chat ou compagnon. Chaque souvenir peut être personnalisé avec photos, noms, dates et messages affectueux.",
       "metaTitle": "Cadeaux commémoratifs pour animaux | Souvenirs personnalisés pour chiens et chats",
-      "metaDescription": "Achetez des cadeaux commémoratifs personnalisés pour animaux. Cadres, plaques, bijoux, urnes et souvenirs numériques NFC avec bon à tirer avant production."
+      "metaDescription": "Achetez des cadeaux commémoratifs personnalisés pour animaux. Cadres, plaques, bijoux, urnes et souvenirs numériques NFC avec bon à tirer avant production.",
+      "seoHeadings": {
+        "whatAre": "Que sont les cadeaux commémoratifs personnalisés pour animaux ?",
+        "popularTypes": "Cadeaux commémoratifs personnalisés les plus populaires",
+        "whenToChoose": "Quand choisir un cadeau commémoratif personnalisé",
+        "personalization": "Ce que vous pouvez personnaliser",
+        "buyingGuide": "Comment choisir le bon cadeau commémoratif",
+        "whyChoose": "Pourquoi choisir nos cadeaux commémoratifs"
+      },
+      "seoSections": {
+        "whatAre": "Les cadeaux commémoratifs personnalisés pour animaux sont des souvenirs créés sur mesure pour honorer un compagnon bien-aimé. Contrairement aux articles de condoléances génériques, ils incluent généralement le nom, la photo, les dates ou l'histoire de votre animal — transformant un cadre, un collier, une urne, une plaque ou une carte NFC en un hommage durable à garder chez soi ou à partager en famille.",
+        "popularTypes": "Les choix les plus populaires comprennent les cadres photo gravés pour l'exposition à la maison, les bijoux commémoratifs portables, les urnes en bois ou en céramique, les plaques en ardoise, les coffrets cadeaux de condoléances et les cartes NFC commémoratives ouvrant un hommage numérique. Commencez par le souvenir qui correspond le mieux à votre façon quotidienne de vous en rappeler.",
+        "whenToChoose": "Choisissez des cadeaux commémoratifs personnalisés lorsque vous souhaitez un hommage durable pour votre propre animal, pour marquer un anniversaire de son départ, ou pour réconforter quelqu'un en deuil. Ils conviennent aussi si vous désirez à la fois un souvenir physique et une page commémorative numérique que la famille peut consulter à tout moment.",
+        "personalization": "La plupart des cadeaux peuvent être personnalisés avec une photo favorite, le nom de votre animal, les dates de naissance et de souvenir, une courte dédicace, le style de police et un emballage cadeau en option. Pour les souvenirs NFC, la personnalisation inclut la création d'une page commémorative en ligne avec photos, vidéos et messages dans le livre d'or. Nous envoyons toujours un bon à tirer gratuit avant la production.",
+        "buyingGuide": "Pour choisir le bon cadeau commémoratif personnalisé : (1) décidez s'il est pour vous ou comme cadeau de condoléances, (2) choisissez un style d'exposition — étagère à la maison, à porter ou numérique, (3) réunissez une photo nette ainsi que le nom et les dates à graver, et (4) approuvez le bon à tirer gratuit avant fabrication. En cas de doute, un cadre personnalisé ou un coffret cadeau commémoratif est un point de départ délicat et très apprécié.",
+        "whyChoose": "Les familles choisissent nos cadeaux commémoratifs personnalisés pour le design chaleureux, l'artisanat soigné, le bon à tirer gratuit avant production et les pages commémoratives numériques NFC en option. Qu'il s'agisse d'un simple cadre ou d'un coffret complet, chaque pièce est faite pour être personnelle — pas produite en série."
+      }
     },
     "dog-memorial-gifts": {
       "name": "Cadeaux commémoratifs pour chiens",
@@ -211,7 +300,23 @@
       "description": "Souvenirs significatifs pour se rappeler d'un chien bien-aimé.",
       "intro": "Honorez l'esprit fidèle de votre chien avec des cadeaux commémoratifs personnalisés. Des cadres gravés aux cartes mémoire NFC, chaque pièce garde leur histoire près de vous.",
       "metaTitle": "Cadeaux commémoratifs pour chiens | Mémoriaux pour chiens",
-      "metaDescription": "Achetez des cadeaux commémoratifs pour chiens. Cadres, urnes, bijoux, boîtes à souvenirs et cartes NFC personnalisées pour honorer votre chien."
+      "metaDescription": "Achetez des cadeaux commémoratifs pour chiens. Cadres, urnes, bijoux, boîtes à souvenirs et cartes NFC personnalisées pour honorer votre chien.",
+      "seoHeadings": {
+        "whatAre": "Que sont les cadeaux commémoratifs pour chiens ?",
+        "popularTypes": "Cadeaux commémoratifs pour chiens les plus populaires",
+        "whenToChoose": "Quand choisir un cadeau commémoratif pour chien",
+        "personalization": "Ce que vous pouvez personnaliser",
+        "buyingGuide": "Comment choisir des cadeaux commémoratifs pour chiens",
+        "whyChoose": "Pourquoi choisir nos cadeaux commémoratifs pour chiens"
+      },
+      "seoSections": {
+        "whatAre": "Les cadeaux commémoratifs pour chiens sont des hommages personnalisés créés pour honorer un chien bien-aimé — des cadres commémoratifs gravés et boîtes à souvenirs aux urnes, bijoux, plaques et cartes NFC ouvrant un mémorial en ligne. Ils aident les familles à garder l'histoire de leur chien près d'elles à la maison, au cou ou sur une page numérique partageable.",
+        "popularTypes": "Les cadeaux commémoratifs pour chiens les plus populaires comprennent les cadres photo personnalisés, les boîtes à souvenirs pour colliers et médailles, les urnes en bois ou en céramique, les bijoux gravés, les plaques commémoratives, les coffrets cadeaux de condoléances et les cartes NFC commémoratives. De nombreuses familles associent une pièce pour la maison à une page commémorative numérique.",
+        "whenToChoose": "Choisissez des cadeaux commémoratifs pour chiens pour vous souvenir de votre propre compagnon, marquer un anniversaire de naissance ou de départ, aménager un coin souvenir à la maison, ou réconforter un ami qui a perdu son chien. Ils sont particulièrement utiles lorsque vous souhaitez quelque chose de plus personnel qu'une carte de condoléances générique.",
+        "personalization": "Personnalisez les cadeaux commémoratifs pour chiens avec le nom, la photo, les dates de naissance et de souvenir, un court message, des détails d'empreinte de patte en option et un emballage cadeau. Les souvenirs NFC pour chiens peuvent aussi renvoyer vers une page numérique avec photos, vidéos et messages familiaux. Chaque commande personnalisée inclut un bon à tirer gratuit.",
+        "buyingGuide": "Lors de l'achat de cadeaux commémoratifs pour chiens : commencez par une photo favorite nette, choisissez entre un souvenir pour la maison ou un hommage portable, et décidez si vous souhaitez aussi une page commémorative numérique. Pour un cadeau à offrir, un cadre ou une boîte à souvenirs est généralement le choix le plus sûr. Après approbation du bon à tirer gratuit, nous fabriquons la pièce prête à exposer ou à offrir.",
+        "whyChoose": "Nos cadeaux commémoratifs pour chiens allient un design délicat à une personnalisation significative, pour que l'hommage ressemble à votre chien — et non à un produit générique. Les familles apprécient le bon à tirer gratuit, les matériaux chaleureux et la possibilité d'ajouter un mémorial numérique NFC à côté du souvenir physique."
+      }
     },
     "cat-memorial-gifts": {
       "name": "Cadeaux commémoratifs pour chats",
@@ -219,7 +324,23 @@
       "description": "Souvenirs délicats pour se rappeler d'un chat bien-aimé.",
       "intro": "Célébrez la compagnie silencieuse de votre chat avec des cadeaux commémoratifs personnalisés. Chaque pièce est conçue avec chaleur et respect pour honorer son esprit unique.",
       "metaTitle": "Cadeaux commémoratifs pour chats | Souvenirs personnalisés pour chats",
-      "metaDescription": "Achetez des cadeaux commémoratifs personnalisés pour chats. Cadres, bijoux, urnes et souvenirs numériques pour se rappeler de votre chat bien-aimé."
+      "metaDescription": "Achetez des cadeaux commémoratifs personnalisés pour chats. Cadres, bijoux, urnes et souvenirs numériques pour se rappeler de votre chat bien-aimé.",
+      "seoHeadings": {
+        "whatAre": "Que sont les cadeaux commémoratifs pour chats ?",
+        "popularTypes": "Cadeaux commémoratifs pour chats les plus populaires",
+        "whenToChoose": "Quand choisir un cadeau commémoratif pour chat",
+        "personalization": "Ce que vous pouvez personnaliser",
+        "buyingGuide": "Comment choisir des cadeaux commémoratifs pour chats",
+        "whyChoose": "Pourquoi choisir nos cadeaux commémoratifs pour chats"
+      },
+      "seoSections": {
+        "whatAre": "Les cadeaux commémoratifs pour chats sont des souvenirs personnalisés créés pour honorer un chat bien-aimé — des cadres photo et ornements aux bijoux, urnes, plaques, coffrets cadeaux et cartes NFC ouvrant un mémorial en ligne. Ils offrent une façon délicate de garder près de soi la compagnie silencieuse d'un chat, à la maison, au cou ou sur une page numérique partageable.",
+        "popularTypes": "Les cadeaux commémoratifs pour chats les plus populaires comprennent les cadres photo personnalisés, les ornements commémoratifs photo, les bijoux gravés, les urnes en bois ou en céramique, les plaques commémoratives, les coffrets cadeaux de condoléances et les cartes NFC commémoratives. De nombreuses familles associent une pièce pour la maison à une page commémorative numérique.",
+        "whenToChoose": "Choisissez des cadeaux commémoratifs pour chats pour vous souvenir de votre propre compagnon, marquer un anniversaire de naissance ou de départ, aménager un coin souvenir doux à la maison, ou réconforter un ami qui a perdu son chat. Ils sont particulièrement utiles lorsque vous souhaitez quelque chose de plus personnel qu'une carte de condoléances générique.",
+        "personalization": "Personnalisez les cadeaux commémoratifs pour chats avec le nom, la photo, les dates de naissance et de souvenir, un court message et un emballage cadeau. Les souvenirs NFC pour chats peuvent aussi renvoyer vers une page numérique avec photos, vidéos et messages familiaux. Chaque commande personnalisée inclut un bon à tirer gratuit.",
+        "buyingGuide": "Lors de l'achat de cadeaux commémoratifs pour chats : commencez par une photo favorite nette, choisissez entre un souvenir pour la maison ou un hommage portable, et décidez si vous souhaitez aussi une page commémorative numérique. Pour un cadeau à offrir, un cadre, un ornement ou un coffret cadeau est généralement le choix le plus sûr. Après approbation du bon à tirer gratuit, nous fabriquons la pièce prête à exposer ou à offrir.",
+        "whyChoose": "Nos cadeaux commémoratifs pour chats allient un design doux et élégant à une personnalisation significative, pour que l'hommage ressemble à votre chat — et non à un produit générique. Les familles apprécient le bon à tirer gratuit, l'esthétique délicate et la possibilité d'ajouter un mémorial numérique NFC à côté du souvenir physique."
+      }
     },
     "pet-memorial-jewelry": {
       "name": "Bijoux commémoratifs pour animaux",
@@ -227,7 +348,19 @@
       "description": "Souvenirs portables pour garder leur mémoire près de vous.",
       "intro": "Gardez votre compagnon bien-aimé près de vous avec des bijoux commémoratifs personnalisés — pendentifs gravés, colliers commémoratifs, médaillons photo et designs d'empreinte de patte, fabriqués avec soin et élégance.",
       "metaTitle": "Bijoux commémoratifs pour animaux | Pendentifs, colliers et médaillons",
-      "metaDescription": "Achetez des bijoux commémoratifs pour animaux : pendentifs, colliers et médaillons photo. Gravés avec nom, dates et empreinte de patte — souvenirs personnalisés pour honorer votre animal."
+      "metaDescription": "Achetez des bijoux commémoratifs pour animaux : pendentifs, colliers et médaillons photo. Gravés avec nom, dates et empreinte de patte — souvenirs personnalisés pour honorer votre animal.",
+      "seoHeadings": {
+        "whatAre": "Que sont les bijoux commémoratifs pour animaux ?",
+        "whenToChoose": "Quand choisir des bijoux commémoratifs",
+        "personalization": "Options de personnalisation",
+        "whyChoose": "Pourquoi choisir nos bijoux commémoratifs"
+      },
+      "seoSections": {
+        "whatAre": "Les bijoux commémoratifs pour animaux comprennent colliers, pendentifs, bracelets et médaillons — des bijoux commémoratifs portables gravés ou personnalisés avec le nom, les dates ou la photo de votre animal.",
+        "whenToChoose": "Choisissez des bijoux commémoratifs lorsque vous souhaitez un souvenir portable que vous gardez avec vous tout au long de la journée, ou comme cadeau de condoléances intime.",
+        "personalization": "Les options incluent la gravure du nom, les dates commémoratives, les motifs d'empreinte de patte, les médaillons photo, le choix de la police et un emballage cadeau premium.",
+        "whyChoose": "Nos bijoux commémoratifs pour animaux sont fabriqués avec des matériaux premium et un design délicat, offrant une façon significative de porter la mémoire de votre animal avec vous."
+      }
     },
     "pet-urns": {
       "name": "Urnes pour animaux",
@@ -235,7 +368,19 @@
       "description": "Urnes funéraires élégantes avec plaques nominatives personnalisées.",
       "intro": "Honorez votre compagnon bien-aimé avec une urne commémorative pour animal soigneusement fabriquée. Choisissez parmi des urnes en bois, céramique et métal avec plaques personnalisées et cadres photo en option.",
       "metaTitle": "Urnes commémoratives pour animaux | Urnes funéraires personnalisées",
-      "metaDescription": "Achetez des urnes commémoratives pour chiens et chats. Urnes en bois, céramique et métal avec plaques personnalisées, options photo et cartes NFC en option."
+      "metaDescription": "Achetez des urnes commémoratives pour chiens et chats. Urnes en bois, céramique et métal avec plaques personnalisées, options photo et cartes NFC en option.",
+      "seoHeadings": {
+        "whatAre": "Que sont les urnes commémoratives pour animaux ?",
+        "whenToChoose": "Quand choisir une urne pour animal",
+        "personalization": "Options de personnalisation",
+        "whyChoose": "Pourquoi choisir nos urnes commémoratives"
+      },
+      "seoSections": {
+        "whatAre": "Les urnes commémoratives pour animaux sont des réceptacles conçus pour conserver avec respect les cendres d'un compagnon bien-aimé après crémation. Elles peuvent être exposées à la maison comme un hommage délicat et digne.",
+        "whenToChoose": "Choisissez une urne pour animal lorsque vous souhaitez conserver les cendres de votre compagnon dans un réceptacle beau et personnalisé à la maison.",
+        "personalization": "Personnalisez avec des plaques gravées, des dates commémoratives, des cadres photo et des cartes commémoratives numériques NFC en option.",
+        "whyChoose": "Nos urnes présentent des designs chaleureux et élégants, un savoir-faire soigné et des options de personnalisation auxquelles les familles font confiance."
+      }
     },
     "nfc-memorial-cards": {
       "name": "Médailles commémoratives NFC",
@@ -243,7 +388,19 @@
       "description": "Approchez pour ouvrir une page commémorative en ligne remplie de souvenirs.",
       "intro": "Reliez un souvenir physique à un mémorial en ligne durable. Nos médailles et cartes NFC — y compris les médailles premium en fibre de carbone — ouvrent une page numérique avec photos, vidéos, histoires et messages familiaux. Approchez d'un smartphone ou scannez le code QR.",
       "metaTitle": "Médailles commémoratives numériques pour animaux | Souvenirs NFC et code QR",
-      "metaDescription": "Achetez des médailles commémoratives numériques pour animaux avec accès NFC et code QR. Médailles premium en fibre de carbone et cartes commémoratives ouvrant des pages en ligne avec photos, vidéos et histoires."
+      "metaDescription": "Achetez des médailles commémoratives numériques pour animaux avec accès NFC et code QR. Médailles premium en fibre de carbone et cartes commémoratives ouvrant des pages en ligne avec photos, vidéos et histoires.",
+      "seoHeadings": {
+        "whatAre": "Que sont les médailles commémoratives numériques pour animaux ?",
+        "whenToChoose": "Quand choisir une médaille commémorative NFC",
+        "personalization": "Options de personnalisation",
+        "whyChoose": "Pourquoi choisir nos médailles NFC commémoratives"
+      },
+      "seoSections": {
+        "whatAre": "Les médailles commémoratives numériques pour animaux sont des souvenirs physiques — médailles en fibre de carbone ou cartes commémoratives — avec des puces NFC intégrées. Un simple contact ouvre une page commémorative en ligne avec photos, vidéos et histoires.",
+        "whenToChoose": "Choisissez une médaille commémorative NFC lorsque vous souhaitez à la fois un souvenir physique premium et un mémorial en ligne partageable pour famille et amis.",
+        "personalization": "Gravez le nom et les dates de votre animal sur la médaille, puis créez votre mémorial en ligne avec photos, vidéos, histoire et messages familiaux.",
+        "whyChoose": "Pet Memo Shop propose des médailles NFC premium en fibre de carbone et des cartes commémoratives accessibles — une façon unique de créer un mémorial en ligne pour animal qui grandit avec votre famille."
+      }
     },
     "memorial-gift-boxes": {
       "name": "Coffrets cadeaux commémoratifs",
@@ -256,15 +413,15 @@
         "whatAre": "Que sont les coffrets cadeaux commémoratifs ?",
         "whenToChoose": "Quand choisir un coffret cadeau commémoratif",
         "personalization": "Options de personnalisation",
-        "whyChoose": "Pourquoi choisir nos coffrets cadeaux"
+        "whyChoose": "Pourquoi choisir nos coffrets cadeaux commémoratifs"
       },
       "relatedCategories": "Catégories associées",
       "helpfulGuides": "Guides utiles",
       "seoSections": {
-        "whatAre": "Coffrets combinant souvenirs personnalisés, bougies, cadres ou bijoux dans un emballage premium.",
-        "whenToChoose": "Comme cadeau de condoléances ou pour un ensemble complet et harmonieux de souvenirs.",
-        "personalization": "Chaque coffret peut inclure des articles personnalisés avec nom, photo et dates, plus carte cadeau.",
-        "whyChoose": "Présentation premium et personnalisation significative pour offrir ou se souvenir."
+        "whatAre": "Les coffrets cadeaux commémoratifs sont des ensembles soigneusement composés réunissant souvenirs personnalisés, bougies, cadres ou bijoux dans un emballage premium pour cadeau.",
+        "whenToChoose": "Choisissez un coffret cadeau commémoratif pour offrir des condoléances ou lorsque vous souhaitez un ensemble complet et harmonieux de souvenirs.",
+        "personalization": "Chaque coffret peut inclure des articles personnalisés avec le nom, la photo et les dates de votre animal. Ajoutez une carte message pour les cadeaux de condoléances.",
+        "whyChoose": "Nos coffrets cadeaux offrent une présentation premium et une personnalisation significative, idéales pour offrir ou pour un souvenir personnel."
       }
     },
     "digital-pet-memorial-keepsakes": {
@@ -275,18 +432,18 @@
       "metaTitle": "Souvenirs numériques pour animaux | Pages mémoire en ligne",
       "metaDescription": "Créez une page commémorative numérique avec photos, vidéos et histoires. Accès par carte NFC ou code QR.",
       "seoHeadings": {
-        "whatAre": "Que sont les souvenirs numériques pour animaux ?",
+        "whatAre": "Que sont les souvenirs numériques commémoratifs pour animaux ?",
         "whenToChoose": "Quand choisir un mémorial numérique",
         "personalization": "Options de personnalisation",
-        "whyChoose": "Pourquoi choisir nos pages numériques"
+        "whyChoose": "Pourquoi choisir nos pages commémoratives numériques"
       },
       "relatedCategories": "Catégories associées",
       "helpfulGuides": "Guides utiles",
       "seoSections": {
-        "whatAre": "Pages en ligne dédiées à honorer un compagnon avec photos, vidéos, histoires et messages familiaux.",
-        "whenToChoose": "Pour partager des souvenirs avec la famille ou compléter une carte NFC ou plaque.",
-        "personalization": "Nom, galerie photos, dates, histoire, vidéos, messages et livre d'or optionnel.",
-        "whyChoose": "Mise en page chaleureuse et élégante, accessible partout et à tout moment."
+        "whatAre": "Les souvenirs numériques commémoratifs pour animaux sont des pages en ligne dédiées à honorer un compagnon bien-aimé avec photos, vidéos, histoires et messages familiaux.",
+        "whenToChoose": "Choisissez un mémorial numérique lorsque vous souhaitez partager des souvenirs avec famille et amis, ou l'associer à une carte NFC physique ou une plaque commémorative.",
+        "personalization": "Incluez le nom de l'animal, une galerie photos, les dates de naissance et de souvenir, l'histoire, des liens vidéo, des messages familiaux et un livre d'or optionnel.",
+        "whyChoose": "Nos pages commémoratives numériques offrent une mise en page chaleureuse et élégante qui préserve l'histoire de votre animal et reste accessible à tout moment, partout."
       }
     },
     "pet-loss-sympathy-gifts": {
@@ -305,10 +462,10 @@
       "relatedCategories": "Catégories associées",
       "helpfulGuides": "Guides utiles",
       "seoSections": {
-        "whatAre": "Cadeaux mémoire et de condoléances qui honorent doucement la mémoire d'un animal disparu.",
-        "whenToChoose": "Quand un proche perd son compagnon et que vous souhaitez un geste réconfortant.",
-        "personalization": "Nombreux cadeaux personnalisables avec nom, photo et dates. Cartes et emballage premium disponibles.",
-        "whyChoose": "Conçus avec chaleur et respect pour soutenir dans les moments difficiles."
+        "whatAre": "Les cadeaux mémoire et de condoléances pour perte d'animal sont des souvenirs attentionnés offerts à quelqu'un qui a perdu un compagnon bien-aimé, proposant une façon délicate d'honorer sa mémoire.",
+        "whenToChoose": "Choisissez un cadeau de condoléances lorsqu'un ami, un proche ou un collègue perd son animal et que vous souhaitez offrir un geste significatif et réconfortant.",
+        "personalization": "De nombreux cadeaux de condoléances peuvent être personnalisés avec le nom, la photo et les dates de l'animal. Des cartes message et un emballage premium sont disponibles.",
+        "whyChoose": "Nos cadeaux de condoléances sont conçus avec chaleur et respect, ce qui en fait un choix attentionné pour accompagner quelqu'un lors de la perte d'un animal."
       }
     },
     "pet-memorial-frames": {
@@ -322,15 +479,15 @@
         "whatAre": "Que sont les cadres commémoratifs pour animaux ?",
         "whenToChoose": "Quand choisir un cadre commémoratif",
         "personalization": "Options de personnalisation",
-        "whyChoose": "Pourquoi choisir nos cadres"
+        "whyChoose": "Pourquoi choisir nos cadres commémoratifs"
       },
       "relatedCategories": "Catégories associées",
       "helpfulGuides": "Guides utiles",
       "seoSections": {
-        "whatAre": "Cadres photo personnalisés avec nom, dates et message — hommage domestique très populaire.",
-        "whenToChoose": "Quand vous souhaitez un rappel quotidien visible de votre compagnon.",
-        "personalization": "Téléchargez une photo, ajoutez nom et dates, choisissez police et style de cadre.",
-        "whyChoose": "Matériaux premium, gravure élégante et aperçu avant production."
+        "whatAre": "Les cadres commémoratifs pour animaux sont des cadres photo personnalisés avec le nom, les dates et des messages optionnels de votre animal — l'une des façons les plus populaires de créer un hommage à la maison.",
+        "whenToChoose": "Choisissez un cadre commémoratif lorsque vous souhaitez un rappel visible et quotidien de votre compagnon bien-aimé exposé chez vous.",
+        "personalization": "Téléchargez la photo de votre animal, ajoutez son nom et ses dates commémoratives, choisissez une police et sélectionnez parmi les styles de cadre en bois, métal ou acrylique.",
+        "whyChoose": "Nos cadres sont fabriqués avec des matériaux premium, une gravure élégante et un processus de bon à tirer avant production pour votre tranquillité d'esprit."
       }
     },
     "pet-memorial-plaques": {
@@ -344,15 +501,15 @@
         "whatAre": "Que sont les plaques commémoratives pour animaux ?",
         "whenToChoose": "Quand choisir une plaque commémorative",
         "personalization": "Options de personnalisation",
-        "whyChoose": "Pourquoi choisir nos plaques"
+        "whyChoose": "Pourquoi choisir nos plaques commémoratives"
       },
       "relatedCategories": "Catégories associées",
       "helpfulGuides": "Guides utiles",
       "seoSections": {
-        "whatAre": "Plaques gravées avec nom, dates et message — idéales pour étagère, jardin ou près d'une urne.",
-        "whenToChoose": "Pour hommage de jardin, étagère ou à côté d'une urne et d'un cadre.",
-        "personalization": "Gravure du nom, dates, message, empreinte ou photo optionnelle. Puce NFC disponible.",
-        "whyChoose": "Matériaux de qualité, gravure précise et intégration NFC optionnelle."
+        "whatAre": "Les plaques commémoratives pour animaux sont des hommages gravés affichant le nom, les dates et un message personnalisé de votre animal — idéales pour une étagère, un jardin ou près d'une urne.",
+        "whenToChoose": "Choisissez une plaque commémorative pour un hommage au jardin, une exposition sur étagère ou à côté d'une urne ou d'un cadre photo.",
+        "personalization": "Gravez le nom de votre animal, les dates de naissance et de souvenir, un message personnalisé et, en option, une empreinte de patte ou une photo. Une puce NFC peut également être intégrée.",
+        "whyChoose": "Nos plaques sont fabriquées avec des matériaux de qualité, une gravure précise et une intégration optionnelle de mémorial numérique NFC."
       }
     }
   },
@@ -501,5 +658,411 @@
       "Demande de vente en gros",
       "Autre"
     ]
+  },
+  "digitalMemorialLanding": {
+    "metaTitle": "Mémorial en ligne pour animal | Créez une page commémorative numérique",
+    "metaDescription": "Créez une page commémorative en ligne pour votre animal avec photos, vidéos et messages familiaux. Accédez-y via une médaille NFC premium en fibre de carbone ou un code QR. Créez un mémorial pour animal en ligne avec Pet Memo Shop.",
+    "hero": {
+      "eyebrow": "Mémorial numérique Pet Memo Shop",
+      "h1": "Créez un mémorial en ligne pour votre animal",
+      "subtitle": "Préservez l'histoire de votre compagnon dans une belle page commémorative en ligne. Partagez photos, vidéos et messages affectueux — accessible à tout moment par un simple contact NFC ou en scannant le code QR.",
+      "body": "Associez votre page numérique à notre médaille commémorative NFC premium en fibre de carbone — un souvenir physique durable que vous pouvez porter, exposer ou placer près de son urne.",
+      "primaryCta": "Acheter la médaille NFC en fibre de carbone",
+      "secondaryCta": "Créer une page numérique",
+      "imageAlt": "page commémorative en ligne pour animal avec photos et messages affectueux"
+    },
+    "whatIs": {
+      "title": "Qu'est-ce qu'un mémorial numérique pour animal ?",
+      "paragraphs": [
+        "Un mémorial numérique pour animal est une page en ligne dédiée à honorer votre compagnon bien-aimé. Contrairement à un simple cadre photo, elle conserve toute son histoire — photos, vidéos, dates et messages de tous ceux qui l'ont aimé.",
+        "Pet Memo Shop vous permet de créer facilement un mémorial pour animal en ligne, puis de le garder près de vous grâce à une médaille NFC physique ou une carte commémorative qui ouvre la page d'un simple geste."
+      ]
+    },
+    "carbonFiber": {
+      "title": "Médaille NFC premium en fibre de carbone",
+      "subtitle": "Notre souvenir commémoratif numérique emblématique — durable, élégant et toujours connecté à son histoire.",
+      "imageAlt": "médaille commémorative NFC en fibre de carbone pour animal gravée avec le nom",
+      "features": [
+        "Vraie fibre de carbone — légère, résistante aux rayures et faite pour durer",
+        "Puce NFC intégrée ouvrant instantanément votre mémorial en ligne",
+        "Gravure laser du nom de votre animal et des dates commémoratives",
+        "Code QR de secours sur chaque médaille",
+        "À porter comme médaille commémorative ou à exposer près d'une urne et d'un cadre",
+        "Inclut la configuration complète de la page commémorative numérique"
+      ],
+      "cta": "Voir la médaille NFC en fibre de carbone"
+    },
+    "howItWorks": {
+      "title": "Comment fonctionnent l'accès NFC et le code QR",
+      "items": [
+        {
+          "title": "Approchez ou scannez",
+          "desc": "Approchez votre médaille commémorative NFC ou scannez le code QR pour ouvrir la page en ligne sur n'importe quel smartphone."
+        },
+        {
+          "title": "Contenus riches",
+          "desc": "Créez un mémorial numérique pour animal avec photos, vidéos et une galerie complète de moments précieux."
+        },
+        {
+          "title": "Son histoire",
+          "desc": "Écrivez son histoire, partagez vos souvenirs favoris et ajoutez des messages familiaux à la page commémorative."
+        },
+        {
+          "title": "Livre d'or",
+          "desc": "Livre d'or optionnel pour que les amis et la famille laissent des messages sur le mémorial en ligne."
+        }
+      ]
+    },
+    "included": {
+      "title": "Ce que vous pouvez inclure",
+      "subtitle": "Créez un hommage en ligne riche avec tout ce qui rendait votre compagnon unique.",
+      "fields": [
+        "Nom de l'animal",
+        "Photo de l'animal",
+        "Date de naissance",
+        "Date commémorative",
+        "Histoire de l'animal",
+        "Galerie photos",
+        "Lien vidéo",
+        "Message familial",
+        "Souvenir favori",
+        "Livre d'or optionnel"
+      ]
+    },
+    "sampleLinks": {
+      "title": "Exemples de pages commémoratives numériques",
+      "subtitle": "Découvrez de vraies pages commémoratives — cliquez sur une carte pour ouvrir l'hommage en ligne.",
+      "linkLabel": "Voir le mémorial →",
+      "items": [
+        {
+          "title": "BELLA"
+        },
+        {
+          "title": "COCO"
+        },
+        {
+          "title": "Milo"
+        }
+      ]
+    },
+    "orderSteps": {
+      "title": "Comment commander",
+      "steps": [
+        "Choisissez une médaille NFC en fibre de carbone, une carte commémorative ou une page numérique autonome",
+        "Téléchargez la photo de votre animal et saisissez son nom et ses dates",
+        "Créez votre mémorial en ligne avec photos, vidéos et histoire",
+        "Examinez et approuvez le bon à tirer",
+        "Recevez votre souvenir et partagez la page commémorative avec votre famille"
+      ]
+    },
+    "pricing": {
+      "title": "Options tarifaires",
+      "subtitle": "Commencez avec une page numérique seule, ou associez-la à un souvenir physique NFC.",
+      "options": [
+        {
+          "name": "Page numérique seule",
+          "price": "$19.99",
+          "desc": "Mémorial en ligne autonome avec lien unique et code QR. Créez un mémorial pour animal en ligne en quelques minutes."
+        },
+        {
+          "name": "Médaille NFC en fibre de carbone",
+          "price": "$69.99",
+          "desc": "Médaille commémorative premium en fibre de carbone avec puce NFC intégrée + page commémorative en ligne complète. Notre souvenir emblématique."
+        },
+        {
+          "name": "Carte commémorative NFC",
+          "price": "$34.99",
+          "desc": "Carte commémorative classique avec puce NFC + page numérique. Un hommage physique et numérique accessible pour débuter."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Qu'est-ce qu'un mémorial en ligne pour animal ?",
+        "answer": "Un mémorial en ligne pour animal est une page web dédiée à honorer votre compagnon bien-aimé. Elle conserve photos, vidéos, son histoire, ses dates et les messages de la famille — accessible à tout moment via lien, code QR ou contact NFC."
+      },
+      {
+        "question": "Comment créer un mémorial pour animal en ligne ?",
+        "answer": "Choisissez une page numérique autonome ou associez-la à une médaille NFC en fibre de carbone ou à une carte commémorative. Téléchargez la photo de votre animal, saisissez ses informations et créez votre mémorial avec photos, vidéos et histoire. Nous vous envoyons un bon à tirer avant l'expédition de la médaille physique."
+      },
+      {
+        "question": "Qu'est-ce que la médaille commémorative NFC en fibre de carbone ?",
+        "answer": "Notre médaille premium en fibre de carbone intègre une puce NFC liée au mémorial en ligne de votre animal. Approchez-la avec un smartphone pour ouvrir la page instantanément. Elle est durable, légère, et peut être portée ou exposée près d'une urne ou d'un cadre photo."
+      },
+      {
+        "question": "Puis-je mettre à jour la page commémorative après sa création ?",
+        "answer": "Oui. Ajoutez des photos, mettez à jour les histoires et modifiez les messages à tout moment — notre équipe peut actualiser votre page après votre commande."
+      },
+      {
+        "question": "Ai-je besoin d'une application ?",
+        "answer": "Aucune application n'est requise. Le mémorial en ligne s'ouvre directement dans le navigateur web de votre téléphone."
+      },
+      {
+        "question": "Les membres de la famille peuvent-ils contribuer ?",
+        "answer": "Oui. Invitez famille et amis à ajouter des photos et des messages. Le livre d'or optionnel permet aux visiteurs de laisser des mots."
+      }
+    ],
+    "finalCta": {
+      "title": "Gardez son histoire près de vous",
+      "subtitle": "Créez un mémorial en ligne qui honore votre compagnon bien-aimé — avec une médaille NFC premium en fibre de carbone ou une carte commémorative classique.",
+      "primaryCta": "Acheter la médaille NFC en fibre de carbone",
+      "secondaryCta": "Voir tous les souvenirs NFC"
+    }
+  },
+  "blogPosts": {
+    "what-to-give-someone-who-lost-a-pet": {
+      "title": "Que offrir à quelqu'un qui a perdu un animal ?",
+      "excerpt": "Trouver le bon cadeau de condoléances lorsqu'un proche perd un animal peut sembler difficile. Voici des idées douces et significatives pour montrer que vous pensez à lui.",
+      "metaTitle": "Que offrir à quelqu'un qui a perdu un animal ? | Guide cadeaux de condoléances",
+      "metaDescription": "Découvrez des idées de cadeaux de condoléances réfléchis après la perte d'un animal. Cadres commémoratifs personnalisés, bijoux, coffrets cadeaux et souvenirs numériques pour réconforter un ami en deuil.",
+      "category": "Soutien après une perte d'animal"
+    },
+    "best-dog-memorial-gifts-for-a-grieving-friend": {
+      "title": "Meilleurs cadeaux commémoratifs pour chiens à offrir à un ami en deuil",
+      "excerpt": "Quand un ami perd son chien, un cadeau commémoratif personnalisé peut apporter réconfort et honorer le lien fidèle qu'ils partageaient.",
+      "metaTitle": "Meilleurs cadeaux commémoratifs pour chiens à offrir à un ami en deuil",
+      "metaDescription": "Trouvez les meilleurs cadeaux commémoratifs pour chiens à offrir à un ami en deuil. Cadres personnalisés, boîtes à souvenirs, urnes et cartes NFC pour honorer un chien bien-aimé.",
+      "category": "Mémoriaux pour chiens"
+    },
+    "best-cat-memorial-gifts-to-remember-a-beloved-cat": {
+      "title": "Meilleurs cadeaux commémoratifs pour chats pour se souvenir d'un félin bien-aimé",
+      "excerpt": "Les chats laissent une présence douce et durable dans nos cœurs. Ces cadeaux commémoratifs aident à honorer cette compagnie délicate.",
+      "metaTitle": "Meilleurs cadeaux commémoratifs pour chats pour se souvenir d'un félin bien-aimé",
+      "metaDescription": "Découvrez les meilleurs cadeaux commémoratifs pour chats : ornements photo, bijoux, cadres et souvenirs numériques pour honorer un chat bien-aimé.",
+      "category": "Mémoriaux pour chats"
+    },
+    "how-to-choose-a-pet-memorial-gift": {
+      "title": "Comment choisir un cadeau commémoratif pour animal",
+      "excerpt": "Vous hésitez sur le cadeau commémoratif idéal ? Ce guide vous aide à choisir selon votre relation, vos préférences et le type d'hommage souhaité.",
+      "metaTitle": "Comment choisir un cadeau commémoratif pour animal | Guide d'achat",
+      "metaDescription": "Apprenez à choisir le cadeau commémoratif parfait pour votre animal. Comparez cadres, bijoux, urnes, cartes NFC et coffrets cadeaux avec notre guide pratique.",
+      "category": "Idées de cadeaux commémoratifs pour animaux"
+    },
+    "what-is-a-pet-memorial-keepsake": {
+      "title": "Qu'est-ce qu'un souvenir commémoratif pour animal ?",
+      "excerpt": "Un souvenir commémoratif pour animal est un objet personnalisé conçu pour honorer et se souvenir d'un compagnon bien-aimé. Découvrez les différents types.",
+      "metaTitle": "Qu'est-ce qu'un souvenir commémoratif pour animal ? | Guide complet",
+      "metaDescription": "Découvrez ce qu'est un souvenir commémoratif pour animal, les différents types disponibles et comment en choisir un pour honorer votre compagnon bien-aimé.",
+      "category": "Idées de cadeaux commémoratifs pour animaux"
+    },
+    "how-to-choose-a-pet-urn": {
+      "title": "Comment choisir une urne pour animal",
+      "excerpt": "Choisir une urne pour animal implique de considérer la taille, le matériau et la personnalisation. Ce guide vous aide à trouver celle qui convient.",
+      "metaTitle": "Comment choisir une urne pour animal | Guide taille et matériaux",
+      "metaDescription": "Apprenez à choisir la bonne urne de crémation pour animal. Guide des tailles, options de matériaux et conseils de personnalisation pour urnes chien et chat.",
+      "category": "Guides des urnes pour animaux"
+    },
+    "pet-loss-sympathy-gift-ideas": {
+      "title": "Idées de cadeaux de condoléances après la perte d'un animal",
+      "excerpt": "Des idées de cadeaux de condoléances réfléchis pour quelqu'un qui a perdu un animal, des bougies et cadres aux coffrets cadeaux complets.",
+      "metaTitle": "Idées de cadeaux de condoléances après la perte d'un animal | Guide",
+      "metaDescription": "Explorez des idées de cadeaux de condoléances après la perte d'un animal : cadres commémoratifs, bougies, coffrets cadeaux et bijoux pour réconforter un proche en deuil.",
+      "category": "Soutien après une perte d'animal"
+    },
+    "how-to-create-a-digital-pet-memorial-page": {
+      "title": "Comment créer une page commémorative numérique pour animal",
+      "excerpt": "Créez un hommage numérique durable avec photos, vidéos et histoires. Accessible via carte NFC ou code QR.",
+      "metaTitle": "Comment créer une page commémorative numérique pour animal | Pas à pas",
+      "metaDescription": "Apprenez à créer une page commémorative numérique pour animal avec photos, vidéos, histoires et messages familiaux. Accessible via NFC ou code QR.",
+      "category": "Mémoriaux numériques",
+      "content": "## Créer un mémorial numérique\n\nUne page commémorative numérique pour animal préserve l'histoire de votre compagnon en ligne, accessible à la famille et aux amis à tout moment.\n\n## Que inclure\n\n- Nom et photo de l'animal\n- Dates de naissance et de décès\n- Son histoire et sa personnalité\n- Galerie photo et liens vidéo\n- Messages familiaux et souvenirs favoris\n- Livre d'or optionnel pour les visiteurs\n\n## Comment commencer\n\nCommandez une [page commémorative numérique pour animal](/products/digital-memorial-page-standalone) pour un hommage en ligne autonome, ou associez-la à une [médaille commémorative NFC en fibre de carbone](/products/carbon-fiber-nfc-memorial-tag) ou une [carte commémorative NFC](/products/nfc-pet-memorial-card) pour une expérience physique + numérique.\n\nEn savoir plus sur notre page [Mémorial numérique pour animal](/digital-pet-memorial)."
+    },
+    "nfc-pet-memorial-cards-how-they-work": {
+      "title": "Cartes commémoratives NFC pour animaux : comment elles fonctionnent",
+      "excerpt": "Les cartes commémoratives NFC relient un souvenir physique à une page numérique. Approchez avec votre téléphone pour ouvrir photos, vidéos et histoires.",
+      "metaTitle": "Cartes commémoratives NFC pour animaux : comment elles fonctionnent | Guide complet",
+      "metaDescription": "Découvrez comment fonctionnent les cartes commémoratives NFC pour animaux. Approchez avec un smartphone pour ouvrir une page commémorative numérique avec photos, vidéos et histoires.",
+      "category": "Mémoriaux numériques",
+      "content": "## Comment fonctionnent les médailles commémoratives NFC\n\nLa NFC (Near Field Communication) permet à une médaille ou carte physique d'ouvrir une page commémorative en ligne lorsqu'on l'approche d'un smartphone.\n\n## Étape par étape\n\n1. **Recevez votre souvenir** — Personnalisé avec le nom et les dates de votre animal\n2. **Approchez avec le téléphone** — Tenez votre smartphone près de la puce NFC\n3. **La page commémorative s'ouvre** — Consultez photos, vidéos, histoire et messages\n4. **Code QR de secours** — Scannez le code QR si la NFC n'est pas disponible\n\n## Médaille en fibre de carbone vs carte commémorative\n\n| Option | Idéal pour | Prix |\n|--------|------------|------|\n| [Médaille NFC en fibre de carbone](/products/carbon-fiber-nfc-memorial-tag) | Premium, portable, exposition durable | $69.99 |\n| [Carte commémorative NFC](/products/nfc-pet-memorial-card) | Format classique type carte de crédit | $34.99 |\n\nLes deux incluent un accès complet à votre page commémorative en ligne pour animal.\n\n## Ce que vous pouvez inclure\n\nPhotos, vidéos, nom, dates, histoire, messages familiaux, souvenirs favoris et livre d'or optionnel.\n\n## Questions fréquentes\n\n- **Ai-je besoin d'une application ?** Non — les téléphones modernes ouvrent la page directement après un contact NFC ou un scan QR.\n- **Puis-je mettre à jour la page plus tard ?** Oui — les photos et le texte commémoratif peuvent être modifiés ; le lien NFC/QR reste le même.\n- **NFC ou QR ?** Les deux ouvrent la même page. Consultez notre comparaison complète : [NFC vs code QR pour mémoriaux d'animaux](/blog/nfc-vs-qr-code-pet-memorial).\n\n## Explorer le cluster mémorial NFC\n\n- [Guide de la médaille commémorative NFC en fibre de carbone](/blog/carbon-fiber-nfc-memorial-tag-guide)\n- [Médaille commémorative NFC pour collier de chien](/blog/nfc-memorial-tag-for-dog-collar)\n- [Comment créer une page commémorative numérique pour animal](/blog/how-to-create-a-digital-pet-memorial-page)\n- [Qu'est-ce qu'un mémorial numérique pour animal ?](/blog/what-is-a-digital-pet-memorial)\n\nParcourez les [médailles commémoratives NFC](/collections/nfc-memorial-cards) ou en savoir plus sur notre page [Mémorial numérique pour animal](/digital-pet-memorial)."
+    },
+    "personalized-pet-memorial-jewelry-guide": {
+      "title": "Guide des bijoux commémoratifs personnalisés pour animaux",
+      "excerpt": "Des souvenirs portables pour garder la mémoire de votre animal près de vous. Un guide des pendentifs, médaillons et bijoux gravés.",
+      "metaTitle": "Guide des bijoux commémoratifs personnalisés pour animaux | Colliers et médaillons",
+      "metaDescription": "Guide des bijoux commémoratifs personnalisés pour animaux : pendentifs gravés, médaillons photo et motifs empreinte de patte.",
+      "category": "Guides d'achat personnalisés"
+    },
+    "rainbow-bridge-pet-memorial-gift-ideas": {
+      "title": "Idées de cadeaux commémoratifs inspirés du Pont de l'Arc-en-ciel",
+      "excerpt": "Des idées de cadeaux commémoratifs douces inspirées du poème du Pont de l'Arc-en-ciel — chaleureuses, réconfortantes et profondément personnelles.",
+      "metaTitle": "Idées de cadeaux commémoratifs Pont de l'Arc-en-ciel | Hommages délicats",
+      "metaDescription": "Des idées de cadeaux commémoratifs douces inspirées du Pont de l'Arc-en-ciel : cadres personnalisés, bijoux et souvenirs numériques.",
+      "category": "Idées de cadeaux commémoratifs pour animaux"
+    },
+    "meaningful-ways-to-remember-a-dog-or-cat": {
+      "title": "Façons significatives de se souvenir d'un chien ou d'un chat",
+      "excerpt": "Des souvenirs personnalisés aux pages commémoratives numériques, voici des façons significatives d'honorer votre compagnon bien-aimé.",
+      "metaTitle": "Façons significatives de se souvenir d'un chien ou d'un chat | Idées de souvenir",
+      "metaDescription": "Découvrez des façons significatives de se souvenir d'un chien ou d'un chat : cadeaux commémoratifs, pages numériques, hommages à la maison et gestes de condoléances.",
+      "category": "Soutien après une perte d'animal"
+    },
+    "pet-memorial-ideas": {
+      "title": "Idées de mémoriaux pour animaux : 15 façons significatives d'honorer votre compagnon",
+      "excerpt": "Vous cherchez des idées de mémoriaux pour animaux ? Des souvenirs personnalisés aux hommages en ligne, voici des façons significatives d'honorer votre chien ou chat bien-aimé.",
+      "metaTitle": "Idées de mémoriaux pour animaux | Hommages et cadeaux significatifs",
+      "metaDescription": "Découvrez des idées de mémoriaux pour chiens et chats — cadres photo, bijoux, urnes, pages numériques, médailles NFC et cadeaux de condoléances. Inspiration pour un hommage personnalisé unique.",
+      "category": "Idées de cadeaux commémoratifs pour animaux"
+    },
+    "what-is-a-digital-pet-memorial": {
+      "title": "Qu'est-ce qu'un mémorial numérique pour animal ?",
+      "excerpt": "Un mémorial numérique pour animal est une page en ligne dédiée à votre compagnon bien-aimé. Découvrez son fonctionnement et pourquoi les familles choisissent cette forme moderne de souvenir.",
+      "metaTitle": "Qu'est-ce qu'un mémorial numérique pour animal ? | Guide hommage en ligne",
+      "metaDescription": "Découvrez ce qu'est un mémorial numérique pour animal, ce qu'il faut y inclure, et comment les médailles NFC et codes QR rendent les mémoriaux en ligne accessibles à la famille et aux amis.",
+      "category": "Mémoriaux numériques",
+      "content": "## Comprendre les mémoriaux numériques pour animaux\n\nUn **mémorial numérique pour animal** est une page d'hommage en ligne créée pour honorer et préserver la mémoire d'un chien, chat ou compagnon bien-aimé. Contrairement à une simple photo sur les réseaux sociaux, c'est un espace dédié conçu pour le souvenir — avec la place pour toute leur histoire.\n\n## Que pouvez-vous inclure ?\n\nLa plupart des pages commémoratives en ligne pour animaux comprennent :\n\n- **Nom et portrait de l'animal** — Le cœur de l'hommage\n- **Dates de naissance et de décès** — Marquant le temps partagé\n- **Galerie photo** — Moments favoris tout au long de leur vie\n- **Vidéos** — Clips qui capturent leur personnalité\n- **Leur histoire** — Qui ils étaient, ce qui les rendait uniques\n- **Messages familiaux** — Mots de ceux qui les aimaient\n- **Livre d'or** — Espace optionnel pour que les amis laissent des messages\n\n## Pourquoi les familles choisissent les mémoriaux numériques\n\n### Partageable avec tous\nLes membres de la famille, même à distance, peuvent visiter la page à tout moment. Aucune application requise — elle s'ouvre dans n'importe quel navigateur web.\n\n### Toujours accessible\nContrairement à un objet physique qui reste dans une seule maison, un mémorial en ligne peut être partagé avec grands-parents, amis et tous ceux qui aimaient votre animal.\n\n### Évolue avec le temps\nVous pouvez ajouter des photos, mettre à jour les histoires et inviter la famille à contribuer de nouveaux souvenirs au fil du temps.\n\n### S'associe aux souvenirs physiques\nDe nombreuses familles exposent un [cadre photo personnalisé](/products/personalized-pet-memorial-frame) ou une urne à la maison, puis placent une [médaille commémorative NFC](/products/carbon-fiber-nfc-memorial-tag) à côté. Un simple contact ouvre la page numérique complète.\n\n## Comment accéder à un mémorial numérique\n\n| Méthode | Fonctionnement |\n|--------|----------------|\n| **Lien web** | Partagez une URL unique avec la famille |\n| **Code QR** | Scannez avec l'appareil photo de n'importe quel smartphone |\n| **Contact NFC** | Approchez une médaille ou carte commémorative pour ouvrir instantanément |\n\n## Mémoriaux numériques vs traditionnels\n\nLes mémoriaux numériques ne remplacent pas les souvenirs physiques — ils les complètent. Un cadre photo sur votre étagère et une page en ligne remplie de vidéos servent des objectifs différents mais tout aussi significatifs. Ensemble, ils créent un hommage complet.\n\n## Pour commencer\n\n1. Choisissez une [page numérique autonome](/products/digital-memorial-page-standalone) ou associez-la à un souvenir NFC\n2. Téléchargez des photos et saisissez les informations de votre animal\n3. Écrivez son histoire et invitez des messages familiaux\n4. Partagez le lien ou approchez votre médaille NFC pour visiter à tout moment\n\nEn savoir plus sur notre page [Mémorial numérique pour animal](/digital-pet-memorial) ou parcourez les [souvenirs commémoratifs numériques](/collections/digital-pet-memorial-keepsakes).",
+      "faqs": [
+        {
+          "question": "Qu'est-ce qu'un mémorial numérique pour animal ?",
+          "answer": "Un mémorial numérique pour animal est une page en ligne dédiée à honorer un compagnon bien-aimé. Elle comprend généralement photos, vidéos, son histoire, dates commémoratives et messages de la famille — accessible via lien web, code QR ou contact NFC."
+        },
+        {
+          "question": "Un mémorial numérique pour animal est-il la même chose qu'une publication sur les réseaux sociaux ?",
+          "answer": "Non. Un mémorial numérique est une page d'hommage dédiée et durable que vous contrôlez. Elle reste organisée en un seul endroit, peut inclure un livre d'or, et est conçue spécifiquement pour le souvenir plutôt que pour le partage social général."
+        },
+        {
+          "question": "Ai-je besoin d'un produit physique pour un mémorial numérique ?",
+          "answer": "Non. Vous pouvez créer une page numérique autonome avec un lien unique et un code QR. De nombreuses familles choisissent aussi une médaille ou carte commémorative NFC comme souvenir physique qui ouvre la même page."
+        }
+      ]
+    },
+    "how-to-make-a-pet-memorial-online": {
+      "title": "Comment créer un mémorial pour animal en ligne",
+      "excerpt": "Créez un mémorial pour animal en ligne en quelques étapes réfléchies. Construisez un hommage en ligne avec photos, vidéos, histoire et messages que votre famille peut visiter à tout moment.",
+      "metaTitle": "Comment créer un mémorial pour animal en ligne | Guide pas à pas",
+      "metaDescription": "Apprenez à créer un mémorial pour animal en ligne avec photos, vidéos et messages familiaux. Créez une page commémorative accessible via lien, code QR ou médaille NFC.",
+      "category": "Mémoriaux numériques",
+      "content": "## Pourquoi créer un mémorial pour animal en ligne ?\n\nUn **mémorial en ligne pour animal** vous permet de préserver l'histoire de votre compagnon dans un espace dédié — et non dispersée entre téléphones et fils sociaux. La famille et les amis peuvent visiter, contribuer des souvenirs et revenir quand ils ont besoin de se sentir proches.\n\n## Pas à pas : créez votre mémorial en ligne\n\n### Étape 1 : Choisissez votre format\n\n| Option | Inclus | Idéal pour |\n|--------|--------|------------|\n| [Page numérique seule](/products/digital-memorial-page-standalone) | Page en ligne + lien + QR | Partage numérique |\n| [Carte commémorative NFC](/products/nfc-pet-memorial-card) | Page + carte physique | Physique + numérique abordable |\n| [Médaille NFC en fibre de carbone](/products/carbon-fiber-nfc-memorial-tag) | Page + médaille premium | Souvenir portable ou à exposer |\n\n### Étape 2 : Rassemblez vos éléments\n\nAvant de commencer, collectez :\n- 5 à 10 photos favorites (portraits et moments spontanés)\n- 1 à 3 courtes vidéos si disponibles\n- Date de naissance et date de décès\n- Quelques phrases sur leur personnalité\n- Messages de membres de la famille (optionnel)\n\n### Étape 3 : Téléchargez photos et informations\n\nSaisissez le nom de votre animal, téléchargez son portrait et ajoutez les dates commémoratives. Choisissez une mise en page chaleureuse et personnelle — cette page est leur maison en ligne.\n\n### Étape 4 : Écrivez leur histoire\n\nC'est le cœur du mémorial. Écrivez sur :\n- Comment ils sont entrés dans votre vie\n- Leurs choses préférées (promenades, coins ensoleillés, jouets)\n- Leurs habitudes amusantes qui vous font encore sourire\n- Ce qui vous manque le plus\n\nRestez honnête et simple. Il n'y a pas de mauvaise façon de raconter leur histoire.\n\n### Étape 5 : Ajoutez des messages familiaux\n\nInvitez les membres de la famille à contribuer leurs propres photos et notes. Un livre d'or permet aux amis de laisser des messages lorsqu'ils visitent la page.\n\n### Étape 6 : Vérifiez et partagez\n\nPrévisualisez votre page, approuvez le design et partagez le lien avec la famille. Si vous avez commandé une médaille NFC, approchez-la pour confirmer que la page s'ouvre correctement.\n\n## Conseils pour un hommage en ligne significatif\n\n- **Commencez par leur meilleure photo** — Choisissez une image qui capture leur esprit\n- **Incluez des moments du quotidien** — Pas seulement des portraits posés, mais les moments calmes et authentiques\n- **Mettez à jour au fil du temps** — Ajoutez de nouveaux souvenirs lors d'anniversaires ou dates spéciales\n- **Placez un ancrage physique** — Exposez une médaille NFC à côté de leur urne ou cadre pour que la page numérique soit toujours à un contact\n\n## Ce qui distingue Pet Memo Shop\n\nChaque mémorial numérique inclut un bon à tirer avant production pour les souvenirs physiques, un design premium chaleureux et un accès NFC optionnel. Notre [médaille commémorative NFC en fibre de carbone](/products/carbon-fiber-nfc-memorial-tag) est conçue pour les familles qui veulent à la fois un hommage physique durable et une riche histoire en ligne.\n\n[Créez votre mémorial en ligne pour animal](/digital-pet-memorial) dès aujourd'hui.",
+      "faqs": [
+        {
+          "question": "Comment créer un mémorial pour animal en ligne ?",
+          "answer": "Choisissez un service de page commémorative numérique, téléchargez la photo et les informations de votre animal, ajoutez photos et vidéos, écrivez son histoire, et partagez le lien unique ou code QR avec la famille. Vous pouvez aussi l'associer à une médaille NFC pour un accès par simple contact."
+        },
+        {
+          "question": "Est-ce gratuit de créer un mémorial en ligne pour animal ?",
+          "answer": "Pet Memo Shop propose une page commémorative numérique autonome à partir de 19,99 $, incluant un lien unique, un code QR et une personnalisation complète. Les médailles NFC premium incluent la page numérique dans le forfait."
+        },
+        {
+          "question": "Puis-je mettre à jour mon mémorial en ligne plus tard ?",
+          "answer": "Oui. Vous pouvez ajouter des photos, modifier les histoires et mettre à jour les messages sur votre page commémorative numérique à tout moment via votre compte."
+        }
+      ]
+    },
+    "carbon-fiber-nfc-memorial-tag-guide": {
+      "title": "Médaille commémorative NFC en fibre de carbone : guide complet",
+      "excerpt": "Notre médaille commémorative NFC en fibre de carbone combine des matériaux premium avec une technologie mémorielle numérique par simple contact. Voici tout ce qu'il faut savoir.",
+      "metaTitle": "Guide de la médaille commémorative NFC en fibre de carbone | Médaille mémorielle numérique",
+      "metaDescription": "Tout sur la médaille commémorative NFC en fibre de carbone — fonctionnement, gravure, accès au mémorial en ligne pour animal, et pourquoi les familles choisissent ce souvenir premium.",
+      "category": "Mémoriaux numériques",
+      "content": "## Qu'est-ce que la médaille commémorative NFC en fibre de carbone ?\n\nLa [médaille commémorative NFC en fibre de carbone](/products/carbon-fiber-nfc-memorial-tag) est le souvenir commémoratif numérique emblématique de Pet Memo Shop. Elle associe une fibre de carbone de qualité aérospatiale à une puce NFC intégrée — une **médaille mémorielle numérique pour animal** que vous pouvez porter, exposer ou garder près de vous.\n\nUn simple contact ouvre un **mémorial en ligne pour animal** complet rempli de photos, vidéos et de l'histoire que seul vous pouvez raconter.\n\n## Caractéristiques principales\n\n- **Vraie fibre de carbone** — Légère, durable, tissage noir mat\n- **Puce NFC intégrée** — Contact pour ouvrir la page commémorative instantanément\n- **Gravure laser** — Nom de votre animal et dates commémoratives\n- **Code QR de secours** — Gravé au laser au dos pour tout smartphone\n- **Page numérique incluse** — Galerie photo, vidéos, histoire, livre d'or\n- **Affichage polyvalent** — À porter comme médaille, accrocher près d'une urne ou placer sur une étagère souvenir\n\n## Comment ça fonctionne\n\n1. Commandez votre médaille et soumettez les informations de votre animal au paiement\n2. Nous configurons votre page commémorative en ligne et vous envoyons un bon à tirer\n3. Votre médaille gravée est expédiée avec la page numérique prête à l'emploi\n4. Approchez la médaille avec n'importe quel smartphone compatible NFC\n5. La page commémorative s'ouvre dans votre navigateur — aucune application requise\n\n## Médaille en fibre de carbone vs carte NFC\n\n| Caractéristique | Médaille fibre de carbone | Carte NFC |\n|-----------------|---------------------------|-----------|\n| Matériau | Vraie fibre de carbone | PVC premium |\n| Taille | Médaille (1,25\" x 2\") | Carte de crédit |\n| Durabilité | Élevée — port quotidien | Modérée |\n| Affichage | Port, près d'urne, étagère | Près d'un cadre ou urne |\n| Prix | $69.99 | $34.99 |\n| Page numérique | Incluse | Incluse |\n\nChoisissez la **médaille en fibre de carbone** pour un souvenir premium et durable. Choisissez la **carte NFC** pour un format classique à un prix plus accessible.\n\n## Que graver\n\nLa plupart des familles gravent :\n- Le nom de l'animal\n- Année de naissance — Année de décès (ex. 2012–2025)\n- Message court optionnel ou icône empreinte de patte\n\nNous envoyons un bon à tirer avant la gravure pour que vous puissiez vérifier chaque détail.\n\n## Pour qui est-ce ?\n\n- Familles souhaitant un hommage **physique premium + numérique**\n- Propriétaires de chiens cherchant une **médaille commémorative pour chien** avec technologie moderne\n- Toute personne exposant un mémorial près d'une **urne ou d'un cadre photo**\n- Cadeaux de condoléances après perte d'animal — un geste unique et significatif\n\n## Commandez votre médaille\n\n[Acheter la médaille commémorative NFC en fibre de carbone](/products/carbon-fiber-nfc-memorial-tag) ou explorer toutes les [médailles commémoratives NFC](/collections/nfc-memorial-cards).",
+      "faqs": [
+        {
+          "question": "Qu'est-ce qu'une médaille commémorative NFC en fibre de carbone ?",
+          "answer": "C'est une médaille commémorative premium pour animal en vraie fibre de carbone avec une puce NFC intégrée. Approchez-la avec un smartphone pour ouvrir la page commémorative en ligne de votre animal. Elle peut être portée, exposée près d'une urne ou conservée dans une boîte à souvenirs."
+        },
+        {
+          "question": "En quoi diffère-t-elle d'une carte commémorative NFC ?",
+          "answer": "La médaille en fibre de carbone est plus durable, plus légère et conçue pour un port ou une exposition à long terme. La carte commémorative est un format classique type carte de crédit à un prix plus accessible. Les deux ouvrent le même type de page commémorative en ligne."
+        },
+        {
+          "question": "La médaille inclut-elle la page commémorative numérique ?",
+          "answer": "Oui. Chaque médaille commémorative NFC en fibre de carbone inclut la configuration complète de votre page commémorative en ligne avec photos, vidéos, histoire et messages familiaux."
+        }
+      ]
+    },
+    "nfc-vs-qr-code-pet-memorial": {
+      "title": "NFC vs code QR pour mémoriaux d'animaux : lequel choisir ?",
+      "excerpt": "Faut-il utiliser la NFC ou le code QR pour votre mémorial d'animal ? Les deux ouvrent la même page en ligne — voici comment ils se comparent et pourquoi avoir les deux compte.",
+      "metaTitle": "NFC vs code QR mémorial pour animal | Guide comparatif",
+      "metaDescription": "Comparez l'accès NFC et code QR pour les mémoriaux d'animaux. Découvrez leur fonctionnement, avantages et inconvénients, et pourquoi Pet Memo Shop inclut les deux sur chaque souvenir.",
+      "category": "Mémoriaux numériques",
+      "content": "## Deux façons d'ouvrir le même mémorial\n\nChaque mémorial numérique Pet Memo Shop — que ce soit sur une [médaille NFC en fibre de carbone](/products/carbon-fiber-nfc-memorial-tag), une [carte commémorative NFC](/products/nfc-pet-memorial-card) ou une [page autonome](/products/digital-memorial-page-standalone) — peut être accessible de deux façons : **contact NFC** et **scan de code QR**. Les deux ouvrent le même mémorial en ligne pour animal.\n\n## Comment fonctionne la NFC\n\nApprochez votre smartphone de la puce NFC intégrée dans la médaille ou la carte. La page commémorative s'ouvre automatiquement dans votre navigateur. Pas d'application, pas de saisie — il suffit d'approcher.\n\n**Avantages :**\n- Accès instantané en une étape\n- Sensation moderne et fluide\n- Pas besoin d'aligner un appareil photo\n\n**Inconvénients :**\n- Nécessite un téléphone compatible NFC (la plupart des téléphones depuis 2016)\n- La NFC doit être activée dans les paramètres du téléphone\n\n## Comment fonctionne le code QR\n\nPointez l'appareil photo de votre téléphone vers le code QR imprimé ou gravé au laser sur le souvenir. Appuyez sur la notification pour ouvrir la page commémorative.\n\n**Avantages :**\n- Fonctionne sur pratiquement tous les smartphones\n- Familier pour la plupart des utilisateurs\n- Facile à partager — imprimez le QR sur des cartes de condoléances ou programmes\n\n**Inconvénients :**\n- Nécessite l'alignement de l'appareil photo\n- Appui supplémentaire après le scan\n\n## Comparaison côte à côte\n\n| | Contact NFC | Scan code QR |\n|---|-------------|--------------|\n| Rapidité | Instantané | 2–3 secondes |\n| Compatibilité téléphone | La plupart des téléphones modernes | Tous les smartphones |\n| Expérience utilisateur | Approchez et c'est ouvert | Pointez, scannez, appuyez |\n| Idéal pour | Visites quotidiennes, famille à la maison | Téléphones anciens, supports imprimés |\n| Inclus sur les médailles Pet Memo Shop | Oui | Oui (secours) |\n\n## Pourquoi nous incluons les deux\n\nNous croyons qu'un mémorial d'animal doit être accessible à tous ceux qui aimaient votre compagnon — grands-parents avec des téléphones anciens, amis lors d'un rassemblement commémoratif, famille à travers le pays. La NFC offre la meilleure expérience quotidienne ; le code QR garantit que personne n'est laissé de côté.\n\n## Lequel choisir ?\n\nVous n'avez pas à choisir. Chaque [médaille commémorative NFC](/collections/nfc-memorial-cards) de Pet Memo Shop inclut les deux technologies. Approchez pour l'accès quotidien ; partagez le code QR quand c'est nécessaire.\n\n[Créez votre mémorial numérique pour animal](/digital-pet-memorial) ou [parcourez les souvenirs NFC](/collections/nfc-memorial-cards).",
+      "faqs": [
+        {
+          "question": "Quelle est la différence entre NFC et code QR pour les mémoriaux d'animaux ?",
+          "answer": "La NFC nécessite d'approcher le souvenir avec un smartphone compatible pour ouvrir la page commémorative instantanément. Les codes QR se scannent avec l'appareil photo du téléphone. Les deux ouvrent le même mémorial en ligne — la NFC est plus rapide ; les codes QR fonctionnent sur tous les téléphones."
+        },
+        {
+          "question": "Tous les téléphones supportent-ils les médailles commémoratives NFC ?",
+          "answer": "La plupart des smartphones modernes (iPhone 7+ et la majorité des appareils Android) supportent la NFC. Pour les téléphones plus anciens ou lorsque la NFC est désactivée, le code QR de secours sur chaque souvenir Pet Memo Shop assure un accès universel."
+        },
+        {
+          "question": "Lequel est le meilleur pour un mémorial d'animal ?",
+          "answer": "L'un ne remplace pas l'autre. La NFC offre une expérience fluide par simple contact ; les codes QR garantissent que tout le monde peut accéder à la page. Pet Memo Shop inclut les deux sur chaque médaille et carte pour cette raison."
+        }
+      ]
+    },
+    "how-to-create-a-pet-memory-corner-at-home": {
+      "title": "Comment créer un coin souvenir pour animal à la maison",
+      "excerpt": "Un coin souvenir pour animal vous offre un endroit calme pour vous souvenir de votre compagnon chaque jour. Voici comment choisir l'emplacement, rassembler des objets significatifs et le rendre personnel.",
+      "metaTitle": "Comment créer un coin souvenir pour animal à la maison | Guide commémoratif",
+      "metaDescription": "Apprenez à créer un coin souvenir significatif à la maison avec cadres photo, boîtes à souvenirs, plaques et bougies. Un guide pas à pas pour honorer votre compagnon.",
+      "category": "Soutien après une perte d'animal"
+    },
+    "dog-memorial-gifts-ideas-to-honor-a-beloved-dog": {
+      "title": "Cadeaux commémoratifs pour chiens : idées réfléchies pour honorer un chien bien-aimé",
+      "excerpt": "Vous cherchez des cadeaux commémoratifs pour chiens qui semblent personnels ? Ces idées vous aident à honorer un chien bien-aimé avec un souvenir qui garde son histoire proche.",
+      "metaTitle": "Idées de cadeaux commémoratifs pour chiens pour honorer un chien bien-aimé",
+      "metaDescription": "Explorez des idées de cadeaux commémoratifs pour chiens : cadres personnalisés, boîtes à souvenirs, urnes, bijoux et cartes NFC. Trouvez un hommage significatif pour un chien bien-aimé.",
+      "category": "Mémoriaux pour chiens",
+      "content": "## Pourquoi les cadeaux commémoratifs pour chiens comptent\n\nLes chiens laissent une fidélité difficile à exprimer par des mots. Les bons cadeaux commémoratifs pour chiens ne cherchent pas à « réparer » le deuil — ils offrent à ce lien un endroit calme et durable à la maison, autour du cou ou dans un hommage numérique partageable.\n\nQue vous achetiez pour vous-même ou pour quelqu'un d'autre, commencez par une intention claire : un affichage à la maison, un souvenir portable ou une page commémorative numérique.\n\n## Idées de cadeaux commémoratifs personnalisés pour chiens\n\n### 1. Cadre photo personnalisé\nUn [cadre commémoratif personnalisé pour animal](/products/personalized-pet-memorial-frame) gravé avec le nom et les dates de votre chien transforme un portrait favori en un rappel chaleureux au quotidien.\n\n### 2. Boîte à souvenirs commémorative pour chien\nLa [boîte à souvenirs commémorative pour chien](/products/dog-memorial-keepsake-box) est conçue pour colliers, médailles et petits objets. De nombreuses familles la placent à côté d'un cadre pour créer une simple étagère souvenir.\n\n### 3. Urne de crémation avec plaque nominative\nSi vous conservez les cendres à la maison, une [urne en bois pour animal](/products/wooden-pet-cremation-urn) ou une [urne en céramique pour animal](/products/ceramic-pet-cremation-urn) avec plaque nominative personnalisée offre un lieu de repos digne.\n\n### 4. Bijou commémoratif gravé\nUn [pendentif commémoratif gravé pour animal](/products/engraved-pet-memorial-pendant) ou un [médaillon photo](/products/pet-memorial-photo-locket) garde leur mémoire proche tout au long de la journée.\n\n### 5. Carte ou médaille commémorative NFC\nUne [carte commémorative NFC pour animal](/products/nfc-pet-memorial-card) ou une [médaille commémorative NFC en fibre de carbone](/products/carbon-fiber-nfc-memorial-tag) ouvre une page numérique avec photos, vidéos et messages familiaux — une option moderne qui reste personnelle.\n\n## Comment choisir des cadeaux commémoratifs pour chiens\n\n| Objectif | Cadeau de départ idéal | Pourquoi ça fonctionne |\n|----------|------------------------|------------------------|\n| Hommage à la maison | Cadre personnalisé | Facile à exposer et personnaliser |\n| Ranger collier et médailles | Boîte à souvenirs | Pratique et émotionnel |\n| Cendres à la maison | Urne personnalisée | Digne et durable |\n| Proximité quotidienne | Bijou ou médaillon | Souvenir portable |\n| Partager avec la famille | Carte NFC / page numérique | Photos et histoires en un seul endroit |\n\n## Conseils de personnalisation pour un cadeau qui leur ressemble\n\n- Choisissez une photo claire et bien éclairée\n- Incluez leur nom et les dates qui comptent le plus pour vous\n- Gardez les messages gravés courts et sincères\n- Approuvez le bon à tirer gratuit avant production\n\nCe sont ces petits détails qui transforment des cadeaux génériques en véritables cadeaux commémoratifs pour chiens.\n\n## Cadeaux commémoratifs pour chiens pour un ami en deuil\n\nLorsque vous achetez pour quelqu'un d'autre, choisissez des cadeaux qui semblent doux plutôt qu'écrasants :\n\n1. Cadre personnalisé avec espace pour leur photo favorite\n2. Coffret cadeaux de condoléances avec bougie et carte\n3. Carte commémorative NFC qu'ils peuvent enrichir au fil du temps\n\nÉvitez la pression. Une simple note — « Je pense à vous et à [nom du chien] » — compte souvent autant que le cadeau lui-même.\n\n## Parcourir les cadeaux commémoratifs pour chiens\n\nExplorez notre collection complète de [cadeaux commémoratifs pour chiens](/collections/dog-memorial-gifts) : cadres personnalisés, urnes, bijoux, boîtes à souvenirs et hommages NFC. Vous pouvez aussi parcourir tous les [cadeaux commémoratifs personnalisés pour animaux](/collections/pet-memorial-gifts) pour un choix plus large.\n\nUn hommage significatif n'a pas besoin d'être compliqué. Il suffit qu'il leur ressemble.",
+      "faqs": [
+        {
+          "question": "Quels sont les meilleurs cadeaux commémoratifs pour chiens ?",
+          "answer": "Les cadres photo personnalisés, boîtes à souvenirs pour colliers et médailles, urnes, bijoux gravés et cartes commémoratives NFC comptent parmi les meilleurs cadeaux commémoratifs pour chiens. Choisissez l'option qui correspond à la façon dont vous souhaitez vous souvenir d'eux au quotidien."
+        },
+        {
+          "question": "Les cadeaux commémoratifs pour chiens peuvent-ils être personnalisés avec une photo ?",
+          "answer": "Oui. La plupart des cadeaux commémoratifs pour chiens peuvent inclure la photo, le nom et les dates de votre chien. Nous vous envoyons un bon à tirer gratuit avant production pour que vous puissiez approuver chaque détail."
+        },
+        {
+          "question": "Quel cadeau commémoratif pour chien convient le mieux à un ami en deuil ?",
+          "answer": "Un cadre personnalisé, une boîte à souvenirs ou un coffret cadeaux de condoléances est généralement le choix le plus sûr. Si votre ami aime partager des souvenirs, une carte commémorative NFC ouvrant une page d'hommage numérique est aussi profondément significative."
+        }
+      ]
+    },
+    "personalized-pet-memorial-gifts-buying-guide": {
+      "title": "Cadeaux commémoratifs personnalisés pour animaux : guide d'achat complet",
+      "excerpt": "Vous hésitez sur le cadeau commémoratif personnalisé idéal ? Ce guide d'achat vous aide à choisir selon le style d'exposition, la personnalisation et la personne à qui offrir le cadeau.",
+      "metaTitle": "Guide d'achat des cadeaux commémoratifs personnalisés pour animaux",
+      "metaDescription": "Apprenez à choisir des cadeaux commémoratifs personnalisés pour animaux avec photo, nom et dates. Comparez cadres, bijoux, urnes, coffrets cadeaux et souvenirs numériques NFC.",
+      "category": "Guides d'achat personnalisés",
+      "content": "## Que sont les cadeaux commémoratifs personnalisés pour animaux ?\n\nLes cadeaux commémoratifs personnalisés pour animaux sont des souvenirs sur mesure créés pour honorer un compagnon bien-aimé. Contrairement aux articles de condoléances génériques, ils incluent généralement un nom, une photo, des dates ou une histoire — pour que l'hommage ressemble à votre animal, et non à un produit standard.\n\nLes familles choisissent des cadeaux commémoratifs personnalisés lorsqu'elles veulent un affichage durable à la maison, un rappel portable, un cadeau de condoléances pour quelqu'un en deuil, ou une page numérique que les proches peuvent visiter à tout moment.\n\n## Comparer les cadeaux commémoratifs personnalisés populaires\n\n| Type de cadeau | Idéal pour | Personnalisation | Affichage |\n|----------------|------------|------------------|-----------|\n| Cadre photo | Hommage quotidien à la maison | Nom, dates, photo | Étagère / chevet |\n| Bijou | Proximité au quotidien | Nom, empreinte de patte, photo | Porté |\n| Urne | Cendres à la maison | Plaque nominative, dates, photo | Cheminée / étagère |\n| Coffret cadeau | Cadeau de condoléances | Souvenirs assortis + carte | Prêt à offrir |\n| Carte / médaille NFC | Photos + vidéos + messages | Page commémorative numérique | Près d'un cadre ou urne |\n\n## Guide d'achat pas à pas\n\n### 1. Déterminez pour qui est le cadeau\nVous achetez pour vous-même ? Choisissez la pièce avec laquelle vous vivrez réellement. Vous achetez pour un ami ? Privilégiez cadres, coffrets cadeaux ou cartes NFC qui semblent bienveillants sans être trop personnels.\n\n### 2. Choisissez un style d'exposition\nPosez-vous une question simple : voulez-vous quelque chose à voir, porter ou partager ?\n\n- Voir : cadre, plaque, urne, boîte à souvenirs\n- Porter : pendentif ou médaillon photo\n- Partager : carte commémorative NFC ou page commémorative numérique\n\n### 3. Rassemblez vos éléments de personnalisation\nAyez sous la main :\n\n- Une photo favorite claire\n- Le nom de l'animal\n- Dates de naissance et de décès (si vous souhaitez les graver)\n- Un court message (optionnel)\n\n### 4. Approuvez un bon à tirer\nLes cadeaux commémoratifs personnalisés de qualité doivent inclure un bon à tirer gratuit. Vérifiez l'orthographe, les dates, le recadrage et la mise en page avant production.\n\n### 5. Associez physique et numérique quand cela semble juste\nDe nombreuses familles gardent un cadre ou une urne à la maison et ajoutent une [carte commémorative NFC pour animal](/products/nfc-pet-memorial-card) ou une [médaille commémorative NFC en fibre de carbone](/products/carbon-fiber-nfc-memorial-tag) pour que photos et vidéos restent faciles à revisiter.\n\n## Meilleurs points de départ selon la situation\n\n### Pour votre propre animal\nCommencez par un [cadre commémoratif personnalisé pour animal](/products/personalized-pet-memorial-frame) ou un bijou commémoratif que vous porterez souvent.\n\n### Pour un ami en deuil\nUn [coffret cadeaux de condoléances commémoratif](/products/memorial-sympathy-gift-box) est réfléchi et prêt à offrir.\n\n### Spécifiquement pour les chiens\nParcourez les [cadeaux commémoratifs pour chiens](/collections/dog-memorial-gifts) : boîtes à souvenirs, cadres, urnes et options NFC.\n\n### Spécifiquement pour les chats\nParcourez les [cadeaux commémoratifs pour chats](/collections/cat-memorial-gifts) : cadres délicats, ornements, bijoux et souvenirs numériques.\n\n## Erreurs courantes à éviter\n\n- Choisir un cadeau uniquement parce qu'il est tendance, et non parce qu'il convient à la personne\n- Utiliser une photo de mauvaise qualité ou fortement filtrée pour la gravure ou l'impression\n- Ignorer le bon à tirer\n- Surcharger la gravure avec un long message difficile à lire\n\n## Acheter des cadeaux commémoratifs personnalisés pour animaux\n\nExplorez notre collection complète de [cadeaux commémoratifs personnalisés pour animaux](/collections/pet-memorial-gifts) — cadres, bijoux, urnes, coffrets cadeaux et souvenirs numériques NFC avec bon à tirer gratuit avant production.\n\nLe meilleur hommage personnalisé est celui qui reste fidèle au lien que vous partagiez.",
+      "faqs": [
+        {
+          "question": "Qu'est-ce qui rend un cadeau commémoratif pour animal personnalisé ?",
+          "answer": "Un cadeau commémoratif personnalisé pour animal inclut généralement le nom, la photo, les dates ou un court message de votre animal. Les meilleures options incluent aussi un bon à tirer gratuit avant production."
+        },
+        {
+          "question": "Quels sont les cadeaux commémoratifs personnalisés pour animaux les plus populaires ?",
+          "answer": "Les cadres photo, bijoux gravés, urnes, plaques commémoratives, coffrets cadeaux de condoléances et souvenirs numériques NFC comptent parmi les cadeaux commémoratifs personnalisés les plus populaires."
+        },
+        {
+          "question": "Combien de temps prennent les cadeaux commémoratifs personnalisés pour animaux ?",
+          "answer": "Après approbation du bon à tirer, la plupart des cadeaux commémoratifs personnalisés prennent environ 3 à 5 jours ouvrables de production, plus le délai d'expédition."
+        }
+      ]
+    },
+    "cat-memorial-gifts-gentle-ways-to-remember": {
+      "title": "Cadeaux commémoratifs pour chats : façons douces de se souvenir d'un félin bien-aimé",
+      "excerpt": "Les chats laissent une présence calme et durable. Ces cadeaux commémoratifs pour chats vous aident à honorer cette compagnie délicate avec un souvenir doux, personnel et durable.",
+      "metaTitle": "Idées de cadeaux commémoratifs pour chats pour un félin bien-aimé",
+      "metaDescription": "Découvrez des idées de cadeaux commémoratifs pour chats : ornements photo, cadres, bijoux, urnes et souvenirs NFC. Hommages personnalisés délicats pour un chat bien-aimé.",
+      "category": "Mémoriaux pour chats",
+      "content": "## Cadeaux commémoratifs pour chats doux et personnels\n\nLes chats laissent souvent une absence plus silencieuse — le rebord de fenêtre vide, le rituel matinal manquant, la douce présence qui remplissait une pièce. Les meilleurs cadeaux commémoratifs pour chats honorent cette douceur sans paraître bruyants ou impersonnels.\n\nQue vous créiez un hommage à la maison ou souteniez un ami, commencez par un souvenir calme, personnel et fidèle à votre chat.\n\n## Idées réfléchies de cadeaux commémoratifs pour chats\n\n### 1. Ornement photo commémoratif pour chat\nL'[ornement photo commémoratif pour chat](/products/cat-memorial-photo-ornament) est une façon délicate d'exposer leur portrait toute l'année — doux, simple et facile à placer dans un coin favori.\n\n### 2. Cadre photo personnalisé\nUn [cadre commémoratif personnalisé pour animal](/products/personalized-pet-memorial-frame) gravé avec leur nom et dates crée un hommage chaleureux à la maison sur une étagère ou une table de chevet.\n\n### 3. Pendentif gravé ou médaillon photo\nUn [pendentif commémoratif gravé pour animal](/products/engraved-pet-memorial-pendant) ou un [médaillon photo](/products/pet-memorial-photo-locket) garde leur mémoire proche de façon privée et portable.\n\n### 4. Urne de crémation\nPour les familles conservant les cendres à la maison, une [urne en céramique pour animal](/products/ceramic-pet-cremation-urn) ou une [urne en bois pour animal](/products/wooden-pet-cremation-urn) avec plaque nominative personnalisée offre un lieu de repos digne.\n\n### 5. Carte commémorative NFC\nUne [carte commémorative NFC pour animal](/products/nfc-pet-memorial-card) ouvre une page numérique avec photos, vidéos et messages — idéale si les membres de la famille veulent aussi un endroit pour visiter l'histoire de votre chat.\n\n## Comment choisir des cadeaux commémoratifs pour chats\n\n| Si vous voulez... | Commencez par | Pourquoi |\n|-------------------|---------------|----------|\n| Un affichage doux à la maison | Ornement photo ou cadre | Délicat et facile à vivre avec |\n| Quelque chose de portable | Pendentif ou médaillon | Souvenir quotidien privé |\n| Un lieu pour les cendres | Urne personnalisée | Digne et durable |\n| Un cadeau de condoléances | Coffret cadeau ou cadre | Réfléchi sans être intrusif |\n| Souvenirs partagés en famille | Carte NFC / page numérique | Photos et histoires en un seul endroit |\n\n## Idées de personnalisation pour cadeaux commémoratifs pour chats\n\n- Utilisez une photo nette montrant leur visage et expression\n- Incluez le nom que vous leur donniez chaque jour\n- Ajoutez les dates si elles apportent du réconfort\n- Gardez le texte gravé court — une ligne suffit souvent\n\nCes détails aident les cadeaux commémoratifs pour chats à paraître intimes plutôt que génériques.\n\n## Cadeaux commémoratifs pour chats pour quelqu'un en deuil\n\nSi vous achetez pour un ami :\n\n1. Choisissez un cadre, un ornement ou un coffret cadeau\n2. Incluez une courte note manuscrite\n3. Évitez de presser pour « avancer » ou adopter un autre animal\n\nUn simple message comme « Je pense à vous et à [nom du chat] » est souvent parfait.\n\n## Parcourir les cadeaux commémoratifs pour chats\n\nExplorez notre collection complète de [cadeaux commémoratifs pour chats](/collections/cat-memorial-gifts) : ornements personnalisés, cadres, bijoux, urnes et souvenirs NFC. Vous pouvez aussi parcourir tous les [cadeaux commémoratifs personnalisés pour animaux](/collections/pet-memorial-gifts) pour un choix plus large.\n\nLe cadeau commémoratif pour chat le plus significatif est celui qui leur ressemble en douceur.",
+      "faqs": [
+        {
+          "question": "Quels sont les meilleurs cadeaux commémoratifs pour chats ?",
+          "answer": "Les ornements photo, cadres personnalisés, bijoux gravés, urnes, coffrets cadeaux et cartes commémoratives NFC comptent parmi les meilleurs cadeaux commémoratifs pour chats. Choisissez une option douce qui correspond à la façon dont vous souhaitez vous souvenir d'eux."
+        },
+        {
+          "question": "Les cadeaux commémoratifs pour chats peuvent-ils inclure une photo ?",
+          "answer": "Oui. De nombreux cadeaux commémoratifs pour chats peuvent être personnalisés avec la photo, le nom et les dates de votre chat. Un bon à tirer gratuit vous aide à approuver le rendu final avant production."
+        },
+        {
+          "question": "Quel cadeau commémoratif pour chat convient à un ami ?",
+          "answer": "Un cadre personnalisé, un ornement photo ou un coffret cadeaux de condoléances est un cadeau commémoratif pour chat réfléchi pour un ami en deuil. Une carte NFC est aussi significative s'il souhaite un endroit pour rassembler photos et histoires."
+        }
+      ]
+    }
   }
 }

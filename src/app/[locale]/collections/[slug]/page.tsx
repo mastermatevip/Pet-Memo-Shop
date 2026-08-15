@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 import { getCollectionBySlug, getAllCollectionSlugs } from "@/data/collections";
 import { getProductsByCollection } from "@/data/products";
 import { getBlogPostBySlug, getBlogPostsForCollection } from "@/data/blog";
-import { localizeCollection, localizeProduct, loadContentBundle, getCollectionPageLabels } from "@/lib/localized-content";
+import { localizeCollection, localizeProduct, localizeBlogPost, loadContentBundle, getCollectionPageLabels } from "@/lib/localized-content";
 import { routing, type Locale } from "@/i18n/routing";
 
 interface Props {
@@ -63,9 +63,10 @@ export default async function CollectionPage({ params }: Props) {
       return rel ? localizeCollection(rel, bundle) : undefined;
     })
     .filter(Boolean);
-  const blogPosts = getBlogPostsForCollection(slug, 4);
+  const blogPosts = getBlogPostsForCollection(slug, 4).map((p) => localizeBlogPost(p, bundle));
   const primaryGuideSlug = COLLECTION_PRIMARY_GUIDE[slug];
-  const primaryGuide = primaryGuideSlug ? getBlogPostBySlug(primaryGuideSlug) : undefined;
+  const primaryGuideBase = primaryGuideSlug ? getBlogPostBySlug(primaryGuideSlug) : undefined;
+  const primaryGuide = primaryGuideBase ? localizeBlogPost(primaryGuideBase, bundle) : undefined;
 
   const seoBlocks = [
     { title: labels.whatAre, body: collection.seoSections.whatAre },

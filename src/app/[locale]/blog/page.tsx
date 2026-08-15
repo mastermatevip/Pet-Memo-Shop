@@ -1,33 +1,41 @@
 import { Link } from "@/i18n/navigation";
 import { buildMetadata } from "@/lib/seo";
 import { getBlogCategories, getBlogPosts } from "@/data/blog";
+import { loadContentBundle, localizeBlogPost } from "@/lib/localized-content";
 import { getTranslations } from "next-intl/server";
 
 export const dynamic = "force-dynamic";
 
-export const metadata = buildMetadata({
-  title: "Pet Memorial Guides & Sympathy Gift Ideas",
-  description:
-    "Gentle guides for pet loss support, memorial gift ideas, urn guides, and digital memorial tips. Thoughtful resources for honoring a beloved companion.",
-  path: "/blog",
-});
+interface Props {
+  params: Promise<{ locale: string }>;
+}
 
-export default async function BlogPage() {
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "blogPage" });
+  return buildMetadata({
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    path: "/blog",
+    locale,
+  });
+}
+
+export default async function BlogPage({ params }: Props) {
+  const { locale } = await params;
   const t = await getTranslations("common");
+  const tb = await getTranslations("blogPage");
+  const bundle = await loadContentBundle(locale);
   const blogCategories = getBlogCategories();
-  const blogPosts = [...getBlogPosts()].sort((a, b) =>
-    b.publishedAt.localeCompare(a.publishedAt)
-  );
+  const blogPosts = [...getBlogPosts()]
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+    .map((post) => localizeBlogPost(post, bundle));
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
       <div className="text-center mb-12">
-        <h1 className="font-serif text-4xl md:text-5xl text-text mb-4">
-          Pet Memorial Guides & Sympathy Gift Ideas
-        </h1>
-        <p className="text-muted text-lg max-w-2xl mx-auto leading-relaxed">
-          Gentle guides and thoughtful ideas to help you honor a beloved companion or support someone who has lost a pet.
-        </p>
+        <h1 className="font-serif text-4xl md:text-5xl text-text mb-4">{tb("title")}</h1>
+        <p className="text-muted text-lg max-w-2xl mx-auto leading-relaxed">{tb("subtitle")}</p>
       </div>
 
       <div className="flex flex-wrap gap-3 justify-center mb-12">

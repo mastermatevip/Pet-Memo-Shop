@@ -2,7 +2,7 @@ import type { Locale } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
 import type { HomepageContent } from "@/lib/cms/types";
 import type { DigitalMemorialLandingContent } from "@/lib/cms/digital-memorial-landing-types";
-import type { Collection, Product } from "@/types";
+import type { BlogPost, Collection, FAQ, Product } from "@/types";
 
 export interface PageSection {
   type: "p" | "h2" | "ul";
@@ -53,6 +53,7 @@ export interface ProductContentBundle {
   metaTitle?: string;
   metaDescription?: string;
   story?: string;
+  faqs?: FAQ[];
 }
 
 export interface CollectionContentBundle {
@@ -81,6 +82,7 @@ export interface CollectionContentBundle {
   };
   relatedCategories?: string;
   helpfulGuides?: string;
+  faqs?: FAQ[];
 }
 
 export interface BestSellersPageContent {
@@ -88,6 +90,16 @@ export interface BestSellersPageContent {
   subtitle?: string;
   metaTitle?: string;
   metaDescription?: string;
+}
+
+export interface BlogPostContentBundle {
+  title?: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  excerpt?: string;
+  category?: string;
+  content?: string;
+  faqs?: FAQ[];
 }
 
 export interface ContentBundle {
@@ -142,6 +154,7 @@ export interface ContentBundle {
   collections?: Record<string, CollectionContentBundle>;
   pages?: Record<string, PageContent>;
   bestSellersPage?: BestSellersPageContent;
+  blogPosts?: Record<string, BlogPostContentBundle>;
   contact?: {
     title?: string;
     intro?: string;
@@ -276,6 +289,23 @@ export function localizeProduct(product: Product, bundle: ContentBundle | null):
     metaTitle: t.metaTitle ?? product.metaTitle,
     metaDescription: t.metaDescription ?? product.metaDescription,
     story: t.story ?? product.story,
+    faqs: t.faqs ?? product.faqs,
+  };
+}
+
+export function localizeBlogPost(post: BlogPost, bundle: ContentBundle | null): BlogPost {
+  const t = bundle?.blogPosts?.[post.slug];
+  if (!t) return post;
+
+  return {
+    ...post,
+    title: t.title ?? post.title,
+    metaTitle: t.metaTitle ?? post.metaTitle,
+    metaDescription: t.metaDescription ?? post.metaDescription,
+    excerpt: t.excerpt ?? post.excerpt,
+    category: t.category ?? post.category,
+    content: t.content ?? post.content,
+    faqs: t.faqs ?? post.faqs,
   };
 }
 
@@ -292,6 +322,7 @@ export function localizeCollection(collection: Collection, bundle: ContentBundle
     metaTitle: t.metaTitle ?? collection.metaTitle,
     metaDescription: t.metaDescription ?? collection.metaDescription,
     imageAlt: t.imageAlt ?? collection.imageAlt,
+    faqs: t.faqs ?? collection.faqs,
     seoSections: {
       whatAre: t.seoSections?.whatAre ?? collection.seoSections.whatAre,
       whenToChoose: t.seoSections?.whenToChoose ?? collection.seoSections.whenToChoose,

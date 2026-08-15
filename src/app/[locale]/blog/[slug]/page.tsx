@@ -10,21 +10,25 @@ import { getRelatedProducts } from "@/data/products";
 import { getCollectionBySlug } from "@/data/collections";
 import { formatDate } from "@/lib/utils";
 import { getTranslations } from "next-intl/server";
+import { loadContentBundle, localizeBlogPost, localizeCollection } from "@/lib/localized-content";
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props) {
-  const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
-  if (!post) return {};
+  const { locale, slug } = await params;
+  const base = getBlogPostBySlug(slug);
+  if (!base) return {};
+  const bundle = await loadContentBundle(locale);
+  const post = localizeBlogPost(base, bundle);
   return buildMetadata({
     title: post.metaTitle,
     description: post.metaDescription,
     path: `/blog/${slug}`,
+    locale,
   });
 }
 
@@ -125,23 +129,29 @@ function renderContent(content: string) {
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
-  if (!post) notFound();
+  const { locale, slug } = await params;
+  const base = getBlogPostBySlug(slug);
+  if (!base) notFound();
 
+  const bundle = await loadContentBundle(locale);
+  const post = localizeBlogPost(base, bundle);
   const t = await getTranslations("common");
-  const relatedPosts = getLatestBlogPosts(3).filter((p) => p.slug !== slug);
+  const tb = await getTranslations("blogPage");
+  const relatedPosts = getLatestBlogPosts(3)
+    .filter((p) => p.slug !== slug)
+    .map((p) => localizeBlogPost(p, bundle));
   const relatedProducts = getRelatedProducts(post.relatedProductSlugs);
   const relatedCollections = (post.relatedCollectionSlugs || [])
     .map((collectionSlug) => getCollectionBySlug(collectionSlug))
-    .filter(Boolean);
+    .filter(Boolean)
+    .map((collection) => (collection ? localizeCollection(collection, bundle) : collection));
   const primaryCollection = relatedCollections[0];
   const ctaHref = primaryCollection
     ? `/collections/${primaryCollection.slug}`
     : "/collections/pet-memorial-gifts";
   const ctaLabel = primaryCollection
-    ? `Shop ${primaryCollection.name}`
-    : "Shop Memorial Gifts";
+    ? tb("shopCollection", { name: primaryCollection.name })
+    : tb("shopMemorialGifts");
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -161,9 +171,8 @@ export default async function BlogPostPage({ params }: Props) {
 
       <BlogRelatedProducts products={relatedProducts} title={t("relatedProducts")} />
 
-      {/* Table of Contents */}
       <nav className="bg-bg rounded-xl p-6 mb-10 border border-border">
-        <h2 className="font-medium text-text mb-3">In This Guide</h2>
+        <h2 className="font-medium text-text mb-3">{tb("inThisGuide")}</h2>
         <ul className="space-y-2 text-sm">
           {post.content
             .split("\n")
@@ -182,7 +191,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {relatedCollections.length > 0 && (
         <section className="mt-10">
-          <h2 className="font-serif text-xl text-text mb-4">Shop Related Collections</h2>
+          <h2 className="font-serif text-xl text-text mb-4">{tb("relatedCollections")}</h2>
           <div className="flex flex-wrap gap-3">
             {relatedCollections.map((collection) =>
               collection ? (
@@ -199,19 +208,15 @@ export default async function BlogPostPage({ params }: Props) {
         </section>
       )}
 
-      {/* CTA */}
       <div className="mt-12 p-8 bg-highlight rounded-2xl text-center">
-        <h2 className="font-serif text-2xl text-text mb-3">Find the Perfect Memorial Gift</h2>
-        <p className="text-muted mb-6">
-          Browse personalized keepsakes chosen to match this guide.
-        </p>
+        <h2 className="font-serif text-2xl text-text mb-3">{tb("ctaTitle")}</h2>
+        <p className="text-muted mb-6">{tb("ctaBody")}</p>
         <Button href={ctaHref}>{ctaLabel}</Button>
       </div>
 
-      {/* Related Posts */}
       {relatedPosts.length > 0 && (
         <section className="mt-16 pt-8 border-t border-border">
-          <h2 className="font-serif text-xl text-text mb-6">More Guides</h2>
+          <h2 className="font-serif text-xl text-text mb-6">{tb("moreGuides")}</h2>
           <div className="space-y-4">
             {relatedPosts.map((rp) => (
               <Link

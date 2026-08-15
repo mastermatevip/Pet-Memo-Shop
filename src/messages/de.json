@@ -70,6 +70,114 @@
     "relatedProducts": "Empfohlene Produkte",
     "addedToCart": "In den Warenkorb gelegt"
   },
+  "productPage": {
+    "storyTitle": "Die Geschichte hinter diesem Andenken",
+    "specsTitle": "Spezifikationen",
+    "benefitsTitle": "Warum Familien dieses Andenken lieben",
+    "shippingTitle": "Versand & Rückgabe",
+    "shippingBody": "Wir versenden weltweit und stellen für jede Bestellung eine Sendungsverfolgung bereit. Details zu Lieferzeiten nach Region finden Sie in unserer <shipping>Versandrichtlinie</shipping>.",
+    "returnsBody": "Personalisierte Produkte können nicht zurückgegeben werden, sofern sie nicht beschädigt oder fehlerhaft sind. Details finden Sie unter <returns>Rückgabe & Erstattung</returns>, oder besuchen Sie die <faqs>FAQs</faqs> zu Personalisierung und Korrekturabzug.",
+    "shippingLink": "Versandrichtlinie",
+    "returnsLink": "Rückgabe & Erstattung",
+    "faqsLink": "FAQs"
+  },
+  "nfcModule": {
+    "title": "So funktioniert das NFC-Gedenkandenken",
+    "introBefore": "Tippen oder scannen Sie, um eine private digitale Gedenkseite zu öffnen. Erfahren Sie den Unterschied zwischen",
+    "nfcVsQr": "NFC und QR-Codes",
+    "introMid": ", oder starten Sie mit unserem",
+    "cardsGuide": "Leitfaden zu NFC-Gedenkkarten",
+    "introAfter": ".",
+    "steps": {
+      "chip": {
+        "title": "NFC-Chip im Inneren",
+        "desc": "Ein kleiner NFC-Chip wird bei der Herstellung in die Karte oder den Anhänger eingebettet — keine Batterie nötig."
+      },
+      "tap": {
+        "title": "Mit dem Smartphone tippen",
+        "desc": "Halten Sie ein kompatibles Smartphone an das Andenken. Auf modernen Handys ist keine App erforderlich."
+      },
+      "qr": {
+        "title": "QR-Code als Backup",
+        "desc": "Jedes Andenken enthält einen QR-Code, damit jeder dieselbe Gedenkseite mit der Kamera öffnen kann."
+      },
+      "media": {
+        "title": "Fotos & Videos",
+        "desc": "Die digitale Seite kann eine Fotogalerie, Videolinks, Namen, Daten und ihre Geschichte enthalten."
+      },
+      "update": {
+        "title": "Jederzeit aktualisieren",
+        "desc": "Fotos und Gedenktext können Sie später ändern — der physische NFC-/QR-Link bleibt derselbe."
+      },
+      "guestbook": {
+        "title": "Optionales Gästebuch",
+        "desc": "Freunde und Familie können Nachrichten auf der privaten digitalen Gedenkseite hinterlassen."
+      }
+    },
+    "links": {
+      "overview": "Übersicht Digitales Haustier-Gedenken",
+      "shop": "NFC-Gedenkanhänger shoppen",
+      "carbonGuide": "Leitfaden Carbonfaser-Anhänger",
+      "createPage": "Digitale Gedenkseite erstellen"
+    }
+  },
+  "faqsPage": {
+    "title": "Häufig gestellte Fragen",
+    "metaTitle": "Häufig gestellte Fragen",
+    "metaDescription": "Antworten auf häufige Fragen zu Pet Memo Shop Haustier-Gedenkgeschenken, Personalisierung, Versand und NFC-Gedenkseiten.",
+    "items": {
+      "0": {
+        "q": "Kann ich das Design vor der Produktion prüfen?",
+        "a": "Ja. Wir senden Ihnen einen Designentwurf zur Prüfung und Freigabe, bevor ein personalisiertes Produkt hergestellt wird."
+      },
+      "1": {
+        "q": "Wie lange dauert die Personalisierung?",
+        "a": "Die Produktion dauert in der Regel 3–5 Werktage, nachdem Sie Ihren Designentwurf freigegeben haben."
+      },
+      "2": {
+        "q": "Kann ich ein Foto meines Haustiers hochladen?",
+        "a": "Ja. Sie können das Foto Ihres Haustiers während der Personalisierung an der Kasse hochladen."
+      },
+      "3": {
+        "q": "Wie funktioniert die NFC-Gedenkseite?",
+        "a": "Die Karte enthält einen NFC-Chip. Tippen Sie mit dem Smartphone darauf, um die digitale Gedenkseite Ihres Haustiers zu öffnen. Ein QR-Code als Backup ist ebenfalls enthalten."
+      },
+      "4": {
+        "q": "Versenden Sie international?",
+        "a": "Ja. Wir versenden weltweit und stellen für jede Bestellung eine Sendungsverfolgung bereit."
+      },
+      "5": {
+        "q": "Können personalisierte Produkte zurückgegeben werden?",
+        "a": "Personalisierte Produkte können nur bei Beschädigung oder Falschlieferung zurückgegeben werden. Nicht personalisierte Artikel können innerhalb von 30 Tagen zurückgegeben werden."
+      },
+      "6": {
+        "q": "Eignet sich das als Beileidsgeschenk?",
+        "a": "Absolut. Unsere Gedenkandenken sind behutsam als einfühlsame Beileidsgeschenke gestaltet."
+      },
+      "7": {
+        "q": "Welche Zahlungsmethoden akzeptieren Sie?",
+        "a": "An der Kasse akzeptieren wir PayPal. Über PayPal können Sie je nach Region auch mit Visa, Mastercard, Apple Pay und Google Pay zahlen."
+      }
+    }
+  },
+  "reviewsPage": {
+    "title": "Kundenbewertungen",
+    "metaTitle": "Kundenbewertungen",
+    "metaDescription": "Lesen Sie Geschichten liebevoller Haustierfamilien, die Gedenkandenken von Pet Memo Shop gewählt haben."
+  },
+  "blogPage": {
+    "title": "Leitfäden zum Haustier-Gedenken & Beileidsgeschenk-Ideen",
+    "subtitle": "Einfühlsame Ratgeber und durchdachte Ideen, um einen geliebten Begleiter zu ehren oder jemandem beizustehen, der ein Haustier verloren hat.",
+    "metaTitle": "Leitfäden zum Haustier-Gedenken & Beileidsgeschenk-Ideen",
+    "metaDescription": "Einfühlsame Ratgeber zur Unterstützung bei Tierverlust, Ideen für Gedenkgeschenke, Urnen-Guides und Tipps für digitale Gedenkseiten. Durchdachte Ressourcen, um einen geliebten Begleiter zu ehren.",
+    "inThisGuide": "In diesem Leitfaden",
+    "relatedCollections": "Verwandte Kollektionen shoppen",
+    "ctaTitle": "Das passende Gedenkgeschenk finden",
+    "ctaBody": "Entdecken Sie personalisierte Andenken, die zu diesem Leitfaden passen.",
+    "moreGuides": "Weitere Leitfäden",
+    "shopCollection": "{name} shoppen",
+    "shopMemorialGifts": "Gedenkgeschenke shoppen"
+  },
   "contactFab": {
     "whatsapp": "WhatsApp {number}",
     "whatsappLabel": "WhatsApp",
