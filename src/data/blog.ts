@@ -55,6 +55,18 @@ const COLLECTION_FEATURED_GUIDES: Record<string, string[]> = {
     "what-to-give-someone-who-lost-a-pet",
     "personalized-pet-memorial-gifts-buying-guide",
   ],
+  "nfc-memorial-cards": [
+    "nfc-pet-memorial-cards-how-they-work",
+    "nfc-vs-qr-code-pet-memorial",
+    "carbon-fiber-nfc-memorial-tag-guide",
+    "nfc-memorial-tag-for-dog-collar",
+  ],
+  "digital-pet-memorial-keepsakes": [
+    "what-is-a-digital-pet-memorial",
+    "how-to-create-a-digital-pet-memorial-page",
+    "how-to-make-a-pet-memorial-online",
+    "nfc-vs-qr-code-pet-memorial",
+  ],
 };
 
 /** Posts that explicitly relate to a collection, with featured guides prioritized. */

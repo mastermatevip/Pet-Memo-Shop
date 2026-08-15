@@ -325,6 +325,12 @@ Learn more on our [Digital Pet Memorial](/digital-pet-memorial) page.
       "NFC memorial cards connect a physical keepsake to a digital page. Tap with your phone to open photos, videos, and stories.",
     category: "Digital Memorials",
     categorySlug: "digital-memorials",
+    relatedProductSlugs: [
+      "nfc-pet-memorial-card",
+      "carbon-fiber-nfc-memorial-tag",
+      "digital-memorial-page-standalone",
+    ],
+    relatedCollectionSlugs: ["nfc-memorial-cards", "digital-pet-memorial-keepsakes"],
     content: `
 ## How NFC Memorial Tags Work
 
@@ -349,6 +355,19 @@ Both include full access to your online pet memorial page.
 ## What You Can Include
 
 Photos, videos, name, dates, story, family messages, favorite memories, and an optional guestbook.
+
+## Common Questions
+
+- **Do I need an app?** No — modern phones open the page directly after a tap or QR scan.
+- **Can I update the page later?** Yes — photos and memorial text can be updated; the NFC/QR link stays the same.
+- **NFC or QR?** Both open the same page. See our full comparison: [NFC vs QR code for pet memorials](/blog/nfc-vs-qr-code-pet-memorial).
+
+## Explore the NFC Memorial Cluster
+
+- [Carbon fiber NFC memorial tag guide](/blog/carbon-fiber-nfc-memorial-tag-guide)
+- [NFC memorial tag for dog collar](/blog/nfc-memorial-tag-for-dog-collar)
+- [How to create a digital pet memorial page](/blog/how-to-create-a-digital-pet-memorial-page)
+- [What is a digital pet memorial?](/blog/what-is-a-digital-pet-memorial)
 
 Shop [NFC memorial tags](/collections/nfc-memorial-cards) or learn more on our [Digital Pet Memorial](/digital-pet-memorial) page.
     `,
@@ -639,7 +658,12 @@ Learn more on our [Digital Pet Memorial](/digital-pet-memorial) page or shop [di
     categorySlug: "digital-memorials",
     publishedAt: "2026-06-25",
     readTime: 10,
-    relatedProductSlugs: ["digital-memorial-page-standalone", "carbon-fiber-nfc-memorial-tag"],
+    relatedProductSlugs: [
+      "digital-memorial-page-standalone",
+      "carbon-fiber-nfc-memorial-tag",
+      "nfc-pet-memorial-card",
+    ],
+    relatedCollectionSlugs: ["digital-pet-memorial-keepsakes", "nfc-memorial-cards"],
     faqs: [
       {
         question: "How do I make a pet memorial online?",
@@ -819,6 +843,7 @@ We send a proof before engraving so you can review every detail.
     publishedAt: "2026-06-30",
     readTime: 7,
     relatedProductSlugs: ["carbon-fiber-nfc-memorial-tag", "nfc-pet-memorial-card", "digital-memorial-page-standalone"],
+    relatedCollectionSlugs: ["nfc-memorial-cards", "digital-pet-memorial-keepsakes"],
     faqs: [
       {
         question: "What is the difference between NFC and QR code for pet memorials?",
@@ -1619,6 +1644,121 @@ Choose a **single keepsake** when:
 Explore our [memorial gift boxes](/collections/memorial-gift-boxes) collection for curated sets and memory boxes. For broader sympathy ideas, see [pet loss sympathy gifts](/collections/pet-loss-sympathy-gifts) and all [personalized pet memorial gifts](/collections/pet-memorial-gifts).
 
 A thoughtful gift box does not need to say everything — it only needs to say you remember with them.
+    `,
+  }),
+  createBlogPost({
+    slug: "nfc-memorial-tag-for-dog-collar",
+    title: "NFC Memorial Tag for Dog Collar: A Gentle Digital Tribute",
+    metaTitle: "NFC Memorial Tag for Dog Collar | Digital Pet Tribute",
+    metaDescription:
+      "Learn how an NFC memorial tag for a dog collar works: tap to open photos and stories, QR backup, no app required, and durable carbon fiber options.",
+    excerpt:
+      "An NFC memorial tag for a dog collar keeps their story one tap away. Learn what opens on the phone, NFC vs QR, durability, and how to personalize the tribute page.",
+    category: "Digital Memorials",
+    categorySlug: "digital-memorials",
+    publishedAt: "2026-08-15",
+    readTime: 9,
+    status: "draft",
+    relatedProductSlugs: [
+      "carbon-fiber-nfc-memorial-tag",
+      "nfc-pet-memorial-card",
+      "digital-memorial-page-standalone",
+      "dog-memorial-keepsake-box",
+    ],
+    relatedCollectionSlugs: [
+      "nfc-memorial-cards",
+      "digital-pet-memorial-keepsakes",
+      "dog-memorial-gifts",
+    ],
+    faqs: [
+      {
+        question: "What is an NFC memorial tag for a dog collar?",
+        answer:
+          "It is a durable memorial tag with an embedded NFC chip. Tap it with a smartphone to open a private digital memorial page with photos, videos, dates, and their story. Many families also keep a QR code backup on the same keepsake.",
+      },
+      {
+        question: "Do I need an app to open the memorial page?",
+        answer:
+          "No. Compatible phones open the memorial page in the browser after a tap. If NFC is unavailable, scan the QR code with the camera.",
+      },
+      {
+        question: "Can I update photos and text after ordering?",
+        answer:
+          "Yes. You can update photos and memorial wording later. The physical NFC and QR links stay the same so family members keep one easy way to revisit the page.",
+      },
+      {
+        question: "Is a carbon fiber NFC tag durable enough for display or wear?",
+        answer:
+          "Carbon fiber tags are designed for long-term display and careful wear. They are lightweight and more durable than paper cards, while still including QR backup access.",
+      },
+    ],
+    content: `
+## Why Families Choose an NFC Memorial Tag for a Dog Collar
+
+A dog collar often holds the most familiar everyday memory — the jingle of tags, the worn leather, the name that everyone knew. An **NFC memorial tag for a dog collar** turns that physical reminder into a gentle digital tribute: tap with a phone and their photos, story, and messages open instantly.
+
+It is not a replacement for a frame or urn. It is a bridge between something you can hold and a page your family can revisit anytime.
+
+## What Opens When You Tap or Scan
+
+After a tap (NFC) or camera scan (QR), the phone opens a private digital memorial page that can include:
+
+- Pet name and portrait
+- Birth and memorial dates
+- Photo gallery and video links
+- Their story and personality notes
+- Family messages and an optional guestbook
+
+No app download is required on modern smartphones.
+
+## NFC vs QR on a Dog Memorial Tag
+
+| Access method | How it works | Best for |
+|---------------|--------------|----------|
+| NFC tap | Hold phone near the tag | Fast access on compatible phones |
+| QR scan | Open camera and scan | Older phones / guests without NFC |
+
+Pet Memo Shop includes **both** so the same tribute page stays easy for everyone. Compare them in detail in [NFC vs QR code for pet memorials](/blog/nfc-vs-qr-code-pet-memorial).
+
+## Collar Tag, Display Tag, or Card?
+
+### Carbon fiber NFC memorial tag
+The [carbon fiber NFC memorial tag](/products/carbon-fiber-nfc-memorial-tag) is the best match when you want a premium, durable tag for display beside an urn, in a keepsake box, or as a wearable-style memorial piece.
+
+### NFC memorial card
+The [NFC pet memorial card](/products/nfc-pet-memorial-card) is a classic wallet-size option — excellent for gifting and for keeping with letters or a memory box.
+
+### Standalone digital page
+If you already have a physical collar tag and only need the online tribute, start with a [digital memorial page](/products/digital-memorial-page-standalone).
+
+## How to Personalize the Tribute
+
+1. Choose the keepsake (tag or card)
+2. Upload a clear favorite photo
+3. Add name, dates, and a short story
+4. Approve the design proof
+5. After delivery, tap or scan to open — then update photos/text anytime
+
+Step-by-step page setup: [How to create a digital pet memorial page](/blog/how-to-create-a-digital-pet-memorial-page).
+
+## Durability and Care
+
+- Carbon fiber tags are lightweight and built for long-term remembrance
+- Keep the tag clean and dry when possible
+- QR backup remains readable even if NFC is temporarily unavailable on a phone
+
+## Pair With Other Dog Memorial Gifts
+
+Many families keep the NFC tag with a [dog memorial keepsake box](/products/dog-memorial-keepsake-box) for the original collar and tags, or next to a photo frame. Browse more ideas in [dog memorial gifts](/collections/dog-memorial-gifts) and [NFC memorial tags](/collections/nfc-memorial-cards).
+
+## Continue the NFC Cluster
+
+- [NFC pet memorial cards: how they work](/blog/nfc-pet-memorial-cards-how-they-work)
+- [Carbon fiber NFC memorial tag guide](/blog/carbon-fiber-nfc-memorial-tag-guide)
+- [What is a digital pet memorial?](/blog/what-is-a-digital-pet-memorial)
+- [Digital Pet Memorial overview](/digital-pet-memorial)
+
+A collar tag can stay simple on the outside — and still hold a whole lifetime of love one tap away.
     `,
   }),
 ];

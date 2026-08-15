@@ -5,6 +5,7 @@ export const metadata = buildMetadata({
   title: "Shopping Cart",
   description: "Review your Pet Memo Shop memorial gift cart.",
   path: "/cart",
+  noIndex: true,
 });
 
 export default function CartPage() {

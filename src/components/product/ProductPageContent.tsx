@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Check, Truck, Shield } from "lucide-react";
-import { useRouter } from "@/i18n/navigation";
+import { useRouter, Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { ProductImageDisplay } from "@/components/shared/ProductImageDisplay";
 import { Badge } from "@/components/ui/Badge";
@@ -180,9 +180,24 @@ export function ProductPageContent({ product, relatedProducts }: ProductPageCont
         <section className="py-8 border-t border-border max-w-3xl">
           <h2 className="font-serif text-2xl text-text mb-4">Shipping & Returns</h2>
           <div className="space-y-3 text-muted leading-relaxed">
-            <p>We ship worldwide with tracking provided for every order. Standard shipping takes 5–10 business days depending on your location.</p>
-            <p>Customized products cannot be returned unless damaged or incorrect. If you receive a damaged item, please contact us within 14 days with photos.</p>
-            <p>Non-customized items may be returned within 30 days in original condition.</p>
+            <p>
+              We ship worldwide with tracking provided for every order. See our{" "}
+              <Link href="/shipping-policy" className="text-gold hover:underline">
+                shipping policy
+              </Link>{" "}
+              for timelines by region.
+            </p>
+            <p>
+              Customized products cannot be returned unless damaged or incorrect. Review{" "}
+              <Link href="/returns-refunds" className="text-gold hover:underline">
+                returns &amp; refunds
+              </Link>{" "}
+              for details, or visit{" "}
+              <Link href="/faqs" className="text-gold hover:underline">
+                FAQs
+              </Link>{" "}
+              for personalization and proof questions.
+            </p>
           </div>
         </section>
 

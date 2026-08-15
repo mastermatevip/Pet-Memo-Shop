@@ -5,6 +5,7 @@ export const metadata = buildMetadata({
   title: "My Account",
   description: "Track your Pet Memo Shop order or get help with your memorial gift purchase.",
   path: "/account",
+  noIndex: true,
 });
 
 export default function AccountPage() {

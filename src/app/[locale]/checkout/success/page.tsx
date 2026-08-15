@@ -6,6 +6,7 @@ export const metadata = buildMetadata({
   title: "Order Confirmed",
   description: "Your Pet Memo Shop order has been received.",
   path: "/checkout/success",
+  noIndex: true,
 });
 
 export default function Page() {

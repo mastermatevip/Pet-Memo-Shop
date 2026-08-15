@@ -19,6 +19,9 @@ const COLLECTION_PRIMARY_GUIDE: Record<string, string> = {
   "pet-memorial-gifts": "personalized-pet-memorial-gifts-buying-guide",
   "dog-memorial-gifts": "dog-memorial-gifts-ideas-to-honor-a-beloved-dog",
   "cat-memorial-gifts": "cat-memorial-gifts-gentle-ways-to-remember",
+  "nfc-memorial-cards": "nfc-pet-memorial-cards-how-they-work",
+  "digital-pet-memorial-keepsakes": "what-is-a-digital-pet-memorial",
+  "memorial-gift-boxes": "pet-memorial-gift-boxes-thoughtful-sets-for-pet-loss",
 };
 
 export const dynamic = "force-dynamic";
