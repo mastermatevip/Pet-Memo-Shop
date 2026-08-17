@@ -46,6 +46,37 @@ const nextConfig: NextConfig = {
         destination: "https://petmemoshop.com/:path*",
         permanent: true,
       },
+      // Legacy / malformed collection URLs (Search Console 404s)
+      {
+        source: "/collections-nfc-memorial-cards",
+        destination: "/collections/nfc-memorial-cards",
+        permanent: true,
+      },
+      {
+        source: "/:locale(de|es|fr|zh|en)/collections-nfc-memorial-cards",
+        destination: "/:locale/collections/nfc-memorial-cards",
+        permanent: true,
+      },
+      {
+        source: "/collections/pet-memorial-gift-boxes",
+        destination: "/collections/memorial-gift-boxes",
+        permanent: true,
+      },
+      {
+        source: "/:locale(de|es|fr|zh|en)/collections/pet-memorial-gift-boxes",
+        destination: "/:locale/collections/memorial-gift-boxes",
+        permanent: true,
+      },
+      {
+        source: "/collections/pet-cremation-urns",
+        destination: "/collections/pet-urns",
+        permanent: true,
+      },
+      {
+        source: "/:locale(de|es|fr|zh|en)/collections/pet-cremation-urns",
+        destination: "/:locale/collections/pet-urns",
+        permanent: true,
+      },
     ];
   },
 
