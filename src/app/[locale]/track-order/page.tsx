@@ -1,12 +1,18 @@
 import { buildMetadata } from "@/lib/seo";
 import { TrackOrderForm } from "@/components/track-order/TrackOrderForm";
 
-export const metadata = buildMetadata({
-  title: "Track Your Order",
-  description: "Track your Pet Memo Shop memorial gift order status and delivery.",
-  path: "/track-order",
-  noIndex: true,
-});
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return buildMetadata({
+    title: "Track Your Order",
+    description: "Track your Pet Memo Shop memorial gift order status and delivery.",
+    path: "/track-order",
+    locale,
+    noIndex: true,
+  });
+}
 
 export default function TrackOrderPage() {
   return (

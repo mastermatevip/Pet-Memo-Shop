@@ -81,6 +81,22 @@ const nextConfig: NextConfig = {
   },
 
   async headers() {
+    const privateNoIndex = [
+      "/cart",
+      "/checkout",
+      "/checkout/success",
+      "/account",
+      "/track-order",
+      "/:locale(de|es|fr|zh|en)/cart",
+      "/:locale(de|es|fr|zh|en)/checkout",
+      "/:locale(de|es|fr|zh|en)/checkout/success",
+      "/:locale(de|es|fr|zh|en)/account",
+      "/:locale(de|es|fr|zh|en)/track-order",
+    ].map((source) => ({
+      source,
+      headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" }],
+    }));
+
     return [
       {
         source: "/(.*)",
@@ -90,6 +106,7 @@ const nextConfig: NextConfig = {
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
         ],
       },
+      ...privateNoIndex,
       {
         // Default-locale homepage must never be CDN/browser cached after CMS edits
         source: "/",

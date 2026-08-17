@@ -28,6 +28,45 @@ export function buildMetadata({
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   const url = `${BRAND.url}${localePath(locale as Locale, normalizedPath)}`;
   const ogImage = image || `${BRAND.url}/og-default.jpg`;
+  const pageTitle = title.includes(BRAND.name) ? title : `${title} | ${BRAND.name}`;
+
+  // Private / utility pages: correct locale canonical, no hreflang cluster
+  if (noIndex) {
+    return {
+      title: pageTitle,
+      description,
+      metadataBase: new URL(BRAND.url),
+      alternates: {
+        canonical: url,
+      },
+      openGraph: {
+        title,
+        description,
+        url,
+        siteName: BRAND.name,
+        images: [{ url: ogImage, width: 1200, height: 630 }],
+        locale: ogLocales[locale as Locale] ?? ogLocales.en,
+        type: "website",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        images: [ogImage],
+      },
+      robots: {
+        index: false,
+        follow: false,
+        nocache: true,
+        googleBot: {
+          index: false,
+          follow: false,
+          noimageindex: true,
+          nocache: true,
+        },
+      },
+    };
+  }
 
   const languages: Record<string, string> = {};
   for (const loc of locales) {
@@ -36,7 +75,7 @@ export function buildMetadata({
   languages["x-default"] = `${BRAND.url}${localePath(routing.defaultLocale, normalizedPath)}`;
 
   return {
-    title: title.includes(BRAND.name) ? title : `${title} | ${BRAND.name}`,
+    title: pageTitle,
     description,
     metadataBase: new URL(BRAND.url),
     alternates: {
@@ -61,6 +100,6 @@ export function buildMetadata({
       description,
       images: [ogImage],
     },
-    robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
+    robots: { index: true, follow: true },
   };
 }

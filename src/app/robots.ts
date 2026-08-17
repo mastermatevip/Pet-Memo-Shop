@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { BRAND } from "@/config/brand";
 import { locales, routing } from "@/i18n/routing";
 
-const PRIVATE_PATHS = ["/account", "/cart", "/checkout", "/track-order"] as const;
+const PRIVATE_PATHS = ["/account", "/cart", "/checkout", "/checkout/success", "/track-order"] as const;
 
 function disallowPaths(): string[] {
   const paths: string[] = ["/admin", "/admin/", "/api/"];
